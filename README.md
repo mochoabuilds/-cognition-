@@ -4,7 +4,7 @@ Learn the basics of embedded computer vision using the best of the best at the r
 
 By Michael V. Ochoa 
 
-MAJOR RESEARCH CHALLENGES
+# MAJOR RESEARCH CHALLENGES
 
 — Dense multi-object tracking in the wild
 — Multi-view consensus across cameras
@@ -12,14 +12,14 @@ MAJOR RESEARCH CHALLENGES
 — Has to run in real-time and 99% accurate 
 — Restructuring code to Rustic
 — Navigating open source software support 
-— Managing unergonomic multi-dimensional array support
+— Managing unergonomic multi-dimensional array support 
 - Determing metrics that continuously improve downstream performance
 
-INGREDIENTS
+# INGREDIENTS
 
 
-TLDR
+# TLDR
 
 
-THE RECIPE
+# THE RECIPE
 
