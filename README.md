@@ -1,13 +1,25 @@
-“YOLO 23:  A Model for Real Time Action Recognition and Item Classification On Cost Friendly Hardware”  
+YOLO 23:  A Model for Real Time Action Recognition and Item Classification On Cost Friendly Hardware
+
+Learn the basics of embedded computer vision using the best of the best at the right price.
+
+By Michael V. Ochoa 
 
 MAJOR RESEARCH CHALLENGES
 
 — Dense multi-object tracking in the wild
-— Multi-view consensus
+— Multi-view consensus across cameras
 — Handling constant partial and full occlusions 
-— Has to run in real-time
-— Has to be 100% accurate
+— Has to run in real-time and 99% accurate 
 — Restructuring code to Rustic
-— Navigating OpenCV's support 
+— Navigating open source software support 
 — Managing unergonomic multi-dimensional array support
-— Finding metrics that continuously improve downstream performance.  
+- Determing metrics that continuously improve downstream performance
+
+INGREDIENTS
+
+
+TLDR
+
+
+THE RECIPE
+
