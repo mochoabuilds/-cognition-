@@ -6,17 +6,17 @@ By Michael V. Ochoa
 
 # MAJOR RESEARCH CHALLENGES
 
-Human pose estimation (Who is here?)
-Blurring face for privacy
-Action recognition (Whatcha up to?)
-Temporal association (Who has what?)
-Object classficiation (What is it?)
-Action analysis
+- Human pose estimation (Who is here?)
+- Blurring face for privacy
+- Action recognition (Whatcha up to?)
+- Temporal association (Who has what?)
+- Object classficiation (What is it?)
+- Action analysis
 
-Branching computer object peristance models across two cameras
-Handing constant partial and full occulsions 
-Restrucuting the code to Rustic
-Navigating open source software support
-Determining the metrics that improve downstream performance
+- Branching computer object peristance models across two cameras
+- Handing constant partial and full occulsions 
+- Restrucuting the code to Rustic
+- Navigating open source software support
+- Determining the metrics that improve downstream performance
 
 
