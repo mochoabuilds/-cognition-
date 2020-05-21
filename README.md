@@ -4,7 +4,7 @@ Computer Vision for Non-STEM Majors: A Mixed Methods Approach (2020)
 
 OVERVIEW
 
-* The goal of this paper is to teach a machine “whose hand are doing what, with what object” in neighborhood market scenarios.  We get the train out of the station by writing and coding on the fly. 
+* The goal of this paper is to teach a machine “whose hands are doing what, with what object” in neighborhood market scenarios.  
 * In Part I, we present an ethnographic study showing natural scene categorization of a neighborhood market.
 * In Part II, we explore what human subjects perceive when they quickly glance at a photograph of a neighborhood market.
 * In Part III, a computer vision model categorizes the natural scene properties of a neighborhood market.
@@ -21,15 +21,13 @@ PART II QUICK-LOOK GLANCES
 
 PART III COMPUTER VISION MODEL
 * Our computer vision model uses convolutional neural networks (CNN) for object detection and action recognition. Algorithms divide images into regions, bounding boxes and probabilities to understand “whose hand are doing what, with what object?”. 
-A.  Who is here? // Object Tracking & Human Pose Estimation 
+* A.  Who is here? // Object Tracking & Human Pose Estimation
 ![1-DsOBzKpVMUULGABMVFdVIg](https://user-images.githubusercontent.com/40745550/82587139-40865d00-9b5e-11ea-8dfa-6bcd8757e3ec.jpeg)
-B. Whatcha up to? // Action recognition 
-C. What is it? // Object classification 
-D. Who has what? // Temporal association (tricky!)
+* B. Whatcha up to? // Action recognition
+* C. What is it? // Object Classification
+* D. Who has what? // Temporal Association (tricky!)
 
-OK! LET'S BUILD THIS PRODUCT!
-
-Costing = Total Main Unit + Total Design + Total Misc + Total Assembly
+ALRIGHT! LET'S BUILD THIS PRODUCT!
 
 01 Installing Required Packages and Libraries for PART III
 
@@ -49,28 +47,32 @@ PART A
 02 Configuring Edge Computing Device 
 * Kat dolorem ipsum, kat dolor sit amet consectetur adipisci velit, sed kat non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam kat voluptatem.
 
-03 Open CV 
+03 Open CV Crash Course 
 * Kat dolorem ipsum, kat dolor sit amet consectetur adipisci velit, sed kat non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam kat voluptatem.
 
 PART B
-04 Object Tracking & Human Pose Estimation 
+04  Human Pose Estimation with Tensorflow and Caffe 
 * What is it?
-* Pre-Trained Models Avaliable 
+* Pre-Trained Models  
 * Project Structure
 * Post-Processing
 * Results
 * Recap
 
-03 How to Train Custom Objects Detectors 
+05  Training Custom Gesture Recognition Model
+* What is gesture recognition?
+* Kat dolorem ipsum, kat dolor sit amet consectetur adipisci velit, sed kat non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam kat voluptatem.
+
+06  Training Custom Objects Detectors 
 * Gathering Neighborhood Market Dataset
-* Connverting Notes to CSV Format
+* Converting Notes to CSV Format
 * Generating and Testing Files
 * Downloading Checkpoints and Configurations
 * Editing Configuration File
 * Launching Training, Monitoring Processes 
 * Recap
 
-04 Deploying Object Detectors 
+07  Deploying Object Detectors 
 * Copying Files and Generating Graph
 * Preparing Graph
 * Detecting Neighborhood Market Data in Images
@@ -79,12 +81,6 @@ PART B
 * Real-Time Testing Results 
 * Recap
 
-05 How to Train Custom Gesture Recognition Model
-* What is gesture recogntion?
-*
-*
-
-
 TESTING AND RESULTS
 
 OPEN ISSUES
@@ -92,7 +88,6 @@ OPEN ISSUES
 * Navigating open source software
 * Handling constant partial and full occlusions
 * Branching object persistence models across multiple cameras
-* Restructuring the code to Rustic
 * Handling changing databases schema, data types and complex objects
 * Handling the velocity of vision data across different frequencies
 * Respecting citizen privacy expectations
@@ -100,7 +95,7 @@ OPEN ISSUES
 DISCUSSION
 
 SOCIETAL APPLICATIONS
-* Every day, more people rely on smartphones to do their daily functions. Our goal is to rework the pipes channeling money at neighborhood markets. The mass adoption of smartphones means many people are now in arms reach of a mini terminal. Our product enables neighborhood markets across the midwest to perform autonomous checkout using smartphone terminals.  We want to make it possible to experience automated checkout with minimum investment of time and money.  Our goal is to help neighborhood markets stay competeitive in changing times.  
+* Every day, more people rely on smartphones to do daily life.  The mass adoption of smartphones means many people are now in arms reach of a mini terminal. Our product enables neighborhood markets across the midwest to perform autonomous checkout using smartphone terminals.  We want to make it possible to experience automated checkout with minimum investment of time and money.  Our goal is to help neighborhood markets stay competitive as the times change. 
 
 * Pilot program under development. 
 
