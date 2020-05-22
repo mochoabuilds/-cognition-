@@ -1,41 +1,50 @@
-Computer Vision for Non-STEM Majors: A Mixed Methods Approach (2020) 
+“Computer Vision for Non-STEM Majors: A Mixed Methods Approach” (Ochoa, 2020) 
 
-** WORKING PAPER ** 
+** WORKING PAPER **
 
 OVERVIEW
-
-* The goal of this paper is to teach a machine “whose hands are doing what, with what object” in neighborhood market scenarios.  
-* In Part I, we present an ethnographic study showing natural scene categorization of a neighborhood market.
-* In Part II, we explore what human subjects perceive when they quickly glance at a photograph of a neighborhood market.
-* In Part III, a computer vision model categorizes the natural scene properties of a neighborhood market.
-* Finally in Part IV, we show how data complied across Part I, Part II and Part III may represent “gut feelings” about neighborhood market scenes.  Then we convert those "gut feelings" into a bayesian hierarchal model that helps our computer vision system understand neighborhood market scenarios by asking "what’s the probability that __ is the true value given the current data?".  We keep humans in the loop throughout to ensure they can team up with automation systems as needed for final verification.
+* Hi there! The goal of this paper is to teach a machine “whose hands are doing what, with what object” when presented with scenes of a neighborhood market.  We bring together methods from complementary disciplines to better approach this experiment. 
+* In Part I, we describe an ETHNOGRAPHIC STUDY showing natural scene categorization of a neighborhood market and its ‘local food conscious’.  
+* In Part II, we explore HUMAN SUBJECT PERCEPTIONS when they quickly glance at a photograph of a neighborhood market.
+* In Part III, a COMPUTER VISION MODEL categorizes the natural scene properties of a neighborhood market.
+* Finally in Part IV, we explain how data in Part I, Part II and Part III represent HUMAN-COMPUTER “gut feelings” about a neighborhood market.  We convert those "gut feelings" into a bayesian hierarchal model that helps the machine understand market scenarios by asking "what’s the probability that __ is the true value given the current data?”
 
 RESEARCH CONTRIBUTION
 * We use clever tricks to coax enormous functionality out of edge computing devices.
+* We show the importance of keeping humans in the loop throughout to ensure they can team up with automatous computer vision systems as needed for final verification.  
 
 PART I ETHNOGRAPHIC RESEARCH
-* Ethnographic research is driven by firsthand participation in unfamiliar social circles to pull a sense of what’s relevant in that world. For the purpose of our research we frequent the neighborhood markets of the Chicago Far Northside.
+* Ethnographic research is firsthand participation in unfamiliar social circles to pull a sense of what’s relevant in that world. For the purpose of this research we frequent neighborhood markets on the Chicago Far Northside.
 
 PART II QUICK-LOOK GLANCES
 * Kat dolorem ipsum, kat dolor sit amet consectetur adipisci velit, sed kat non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam kat voluptatem.
 
 PART III COMPUTER VISION MODEL
-* Our computer vision model uses convolutional neural networks (CNN) for object detection and action recognition. Algorithms divide images into regions, bounding boxes and probabilities to understand “whose hand are doing what, with what object?”. 
-* A.  Who is here? // Object Tracking & Human Pose Estimation
+* Our computer vision model uses convolutional neural networks (CNN) for object detection, gesture recognition and temporal associations.  Algorithms divide images into regions, bounding boxes and probabilities to understand “whose hands are doing what, with what object?”. 
+* A.  Human Pose Estimation — Who’s here? 
 ![1-DsOBzKpVMUULGABMVFdVIg](https://user-images.githubusercontent.com/40745550/82587139-40865d00-9b5e-11ea-8dfa-6bcd8757e3ec.jpeg)
-* B. Whatcha up to? // Action recognition
-* C. What is it? // Object Classification
-* D. Who has what? // Temporal Association (tricky!)
+* B. Gesture Recognition — Whatcha up to? 
+* C. Object Classification — Whatcha holdin?
+* D. Temporal Association — Who has what? 
+* E.  Action Analysis Based on Location 
 
 ALRIGHT! LET'S BUILD THIS PRODUCT!
 
-01 Installing Required Packages and Libraries for PART III
+01 Installing Required Packages and Libraries for Computer Vision Model 
 
 For PART A
-* Python 
+* Python
 * OpenCV https://opencv.org/
 
-For PART B, C, D
+02 Configuring Edge Computing Device
+* Kat dolorem ipsum, kat dolor sit amet consectetur adipisci velit, sed kat non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam kat voluptatem.
+
+03 Open CV Crash Course
+* Kat dolorem ipsum, kat dolor sit amet consectetur adipisci velit, sed kat non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam kat voluptatem.
+
+01 Installing Required Packages and Libraries for Computer Vision Model 
+
+For PART B, C & D
 * scikit-image https://scikit-image.org/
 * scikit-learn https://scikit-learn.org/stable/index.html
 * dlib http://dlib.net/
@@ -43,45 +52,43 @@ For PART B, C, D
 * Tensorflow https://www.tensorflow.org/
 * Caffe http://caffe.berkeleyvision.org/
 
-PART A
-02 Configuring Edge Computing Device 
-* Kat dolorem ipsum, kat dolor sit amet consectetur adipisci velit, sed kat non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam kat voluptatem.
-
-03 Open CV Crash Course 
-* Kat dolorem ipsum, kat dolor sit amet consectetur adipisci velit, sed kat non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam kat voluptatem.
-
-PART B
-04  Human Pose Estimation with Tensorflow and Caffe 
+04 Human Pose Estimation with Tensorflow and Caffe — Who’s here? 
 * What is it?
-* Pre-Trained Models  
+* Pre-Trained Models
 * Project Structure
 * Post-Processing
 * Results
 * Recap
 
-05  Training Custom Gesture Recognition Model
+05 Training Custom Gesture Recognition Model — Whatcha up to?
 * What is gesture recognition?
 * Kat dolorem ipsum, kat dolor sit amet consectetur adipisci velit, sed kat non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam kat voluptatem.
 
-06  Training Custom Objects Detectors 
+06 Training Custom Objects Classifier — Whatcha holdin?
 * Gathering Neighborhood Market Dataset
-* Converting Notes to CSV Format
+* Converting Neighborhood Market Notes to CSV Format
 * Generating and Testing Files
-* Downloading Checkpoints and Configurations
+* Downloading Checkpoints and Configuration
 * Editing Configuration File
-* Launching Training, Monitoring Processes 
+* Launching, Training, Monitoring Processes
 * Recap
 
-07  Deploying Object Detectors 
+07 Deploying Object Classifier — Whatcha holdin?
 * Copying Files and Generating Graph
 * Preparing Graph
 * Detecting Neighborhood Market Data in Images
-* Images Testing Results 
-* Real-Time Neighborhood Market Data 
-* Real-Time Testing Results 
+* Testing for Images Results
+* Real-Time Neighborhood Market Data
+* Testing for Real-Time Data Results
 * Recap
 
-TESTING AND RESULTS
+08 Temporal Association — Who has what?
+
+09 Thermal Imaging, etc. — Double checking computer vision model decisions
+
+09  Action Analysis Based on Location  (i.e.  Autonomous Payment Processing, etc.)
+
+EXPERIMENTS AND RESULTS
 
 OPEN ISSUES
 * Determining the metrics that improve downstream performance
@@ -94,36 +101,31 @@ OPEN ISSUES
 
 DISCUSSION
 
-SOCIETAL APPLICATIONS
-* Every day, more people rely on smartphones to do daily life.  The mass adoption of smartphones means many people are now in arms reach of a mini terminal. Our product enables neighborhood markets across the midwest to perform autonomous checkout using smartphone terminals.  We want to make it possible to experience automated checkout with minimum investment of time and money.  Our goal is to help neighborhood markets stay competitive as the times change. 
+**PRELIMINARY BUSINESS PLAN**
+* Every day, more people rely on smartphones in their daily life.  Our goal is to help neighborhood markets stay competitive in a changing world.  We see the mass adoption of smartphones as many people are now in arms reach of a mini-terminal. Our product/engineering enables neighborhood markets across the midwest to perform autonomous/hands-free checkout using this smartphone terminal.   
+* We don’t see as our technology as new.  It has been developed and used in military or industrial/commercial markets.  The time has come for the consumer market.  The market for our pilot product is diverse in character and highly dependent on smartphones.  The pilot product showcases the benefits to be obtained for neighborhood markets operating their own autonomous checkout system and “add-on” peripherals.    
 
-* Pilot program under development. 
+* “Get the Train Out of the Station”
+    * Summer 2020
+        * Software:  Footfall/People Counter 
+        * Hardware:  Laying the Foundation for Hardware Housing Design
+    * Fall 2020
+        * Software:  “Whose hands are doing what, with what object?”
+        * Hardware:  Smartphone-Hardware Compatibility  
+    * Winter 2020-2021
+        * Software:  Autonomous Payment Processing based on Action Analysis, Temporal Association and Location 
+
+SANDBOX
+
+* How will the profits that accrue from increasing automation be redirected back into society for collective gains?
+* Humans are social animals and we must never forget that.  
+
 
 BIBLIOGRAPHY
-
-* Writing Ethnographic Field Notes, 2nd Edition by Emerson, Fretz and Shaw (2011) 
+* Writing Ethnographic Field Notes, 2nd Edition by Emerson, Fretz and Shaw (2011)
 * The Great Good Place by Roy Oldenburg (1989)
 * Who's Your City by Richard Florida (2008)
 
-@InProceedings{Li_2019_CVPR,
-author = {Li, Chen and Lee, Gim Hee},
-title = {Generating Multiple Hypotheses for 3D Human Pose Estimation With Mixture Density Network},
-booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-month = {June},
-year = {2019}
-}
-
-@inproceedings{wang2019fast,
-    title={Fast online object tracking and segmentation: A unifying approach},
-    author={Wang, Qiang and Zhang, Li and Bertinetto, Luca and Hu, Weiming and Torr, Philip HS},
-    booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
-    year={2019}
-}
-
-@inproceedings{zhou2020monocular,
-  title={Monocular Real-time Hand Shape and Motion Capture using Multi-modal Data},
-  author={Zhou, Yuxiao and Habermann, Marc and Xu, Weipeng and Habibie, Ikhsanul and Theobalt, Christian and Xu, Feng},
-  booktitle={Proceedings of the IEEE International Conference on Computer Vision},
-  pages={0--0},
-  year={2020}
-}
+* @InProceedings{Li_2019_CVPR, author = {Li, Chen and Lee, Gim Hee}, title = {Generating Multiple Hypotheses for 3D Human Pose Estimation With Mixture Density Network}, booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}, month = {June}, year = {2019} }
+* @inproceedings{wang2019fast, title={Fast online object tracking and segmentation: A unifying approach}, author={Wang, Qiang and Zhang, Li and Bertinetto, Luca and Hu, Weiming and Torr, Philip HS}, booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition}, year={2019} }
+* @inproceedings{zhou2020monocular, title={Monocular Real-time Hand Shape and Motion Capture using Multi-modal Data}, author={Zhou, Yuxiao and Habermann, Marc and Xu, Weipeng and Habibie, Ikhsanul and Theobalt, Christian and Xu, Feng}, booktitle={Proceedings of the IEEE International Conference on Computer Vision}, pages={0--0}, year={2020} }
