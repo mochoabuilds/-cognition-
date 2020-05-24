@@ -22,7 +22,7 @@ PART II QUICK-LOOK GLANCES
 PART III COMPUTER VISION MODEL
 * Our computer vision model uses convolutional neural networks (CNN) for object detection, gesture recognition and temporal associations. Algorithms divide images into regions, bounding boxes and probabilities to understand “whose hands are doing what, with what object?”. 
 * A. Human Pose Estimation — Who’s here? 
-￼
+￼![1-DsOBzKpVMUULGABMVFdVIg](https://user-images.githubusercontent.com/40745550/82762582-6febd280-9dc7-11ea-90ea-0671e1bf3744.jpeg)
 * B. Gesture Recognition — Whatcha up to?
 * C. Object Classification — Whatcha holdin?
 * D. Temporal Association — Who has what?
