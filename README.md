@@ -1,4 +1,4 @@
-Hardware and Software Improvements to a Low-Cost Computer Vision System (Ochoa et la., 2020)
+Hardware and Software Improvements for a Low-Cost Computer Vision System (Ochoa et la., 2020)
 
 ** WORKING PAPER **
 
@@ -67,22 +67,21 @@ PART A RECIPE
 * Privacy Concerns:
 
 PART B RECIPE
-04 Human Pose Estimation with Tensorflow and Caffe — Who’s here?
+04 Human Pose Estimation with Tensorflow and Caffe | Who’s here?
 * Prep:
 * Code:  
 * Post-Processing:
 * Notes:
 * Privacy Concerns:
 
-05 Training Custom Gesture Recognition Model — Whatcha up to?
+05 Training Custom Gesture Recognition Model | Whatcha up to?
 
-06 Training Custom Objects Classifier — Whatcha holdin?
+06 Training Custom Objects Classifier | Whatcha holdin?
 
-07 Deploying Object Classifier — Whatcha holdin?
+07 Deploying Object Classifier | Whatcha holdin?
 
-08 Temporal Association — Who has what?
+08 Temporal Association | Who has what?
 
-PART C RECIPE
 09 Action Analysis Based on Location 
 
 EXPERIMENTS AND RESULTS
@@ -105,7 +104,7 @@ FUTURE WORK
    * Software:  Footfall/People counter
    * Hardware:  Sending Notifications from Hardware to Phone
 * Summer 2020
-   * Software:  “Whose hands are doing wha, with what object?” in Neighborhood Market Scenarios 
+   * Software:  “Whose hands are doing what, with what object?” in Neighborhood Market Scenarios 
    * Hardware:  Extending Smartphone-Hardware Communications 
 * Fall 2020
    * Software:   Autonomous Checkout using Temporal Association and Location
