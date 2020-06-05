@@ -1,15 +1,18 @@
-Hardware and Software Improvements for a Low-Cost Computer Vision System (Ochoa et la., 2020)
+Hardware and Software Improvements for a Low-Cost Autonomous Checkout System (Ochoa et la., 2020)
 
 ** WORKING PAPER **
 
 ## INTRODUCTION 
 
-* Hi there!  This paper explains how we train a computer vision system to understand “whose hands are doing what, with what object” in neighborhood market scenarios.  We use a mixed methods approach made up of ethnography, quick look perceptions and  open source computer vision code.  These mixed methods are then integrated into more abstract tools (i.e.  mixture density network trained on neighborhood market data) to build a computer vision system with societal applications.
+* Hi there! This paper takes on the critical experiment of planning for healthier cities.  I've long been puzzled by phenomena that is obvious.  Case in point, the checkout process at neighborhood markets.  Could it be simpler?  I dug deeper into the idea to discover the nature of the system.  I explore how an autonomous checkout system customized to serve the needs of a neighborhood could implictly incentivize the kind of human associations key to healthy neighborhoods.
+* This paper explores the engineering and science of autonomous checkout systems.  I use a mixed methods approach made up of ethnography, quick look perceptions and open source computer vision code to do this.  I describe how I train a computer vision system to understand “whose hands are doing what, with what object” using neighborhood market data.  These methods are then integrated into more abstract tools (i.e.  mixture density network trained on neighborhood market data) to build a computer vision system with societal applications.
 
 ## SOCIETAL APPLICATION
-* Cashier systems are becoming more than mere stores of data.  We create active pieces of infrastructure for a simpler checkout processes.  We hope our autonomous checkout gives owners/staff more free time for 1) chatting with customers for no specific purpose 2) being a “port of entry" for newcomers 3) being the public characters that “keep an eye” on the neighborhood 4) daily operations, etc.  Our computer vision system implicitly incentivizes the kind of human associations key to healthy neighborhoods.
-
+* We see cashier systems as more than mere stores of data. They are active pieces of infrastructure for a simpler checkout processes.  Our autonomous checkout system gives workers more free time to 1) chat with customers for no specific purpose 2) be a “port of entry" for newcomers 3) be the public characters that “keep an eye” on the neighborhood 4) daily operations
+* We build a high ROI pilot project to pave out the efficiency of our first product (See FUTURE WORK, Fall 2020)
+ 
 ## RELATED WORK
+*
 
 ## OUR MIXED METHODS APPROACH 
 ETHNOGRAPHY
@@ -37,20 +40,10 @@ MIXTURE DENSITY NETWORK
 
 ## BUILDING THIS COMPUTER VISION SYSTEM 
 01 Installing Required Packages and Libraries 
-
-For PART A
 * Python
 * OpenCV https://opencv.org/
 
-For PART B
-* scikit-image https://scikit-image.org/
-* scikit-learn https://scikit-learn.org/stable/index.html
-* dlib http://dlib.net/
-* Keras https://keras.io/
-* Tensorflow https://www.tensorflow.org/
-* Caffe http://caffe.berkeleyvision.org/
-
-PART A RECIPE
+PART A 
 02 Configuring Edge Computing Device
 * Prep:
 * Notes:
@@ -61,19 +54,25 @@ PART A RECIPE
 * Notes:
 * Privacy Concerns:
 
-PART B RECIPE
-04 Human Pose Estimation with Tensorflow and Caffe | Who’s here?
+04 Installing Required Packages and Libraries 
+* scikit-image https://scikit-image.org/
+* scikit-learn https://scikit-learn.org/stable/index.html
+* dlib http://dlib.net/
+* Keras https://keras.io/
+* Tensorflow https://www.tensorflow.org/
+* Caffe http://caffe.berkeleyvision.org/
+
+PART B 
+05 Human Pose Estimation with Tensorflow and Caffe | Who’s here?
 * Prep:
 * Code:  
 * Post-Processing:
 * Notes:
 * Privacy Concerns:
 
-05 Training Custom Gesture Recognition Model | Whatcha up to?
+06 Training and Deploying Custom Gesture Recognition Model | Whatcha up to?
 
-06 Training Custom Objects Classifier | Whatcha holdin?
-
-07 Deploying Object Classifier | Whatcha holdin?
+07 Training and Deploying Custom Objects Classifier | Whatcha holdin?
 
 08 Temporal Association | Who has what?
 
@@ -94,16 +93,24 @@ OPEN ISSUES
 ## FUTURE WORK
 * Spring 2020 
    * Software:  Footfall/People counter
-   * Hardware:  Sending Notifications from Hardware to Phone
-* Summer 2020
-   * Software:  Whose hands are doing what, with what object in Neighborhood Market Scenarios 
-   * Hardware:  Extending Smartphone-Hardware Communications 
+   * Hardware:
+   * Industrial Design:  
+* Early Summer 2020
+   * Software:  Sending Notifications from Hardware to Phone
+   * Hardware:
+   * Industrial Design:
+* Late Summer 2020  
+   * Software:  "Whose hands are doing what, with what object" in neighborhood market scenarios
+   * Hardware:
+   * Industrial Design:
 * Fall 2020
    * Software:   Autonomous Checkout for Neighborhood Markets using Temporal Association and Location
+   * Hardware:
+   * Industrial Design:
 
 ## SANDBOX
 * How will the profits that accrue from increasing automation be redirected back into society for collective gain?
-* Rework the pipes channeling neighborhood money
+* What local products will we sell at our mock autonomous market??
 
 # BIBLIOGRAPHY
 * The Great Good Place by Roy Oldenburg (1989)
