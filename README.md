@@ -2,31 +2,26 @@ Hardware and Software Improvements for a Low-Cost Computer Vision System (Ochoa 
 
 ** WORKING PAPER **
 
-## "GET THE TRAIN OUT THE STATION"
-* There’s a need for more fluid checkout experiences right now as a result of Covid-19. We see the mass adoption of smartphones as many are now in arms reach of a mini-cash register.  Our computer vision products enable neighborhood markets to perform autonomous checkout using smartphones.  
-* Our system gives neighborhood market staff more free time for purposes such as:  1) chatting with customers for no specific purpose 2) being a “port of entry" for newcomers  3) being the public characters that “keep an eye” on the neighborhood  4) daily operations
+## INTRODUCTION 
 
-![LombardyMarket, Richmond VA](https://user-images.githubusercontent.com/40745550/83225135-b6815a00-a144-11ea-9fb2-12da5ce78c1d.jpg)
+* Hi there!  This paper explains how we train a computer vision system to understand “whose hands are doing what, with what object” in neighborhood market scenarios.  We use a mixed methods approach made up of ethnography, quick look perceptions and  open source computer vision code.  These mixed methods are then integrated into more abstract tools (i.e.  mixture density network trained on neighborhood market data) to build a computer vision system with societal applications.
 
-* This paper explains how our autonomous checkout system implicitly incentivizes the positive human associations key to healthy neighborhoods.
+## SOCIETAL APPLICATION
+* Cashier systems are becoming more than mere stores of data.  We create active pieces of infrastructure for a simpler checkout processes.  We hope our autonomous checkout gives owners/staff more free time for 1) chatting with customers for no specific purpose 2) being a “port of entry" for newcomers 3) being the public characters that “keep an eye” on the neighborhood 4) daily operations, etc.  Our computer vision system implicitly incentivizes the kind of human associations key to healthy neighborhoods.
 
-INTRODUCTION
-* Hi there!  Our paper is formatted to show how we train a computer vision system to understand “whose hands are doing what, with what object” in neighborhood market.  We use a mixed methods approach consisting of: ethnographic study, quick look perceptions and a computer vision model to train a computer vision model to understand neighborhood market scenarios.  We then integrate this model into more abstract tools (i.e.  a mixture density network trained on neighborhood market data) to build a computer vision system with societal applications.   
-
-RELATED WORK
-*df
+## RELATED WORK
 
 ## OUR MIXED METHODS APPROACH 
 ETHNOGRAPHY
-* Prep:  What is ethnographic research?  It is firsthand participation in unfamiliar social circles to pull a sense of what’s relevant in that world.  For the purpose of this research we frequent neighborhood markets on Chicago’s Far Northside.
-* Field Notes:
+* Prep:  What is ethnographic research?  It is firsthand participation in unfamiliar social circles to pull a sense of what’s relevant in that world.  For the purpose of this research we frequent neighborhood markets in the Uptown and Edgewater neighborhoods of Chicago  
+* Field Notes: 
 
 QUICK LOOK GLANCES
 * Prep:
 * Notes:
 
 COMPUTER VISION 
-* Prep:  We use convolutional neural networks (CNN) for object detection, gesture recognition and temporal associations. Algorithms divide images into regions, bounding boxes and probabilities to understand “whose hands are doing what, with what object?"
+* Prep:  We use convolutional neural networks (CNN) for object detection, gesture recognition and temporal associations. Algorithms divide images into regions, bounding boxes and probabilities to help the machine understand “whose hands are doing what, with what object?"
 
 * A. Human Pose Estimation | Who’s here? ![1-DsOBzKpVMUULGABMVFdVIg](https://user-images.githubusercontent.com/40745550/82762582-6febd280-9dc7-11ea-90ea-0671e1bf3744.jpeg)
 * B. Gesture Recognition | Whatcha up to?
@@ -84,33 +79,31 @@ PART B RECIPE
 
 09 Action Analysis Based on Location 
 
-EXPERIMENTS AND RESULTS
+## EXPERIMENTS AND RESULTS
 * Datasets and Protocols:
 * Results: 
 
 ## DISCUSSION
 OPEN ISSUES
-* Navigating open source software
-* Grasping the front-back orientation of limbs due to clothing, lighting, background
-* Determining the metrics that improve downstream performance
-* Depth ambiguity, occlusion and hand pose estimation 
+* Showing it’s possible to get interesting services without invasive privacy practices.  
+* Better grasping the front-back orientation of limbs due to clothing, lighting, background
 * Branching object persistence models across multiple cameras
 * Handling changing databases schema, data types and complex objects
-* Handling the velocity of vision data across different frequencies
-* Respecting citizen privacy expectations
+* Determining the metrics that improve downstream performance
 
-FUTURE WORK
+## FUTURE WORK
 * Spring 2020 
    * Software:  Footfall/People counter
    * Hardware:  Sending Notifications from Hardware to Phone
 * Summer 2020
-   * Software:  “Whose hands are doing what, with what object?” in Neighborhood Market Scenarios 
+   * Software:  Whose hands are doing what, with what object in Neighborhood Market Scenarios 
    * Hardware:  Extending Smartphone-Hardware Communications 
 * Fall 2020
-   * Software:   Autonomous Checkout using Temporal Association and Location
+   * Software:   Autonomous Checkout for Neighborhood Markets using Temporal Association and Location
 
-SANDBOX
+## SANDBOX
 * How will the profits that accrue from increasing automation be redirected back into society for collective gain?
+* Rework the pipes channeling neighborhood money
 
 # BIBLIOGRAPHY
 * The Great Good Place by Roy Oldenburg (1989)
