@@ -1,26 +1,25 @@
-Hardware and Software Improvements for a Low-Cost Autonomous Checkout System (Ochoa et la., 2020)
+Hardware and Software Improvements for a Low-Cost Computer Vision Application (Ochoa et la., 2020)
 
 ** WORKING PAPER **
 
 ## INTRODUCTION 
-
-* Hi there! This paper takes on the critical experiment of planning for healthier cities.  I've long been puzzled by phenomena that is obvious.  Case in point, the checkout process at neighborhood markets.  Could it be simpler?  I dug deeper into the idea to discover the nature of the system.  I explore how an autonomous checkout system customized to serve the needs of a neighborhood could implictly incentivize the kind of human associations key to healthy neighborhoods.
-* This paper explores the engineering and science of autonomous checkout systems.  I use a mixed methods approach made up of ethnography, quick look perceptions and open source computer vision code to do this.  I describe how I train a computer vision system to understand “whose hands are doing what, with what object” using neighborhood market data.  These methods are then integrated into more abstract tools (i.e.  mixture density network trained on neighborhood market data) to build a computer vision system with societal applications.
+* Hi there!  I've long been puzzled by phenomena that is obvious.  Case in point, the checkout process at neighborhood markets.  Could it be simpler?  I dug deeper into the idea to discover the nature of the system.  I explore how an autonomous checkout system customized to serve the needs of a community may implictly incentivize the kind of human associations key to healthy neighborhoods.  This paper takes on the critical experiment of planning for healthier cities.  
+* This paper also explores the engineering and science of autonomous checkout systems.  I use a mixed methods approach made up of ethnography, quick look perceptions and open source computer vision code.  I train a computer vision system to understand “whose hands are doing what, with what object” using neighborhood market data.  These methods are then integrated into more abstract tools (i.e.  mixture density network trained on neighborhood market data) to build a computer vision system with societal applications.
 
 ## SOCIETAL APPLICATION
-* We see cashier systems as more than mere stores of data. They are active pieces of infrastructure for a simpler checkout processes.  Our autonomous checkout system gives workers more free time to 1) chat with customers for no specific purpose 2) be a “port of entry" for newcomers 3) be the public characters that “keep an eye” on the neighborhood 4) daily operations
-* We build a high ROI pilot project to pave out the efficiency of our first product (See FUTURE WORK, Fall 2020)
+* We see cashier systems as more than mere stores of data. They're active pieces of infrastructure for a simpler checkout processes.  Our autonomous checkout system will do this and give workers more free time to 1) chat with customers for no specific purpose 2) be a “port of entry" for newcomers 3) be the public characters that “keep an eye” on the neighborhood 4) daily operations
+* We build a high ROI pilot project to pave out the efficiency of this first product (See: FUTURE WORK, Fall 2020)
  
-## RELATED WORK
+RELATED WORK
 *
 
 ## OUR MIXED METHODS APPROACH 
 ETHNOGRAPHY
-* Prep:  What is ethnographic research?  It is firsthand participation in unfamiliar social circles to pull a sense of what’s relevant in that world.  For the purpose of this research we frequent neighborhood markets in the Uptown and Edgewater neighborhoods of Chicago  
+* Prep:  What is ethnographic research?  It is firsthand participation in once unfamiliar social circles to pull a sense of what’s relevant in that world.  For the purpose of this research we frequent neighborhood markets in the Uptown and Edgewater neighborhoods of Chicago.   
 * Field Notes: 
 
 QUICK LOOK GLANCES
-* Prep:
+* Prep:  
 * Notes:
 
 COMPUTER VISION 
@@ -42,10 +41,10 @@ MIXTURE DENSITY NETWORK
 01 Installing Required Packages and Libraries 
 * Python
 * OpenCV https://opencv.org/
-
-PART A 
+ 
 02 Configuring Edge Computing Device
 * Prep:
+* Code:
 * Notes:
 
 03 Open CV Crash Course
@@ -54,7 +53,7 @@ PART A
 * Notes:
 * Privacy Concerns:
 
-04 Installing Required Packages and Libraries 
+04 Installing Required Packages and Libraries
 * scikit-image https://scikit-image.org/
 * scikit-learn https://scikit-learn.org/stable/index.html
 * dlib http://dlib.net/
@@ -62,13 +61,15 @@ PART A
 * Tensorflow https://www.tensorflow.org/
 * Caffe http://caffe.berkeleyvision.org/
 
-PART B 
-05 Human Pose Estimation with Tensorflow and Caffe | Who’s here?
+05 Footfall/People Counter
 * Prep:
-* Code:  
-* Post-Processing:
+* Geometric Center Tracking Algorithm:
+* Implementation:
+* Deploying:
 * Notes:
 * Privacy Concerns:
+
+05 Human Pose Estimation with Tensorflow and Caffe | Who’s here?
 
 06 Training and Deploying Custom Gesture Recognition Model | Whatcha up to?
 
@@ -84,28 +85,23 @@ PART B
 
 ## DISCUSSION
 OPEN ISSUES
-* Showing it’s possible to get interesting services without invasive privacy practices.  
-* Better grasping the front-back orientation of limbs due to clothing, lighting, background
-* Branching object persistence models across multiple cameras
-* Handling changing databases schema, data types and complex objects
-* Determining the metrics that improve downstream performance
+* Show it’s possible to get interesting services without invasive privacy practices.  
+* Better grasp the front-back orientation of limbs due to clothing, lighting, background
+* Branch object persistence models across multiple cameras
+* Handle changing databases schema, data types and complex objects
+* Determinine the metrics that improve downstream performance
 
 ## FUTURE WORK
 * Spring 2020 
-   * Software:  Footfall/People counter
-   * Hardware:
-   * Industrial Design:  
+   * Software & Hardware:  Footfall/People counter 
 * Early Summer 2020
-   * Software:  Sending Notifications from Hardware to Phone
-   * Hardware:
+   * Software & Hardware:  Sending Notifications from Hardware to Phone
+* Late Summer 2020 
+   * Software & Hardware:  "Whose hands are doing what, with what object" logic established
    * Industrial Design:
-* Late Summer 2020  
-   * Software:  "Whose hands are doing what, with what object" in neighborhood market scenarios
-   * Hardware:
-   * Industrial Design:
-* Fall 2020
-   * Software:   Autonomous Checkout for Neighborhood Markets using Temporal Association and Location
-   * Hardware:
+   
+* Fall 2020 -- Pilot Project
+   * Software:  Autonomous Checkout for Neighborhood Markets using Temporal Association and Location
    * Industrial Design:
 
 ## SANDBOX
