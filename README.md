@@ -8,10 +8,9 @@ Hardware and Software Improvements for a Low Cost Distributed Computer Vision Ap
 * This paper explores how an autonomous checkout system customized to serve the needs of a community may implicitly incentivize the kind of human associations key to healthy neighborhoods and their tax coffers.  
 * This paper also dives into the engineering of an autonomous checkout system. I use a mixed methods approach made up of ethnography, quick look perceptions and open source computer vision code.  This clever approach helps trim computational costs by only taking action when a person comes in contact with a specific space or object.  
 * This trick means our distributed computer vision application is essentially a virtual reality controller.  It scans the room with an off-the-shelf camera to understand the scene and syncs specific points in the space with connected actions.  It all runs on a set of Python programs distributed among nodes, Mac & Linux hubs.
-* Within a neighborhood market this dcvp setup lends itself to handsfree checkout.  It has the potential to change the neighborhood market in the long term.  Customers browse, built their basket and upon exit they are issued a check via SMS, allowing them to pay thru their own mobile payment accounts. 
-  
-RELATED WORK
-*
+* Within a neighborhood market this setup lends itself to handsfree checkout. Customers browse, build their baskets and upon exit are issued a check via SMS for their basket, allowing them to pay thru their own mobile payment accounts. 
+
+# RELATED WORK
 
 ## OUR MIXED METHODS APPROACH 
 ETHNOGRAPHY
