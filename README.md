@@ -4,12 +4,21 @@ Hardware and Software Improvements for a Distributed Computer Vision Application
 
 ## INTRODUCTION
 + Hi there! I've long been puzzled by neighborhood markets (i.e. corner stores, small grocers, bodegas) — especially their checkout process! I often ask myself, could it be simpler? I dug deeper to discover the nature of the system.
-+ First hand experience eventually had me hypothesizing that IF you were to automate the checkout process THEN staff would be free to perform the kind of human associations key to healthy neighborhoods. Examples include: 1) chatting with customers for no specific purpose 2) being the public characters that “keep an eye” on the neighborhood 3) being a “port of entry" for newcomers 4) other duties.  
++ First hand experience eventually had me hypothesizing that **IF you were to automate the checkout process THEN staff would be free to perform the kind of human associations key to healthy neighborhoods**. Examples include: 1) chatting with customers for no specific purpose 2) being the public characters that “keep an eye” on the neighborhood 3) being a “port of entry" for newcomers 4) other duties.  
 + This paper dives into the engineering and science of an autonomous checkout system. I use a mixed methods approach built upon ethnography, quick look perceptions and open source code. This distributed computer vision application scans the room with an off-the-shelf camera to understand the scene and syncs specific points in the space with connected actions. This setup helps trim computational costs by taking action only when a person comes in contact with a specific space or object.  
 + When extended to a neighborhood market this distributed setup makes autonomous checkout possible.  Customers browse goods, build their baskets and upon exit our system issues a bill to a customer via SMS, allowing customers to pay thru their own mobile payment system.
 
+## TIMELINE
++ Winter 2018 — Spring 2020 
+    + Conceptualizing & Design
++ Summer 2020 
+    + People/Footfall Counter 
+    + Gesture Recognition and Object Classification of Neighborhood Market Scenes
++ Fall 2020 
+    + Pilot Product:  Customers browse goods, build their baskets and upon exit our system issues a bill to a customer via SMS, allowing customers to pay thru their own mobile payment system
+
 ## HOW WE APPROACH DATA PRIVACY.  WHY?
-+ Clients (i.e. neighborhood markets) ask questions about their video data thru a secure pipeline, and a public log of all queries the client runs is recorded — thus the watchers themselves are watched.   We transform a customer's own video data into an active piece of infrastructure underpinning autonomous checkout privacy.  
++ **Proprietors of neighborhood market ask questions about their video data thru a secure pipeline, and a public log of all queries the proprietors runs is recorded — thus the watchers themselves are watched**.   We transform a customer's actions/ data into an active piece of infrastructure underpinning their privacy.
 + We believe democracy is more likely to thrive when citizens have good information.  By baking strong privacy practices into our autonomous checkout system we hope to incentivize citizens to shop neighborhood markets more to cut their emissions, thus ensuring the shift to less carbon happens in the most efficient way possible.  
 
 ## OUR MIXED METHODS APPROACH
@@ -22,7 +31,7 @@ QUICK LOOK GLANCES
 + Field Notes
 
 COMPUTER VISION
-+ We train a distributed computer vision model to understand “whose hands are doing what, with what object” in neighborhood markets scenarios. Algorithms divide images into regions, bounding boxes and probabilities that are then integrated into more abstract and analytical efforts (i.e. mixture density network) to help machines understand the local realities that make things work elsewhere but not here.  
++ **We train a distributed computer vision model to understand “whose hands are doing what, with what object” in neighborhood markets scenarios**. Algorithms divide images into regions, bounding boxes and probabilities that are then integrated into more abstract and analytical efforts (i.e. mixture density network) to help machines understand the local realities that make things work elsewhere but not here.  
 
 + A. Human Pose Estimation | Who’s here? ![1-DsOBzKpVMUULGABMVFdVIg](https://user-images.githubusercontent.com/40745550/82762582-6febd280-9dc7-11ea-90ea-0671e1bf3744.jpeg)
 + B. Gesture Recognition | Whatcha up to? 
@@ -102,16 +111,6 @@ OPEN ISSUES
 + Branching object persistence models across multiple cameras
 + Handling changing databases schema, data types and complex objects
 + Determining the metrics that improve downstream performance
-
-## TIMELINE
-+ Winter 2018 — Spring 2020 
-    + Conceptualizing & Design
-+ Summer 2020 
-    + People/Footfall Counter 
-    + Gesture Recognition and Object Classification of Neighborhood Market Scenes
-+ Fall 2020 
-    + Pilot Product:  Customers browse goods, build their baskets and upon exit our system issues a bill to a customer via SMS, allowing customers to pay thru their own mobile payment system
-
 
 ## SANDBOX
 + Reliability planning: recovering gracefully from internet/power outages
