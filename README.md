@@ -19,7 +19,7 @@ Hardware and Software Improvements for a Distributed Computer Vision Application
     + Pilot Product:  Customers enter market, browse, build their baskets and upon exit our system issues a bill to a customer via SMS, allowing customers to pay thru their own mobile payment system
 
 ## HOW WE APPROACH DATA PRIVACY
-+ Owners of a neighborhood market ask business questions about their video data thru a secure pipeline, and a public log of all queries the owners run are recorded — **thus the watchers themselves are watched.  We transform customer data into active pieces of infrastructure underpinning autonomous checkout and customer privacy expectations.**  
++ Owners of a neighborhood market ask business questions about their video data thru a secure pipeline, and a public log of all queries the owners run are recorded — **thus the watchers themselves are watched.**  We transform customer data into active pieces of infrastructure underpinning autonomous checkout and customer privacy expectations.
 
 ## OUR MIXED METHODS APPROACH
 ETHNOGRAPHY
@@ -47,12 +47,7 @@ MIXTURE DENSITY NETWORK (MDN)
 
 ## DISTRIBUTED COMPUTER VISION PIPELINE
 
-+ VideoNode <—> VideoHub <—> Librarian <—> UI/UX
-
-+ VideoNode for parameter tuning to optimize detection
-+ VideoHub for logging video and event message, acknowledging
-+ Librarian for extracting features from video, creates summaries and reports
-+ UI/UX for SMS, mobile payment integration 
++ ipsum et la
 
 ## BUILDING THIS COMPUTER VISION APPLICATION
 01 Installing Required Packages and Libraries
@@ -101,15 +96,17 @@ MIXTURE DENSITY NETWORK (MDN)
 
 ## EXPERIMENTS AND RESULTS
 + Datasets and Protocols
++ In-House Metrics
 + Results
+
 
 ## DISCUSSION
 OPEN ISSUES
 + Showing it’s possible to get interesting services without invasive privacy practices (NO facial recognition)
-+ Bridging the Edge-Cloud barrier 
 + Better handling the 10-20% of edge cases
 + Better grasping the front-back orientation of limbs due to clothing, lighting, background
 + Branching object persistence models across multiple cameras
++ Bridging the Edge-Cloud barrier 
 + Handling changing databases schema, data types and complex objects
 + Determining the metrics that improve downstream performance
 
