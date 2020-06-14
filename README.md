@@ -2,24 +2,25 @@ Hardware and Software Improvements for a Distributed Computer Vision Application
 
 *** WORKING PAPER ***
 
+*** ATTACHED SOURCE CODE IS FOR A PEOPLE/FOOTFALL COUNTER *** 
+
 ## INTRODUCTION
-+ Hi there! I've long been puzzled by neighborhood markets (i.e. corner stores, small grocers, bodegas, farmers markets),  especially their checkout process! I often ask myself, could it be simpler?  Could you re-engineer the flow of neighborhood checkout? I dug deeper into the idea to discover the nature of the system.
-+ Neighborhood markets have transformed into living laboratories for new communal safety habits.  That in mind, I take on the critical experiment of asking -- can autonomous technology be used for democracy?  
-+ First hand experience and observation eventually had me hypothesizing that **IF you were to automate the checkout process THEN staff would be free to perform the kind of human associations key to healthy neighborhoods.** Possible human associations include: 1) chatting with customers for no specific purpose 2) being the public characters that “keep an eye” on the neighborhood 3) being a “port of entry" for newcomers 4) other duties
-+ This paper dives into the engineering, science and privacy implications of an autonomous checkout system. Using a mixed methods approach **this application scans the room with off-the-shelf overhead cameras to sync specific points in the space with connected actions.** This setup trims computational costs by only taking action when a person comes in contact with a specific space or object.  By ignoring irrelevant details the application ensures fractions of its vision are processed at the highest resolution.
-+ **Extended to a real world neighborhood market our autonomous checkout system tracks and process customers choices, and upon exit our system issues a bill to a customer via SMS, allowing customers to pay thru their own mobile payment system.**
++ Hi there! I've long been puzzled by neighborhood markets (corner stores, small grocers, bodegas, farmers markets),  especially their checkout process! I often ask myself, could it be simpler?  Could you re-engineer the flow of checkout? I dug deeper into the idea to discover the nature of the system.
++ Recently neighborhood markets have transformed into living laboratories for new communal safety habits.  First hand experience and observation has me hypothesizing that **IF you were to automate the checkout process THEN staff would be free to perform the kind of human associations key to healthy neighborhoods.** Possible interactions include: 1) chatting with customers for no specific purpose 2) being the public characters that “keep an eye” on the neighborhood 3) being a “port of entry" for newcomers 4) other duties
++ This paper dives into the engineering, science and privacy implications of an autonomous checkout system. Using a mixed methods approach **this application scans a room with off-the-shelf overhead cameras and syncs specific points in the space with connected actions.** This setup trims computational costs by only taking action when a person comes in contact with a specific space or object.  
++ **Extended to a real world neighborhood market our autonomous checkout system tracks and processes customer choices, and upon exit our system issues a bill via SMS, allowing customers to pay thru their own mobile payment system.**
 
 ## TIMELINE
 + Winter 2018 — Spring 2020 
     + Conceptualizing & Design
 + Summer 2020 
-    + People/Footfall Counter with SMS
+    + People/Footfall Counter 
     + Gesture Recognition and Item Classification in Neighborhood Markets Scenarios 
 + Fall 2020 
-    + Pilot Product:  Customers enter market, browse, build their baskets and upon exit our system issues a bill to a customer via SMS, allowing customers to pay thru their own mobile payment system
+    + Pilot Product:  Customers enter market, browse, build their baskets and upon exit our system issues a bill via SMS, allowing customers to pay thru their own mobile payment system
 
 ## HOW WE APPROACH DATA PRIVACY
-+ Owners of a neighborhood market ask business questions about their video data thru a secure pipeline, and a public log of all queries the owners run are recorded — **thus the watchers themselves are watched.**  We transform customer data into active pieces of infrastructure underpinning autonomous checkout and customer privacy expectations.
++ Owners of a neighborhood market can ask questions about their customers data thru a secure pipeline, and a public log of all their queries run are recorded, **thus the watchers themselves are watched.**  We transform customer data into active pieces of infrastructure underpinning privacy within autonomous checkout.
 
 ## OUR MIXED METHODS APPROACH
 ETHNOGRAPHY
@@ -118,6 +119,13 @@ OPEN ISSUES
 ## BIBLIOGRAPHY
 + The Great Good Place by Roy Oldenburg (1989)
 + Writing Ethnographic Field Notes, 2nd Edition by Emerson, Fretz and Shaw (2011)
+
 + @InProceedings{Li_2019_CVPR, author = {Li, Chen and Lee, Gim Hee}, title = {Generating Multiple Hypotheses for 3D Human Pose Estimation With Mixture Density Network}, booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}, month = {June}, year = {2019} } 
 + Ye Q., Kim TK. (2018) Occlusion-Aware Hand Pose Estimation Using Hierarchical Mixture Density Network. In: Ferrari V., Hebert M., Sminchisescu C., Weiss Y. (eds) Computer Vision – ECCV 2018. ECCV 2018. Lecture Notes in Computer Science, vol 11214. Springer, Cham
 + @inproceedings{zhou2020monocular, title={Monocular Real-time Hand Shape and Motion Capture using Multi-modal Data}, author={Zhou, Yuxiao and Habermann, Marc and Xu, Weipeng and Habibie, Ikhsanul and Theobalt, Christian and Xu, Feng}, booktitle={Proceedings of the IEEE International Conference on Computer Vision}, pages={0--0}, year={2020} } 
++ @inproceedings{martinez_2017_3dbaseline,
+  title={A simple yet effective baseline for 3d human pose estimation},
+  author={Martinez, Julieta and Hossain, Rayat and Romero, Javier and Little, James J.},
+  booktitle={ICCV},
+  year={2017}
+}
