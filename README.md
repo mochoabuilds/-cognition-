@@ -1,35 +1,40 @@
-Hardware and Software Improvements for a Distributed Computer Vision Application (Ochoa et la., 2020)
+An Empirical Analysis of Autonomous Checkout for Neighborhood Markets
+
+Ochoa et la., 2020
 
 *** WORKING PAPER ***
+
+*** COMMENTS GREATLY APPRECIATED *** 
 
 *** ATTACHED CODE IS FOR A PEOPLE/FOOTFALL COUNTER *** 
 
 ## INTRODUCTION
-+ Hi there! I've long been puzzled by neighborhood markets (i.e. corner stores, small grocers, bodegas, farmers markets),  especially their checkout process. **I often ask myself, could checkout be simpler?  Could you re-engineer the flow of checkout to render newfound benefits?** I take on this critical experiment of cooking up an experience we didn't know we wanted, but suddenly can't live without.     
-+ Neighborhood markets are transforming into living labortories for new communal social habits.  First hand experience has me hypothesizing that **IF you were to automate the checkout process THEN staff would be freer to perform the kind of human associations key to healthy neighborhoods.** Possible activities include: 1) chatting with customers for no specific purpose 2) being the public characters that “keep an eye” on the neighborhood 3) being a “port of entry" for newcomers 4) other duties
-+ This paper dives into the engineering, science and privacy implications of an autonomous checkout system. The system scans a room with an off-the-shelf overhead camera and syncs specfic points and items in the space with connected actions. **The goal is to train a distributed computer vision model to understand “whose hands are doing what, with what object” in neighborhood markets scenarios.** Connected actions include:  entering the market, tracking customer choices and upon exit issuing a bill via SMS that asks customers to pay thru their own mobile payment system.  
++ Hi there! I've long been curious about neighborhood markets (corner stores, small grocers, bodegas, farmers markets),  especially their checkout process. **I often ask myself, could checkout be simpler?  Could you re-engineer its flow to render newfound benefits?**  Through a rarely employed combination of ethnography, smart contracts and computer vision I paint a picture of a possible future - autonomous checkout. 
++ Since the arrival Covid-19 neighborhood markets have transformed into living labortories for new communal social habits.   First hand experience working in one has me hypothesizing **IF you were to automate the checkout process THEN staff would be free to perform the kind of human associations key to healthy neighborhoods.** Possible human associations include: 1) chatting with customers for no specific purpose 2) being the public characters that “keep an eye” on the neighborhood 3) being a “port of entry" for newcomers 4) operational duties  
++ My goal is to train a distributed computer vision application to understand “whose hands are doing what, with what object” in neighborhood markets. **The system works by scanning a room with an off-the-shelf overhead camera to sync specfic points and items in the space with connected actions.** Connected actions include:  entering the market, tracking people's choices and upon exit people are issued a bill via SMS that asks them to pay thru their own mobile payment system.
 
 ## TIMELINE
 + Winter 2018 — Spring 2020 
-    + Conceptualizing & Design
+    + Conceptualizing , Literature Review & Ethnographic Research 
 + Summer 2020 
-    + People/Footfall Counter 
-    + Gesture Recognition and Item Classification in Neighborhood Markets Scenarios 
+    + Proof-of-Concept:  People/Footfall Counter 
+    + Alpha:  Gesture Recognition and Item Classification in Neighborhood Markets Scenarios
 + Fall 2020 
-    + Pilot Product:  Customers enter market, customers choices are tracked and upon exit customers are issued a bill via SMS that asks them to pay thru their own mobile payment system.
+    + Beta:  People enter market, people's choices are tracked and upon exit people are issued a bill via SMS that asks them to pay thru their own mobile payment system.
     
 ## APPROACHING DATA PRIVACY
-* We want to empower customers to demand computer vision applications respect their privacy expectations, but we also don’t want to stifle innovation in the development of computer vision technology.
-* To meet the needs of both **we underpin our computer vision applications with a public log that records all events/queries run on the records - “so the watchers themselves are watched”**  We want to show it's possible to create interesting computer vision applications without sweeping and invasive privacy practices.  
+* We want to empower customers to demand applications respect their privacy expectations, but we also don’t want to stifle innovation in the development of computer vision technology.
+* To meet the needs of both **we underpin our computer vision applications with a public log that records all events/queries run on the video feed, “so the watchers themselves are watched”**  We want to show it's possible to create interesting computer vision applications without sweeping and invasive privacy practices.  
 
 ## OUR MIXED METHODS APPROACH
 ETHNOGRAPHY
-+ What is ethnographic research? It is firsthand participation in once unfamiliar social circles to pull a sense of what’s relevant in that world. For the purpose of this research we frequent neighborhood markets in Chicago’s Edgewater, Rogers Park and Uptown neighborhoods.
-+ Field Notes
++ What is ethnographic research? It is firsthand participation in once unfamiliar social circles to pull a sense of what’s relevant in that world.  
++ I undertook approximately 10 months of ethnographic study in two neighborhood markets.  What piqued my interest in these two neighborhoods was that that markets layouts/human associations were organized very differently, despite the fact they shared similar economic and demographic characteristics.  
++ Field Notes:  Data was gathered weekly...
 
 QUICK LOOK GLANCES
-+ What are quick look glances?  How are they significant?  
-+ Field Notes
++ What are quick look glances?  
++ Notes:  
 
 COMPUTER VISION
 + Algorithms divide images into regions, bounding boxes and probabilities that are then integrated into more abstract and analytical efforts (i.e. mixture density network) to help machines understand the local realities that make things work elsewhere but not here.  **The goal is to train a distributed computer vision model to understand “whose hands are doing what, with what object” in neighborhood markets scenarios.**
@@ -39,16 +44,6 @@ COMPUTER VISION
 + C. Item Classification | Whatcha holdin? 
 + D. Temporal Association | Who has what? 
 + E. Action Analysis Based on Location
-
-MIXTURE DENSITY NETWORK (MDN)
-+ What is a mixed density network?
-+ Model
-+ Network Architecture
-+ Optimization
-
-## DISTRIBUTED COMPUTER VISION PIPELINE
-
-+ ipsum et la
 
 ## BUILDING THIS COMPUTER VISION APPLICATION
 01 Installing Required Packages and Libraries
@@ -93,28 +88,26 @@ MIXTURE DENSITY NETWORK (MDN)
 
 10 Action Analysis Based on Location
 
-11 SMS Mobile Payments 
+11 Payment via SMS
 
 ## EXPERIMENTS AND RESULTS
++ Summary Statistics
 + Datasets and Protocols
-+ In-House Metrics
 + Results
-
 
 ## DISCUSSION
 OPEN ISSUES
-+ Showing it’s possible to get interesting services without invasive privacy practices (i.e. NO facial recognition)
++ Show it’s possible to get interesting services without invasive privacy practices (i.e. NO facial recognition)
 + Better handling the 10-20% of edge cases
-+ Branching object persistence models across multiple cameras
-+ Better understanding the front-back orientation of limbs due to clothing, lighting, background
-+ Bridging the Edge-Cloud barrier 
-+ Handling changing databases schema, data types and complex objects
-+ Determining the metrics that improve downstream performance
++ Branch object persistence models across multiple cameras
++ Better understand the front-back orientation of limbs due to clothing, lighting, background
++ Bridge the Edge-Cloud barrier 
++ Handle changing databases schema, data types and complex objects
++ Determinine the metrics that improve downstream performance
 
 ## SANDBOX
 + Reliability planning: recovering gracefully from internet/power outages
 + How will the profits that accrue from increasing automation be reinvested back for collective gains?
-+ How can we make autonomous checkout an experience we didn't know we wanted, but suddenly can't live without?
 
 ## BIBLIOGRAPHY
 + The Great Good Place by Roy Oldenburg (1989)
@@ -129,3 +122,5 @@ OPEN ISSUES
   booktitle={ICCV},
   year={2017}
 }
+
+## APPENDIX
