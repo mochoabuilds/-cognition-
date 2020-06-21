@@ -1,4 +1,4 @@
-An Empirical Analysis of Autonomous Checkout for Neighborhood Markets
+An Empirical and Ethnographic Analysis of Autonomous Checkout 
 
 Ochoa et la., 2020
 
@@ -9,9 +9,9 @@ Ochoa et la., 2020
 *** ATTACHED CODE IS FOR A PEOPLE/FOOTFALL COUNTER *** 
 
 ## INTRODUCTION
-+ Hi there! I've long been curious about neighborhood markets (corner stores, small grocers, bodegas, farmers markets),  especially their checkout process. **I often ask myself, could checkout be simpler?  Could you re-engineer its flow to render newfound benefits?**  Through a rarely employed combination of ethnography, smart contracts and computer vision I paint a picture of a possible future - autonomous checkout. 
++ Hi there! I've long been curious about neighborhood markets (corner stores, small grocers, bodegas, farmers markets),  especially their checkout process. **I often ask myself, could checkout be simpler?  Could you re-engineer its flow to render newfound benefits?**  Through a rarely employed combination of ethnography, public log/smart contract and computer vision I paint a picture of a possible future - autonomous checkout. 
 + Since the arrival Covid-19 neighborhood markets have transformed into living labortories for new communal social habits.   First hand experience working in one has me hypothesizing **IF you were to automate the checkout process THEN staff would be free to perform the kind of human associations key to healthy neighborhoods.** Possible human associations include: 1) chatting with customers for no specific purpose 2) being the public characters that “keep an eye” on the neighborhood 3) being a “port of entry" for newcomers 4) operational duties  
-+ My goal is to train a distributed computer vision application to understand “whose hands are doing what, with what object” in neighborhood markets. **The system works by scanning a room with an off-the-shelf overhead camera to sync specfic points and items in the space with connected actions.** Connected actions include:  entering the market, tracking people's choices and upon exit people are issued a bill via SMS that asks them to pay thru their own mobile payment system.
++ My goal is to train a distributed computer vision application to understand “whose hands are doing what, with what object” in neighborhood markets.  The goal is to explore the economics of an autonomous checkout system. **The system works by scanning a room with an off-the-shelf overhead video camera to sync specfic points and items in the space with connected actions.** Connected actions include:  entering the market, tracking people's choices and upon exit issuing people a bill via SMS that asks them to pay thru their own mobile payment system.
 
 ## TIMELINE
 + Winter 2018 — Spring 2020 
@@ -20,11 +20,11 @@ Ochoa et la., 2020
     + Proof-of-Concept:  People/Footfall Counter 
     + Alpha:  Gesture Recognition and Item Classification in Neighborhood Markets Scenarios
 + Fall 2020 
-    + Beta:  People enter market, people's choices are tracked and upon exit people are issued a bill via SMS that asks them to pay thru their own mobile payment system.
+    + Beta:  People enter the market, their choices tracked and upon exit people are issued a bill via SMS that asks them to pay thru their own mobile payment system.
     
 ## APPROACHING DATA PRIVACY
 * We want to empower customers to demand applications respect their privacy expectations, but we also don’t want to stifle innovation in the development of computer vision technology.
-* To meet the needs of both **we underpin our computer vision applications with a public log that records all events/queries run on the video feed, “so the watchers themselves are watched”**  We want to show it's possible to create interesting computer vision applications without sweeping and invasive privacy practices.  
+* To meet the needs of both **we underpin our computer vision applications with a public log/smart contract that records all events/queries run on the video camera data, “so the watchers themselves are watched”**  We want to show it's possible to create interesting computer vision applications without sweeping and invasive privacy practices.  
 
 ## OUR MIXED METHODS APPROACH
 ETHNOGRAPHY
