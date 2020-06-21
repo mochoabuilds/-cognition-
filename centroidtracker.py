@@ -1,3 +1,9 @@
+# 1  establish bounding box coordiantes and determine centroids
+# 2  compute Euclidean distance between bounding boxes and old objects
+# 3  update coordinates of old objects
+# 4  register new objects 
+# 5  deregister old/lost objects that left the view
+
 # import packages
 from scipy.spatial import distance as dist
 from collections import OrderedDict
