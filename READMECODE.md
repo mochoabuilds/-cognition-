@@ -1,4 +1,4 @@
-## PROJECT STRUCTURE
+## PROJECT STRUCTURE for People/Footfall Counter
 
 Videos
 + .avi
@@ -14,4 +14,4 @@ yolo23
 + directioncounter.py
 + trackableobject.py
 
-people_counter.py // driver script optimized for a Raspberry Pi
+people_counter.py 
