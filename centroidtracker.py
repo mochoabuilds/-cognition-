@@ -75,8 +75,9 @@ if len(self.objects) == 0:
 	for i in range(0, len(inputCentroids)):
 		self.register(inputCentroids[i])
 
-# otherwise, track objects and maintain object IDs with a distance map output array 
-# that indexes values with the smallest corresponding distance to the front of the list
+# otherwise, compute Euclidean distance between boxes and old objects with 
+# a distance map output array that indexes values with the smallest 
+# corresponding distance to the front of the list
 else:
 	
 	# pull object IDs and related centroids
