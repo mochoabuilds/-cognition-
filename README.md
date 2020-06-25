@@ -5,18 +5,17 @@
 *** ATTACHED CODE IS FOR A PEOPLE/FOOTFALL COUNTER (PROOF OF CONCEPT) *** 
 
 ## INTRODUCTION
-+ Hi there! I've long been curious about neighborhood markets (i.e. corner stores, small grocers, bodegas, farmers markets), especially their checkout process. **I often ask myself, could it be simpler?  And could we re-engineer checkouts flow to render newfound benefits? (i.e. more social and sustainable)
-+ First hand experience working in a neighborhood market had me hypothesizing IF you were to automate the checkout process THEN staff would be free to perform the kind of human associations key to healthy neighborhoods.  Associations include: 1) chatting with customers for no specific purpose 2) being the public characters that “keep an eye” on the neighborhood 3) being a “port of entry" for newcomers 4) operational duties 
-+ Through a combination of ethnography, smart contracts and computer vision I paint my picture of cashierless autonomous checkout.  **Its algorithms, trained on data from off-the-shelf overhead cameras, sync specfic points and items in the space with connected actions.**  Connected actions include:  walking into market, picking up items, walking out with items and upon exit a bill is calculated and sent via SMS that asks guests to pay thru their own mobile payment system.  Doing it won't be easy.  And we must do it in real-tme, with a high degree of accuracy.
++ Hi there! I've long been curious about neighborhood markets (i.e. corner stores, small grocers, bodegas, farmers markets), especially their checkout process. **I often ask myself, could it be simpler?  How could we re-engineer checkouts flow to render newfound benefits? (i.e. more social and sustainable)**
++ First hand experience working in a neighborhood market had me hypothesizing IF you were to automate the checkout process THEN staff would be free to perform the kind of beneficial human associations key to healthy neighborhoods.  Associations include: 1) chatting with customers for no specific purpose 2) being the public characters that “keep an eye” on the neighborhood 3) being a “port of entry" for newcomers 4) operational duties 
++ **Through a combination of ethnography, smart contracts and computer vision I paint my picture of cashierless autonomous checkout.**  Its algorithms, trained on data from off-the-shelf overhead cameras, sync specfic points and items in the space with connected actions.  Connected actions include:  walking into market, picking up items, walking out with items and upon exit a bill is calculated and sent via SMS that asks guests to pay thru their own mobile payment system.  Doing this all won't be easy.  And we must do it in real-tme, with a high degree of accuracy.
 
-## OUR MIXED METHODS APPROACH
-ETHNOGRAPHY
-+ What is ethnographic research? It is firsthand participation in once unfamiliar social circles to pull a sense of what’s relevant in that world.  This ethnography data is valuable because there's so little of it wrangled and prepared for computer vision applications.  I get the ethnographic data into a coherent usable format so we can ask basic questions about market scenarios.  
-+ I undertook approximately 10 months of ethnographic study working and shopping in two neighborhood markets to create the training data.  What piqued my interest in these two neighborhoods was that that markets layouts were organized very differently, despite the fact they shared similar economic and demographic characteristics.
-+ Field Notes:  Data gathered weekly
+## ETHNOGRAPHY ("DATA WRANGLING)
++ What is ethnographic research? It is firsthand participation in once unfamiliar social circles to pull a sense of what’s relevant in that world.  Ethnographic data is valuable because there's so little of it wrangled and prepared for computer vision applications.  **I get ethnographic data into a coherent usable format so computer vision models can ask questions.**
++ I undertook approximately 10 months of ethnographic study working and shopping in two neighborhood markets to create the training data.  What piqued my interest in these two neighborhoods was that that markets layouts were organized very differently, despite the fact they shared similar economic and demographic characteristics. **My methods for formatting data show how computer vision system reach particular conclusions thru probabilities and simplified flow charts.**
++ Field Notes:  
 
-COMPUTER VISION
-+ Algorithms divide images into regions, bounding boxes and probabilities that are then integrated into more abstract and analytical efforts (i.e. mixture density networks) to help the system understand the local realities that make things work elsewhere but not here.  **The goal is to train a distributed computer vision system to understand “whose hands are doing what, with what object” in different neighborhood markets scenarios.**
+## COMPUTER VISION
++ Algorithms divide images into regions, bounding boxes and probabilities that are then integrated into more abstract and analytical efforts (i.e. mixture density networks) to help the system understand the local realities that make things work elsewhere but not here.  **The goal is to train a computer vision system to understand “whose hands are doing what, with what object” in different neighborhood markets scenarios.**
 
 + A. Feature Extraction - Human Pose Estimation | Who is here? ![1-DsOBzKpVMUULGABMVFdVIg](https://user-images.githubusercontent.com/40745550/82762582-6febd280-9dc7-11ea-90ea-0671e1bf3744.jpeg)
 + B. Gesture Recognition | Whatcha up to? 
@@ -69,7 +68,7 @@ COMPUTER VISION
 
 11 Payment via SMS
 
-## APPROACHING DATA PRIVACY
+## APPROACHING DATA PRIVACY (SMART CONTRACTS)
 * We want to empower customers to demand applications respect their privacy expectations, but we also don’t want to stifle innovation in the development of computer vision technology.
 * To meet the needs of both **we underpin our computer vision applications with a public log that records all events/queries run on the video stream data - “thus the watchers themselves are watched”** 
 * Our system is setup so video stream data remains within a market's walls. Our software lets neighborhood market mgmt perform analysis only in-house, there is no copying or moving of data outside for processing. And even then, mgmt is not given free roam to pick and prod customer data. Instead we provide scripts which let them tease customer records **with a log of every action mgmt took - "thus the wathchers themselves are watched".**  Our privacy system was designed for both research and privacy.  We want to show it's possible to create interesting computer vision applications without sweeping and invasive privacy practices.   I believe the best technology is not worth much without understanding the right social, environmental and governance for it based on community demands.
@@ -81,12 +80,12 @@ COMPUTER VISION
 
 ## DISCUSSION
 OPEN ISSUES
-+ **Show it’s possible to get interesting services without invasive privacy practices (i.e. NO FACE RECOGNITION)**
-+ Better handling the 10% of edge cases - usualcasesthat are not commmon in training data
++ **Show it’s possible to get interesting services without invasive privacy practices (NO FACE RECOGNITION)**
++ Better handling the 10% of edge cases - usual cases that are not commmon in training data
 + Highlighting which features in the input most strongly affect its output
 + Branch object persistence models across multiple cameras
 + Better understand the front-back orientation of limbs due to clothing, lighting, background
-+ Bridge the Edge-Cloud barrier to lower processing power bills 
++ **Bridge the Edge-Cloud barrier to lower processing power bills** 
 + Handle changing databases schema, data types and complex objects
 + Determinine the metrics that improve downstream performance
 
@@ -97,7 +96,7 @@ OPEN ISSUES
     + Proof-of-Concept :  People/Footfall Counter (customers per square feet of square space)
     + Alpha :  Tracking Gestures and Classifying Items in Neighborhood Markets 
 + Fall 2020 
-    + Beta :  People enter the market, their choices are tracked and upon exit people are issued a bill via SMS that asks them to pay thru their own mobile payment system.
+    + Beta :  Guests walk into market, pick up items, walk out with items and upon exit a bill is calculated and sent via SMS that asks guests to pay thru their own mobile payment system.
 
 ## SANDBOX
 + Reliability planning: recovering gracefully from internet/power outages
