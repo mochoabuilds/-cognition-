@@ -34,6 +34,17 @@ def write_video(outputPath, writeVideo, frameQueue, W, H):
   # when video is done let go of video writer object
   writer.release()
   
-  
-# define command line arguments with parser 
+# argument parser that accepts four command line arguments
 ap = argparse.ArgumentParser()
+ap.add_argument("-m", "--mode", type=str, required=True,
+  choices=["horizontal", "vertical"],
+  help="direction people moving thru frame")
+ap.add_argument("i", "--input", type=str,
+  help="path to input video file")
+ap.add_argument("-o", "--output", type=str,
+  help="path to output video file")
+ap.add_argument("s", "--skip-frames", type=int, default=40
+  # skips frames used to improve efficiency              
+  help="# of skip frames between detections"
+
+# if video path empty, pull a reference from webcam
