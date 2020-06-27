@@ -5,17 +5,17 @@
 *** ATTACHED CODE IS FOR A PEOPLE/FOOTFALL COUNTER (PROOF OF CONCEPT) *** 
 
 ## INTRODUCTION
-+ Hi there! I've long been curious about neighborhood markets (i.e. corner stores, small grocers, bodegas, farmers markets), especially their checkout process. **I often ask myself, could it be simpler?  How could we re-engineer checkouts flow to render newfound benefits? (i.e. more social and sustainable)**
++ Hi there! I've long been curious about neighborhood markets (i.e. corner stores, small grocers, bodegas, farmers markets), especially their checkout process. I often ask myself, could it be simpler?  How could we re-engineer checkouts flow to render newfound benefits? (i.e. more social and sustainable).
 + First hand experience working in a neighborhood market had me hypothesizing IF you were to automate the checkout process THEN staff would be free to perform the kind of beneficial human associations key to healthy neighborhoods.  Associations include: 1) chatting with customers for no specific purpose 2) being the public characters that “keep an eye” on the neighborhood 3) being a “port of entry" for newcomers 4) operational duties 
-+ **Through a combination of ethnography, smart contracts and computer vision I paint my picture of cashierless autonomous checkout.**  Its algorithms, trained on data from off-the-shelf overhead cameras, sync specfic points and items in the space with connected actions.  Connected actions include:  walking into market, picking up items, walking out with items and upon exit a bill is calculated and sent via SMS that asks guests to pay thru their own mobile payment system.  Doing this all won't be easy.  And we must do it in real-tme, with a high degree of accuracy.
++ **Through a combination of ethnography, smart contracts and computer vision I paint my vision of autonomous (cashierless) checkout.**  Its algorithms, trained on data from off-the-shelf overhead cameras, sync specfic points and items in the space with connected actions.  Connected actions include:  walking into market, picking up items, walking out with items and upon exit a bill is calculated and sent via SMS that asks guests to pay thru their own mobile payment system.  Doing this all won't be easy, and we must do it in real-tme, with a high degree of accuracy.
 
-## ETHNOGRAPHY ("DATA WRANGLING)
-+ What is ethnographic research? It is firsthand participation in once unfamiliar social circles to pull a sense of what’s relevant in that world.  Ethnographic data is valuable because there's so little of it wrangled and prepared for computer vision applications.  **I get ethnographic data into a coherent usable format so computer vision models can ask questions.**
-+ I undertook approximately 10 months of ethnographic study working and shopping in two neighborhood markets to create the training data.  What piqued my interest in these two neighborhoods was that that markets layouts were organized very differently, despite the fact they shared similar economic and demographic characteristics. **My methods for formatting data show how computer vision system reach particular conclusions thru probabilities and simplified flow charts.**
+## ETHNOGRAPHIC RESEARCH ("DATA WRANGLING")
++ What is ethnographic research? It is firsthand participation in once unfamiliar social circles to pull a sense of what’s relevant in that world.  **Ethnographic data is valuable because there's so little of it a coherent usable format for computer vision models to ask questions.**  I believe if the only people to work with AI/computer vision are those with its formal math-heavy education, then we'll get societal applications from a very narrow perspective.
++ I undertook approximately 10 months of ethnography in two neighborhood markets to distill the diveristy of the qualitative research into training data tailored to specific neighborhood markets.  What piqued my interest about these two neighborhoods was that that markets layouts and interactions were very different, despite the fact they shared similar economic and demographic characteristics. 
 + Field Notes:  
 
 ## COMPUTER VISION
-+ Algorithms divide images into regions, bounding boxes and probabilities that are then integrated into more abstract and analytical efforts (i.e. mixture density networks) to help the system understand the local realities that make things work elsewhere but not here.  **The goal is to train a computer vision system to understand “whose hands are doing what, with what object” in different neighborhood markets scenarios.**
++ Algorithms divide ethnographic training data into regions, bounding boxes and probabilities that are then integrated into more abstract and analytical efforts (i.e. mixture density networks) to help the system understand the local realities that make things work elsewhere but not here.  **The goal is to train a computer vision system to understand “whose hands are doing what, with what object” in neighborhood markets scenarios.**
 
 + A. Feature Extraction - Human Pose Estimation | Who is here? ![1-DsOBzKpVMUULGABMVFdVIg](https://user-images.githubusercontent.com/40745550/82762582-6febd280-9dc7-11ea-90ea-0671e1bf3744.jpeg)
 + B. Gesture Recognition | Whatcha up to? 
@@ -38,14 +38,19 @@
 + Code
 + Notes
 
-04 Footfall/People Counter
-+ Prep
-+ Geometric Center Tracking Algorithm
-+ Implementation
-+ SMS Notifications
-+ Deploying
-+ Notes
-+ Privacy Concerns
+04 Footfall/People Counter Project Structure 
++ Videos
+    + .avi
+    + .mp4
+    + .mp4
++ Output
+    + .avi
+yolo23
+    + init__.py
+    + centroidtracker.py
+    + directioncounter.py
+    + trackableobject.py
++ people_counter.py
 
 04 Installing Required Packages and Libraries (part two)
 + scikit-image https://scikit-image.org/
@@ -62,7 +67,7 @@
 
 08 Training and Deploying a Custom Objects Classifier | Whatcha holdin?
 
-**09 Temporal Association | Who has what?**
+09 Temporal Association | Who has what?
 
 10 Action Analysis Based on Location
 
@@ -71,7 +76,7 @@
 ## APPROACHING DATA PRIVACY (SMART CONTRACTS)
 * We want to empower customers to demand applications respect their privacy expectations, but we also don’t want to stifle innovation in the development of computer vision technology.
 * To meet the needs of both **we underpin our computer vision applications with a public log that records all events/queries run on the video stream data - “thus the watchers themselves are watched”** 
-* Our system is setup so video stream data remains within a market's walls. Our software lets neighborhood market mgmt perform analysis only in-house, there is no copying or moving of data outside for processing. And even then, mgmt is not given free roam to pick and prod customer data. Instead we provide scripts which let them tease customer records **with a log of every action mgmt took - "thus the wathchers themselves are watched".**  Our privacy system was designed for both research and privacy.  We want to show it's possible to create interesting computer vision applications without sweeping and invasive privacy practices.   I believe the best technology is not worth much without understanding the right social, environmental and governance for it based on community demands.
+* Our system is setup so video stream data remains within a market's walls. Our software lets neighborhood market mgmt perform analysis only in-house, there is no copying or moving of data outside for processing. And even then, mgmt is not given free roam to pick and prod customer data. Instead we provide scripts which let them tease customer records with a log of every action mgmt took - "thus the wathchers themselves are watched".  Our privacy system was designed for both research and privacy.  We want to show it's possible to create interesting computer vision applications without sweeping and invasive privacy practices.   I believe the best technology is not worth much without understanding the right social, environmental and governance for it based on community demands.
 
 ## EXPERIMENTS AND RESULTS
 + Summary Statistics
@@ -80,7 +85,7 @@
 
 ## DISCUSSION
 OPEN ISSUES
-+ **Show it’s possible to get interesting services without invasive privacy practices (NO FACE RECOGNITION)**
++ **Show it’s possible to get interesting services without egregious and invasive privacy practices (NO FACE RECOGNITION)**
 + Better handling the 10% of edge cases - usual cases that are not commmon in training data
 + Highlighting which features in the input most strongly affect its output
 + Branch object persistence models across multiple cameras
@@ -93,7 +98,7 @@ OPEN ISSUES
 + Winter 2018 — Spring 2020 
     + Conceptualizing, Literature Review & Ethnographic Research 
 + Summer 2020 
-    + Proof-of-Concept :  People/Footfall Counter (customers per square feet of square space)
+    + Proof-of-Concept :  People/Footfall Counter that tracks the number of people entering/exiting a building on a Raspberry Pi
     + Alpha :  Tracking Gestures and Classifying Items in Neighborhood Markets 
 + Fall 2020 
     + Beta :  Guests walk into market, pick up items, walk out with items and upon exit a bill is calculated and sent via SMS that asks guests to pay thru their own mobile payment system.
