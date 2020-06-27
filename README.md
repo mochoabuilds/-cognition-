@@ -45,7 +45,7 @@
     + .mp4
 + Output
     + .avi
-yolo23
++ yolo23
     + init__.py
     + centroidtracker.py
     + directioncounter.py
