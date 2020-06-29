@@ -2,20 +2,19 @@
 
 *** COMMENTS GREATLY APPRECIATED *** 
 
-*** ATTACHED CODE IS FOR A PEOPLE/FOOTFALL COUNTER (PROOF OF CONCEPT) *** 
+*** ATTACHED CODE IS FOR A PEOPLE/FOOTFALL COUNTER *** 
 
 ## INTRODUCTION
-+ Hi there! I've long been curious about neighborhood markets (i.e. corner stores, small grocers, bodegas, farmers markets), especially their checkout process. I often ask myself, could it be simpler?  How could we re-engineer checkouts flow to render newfound benefits? (i.e. more social and sustainable).
-+ First hand experience working in a neighborhood market had me hypothesizing IF you were to automate the checkout process THEN staff would be free to perform the kind of beneficial human associations key to healthy neighborhoods.  Associations include: 1) chatting with customers for no specific purpose 2) being the public characters that “keep an eye” on the neighborhood 3) being a “port of entry" for newcomers 4) operational duties 
-+ **Through a combination of ethnography, smart contracts and computer vision I paint my vision of autonomous (cashierless) checkout.**  Its algorithms, trained on data from off-the-shelf overhead cameras, sync specfic points and items in the space with connected actions.  Connected actions include:  walking into market, picking up items, walking out with items and upon exit a bill is calculated and sent via SMS that asks guests to pay thru their own mobile payment system.  Doing this all won't be easy, and we must do it in real-tme, with a high degree of accuracy.
++ Hi there! I've long been curious about neighborhood markets (i.e. corner stores, small grocers, bodegas, farmers markets). I often ask myself, could it be simpler?  **How could we re-engineer checkouts flow to render newfound benefits? (i.e. more social and sustainable).**
++ Working in a neighborhood market had me see guests get hot under the collar about waiting to pay or being unable to find what they want.  My thought is IF you were to automate the checkout process THEN staff would be from free to perform the positive human associations that make shopping more enjoyable and easy.  Associations include: 1) chatting with customers for no specific purpose 2) being the public characters that “keep an eye” on the neighborhood 3) being a “port of entry" for newcomers 4) operational duties 
++ **Through a combination of ethnography, smart contracts and computer vision I paint a picture of autonomous/cashierless checkout.**  Its algorithms, trained on data from off-the-shelf overhead cameras, sync specfic points and items in the space with connected actions as:  walking into market, picking up items, walking out with items and upon exit a bill is calculated and sent via SMS that asks guests to pay thru their own mobile payment system.  
 
 ## ETHNOGRAPHIC RESEARCH ("DATA WRANGLING")
-+ What is ethnographic research? It is firsthand participation in once unfamiliar social circles to pull a sense of what’s relevant in that world.  **Ethnographic data is valuable because there's so little of it a coherent usable format for computer vision models to ask questions.**  I believe if the only people to work with AI/computer vision are those with its formal math-heavy education, then we'll get societal applications from a very narrow perspective.
-+ I undertook approximately 10 months of ethnography in two neighborhood markets to distill the diveristy of the qualitative research into training data tailored to specific neighborhood markets.  What piqued my interest about these two neighborhoods was that that markets layouts and interactions were very different, despite the fact they shared similar economic and demographic characteristics. 
-+ Field Notes:  
++ What is ethnographic research? It is firsthand participation in once unfamiliar social circles to pull a sense of what’s relevant in that world.  **I translate this valuable ethnographic data into a coherent usable format to train computer vision models.**  I undertook approximately 10 months of ethnographic research in two neighborhood markets to collect this training  data. What piqued my interest about these two markets was that their layouts and interactions were very different, despite the fact they shared similar economic and demographic characteristics.  
 
-## COMPUTER VISION
-+ Algorithms divide ethnographic training data into regions, bounding boxes and probabilities that are then integrated into more abstract and analytical efforts (i.e. mixture density networks) to help the system understand the local realities that make things work elsewhere but not here.  **The goal is to train a computer vision system to understand “whose hands are doing what, with what object” in neighborhood markets scenarios.**
+## COMPUTER VISION MODEL
++ The goal is to train a computer vision model to understand “whose hands are doing what, with what object” in neighborhood markets scenarios. Our algorithms divide video input into probabilities and bounding boxes that are then integrated into more abstract and analytical efforts.  
++ **Our software relies on thousands of bits of feedback from human trainers to better understand which choices are closest to the desired behavior. We want our system's "reward function" to come from taking advice from humans in a collaborative process.**  Ideally our computer vision model system will gaze at the world with some empathy.
 
 + A. Feature Extraction - Human Pose Estimation | Who is here? ![1-DsOBzKpVMUULGABMVFdVIg](https://user-images.githubusercontent.com/40745550/82762582-6febd280-9dc7-11ea-90ea-0671e1bf3744.jpeg)
 + B. Gesture Recognition | Whatcha up to? 
@@ -74,32 +73,34 @@
 11 Payment via SMS
 
 ## APPROACHING DATA PRIVACY (SMART CONTRACTS)
-* We want to empower customers to demand applications respect their privacy expectations, but we also don’t want to stifle innovation in the development of computer vision technology.
-* To meet the needs of both **we underpin our computer vision applications with a public log that records all events/queries run on the video stream data - “thus the watchers themselves are watched”** 
-* Our system is setup so video stream data remains within a market's walls. Our software lets neighborhood market mgmt perform analysis only in-house, there is no copying or moving of data outside for processing. And even then, mgmt is not given free roam to pick and prod customer data. Instead we provide scripts which let them tease customer records with a log of every action mgmt took - "thus the wathchers themselves are watched".  Our privacy system was designed for both research and privacy.  We want to show it's possible to create interesting computer vision applications without sweeping and invasive privacy practices.   I believe the best technology is not worth much without understanding the right social, environmental and governance for it based on community demands.
+* We want to empower customers to demand applications respect their privacy expectations, but we also don’t want to stifle innovation in the development of computer vision technology. To meet the needs of both **we underpin our computer vision applications with a public log that records all events/queries run on the video stream data - “thus the watchers themselves are watched”** 
+* Our system is setup so video stream data remains within the hardware itself. Our software lets neighborhood market mgmt perform analysis, but only in-house, there is no copying or moving of data outside for processing. Even then, mgmt is not given free roam to pick and prod customer data. Instead we provide scripts which let them tease customer records with a log of every action mgmt took - "thus the wathchers themselves are watched". We want to show it's possible to create interesting computer vision applications without sweeping and invasive privacy practices.   
 
 ## EXPERIMENTS AND RESULTS
 + Summary Statistics
+    + Accuracy 
+    + Computation Speed
+    + System Requirements
+    + Model Size
+    + Other
 + Datasets and Protocols
 + Results
 
 ## DISCUSSION
 OPEN ISSUES
 + **Show it’s possible to get interesting services without egregious and invasive privacy practices (NO FACE RECOGNITION)**
-+ Better handling the 10% of edge cases - usual cases that are not commmon in training data
-+ Highlighting which features in the input most strongly affect its output
++ Better handling the 10% of "edge cases" (unusual cases that are not commmon in training data)
 + Branch object persistence models across multiple cameras
-+ Better understand the front-back orientation of limbs due to clothing, lighting, background
-+ **Bridge the Edge-Cloud barrier to lower processing power bills** 
-+ Handle changing databases schema, data types and complex objects
++ Better understand the front-back orientation of human limbs due to clothing, lighting, background
++ **Lower processing power bills - bridge the Edge-Cloud barrier, apprenticeship learning, etc.** 
 + Determinine the metrics that improve downstream performance
 
 ## TIMELINE
 + Winter 2018 — Spring 2020 
     + Conceptualizing, Literature Review & Ethnographic Research 
 + Summer 2020 
-    + Proof-of-Concept :  People/Footfall Counter that tracks the number of people entering/exiting a building on a Raspberry Pi
-    + Alpha :  Tracking Gestures and Classifying Items in Neighborhood Markets 
+    + Proof-Of-Concept :  People/Footfall Counter that tracks the number of people entering/exiting a building on a Raspberry Pi
+    + Alpha :  Tracking Gestures and Classifying Items in Neighborhood Markets on a NVIDIA Jetson
 + Fall 2020 
     + Beta :  Guests walk into market, pick up items, walk out with items and upon exit a bill is calculated and sent via SMS that asks guests to pay thru their own mobile payment system.
 
@@ -119,6 +120,14 @@ OPEN ISSUES
   author={Martinez, Julieta and Hossain, Rayat and Romero, Javier and Little, James J.},
   booktitle={ICCV},
   year={2017}
+}
++ @misc{christiano2017deep,
+    title={Deep reinforcement learning from human preferences},
+    author={Paul Christiano and Jan Leike and Tom B. Brown and Miljan Martic and Shane Legg and Dario Amodei},
+    year={2017},
+    eprint={1706.03741},
+    archivePrefix={arXiv},
+    primaryClass={stat.ML}
 }
 
 ## APPENDIX
