@@ -5,15 +5,16 @@
 *** ATTACHED CODE IS FOR A PEOPLE/FOOTFALL COUNTER *** 
 
 ## INTRODUCTION
-+ Hi there! I've long been curious about neighborhood markets (i.e. corner stores, small grocers, bodegas, farmers markets). I often ask myself, could it be simpler?  **How could we re-engineer checkouts flow to render newfound benefits? (i.e. more social and sustainable).**
++ Hi there! I've long been curious about neighborhood markets (i.e. corner stores, small grocers, bodegas, farmers markets). I often ask myself, could it be simpler?  **How could we re-engineer checkouts flow to render newfound benefits? (e.g. more social and sustainable).**
 + Working in a neighborhood market had me see guests get hot under the collar about waiting to pay or being unable to find what they want.  My thought is IF you were to automate the checkout process THEN staff would be from free to perform the positive human associations that make shopping more enjoyable and easy.  Associations include: 1) chatting with customers for no specific purpose 2) being the public characters that “keep an eye” on the neighborhood 3) being a “port of entry" for newcomers 4) operational duties 
 + **Through a combination of ethnography, smart contracts and computer vision I paint a picture of autonomous/cashierless checkout.**  Its algorithms, trained on data from off-the-shelf overhead cameras, sync specfic points and items in the space with connected actions as:  walking into market, picking up items, walking out with items and upon exit a bill is calculated and sent via SMS that asks guests to pay thru their own mobile payment system.  
 
-## ETHNOGRAPHIC RESEARCH ("DATA WRANGLING")
-+ What is ethnographic research? It is firsthand participation in once unfamiliar social circles to pull a sense of what’s relevant in that world.  **I translate this valuable ethnographic data into a coherent usable format to train computer vision models.**  I undertook approximately 10 months of ethnographic research in two neighborhood markets to collect this training  data. What piqued my interest about these two markets was that their layouts and interactions were very different, despite the fact they shared similar economic and demographic characteristics.  
+## ETHNOGRAPHIC RESEARCH ("TRAINING DATA")
++ What is ethnographic research? It is sociological method that uses firsthand participation in once unfamiliar social circles to pull a sense of what’s relevant in that world.  **I translate ethnographic data about neighborhood markets into a coherent usable format to train our computer vision model.** I undertook approximately 10 months of ethnographic research in two neighborhood markets to collect our training data. 
++ Research in computer vision requires a somewhat different set of tools than most scholars are currently equipped with. Scholars need both a deep understanding of computer vision, but they also need to understand how institutional structures of neighborhood markets.  Because of their complexity, collaborations with other disciplines (e.g. sociology, law and economics) needs to be the norm. If researchers want to contribute to the great problems of the day, scholarship must move in a cross-disciplinary direction.
 
 ## COMPUTER VISION MODEL
-+ The goal is to train a computer vision model to understand “whose hands are doing what, with what object” in neighborhood markets scenarios. Our algorithms divide video input into probabilities and bounding boxes that are then integrated into more abstract and analytical efforts.  
++ The goal is to train our computer vision model to understand “whose hands are doing what, with what object” in neighborhood markets scenarios. Our algorithms divide video input into probabilities and bounding boxes that are then integrated into more abstract and analytical efforts.  
 + **Our software relies on thousands of bits of feedback from human trainers to better understand which choices are closest to the desired behavior. We want our system's "reward function" to come from taking advice from humans in a collaborative process.**  Ideally our computer vision model system will gaze at the world with some empathy.
 
 + A. Feature Extraction - Human Pose Estimation | Who is here? ![1-DsOBzKpVMUULGABMVFdVIg](https://user-images.githubusercontent.com/40745550/82762582-6febd280-9dc7-11ea-90ea-0671e1bf3744.jpeg)
@@ -74,7 +75,7 @@
 
 ## APPROACHING DATA PRIVACY (SMART CONTRACTS)
 * We want to empower customers to demand applications respect their privacy expectations, but we also don’t want to stifle innovation in the development of computer vision technology. To meet the needs of both **we underpin our computer vision applications with a public log that records all events/queries run on the video stream data - “thus the watchers themselves are watched”** 
-* Our system is setup so video stream data remains within the hardware itself. Our software lets neighborhood market mgmt perform analysis, but only in-house, there is no copying or moving of data outside for processing. Even then, mgmt is not given free roam to pick and prod customer data. Instead we provide scripts which let them tease customer records with a log of every action mgmt took - "thus the wathchers themselves are watched". We want to show it's possible to create interesting computer vision applications without sweeping and invasive privacy practices.   
+* Our system is setup so video stream data remains within the hardware itself. Our software lets neighborhood market mgmt perform analysis, but only in-house, there is no copying or moving of data outside for processing. Even then, mgmt is not given free roam to pick and prod customer data. Instead we provide scripts which let them tease customer records with a log of every action mgmt took. We want to show it's possible to create interesting computer vision applications without sweeping and invasive privacy practices.   
 
 ## EXPERIMENTS AND RESULTS
 + Summary Statistics
