@@ -48,3 +48,35 @@ ap.add_argument("s", "--skip-frames", type=int, default=40
   help="# of skip frames between detections"
 
 # if video path empty, pull a reference from webcam
+if not args.get("input", False):
+  
+  # start a video stream              
+  print("[INFO] running video stream...")      
+  vs = VideoStream(usePiCamera=True).start()
+  time.sleep(2.0)
+                
+# otherwise, grab a reference to video file
+else:
+  print("[INFO] opening video file...")
+  vs = cv2.VideoCapture(args["input"])
+  
+# run video writing process object with specified frame dimensions
+writerProcess = None
+W = None
+H = None 
+
+# run centroid tracker, then build a list to store dlib correlation trackers,
+# followed by dictionary to map each object ID to trackable object
+ct = CentroidTracker(maxDisappeared=15, maxDistance=100)
+trackers = []
+trackableObjects = {}
+                
+# build the directional info variable
+directionInfo = None
+                
+# run the foreground background subtractor and 
+# build the fps counter
+mog = cv2.bgsegm.createBackgroundSubtractorMOG()
+fps = FPS().start()
+
+# loop over frames from video steam
