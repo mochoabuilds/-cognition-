@@ -80,3 +80,19 @@ mog = cv2.bgsegm.createBackgroundSubtractorMOG()
 fps = FPS().start()
 
 # loop over frames from video steam
+while True:
+  # grab frame and index depending on if it is web cam or webcam or video stream
+  frame = vs.read()
+  frame = frame[1] if args.get("input", False) else frame
+
+  # if viewing video and no frames grabbed then end of the video reached
+  if args["input"] is not None and frame is None:
+    break
+
+  # set the frame dimensions and run direction counter
+  # object if required
+  if W is None or H is None:
+  (H, W) = frame.shape[:2]
+  dc = DirectionCounter(args["mode"], H, W)
+
+  # begin writing video to disk, if needed
