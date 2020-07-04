@@ -8,12 +8,19 @@
 + **Through a combination of ethnography, a public log and computer vision we paint a picture of autonomous (cashierless) checkout.**  Its algorithms, trained on data from off-the-shelf overhead cameras, sync specfic points and items in the space with connected actions such as:  walking into market, picking up items, walking out with items and upon exit calculating a bill that is sent via SMS to guests asking them to pay thru their own mobile payment system. **The concept is beautifully simple: make checkout so easy it feels you're stealing.
  
 ## I. ETHNOGRAPHIC RESEARCH (TRAINING DATA)
-+ What is ethnographic research? It is sociological method of firsthand participation in once unfamiliar social circles to pull a sense of what’s relevant in that world.  I explore "what is the impact of neighborhood identity on decision making", and "how the effects of emotional state play into decision making processes". I undertook approximately 10 months of ethnographic field work in two neighborhood markets to collect training data.  
-+ **I then translate these ethnographic field notes / sensory impressions into a coherent usable format to train computer vision models to understand "whose hands are doing what, with what object" in neighborhood markets scenarios.**
-+ We believe computer vision research requires a somewhat different set of tools than most scholars are currently equipped with.  In the case of neighborhood markets, they need both a deep understanding of computer vision, and researchers need to understand the social and environmental structures of each respective space.  Because of this dual complexity, collaborations with other disciplines (e.g. sociology, economics, law) needs to be the norm. If computer vision scholars want to contribute to the great problems of the day, research must move in an intrinsic and long-term minded direction.
++ What is ethnographic research? It is sociological method of firsthand participant obsevation in once unfamiliar social circles to pull a sense of:
++ relevant details
++ sensory impressions: sight, sounds, textrures, smells, tastes, emotional states
++ personal responses 
++ insider language
++ questions about behaviors, neighborhood identities
++ jottings 
+ 
++ + I undertook approximately 10 months of ethnographic field work in two neighborhood markets to collect training data.  **I then translated these field notes into a coherent usable format to train computer vision models to understand "whose hands are doing what, with what object" in neighborhood markets scenarios.**
++ I believe training a computer vision research requires a somewhat different set of tools than most engineers are currently equipped with.  In the case of neighborhood markets, they need both a deep understanding of computer vision, and they need to understand the social and environmental structures of each respective space.  Because of this dual complexity, collaborations with other disciplines (e.g. sociology, economics, law) needs to be the norm. If computer vision engineers want to contribute to the great problems of the day, research must move in an intrinsic and long-term minded direction.
 
 ## II. COMPUTER VISION MODEL
-+ After translating ethnographic data into a usable format we train a computer vision model to rely on probabilities, bounding boxes and thousands of bits of feedback from human preferences to better understand which choices are closest to the desired behavior.  **We want our system's "reward function" to come from taking advice from humans in a collaborative process.**  Ideally our computer vision model system will learn to gaze at the world with some empathy.  
++ After translating ethnographic data into a usable format I train a computer vision model to rely on probabilities, bounding boxes and thousands of bits of feedback from human preferences to better understand which choices are closest to the desired behavior.  **We want our system's "reward function" to come from taking advice from humans in a collaborative process.**  Ideally our computer vision model system will learn to gaze at the world with some empathy.  
 
 ## III. PUBLIC LOG (DATA PRIVACY)
 * We want to empower people to demand applications respect their privacy expectations, yet we also don’t want to stifle innovation in the development of computer vision technology. To meet the needs of both **we underpin our computer vision application with a public log that records all events and queries run on the video stream data.**  
