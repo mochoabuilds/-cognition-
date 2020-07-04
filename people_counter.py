@@ -2,19 +2,19 @@ import yolo23.directioncounter import DirectionCounter
 import yolo23.centroid tracker import CentroidTracker
 import yolo23.trackableobject import TrackableObject
 from multiprocessing import Process
-from 
-from 
-from
-from
+## from 
+## from 
+## from
+## from
 import argparse  
 import imutils 
 import time  
 import cv 2  
 
-# recipe for video writing process
+# "recipe" for video writing process
 def write_video(outputPath, writeVideo, frameQueue, W, H):
   
-  # set up the necessary data formats and video writer object
+  # set up necessary data formats and video writer object
   fourcc = cv2.VideoWriter_fourcc(*"MJPG")
  
   # set up video writer to write frames as they become avalaible 
@@ -44,10 +44,10 @@ ap.add_argument("i", "--input", type=str,
 ap.add_argument("-o", "--output", type=str,
   help="path to output video file")
 ap.add_argument("s", "--skip-frames", type=int, default=40
-  # skips frames used to improve efficiency              
+  # skips frames to improve efficiency              
   help="# of skip frames between detections"
 
-# if video path empty, pull a reference from webcam
+# if video path is empty, pull a reference from webcam
 if not args.get("input", False):
   
   # start a video stream              
@@ -55,7 +55,7 @@ if not args.get("input", False):
   vs = VideoStream(usePiCamera=True).start()
   time.sleep(2.0)
                 
-# otherwise, grab a reference to video file
+# otherwise, grab a reference from video file
 else:
   print("[INFO] opening video file...")
   vs = cv2.VideoCapture(args["input"])
@@ -74,18 +74,19 @@ trackableObjects = {}
 # build the directional info variable
 directionInfo = None
                 
-# run the foreground background subtractor and 
+# run the foreground background subtractor, 
 # build the fps counter
 mog = cv2.bgsegm.createBackgroundSubtractorMOG()
 fps = FPS().start()
 
 # loop over frames from video steam
 while True:
-  # grab frame and index depending on if it is web cam or webcam or video stream
+                
+  # grab frame, and index based on if webcam or video stream
   frame = vs.read()
   frame = frame[1] if args.get("input", False) else frame
 
-  # if viewing video and no frames grabbed then end of the video reached
+  # if viewing video and no frames grabbed then end of the video has been reached
   if args["input"] is not None and frame is None:
     break
 
