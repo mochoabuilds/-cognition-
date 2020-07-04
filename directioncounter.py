@@ -7,14 +7,14 @@ class DirectionCounter:
     self.H = H
     self.W = W
      
-    # set up variables and counters for bottom-to-top and right-to-left movement
+    # set up variables and counters for bottom-to-top & right-to-left movement
     self.directionMode = directionMode
     self.totalUp = 0
     self.totalDown = 0
     self.totalRight = 0
     self.totalLeft = 0
      
-    # set up variable holding directional movement
+    # set up variable for directional movement
     self.direction = ""
      
   def find_direction(self, to, centroid):
@@ -24,7 +24,7 @@ class DirectionCounter:
       
       # pull x-coordinate from current centroids and calculate difference 
       # between current and averages of all previous centroids to show direction
-      # (negative for left movement, postive for right)
+      # (negative for left movement & postive for right)
       x = [c[0] for c in to.centroids]
       delta = centroid[0] - np.mean(x)
     
@@ -36,12 +36,12 @@ class DirectionCounter:
     elif delta > 0:
       self.direction = "right"
       
-  # otherwise, tracking vertical movements
+  # otherwise, track vertical movements
   elif self.directionMode == "vertical":
     
     # pull y-coordinate from current centroids and calculate difference
     # between current and averages of all previous centroids to show direction
-    # (negative for up, positive for down)
+    # (negative for up & positive for down)
     v = [c[1] for c in to.centroids]
     delta = centroid[1] - np.mean(y)
     
@@ -53,7 +53,7 @@ class DirectionCounter:
     elif delta > 0:
         self.direction = "down"
   
-  # function that performs the actual counting
+  # perform the actual counting
   def count_object(self, to, centroid):
     
     # run the output list
@@ -97,8 +97,5 @@ class DirectionCounter:
         # build list of tuples with object counts in the up and down directions
         output =[("Up", self.totalUp), ("Down", self.totalDown)]
     
-    # return dat output list
+    # return output list
     return output    
-        
-        
-    
