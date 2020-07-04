@@ -1,29 +1,29 @@
 *** WORKING PAPER ***
 
-*** COMMENTS GREATLY APPRECIATED *** 
-
-*** ATTACHED CODE IS FOR A PEOPLE/FOOTFALL COUNTER *** 
+*** CODE IS FOR A PEOPLE/FOOTFALL COUNTER *** 
 
 ## INTRODUCTION
-+ Hi there! I've long been curious about neighborhood markets (i.e. corner stores, small grocers, bodegas, farmers markets). I often ask myself, could it be simpler?  **How could we redesign the flow of checkout to render newfound benefits?** 
++ Hi there! I've long been curious about neighborhood markets (i.e. corner stores, bakeries, food stores, small pharmacies). I often ask myself, could checkout be simpler?  How could we redesign the flow of it to render newfound benefits?
 + My thought is IF you were to automate checkout THEN staff would be free to: 1) chat with customers for no specific purpose 2) be the public characters that “keep an eye” on the neighborhood 3) be a “port of entry" for newcomers 4) make shopping more enjoyable and easy
-+ **Through a combination of I. ethnography, II. smart contracts and III. computer vision models we paint a picture of autonomous (cashierless) checkout.**  Its algorithms, trained on data from off-the-shelf overhead cameras, sync specfic points and items in the space with connected actions such as:  walking into market, picking up items, walking out with items and upon exit a bill is calculated and sent via SMS to guests asking them to pay thru their own mobile payment system.  
++ **Through a combination of ethnography, a public log and computer vision we paint a picture of autonomous (cashierless) checkout.**  Its algorithms, trained on data from off-the-shelf overhead cameras, sync specfic points and items in the space with connected actions such as:  walking into market, picking up items, walking out with items and upon exit calculating a bill that is sent via SMS to guests asking them to pay thru their own mobile payment system. **The concept is beautifully simple: make checkout so easy it feels you're stealing.
  
 ## I. ETHNOGRAPHIC RESEARCH (TRAINING DATA)
-+ What is ethnographic research? It is sociological method that uses firsthand participation in once unfamiliar social circles to pull a sense of what’s relevant in that world.  I undertook approximately 10 months of ethnographic research in two neighborhood markets to collect our training data.  **My research translates ethnographic field notes into a coherent usable format to train computer vision models.**
-+ We beleive computer vision research requires a somewhat different set of tools than most scholars are currently equipped with.  They need both a deep understanding of computer vision, and they also need to understand the institutional structures of neighborhood markets.  Because of this dual complexity, collaborations with other disciplines (e.g. sociology/ethnography, law and economics) needs to be the norm. If scholars want to contribute to the great problems of the day, research must move in a cross-disciplinary direction.
++ What is ethnographic research? It is sociological method of firsthand participation in once unfamiliar social circles to pull a sense of what’s relevant in that world.  I explore "what is the impact of neighborhood identity on decision making", and "how the effects of emotional state play into decision making processes". I undertook approximately 10 months of ethnographic field work in two neighborhood markets to collect training data.  
++ **I then translate these ethnographic field notes / sensory impressions into a coherent usable format to train computer vision models to understand "whose hands are doing what, with what object" in neighborhood markets scenarios.**
++ We believe computer vision research requires a somewhat different set of tools than most scholars are currently equipped with.  In the case of neighborhood markets, they need both a deep understanding of computer vision, and researchers need to understand the social and environmental structures of each respective space.  Because of this dual complexity, collaborations with other disciplines (e.g. sociology, economics, law) needs to be the norm. If computer vision scholars want to contribute to the great problems of the day, research must move in an intrinsic and long-term minded direction.
 
-## II. SMART CONTRACTS (APPROACHING DATA PRIVACY)
-* We want to empower people to demand applications respect their privacy expectations, but we also don’t want to stifle innovation in the development of computer vision technology. To meet the needs of both **we underpin our computer vision application with a public log that records all events/queries run on the video stream data.**
-* Our system is setup so video stream data remains in the hardware itself. Our edge-cloud software lets neighborhood market mgmt perform analysis, but only in-house, there is no copying or moving of data outside for processing. And even then, mgmt is not given free roam to pick and prod customer data. Instead we provide scripts which lets mgmt tease guest records with a log of every action they taken - “thus the watchers themselves are watched”. We want to show it's possible to create interesting computer vision applications without sweeping and invasive privacy practices.  
+## II. COMPUTER VISION MODEL
++ After translating ethnographic data into a usable format we train a computer vision model to rely on probabilities, bounding boxes and thousands of bits of feedback from human preferences to better understand which choices are closest to the desired behavior.  **We want our system's "reward function" to come from taking advice from humans in a collaborative process.**  Ideally our computer vision model system will learn to gaze at the world with some empathy.  
 
-## III. COMPUTER VISION MODEL
-+ Using translated ethnographic data we train a computer vision model to understand “whose hands are doing what, with what object” in neighborhood markets scenarios. **Our software relies on probabilities, bounding boxes and thousands of bits of feedback from human preferences to better understand which choices are closest to the desired behavior. We want our system's "reward function" to come from taking advice from humans in a collaborative process.**  Ideally our computer vision model system will gaze at the world with some empathy.
+## III. PUBLIC LOG (DATA PRIVACY)
+* We want to empower people to demand applications respect their privacy expectations, yet we also don’t want to stifle innovation in the development of computer vision technology. To meet the needs of both **we underpin our computer vision application with a public log that records all events and queries run on the video stream data.**  
+* Our setup means video stream data stay on the hardware/camera itself. Our edge-cloud software lets neighborhood market staff/mgmt perform analysis, but only in-house, there is no copying or moving of data outside for processing.  Even then, staff/mgmt is not given free roam to pick and prod customer data. Instead we provide scripts which lets them tease guest records with a log of every action taken - “thus the watchers themselves are watched”. We want to show it's possible to create interesting computer vision applications without hellish privacy practices. The idea is still in its infancy.  There is plenty of room for improvement.
 
 ## BRINGING IT ALL TOGETHER
 01 Installing Required Packages and Libraries (part one)
 + Python
 + OpenCV https://opencv.org/
++ dlib http://dlib.net/a
 
 02 Configuring Edge Computing Device
 + Prep
@@ -35,14 +35,14 @@
 + Code
 + Notes
 
-04 Footfall/People Counter Project Structure 
+04 Footfall/People Counter Project 
 + Videos
     + .avi
     + .mp4
     + .mp4
 + Output
     + .avi
-+ yolo23
++ cognition
     + init__.py
     + centroidtracker.py
     + directioncounter.py
@@ -53,7 +53,6 @@
 + scikit-image https://scikit-image.org/
 + scikit-learn https://scikit-learn.org/stable/index.html
 + Numpy https://numpy.org/install/
-+ dlib http://dlib.net/
 + Keras https://keras.io/
 + Tensorflow https://www.tensorflow.org/
 + Caffe http://caffe.berkeleyvision.org/
@@ -65,7 +64,7 @@
 
 08 Training and Deploying a Custom Objects Classifier | Whatcha holdin?
 
-09 Temporal Association | Who has what?
+09 **Temporal Association | Who has what?**
 
 10 Action Analysis Based on Location | SMS Notification for Payment
 
@@ -82,23 +81,23 @@
 ## DISCUSSION
 OPEN ISSUES
 + **Show it’s possible to get interesting services without egregious and invasive privacy practices (NO FACE RECOGNITION)**
-+ Better handling the 10% of "edge cases" (unusual cases that are not commmon in training data)
++ Better handle the 10% of "edge cases" (unusual cases that are not commmon in training data)
 + Branch object persistence models across multiple cameras
 + Better understand the front-back orientation of human limbs due to clothing, lighting, background
-+ **Lower processing power bills - bridge the Edge-Cloud barrier, apprenticeship learning, etc.** 
++ **Lower processing power bills/energy use - bridge the Edge-Cloud barrier!
 + Determinine the metrics that improve downstream performance
 
 ## TIMELINE
 + Winter 2018 — Spring 2020 
     + Conceptualizing, Literature Review & Ethnographic Research 
 + Summer 2020 
-    + Proof-Of-Concept:  People/Footfall Counter that tracks the number of people entering/exiting a building on a Raspberry Pi
-    + Alpha:  Tracking Gestures and Classifying Items in Neighborhood Market Scenarios on a NVIDIA Jetson
+    + Proof-Of-Concept:  People/Footfall Counter that tracks the number of people entering/exiting a room on a Raspberry Pi
+    + Alpha:  Tracking Gestures and Classifying Items in Neighborhood Market Scenarios on a tbd device
 + Fall 2020 
-    + Beta:  Guests walk into market, pick up items, walk out with items and upon exit a bill is calculated and sent via SMS that ask guests to pay thru their own mobile payment system.  
- 
+    + Beta:  Autonomous (Cashierless) Checkout 
+    + Features:  Inventory Assistant, Purchasing Assistant
+
 ## SANDBOX
-+ Reliability planning: recovering gracefully from internet/power outages
 + How will the profits that accrue from increasing automation be reinvested back into communities for collective gain?
 
 ## BIBLIOGRAPHY
