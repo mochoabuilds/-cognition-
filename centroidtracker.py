@@ -1,15 +1,18 @@
+#    RECIPE
+#
 # 1  establish bounding box coordiantes and determine centroids
 # 2  compute Euclidean distance between bounding boxes and old objects
 # 3  update coordinates of old objects
 # 4  register new objects 
-# 5  deregister old/lost objects that left the view
+# 5  de-register old/lost objects that left the view
 
-# import packages
+
 from scipy.spatial import distance as dist
 from collections import OrderedDict
 import numpy as np
 
 class CentroidTracker: 
+	
 # build class variables
 def __init__(self, maxDisappeared=  , maxDistance=  ):
 	
@@ -59,7 +62,7 @@ def update(self, rects):
 		# return early if no centroid or tracking info to update
 		return self.objects
 	
-	# initialize a NumPy array to store centroids for each rect
+	# initialize a NumPy array to store centroids for each rectangle
 	inputCentroids = np.zeros((len(rects), 2), dtype="int")
 	
 # loop over bounding box rectangles 
@@ -93,7 +96,7 @@ else:
 	# perform marching on columns
 	cols = D.argmin(axis=1)[rows]
 	
-	# initialize two sets to keep track of which rows and columns looked at
+	#  set up two sets to keep track of which rows and columns looked at
 	used Rows = set ()
 	used Cols = set ()
 	
@@ -108,8 +111,8 @@ else:
 	if D[row, col] > self.maxDistance:
 		continue 
 		
-	# we are then left with the smallest Euclidean distances.  we pull their object ID for 
-	# the row, set its new centroid and reset our disappeared counter
+	# we are then left with the smallest Euclidean distances. we pull their object ID for 
+	# the row, set its new centroid and reset our "disappeared" counter
 	objectID = objectIDs[row]
 	self.objects[objectID] = inputCentroids[col]
 	self.disappeared[objectID] = 0
@@ -118,18 +121,18 @@ else:
 	usedRows.add(row)
 	usedCols.add(col)
 	
-	# compute row and column index for sets we have not yet looked at
+	# compute row and column indexing for sets we have not yet looked at
 	unusedRows = set(range(0, D.shape[0])).difference(usedRows)
 	unusedCols = set(range(0, D.shape[1])).difference(usedCols)
 	
 	# check if objects have "disappeared" or have been lost
-	# helpful when object centroids are greater than equal to input centroids
+	# why? helpful when object centroids are greater than equal to input centroids
 	if D.shape[0] >= D.shape[1]:
 		
 		# loop over unused row indexes
 		for row in unusedRows:
 		
-			# pull object ID for related row and increment our disppeared counter
+			# pull object ID for related row and increment our "disppeared" counter
 			objectID = objectIDs[row]
 			self.disappeared[objectID] += 1
 			
@@ -137,8 +140,8 @@ else:
 			if self.disappeared[objectID] > self.maxDisappeared:
 				self.deregister(objectID)
 		
-		# otherwise, if # of input centroids are greater than existing # of objects 
-		# then loop over new centroids and register and track em		 
+		# otherwise, if number of input centroids > existing # of objects 
+		# then loop over new centroids and register and start tracking them 		 
 			for col in unusedcols:
 				self.register(inputCentroids[cols])
 			
