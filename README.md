@@ -3,8 +3,7 @@
 *** ATTACHED CODE IS FOR A PEOPLE/FOOTFALL COUNTER *** 
 
 ## INTRODUCTION
-+ Hi there! I've longgg been curious about neighborhood markets (i.e. corner stores, bakeries, food stores, small pharmacies). I often ask myself, could the checkout process be simpler? 
-+ My thought is, IF you automate checkout THEN staff will be free to: 1) chat with customers for no specific purpose 2) be the public characters that “keep an eye” on the neighborhood 3) be a “port of entry" for newcomers 4) operational duties
++ Hi there! I've longgg been curious about neighborhood markets (i.e. corner stores, bakeries, food stores, small pharmacies). I often ask myself, could the checkout process be simpler? My thought is, IF you automate checkout THEN staff will be free to: 1) chat with customers for no specific purpose 2) be the public characters that “keep an eye” on the neighborhood 3) be a “port of entry" for newcomers 4) operational duties
 + Through a combination of ethnography, a public log and computer vision we show easy and enjoyable autonomous checkout could be.  **The concept is beautifully simple: make checkout so easy it feels you're stealing.**  
 + Our algorithms, trained on translated ethnographic data and video stream data from off-the-shelf overhead cameras, sync specfic points and items in a space with classifications across 400+ action classes (e.g. guests walk in, guest picks up items, guest walks out with items and upon exit a bill is sent via SMS to guests asking them to pay thru their own mobile payment system).
 
@@ -83,7 +82,7 @@
 
 10 Action Analysis Based on Location | SMS Notification for Payment
 
-## EXPERIMENTS AND RESULTS
+## V. EXPERIMENTS AND RESULTS
 + Summary Statistics
     + Accuracy 
     + Computation Speed
