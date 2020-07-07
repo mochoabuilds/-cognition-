@@ -1,25 +1,35 @@
 *** WORKING PAPER ***
 
-*** CODE IS FOR A PEOPLE/FOOTFALL COUNTER *** 
+*** ATTACHED CODE IS FOR A PEOPLE/FOOTFALL COUNTER *** 
 
 ## INTRODUCTION
-+ Hi there! I've long been curious about neighborhood markets (i.e. corner stores, bakeries, food stores, small pharmacies). I often ask myself, could checkout be simpler?  How could we redesign the flow of it to render newfound benefits?
-+ My thought is IF you were to automate checkout THEN staff would be free to: 1) chat with customers for no specific purpose 2) be the public characters that “keep an eye” on the neighborhood 3) be a “port of entry" for newcomers 4) make shopping more enjoyable and easy
-+ **Through a combination of ethnography, a public log and computer vision we paint a picture of autonomous (cashierless) checkout.**  Its algorithms, trained on data from off-the-shelf overhead cameras, sync specfic points and items in the space with connected actions such as:  walking into market, picking up items, walking out with items and upon exit calculating a bill that is sent via SMS to guests asking them to pay thru their own mobile payment system. **The concept is beautifully simple: make checkout so easy it feels you're stealing.
++ Hi there! I've long been curious about neighborhood markets (i.e. corner stores, bakeries, food stores, small pharmacies). I often ask myself, could the checkout process be simpler? 
++ My thought is, IF you automate checkout THEN staff will be free to: 1) chat with customers for no specific purpose 2) be the public characters that “keep an eye” on the neighborhood 3) be a “port of entry" for newcomers 4) make the guest shopping more enjoyable and easy
++ Through a combination of ethnography, a public log and computer vision we paint our picture of autonomous (cashierless) checkout.  **The concept is beautifully simple: make checkout so easy it feels you're stealing.**  Guests walk in, pickup items, walk out with items and upon exit a bill is send via SMS to guests asking them to pay thru their own mobile payment system. Our algorithms, trained on translated ethnographic data and video stream data from off-the-shelf overhead cameras, sync specfic points and items in a space with action classes such as:  guests walking into market, guests picking up items, guests  walking out with items and upon exit calculating a bill that is sent via SMS to guests asking them to pay thru their own mobile payment system. 
+
+## TIMELINE
++ Winter 2018 — Spring 2020 
+    + Conceptualizing, Literature Review & Ethnographic Research 
++ Summer 2020 
+    + Proof-Of-Concept:  People/Footfall Counter that tracks the number of people entering/exiting a room 
+    + Alpha:  Tracking Gestures and Classifying Items in Neighborhood Market Scenarios 
++ Fall 2020 
+    + Beta:  Autonomous (Cashierless) Checkout 
+    + Features:  Inventory Assistant & Purchasing Assistant
  
-## I. ETHNOGRAPHIC RESEARCH (TRAINING DATA)
-+ I believe training a computer vision research requires a somewhat different set of tools than most engineers are currently equipped with.  In the case of neighborhood markets, they need both a deep understanding of computer vision, and they need to understand the social and environmental structures of each respective space.  Because of this dual complexity, collaborations with other disciplines (e.g. sociology, economics, law) needs to be the norm. If computer vision engineers want to contribute to the great problems of the day, research must move in an intrinsic and long-term minded direction.
-+ What is ethnographic research? It is sociology method of firsthand participant obsevation in once unfamiliar social circles to pull a sense of what's relevant in that world. Observations include: sensory impressions, personal responses, insider language, questions about behaviors, neighborhood identities, jottings, etc. 
-+  I undertook approximately 10 months of ethnographic field work in two neighborhood markets to collect training data.  **I then translated these observations into a coherent usable format to train a computer vision model.
+## I. PARTICIPANT OBSERVATION (ETHNOGRAPHY)
++ I believe training a computer vision model requires a somewhat different set of tools than most engineers are currently equipped with.  In the case of neighborhood markets, they need a deep understanding of computer vision and the social and environmental structures of each respective space.  Because of this dual complexity, collaborations with other disciplines needs to be the norm. If computer vision engineers want to contribute to the great problems of the day, research must move in an intrinsic, interdisciplinary and long-term minded direction.
++ What is ethnographic research? It is sociological method of firsthand participant obsevation in once unfamiliar social circles to pull a sense of what's relevant in that world. Ethnographic data includes: sensory impressions, personal responses, insider language, questions about behaviors, neighborhood identities, jottings, etc. 
++  I undertook approximately 10 months of ethnographic data collection work in two neighborhood markets for training data.  **I then translated this data  into a coherent usable format to train computer vision models.
 
 ## II. COMPUTER VISION MODEL
-+ On translated ethnographic field notes I train a computer vision model to rely on probabilities, bounding boxes and thousands of bits of feedback from human preferences to understand which choices are closest to the desired behavior.  **We want our system's "reward function" to come from taking advice from humans in a collaborative process.**  Ideally our computer vision model system will learn to gaze at the world with some empathy.  
++ I train a computer vision model to rely on translated ethnographic data, probabilities, bounding boxes and thousands of bits of feedback from human preferences to understand which choices are closest to the desired behavior.  We want our system's "reward function" to come from taking advice from humans in a collaborative process. Ideally our computer vision model system will learn to gaze at the world with some empathy.  
 
 ## III. PUBLIC LOG (DATA PRIVACY)
-* We want to empower people to demand applications respect their privacy expectations, yet we also don’t want to stifle innovation in the development of computer vision technology. To meet the needs of both **we underpin our computer vision application with a public log that records all events and queries run on the video stream data.**  
-* Our setup means video stream data stay on the hardware/camera itself. Our edge-cloud software lets neighborhood market staff/mgmt perform analysis, but only in-house, there is no copying or moving of data outside for processing.  Even then, staff/mgmt is not given free roam to pick and prod customer data. Instead we provide scripts which lets them tease guest records with a log of every action taken - “thus the watchers themselves are watched”. We want to show it's possible to create interesting computer vision applications without hellish privacy practices. The idea is still in its infancy.  There is plenty of room for improvement.
+* We want to empower people to demand computer vision applications respect their privacy expectations, but we also don’t want to stifle innovation in the development of this technology. To meet the needs of both **we underpin our computer vision applications with a public log that records all events and queries run on the video stream data.**  
+* Our setup means video stream data stays on the hardware/camera itself. Our edge-cloud software lets neighborhood market staff/mgmt perform analysis, but only in-house, there is no copying or moving of data outside for processing. Even then, staff/mgmt is not given free roam to pick and prod customer data. **We provide scripts which lets staff/mgmt tease guest records with a log of every action taken, “thus the watchers themselves are watched”.** We want to show it's possible to create interesting computer vision applications without hellish privacy practices. The idea is still in its infancy.  There is plenty of room for improvement.
 
-## BRINGING IT ALL TOGETHER
+## IV. BRINGING IT ALL TOGETHER
 01 Installing Required Packages and Libraries (part one)
 + Python
 + OpenCV https://opencv.org/
@@ -64,7 +74,7 @@
 
 08 Training and Deploying a Custom Objects Classifier | Whatcha holdin?
 
-09 **Temporal Association | Who has what?**
+09 Temporal Association | Who has what?
 
 10 Action Analysis Based on Location | SMS Notification for Payment
 
@@ -81,24 +91,14 @@
 ## DISCUSSION
 OPEN ISSUES
 + **Show it’s possible to get interesting services without egregious and invasive privacy practices (NO FACE RECOGNITION)**
-+ Better handle the 10% of "edge cases" (unusual cases that are not commmon in training data)
++ Better handle the 10% of "edge cases" (unusual cases that are not common in training data)
 + Branch object persistence models across multiple cameras
 + Better understand the front-back orientation of human limbs due to clothing, lighting, background
 + **Lower processing power bills/energy use - bridge the Edge-Cloud barrier!
-+ Determinine the metrics that improve downstream performance
-
-## TIMELINE
-+ Winter 2018 — Spring 2020 
-    + Conceptualizing, Literature Review & Ethnographic Research 
-+ Summer 2020 
-    + Proof-Of-Concept:  People/Footfall Counter that tracks the number of people entering/exiting a room on a Raspberry Pi
-    + Alpha:  Tracking Gestures and Classifying Items in Neighborhood Market Scenarios on a tbd device
-+ Fall 2020 
-    + Beta:  Autonomous (Cashierless) Checkout 
-    + Features:  Inventory Assistant, Purchasing Assistant
++ Determine the metrics that improve downstream performance
 
 ## SANDBOX
-+ How will the profits that accrue from increasing automation be reinvested back into communities for collective gain?
++ How will the profits that accrue from increasing automation be reinvested back into communities for collective gain? (WORKING ON POLICY MEMORANDUM)
 
 ## BIBLIOGRAPHY
 + The Great Good Place by Roy Oldenburg (1989)
