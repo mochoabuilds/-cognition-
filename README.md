@@ -5,7 +5,7 @@
 ## INTRODUCTION
 + Hi there! I've long been curious about neighborhood markets (i.e. corner stores, bakeries, food stores, small pharmacies). I often ask myself, could the checkout process be simpler? 
 + My thought is, IF you automate checkout THEN staff will be free to: 1) chat with customers for no specific purpose 2) be the public characters that “keep an eye” on the neighborhood 3) be a “port of entry" for newcomers 4) make the guest shopping more enjoyable and easy
-+ Through a combination of ethnography, a public log and computer vision we paint our picture of autonomous (cashierless) checkout.  **The concept is beautifully simple: make checkout so easy it feels you're stealing.**  Guests walk in, pickup items, walk out with items and upon exit a bill is send via SMS to guests asking them to pay thru their own mobile payment system. Our algorithms, trained on translated ethnographic data and video stream data from off-the-shelf overhead cameras, sync specfic points and items in a space with action classes such as:  guests walking into market, guests picking up items, guests  walking out with items and upon exit calculating a bill that is sent via SMS to guests asking them to pay thru their own mobile payment system. 
++ Through a combination of ethnography, a public log and computer vision we paint our picture of autonomous (cashierless) checkout.  **The concept is beautifully simple: make checkout so easy it feels you're stealing.**  Our algorithms, trained on translated ethnographic data and video stream data from off-the-shelf overhead cameras, sync specfic points and items in a space with classifications across 400+ action classes (i.e. guests walk in, pickup items, walk out with items and upon exit a bill is send via SMS to guests asking them to pay thru their own mobile payment system).
 
 ## TIMELINE
 + Winter 2018 — Spring 2020 
@@ -98,7 +98,7 @@ OPEN ISSUES
 + Determine the metrics that improve downstream performance
 
 ## SANDBOX
-+ How will the profits that accrue from increasing automation be reinvested back into communities for collective gain? (WORKING ON POLICY MEMORANDUM)
++ How will the profits that accrue from increasing automation be reinvested back into communities for collective gain? (POLICY MEMORANDUM IN PROGRESS)
 
 ## BIBLIOGRAPHY
 + The Great Good Place by Roy Oldenburg (1989)
