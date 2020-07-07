@@ -3,9 +3,10 @@
 *** ATTACHED CODE IS FOR A PEOPLE/FOOTFALL COUNTER *** 
 
 ## INTRODUCTION
-+ Hi there! I've long been curious about neighborhood markets (i.e. corner stores, bakeries, food stores, small pharmacies). I often ask myself, could the checkout process be simpler? 
-+ My thought is, IF you automate checkout THEN staff will be free to: 1) chat with customers for no specific purpose 2) be the public characters that “keep an eye” on the neighborhood 3) be a “port of entry" for newcomers 4) make the guest shopping more enjoyable and easy
-+ Through a combination of ethnography, a public log and computer vision we paint our picture of autonomous (cashierless) checkout.  **The concept is beautifully simple: make checkout so easy it feels you're stealing.**  Our algorithms, trained on translated ethnographic data and video stream data from off-the-shelf overhead cameras, sync specfic points and items in a space with classifications across 400+ action classes (i.e. guests walk in, pickup items, walk out with items and upon exit a bill is send via SMS to guests asking them to pay thru their own mobile payment system).
++ Hi there! I've longgg been curious about neighborhood markets (i.e. corner stores, bakeries, food stores, small pharmacies). I often ask myself, could the checkout process be simpler? 
++ My thought is, IF you automate checkout THEN staff will be free to: 1) chat with customers for no specific purpose 2) be the public characters that “keep an eye” on the neighborhood 3) be a “port of entry" for newcomers 4) operational duties
++ Through a combination of ethnography, a public log and computer vision we show easy and enjoyable autonomous checkout could be.  **The concept is beautifully simple: make checkout so easy it feels you're stealing.**  
++ Our algorithms, trained on translated ethnographic data and video stream data from off-the-shelf overhead cameras, sync specfic points and items in a space with classifications across 400+ action classes (e.g. guests walk in, guest picks up items, guest walks out with items and upon exit a bill is sent via SMS to guests asking them to pay thru their own mobile payment system).
 
 ## TIMELINE
 + Winter 2018 — Spring 2020 
@@ -14,16 +15,20 @@
     + Proof-Of-Concept:  People/Footfall Counter that tracks the number of people entering/exiting a room 
     + Alpha:  Tracking Gestures and Classifying Items in Neighborhood Market Scenarios 
 + Fall 2020 
-    + Beta:  Autonomous (Cashierless) Checkout 
+    + Beta:  Autonomous Checkout 
     + Features:  Inventory Assistant & Purchasing Assistant
- 
+    
+ ## POLICY MEMORANDUM
++ How will the profits that accrue from increasing automation be reinvested back into communities for collective gain? 
++ In a society that respects labor rights, each person would receive a cash payment equal to their share of the value of an automation-tax, taken on industry in pursuit of economic gain.  Fee proceeds called the “universal basic dividend” would go to all in that community, to each an equal amount.  **An automation-tax on robots also provides industry with an incentive to ensure sufficient re-training, especially of low skilled workers or they bear the full brunt of the automation-tax.**
++ We understand some may see the automation-tax as an innovation penalty.  Some companies may move elsewhere to avoid the tax.  Others may see the labor-intensive, redundant tasks saved by automation as a way to transform the way they do  operations, and in some ways reshape what it means to be a neighborhood market.
+
 ## I. PARTICIPANT OBSERVATION (ETHNOGRAPHY)
-+ I believe training a computer vision model requires a somewhat different set of tools than most engineers are currently equipped with.  In the case of neighborhood markets, they need a deep understanding of computer vision and the social and environmental structures of each respective space.  Because of this dual complexity, collaborations with other disciplines needs to be the norm. If computer vision engineers want to contribute to the great problems of the day, research must move in an intrinsic, interdisciplinary and long-term minded direction.
-+ What is ethnographic research? It is sociological method of firsthand participant obsevation in once unfamiliar social circles to pull a sense of what's relevant in that world. Ethnographic data includes: sensory impressions, personal responses, insider language, questions about behaviors, neighborhood identities, jottings, etc. 
-+  I undertook approximately 10 months of ethnographic data collection work in two neighborhood markets for training data.  **I then translated this data  into a coherent usable format to train computer vision models.
++ What is ethnographic research? It is sociological method of firsthand participant obsevation in once unfamiliar social circles to pull a sense of what's relevant in that world. Ethnographic data includes: sensory impressions, personal responses, insider language, questions about behaviors, neighborhood identities, jottings, etc. I undertook approximately 10 months of ethnographic data collection work in two neighborhood markets.  **I then built software/hardware for converting ethnographic field notes into training data for computer vision models.**
++ I believe training a computer vision model requires a somewhat different set of tools than most engineers are currently equipped with.  In the case of neighborhood markets, they need both a deep understanding of computer vision and the social, environmental and governance structures of each respective neighborhood market.  Because of this dual complexity, collaborations with other disciplines needs to be the norm. If computer vision engineers want to contribute to the great problems of the day, research must move in an intrinsic and interdisciplinary direction.
 
 ## II. COMPUTER VISION MODEL
-+ I train a computer vision model to rely on translated ethnographic data, probabilities, bounding boxes and thousands of bits of feedback from human preferences to understand which choices are closest to the desired behavior.  We want our system's "reward function" to come from taking advice from humans in a collaborative process. Ideally our computer vision model system will learn to gaze at the world with some empathy.  
++ I train a computer vision model to rely on ethnographic field notes, probabilities and thousands of bits of feedback from human to understand which choices are closest to the desired behavior.  **We want the "reward function" of our software/hardware to come from taking advice from humans in a collaborative process.** Ideally our computer vision model system will learn to gaze at the world with some empathy.  
 
 ## III. PUBLIC LOG (DATA PRIVACY)
 * We want to empower people to demand computer vision applications respect their privacy expectations, but we also don’t want to stifle innovation in the development of this technology. To meet the needs of both **we underpin our computer vision applications with a public log that records all events and queries run on the video stream data.**  
@@ -94,11 +99,8 @@ OPEN ISSUES
 + Better handle the 10% of "edge cases" (unusual cases that are not common in training data)
 + Branch object persistence models across multiple cameras
 + Better understand the front-back orientation of human limbs due to clothing, lighting, background
-+ **Lower processing power bills/energy use - bridge the Edge-Cloud barrier!
++ **Lower processing power bills and bridge the Edge-Cloud barrier!**
 + Determine the metrics that improve downstream performance
-
-## SANDBOX
-+ How will the profits that accrue from increasing automation be reinvested back into communities for collective gain? (POLICY MEMORANDUM IN PROGRESS)
 
 ## BIBLIOGRAPHY
 + The Great Good Place by Roy Oldenburg (1989)
