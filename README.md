@@ -4,8 +4,7 @@
 
 ## INTRODUCTION
 + Hi there! I've longgg been curious about neighborhood markets (i.e. corner stores, bakeries, food stores, small pharmacies). I often ask myself, could the checkout process be simpler? My thought is, IF you automate checkout THEN staff will be free to: 1) chat with customers for no specific purpose 2) be the public characters that “keep an eye” on the neighborhood 3) be a “port of entry" for newcomers 4) operational duties
-+ Through a combination of ethnography, a public log and computer vision we show easy and enjoyable autonomous checkout could be.  **The concept is beautifully simple: make checkout so easy it feels you're stealing.**  
-+ Our algorithms, trained on translated ethnographic data and video stream data from off-the-shelf overhead cameras, sync specfic points and items in a space with classifications across 400+ action classes (e.g. guests walk in, guest picks up items, guest walks out with items and upon exit a bill is sent via SMS to guests asking them to pay thru their own mobile payment system).
++ Through a combination of ethnography, public logs and computer vision we show how easy and enjoyable autonomous checkout could be.  **The concept is beautifully simple: make checkout so easy it feels you're stealing.**  Guests walk into a market, select items, walk out and upon exit a bill is sent via SMS asking them to pay thru their own mobile payment system.
 
 ## TIMELINE
 + Winter 2018 — Spring 2020 
@@ -17,7 +16,7 @@
     + Beta:  Autonomous Checkout 
     + Features:  Inventory Assistant & Purchasing Assistant
     
- ## POLICY MEMORANDUM
+## POLICY MEMORANDUM
 + How will the profits that accrue from increasing automation be reinvested back into communities for collective gain? 
 + In a society that respects labor rights, each person would receive a cash payment equal to their share of the value of an automation-tax, taken on industry in pursuit of economic gain.  Fee proceeds called the “universal basic dividend” would go to all in that community, to each an equal amount.  **An automation-tax on robots also provides industry with an incentive to ensure sufficient re-training, especially of low skilled workers or they bear the full brunt of the automation-tax.**
 + We understand some may see the automation-tax as an innovation penalty.  Some companies may move elsewhere to avoid the tax.  Others may see the labor-intensive, redundant tasks saved by automation as a way to transform the way they do  operations, and in some ways reshape what it means to be a neighborhood market.
