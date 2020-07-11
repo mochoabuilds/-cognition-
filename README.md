@@ -1,54 +1,57 @@
 *** WORKING PAPER ***
 
-*** ATTACHED CODE IS FOR A PEOPLE/FOOTFALL COUNTER *** 
+*** ATTACHED CODE IS FOR A PEOPLE/FOOTFALL COUNTER (PROOF-OF-CONCEPT) *** 
 
-## INTRODUCTION
-+ Hi there! I've longgg been curious about neighborhood markets (i.e. corner stores, bakeries, food stores, small pharmacies). I often ask myself, could the checkout process be simpler? My thought is, IF you automate checkout THEN staff will be free to: 1) chat with customers for no specific purpose 2) be the public characters that “keep an eye” on the neighborhood 3) be a “port of entry" for newcomers 4) operational duties
-+ Through a combination of ethnography, public logs and computer vision we show how easy and enjoyable autonomous checkout could be.  **The concept is beautifully simple: make checkout so easy it feels you're stealing.**  Guests walk into a market, select items, walk out and upon exit a bill is sent via SMS asking them to pay thru their own mobile payment system.
+# I. INTRODUCTION
++ Hi there! I've long been curious about neighborhood markets (corner stores, coffeeshops, bakeries, small pharmacies). I often ask myself, could its checkout be simpler.  My thought is yes. If you were to modify neighborhood markets to run on autonomous checkout systems staff would be free from the POS and available to:  
+    + chat with customers for no specific purpose 
+    + be the public characters that “keep an eye” on the neighborhood 
+    + be a “port of entry" for newcomers 
+    + other operational duties
++ I believe neighborhood markets are an intrinsically valuable space within cities. This research explicitly focuses on giving neighborhood markets every edge. I want to bring them the tools and services of big players, but also help them keep their atmosphere and vibe. My focus is on making it feel like a natural, simple extension of the existing shopping experience. 
++ The concept is beautifully simple: make checkout so easy it feels you're stealing. Guests walk into a market, select items, walk out and upon exit the bill is sent to them via SMS that closes them out thru a mobile payment system.  
 
-## TIMELINE
+# WHY?
++ I believe training a computer vision model requires a somewhat different set of tools than most developers are currently equipped with.  In the case of neighborhood markets, developers need a deep understanding of computer vision and the socio-cultural landscape of neighborhood markets.  Because of this dual complexity, collaborations with other disciplines needs to be the norm. If computer vision developers want to contribute to the great problems of the day, research must move in an intrinsic and interdisciplinary direction.  
+
+# TWO RESEARCH QUESTIONS
++ Through a combination of ethnography, computer vision and off-the-shelf overhead camera our system syncs specific points and items in a room with classifications across 400+ classes. To do this our computer vision model need training data.  My research explores better ways to generate this training data.
++ The focus then becomes... **How can we translate neighborhood market ethnography into a usable coherent format for training computer vision models?**   I believe translators are only products of their time and culture, so our ethnographic field notes must reflect a deep understanding of the social, environmental and governance structures of each neighborhood market.
++ I also explore (BUT not in this research)... How can we underpin our compute vision application with a public log of all queries run on the video stream data, so "the watchers themselves are watched"?  Right now a working model has video stream data staying on the hardware/off-the-shelf camera itself. Edge-cloud software lets neighborhood market staff/mgmt perform analysis, but ONLY in-house, there is no copying or moving of data outside for processing. Even then, mgmt is not given free roam to pick and prod customer data. We provide scripts which lets mgmt tease guest records with a log of every action taken. I want to show it's possible to create interesting computer vision applications that better respect guest privacy expectations.  
+
+# METHODS --> HUMAN ETHNOGRAPHY
++ What is ethnographic research? It is sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world. Ethnographic field notes include: sensory impressions, personal responses, insider language, questions about behaviors, neighborhood identities, jottings, etc. I undertook approximately 10 months of ethnographic data collection in two neighborhood markets.  Next, **I built clever software for translating these field notes into usable data for training computer vision models.**
+
+# METHODS --> HUMAN-COMPUTER VISION MODEL
++ I train a computer vision model to learn from translated ethnography, bounding boxes and thousands of bits of feedback from humans to understand which choices are closest to the desired behavior.  **We want the "reward function" of our system to come from taking advice from humans in a collaborative process.** Ideally our computer vision model system will learn to gaze at the world with some human-like empathy.  The idea is still in its infancy.  There is plenty of room for improvement.
+
+# TIMELINE
 + Winter 2018 — Spring 2020 
-    + Conceptualizing, Literature Review & Ethnographic Research 
+    + Conceptualizing, Literature Review & Ethnography
 + Summer 2020 
-    + Proof-Of-Concept:  People/Footfall Counter that tracks the number of people entering/exiting a room 
-    + Alpha:  Tracking Gestures and Classifying Items in Neighborhood Market Scenarios 
+    + Proof-Of-Concept:  People/Footfall Counter  
+    + Prototype:  Tracking Gestures & Classifying Items in Neighborhood Markets 
 + Fall 2020 
-    + Beta:  Autonomous Checkout 
-    + Features:  Inventory Assistant & Purchasing Assistant
-    
-## POLICY MEMORANDUM
-+ How will the profits that accrue from increasing automation be reinvested back into communities for collective gain? 
-+ In a society that respects labor rights, each person would receive a cash payment equal to their share of the value of an automation-tax, taken on industry in pursuit of economic gain.  Fee proceeds called the “universal basic dividend” would go to all in that community, to each an equal amount.  **An automation-tax on robots also provides industry with an incentive to ensure sufficient re-training, especially of low skilled workers or they bear the full brunt of the automation-tax.**
-+ We understand some may see the automation-tax as an innovation penalty.  Some companies may move elsewhere to avoid the tax.  Others may see the labor-intensive, redundant tasks saved by automation as a way to transform the way they do  operations, and in some ways reshape what it means to be a neighborhood market.
+    + Prototype: "Building a Cart" w/ SMS Payment Upon Exit
+    + Features: Inventory Assistant & Purchasing Assistant 
 
-## I. PARTICIPANT OBSERVATION (ETHNOGRAPHY)
-+ What is ethnographic research? It is sociological method of firsthand participant obsevation in once unfamiliar social circles to pull a sense of what's relevant in that world. Ethnographic data includes: sensory impressions, personal responses, insider language, questions about behaviors, neighborhood identities, jottings, etc. I undertook approximately 10 months of ethnographic data collection work in two neighborhood markets.  **I then built software/hardware for converting ethnographic field notes into training data for computer vision models.**
-+ I believe training a computer vision model requires a somewhat different set of tools than most engineers are currently equipped with.  In the case of neighborhood markets, they need both a deep understanding of computer vision and the social, environmental and governance structures of each respective neighborhood market.  Because of this dual complexity, collaborations with other disciplines needs to be the norm. If computer vision engineers want to contribute to the great problems of the day, research must move in an intrinsic and interdisciplinary direction.
-
-## II. COMPUTER VISION MODEL
-+ I train a computer vision model to rely on ethnographic field notes, probabilities and thousands of bits of feedback from human to understand which choices are closest to the desired behavior.  **We want the "reward function" of our software/hardware to come from taking advice from humans in a collaborative process.** Ideally our computer vision model system will learn to gaze at the world with some empathy.  
-
-## III. PUBLIC LOG (DATA PRIVACY)
-* We want to empower people to demand computer vision applications respect their privacy expectations, but we also don’t want to stifle innovation in the development of this technology. To meet the needs of both **we underpin our computer vision applications with a public log that records all events and queries run on the video stream data.**  
-* Our setup means video stream data stays on the hardware/camera itself. Our edge-cloud software lets neighborhood market staff/mgmt perform analysis, but only in-house, there is no copying or moving of data outside for processing. Even then, staff/mgmt is not given free roam to pick and prod customer data. **We provide scripts which lets staff/mgmt tease guest records with a log of every action taken, “thus the watchers themselves are watched”.** We want to show it's possible to create interesting computer vision applications without hellish privacy practices. The idea is still in its infancy.  There is plenty of room for improvement.
-
-## IV. BRINGING IT ALL TOGETHER
-01 Installing Required Packages and Libraries (part one)
+# PROOF-OF-CONCEPT 
+01 Installing Required Packages and Libraries 
 + Python
 + OpenCV https://opencv.org/
 + dlib http://dlib.net/a
 
 02 Configuring Edge Computing Device
 + Prep
-+ Code
 + Notes
 
-03 Open CV Crash Course
++ Code
+
+
+03 Footfall/People Counter | Counts the # of people entering and exiting a room 
 + Prep
-+ Code
 + Notes
 
-04 Footfall/People Counter Project 
 + Videos
     + .avi
     + .mp4
@@ -62,7 +65,8 @@
     + trackableobject.py
 + people_counter.py
 
-05 Installing Required Packages and Libraries (part two)
+# PROTOTYPE 
+04 Installing Required Packages and Libraries 
 + scikit-image https://scikit-image.org/
 + scikit-learn https://scikit-learn.org/stable/index.html
 + Numpy https://numpy.org/install/
@@ -70,18 +74,32 @@
 + Tensorflow https://www.tensorflow.org/
 + Caffe http://caffe.berkeleyvision.org/
 
-06 Human Pose Estimation with Tensorflow and Caffe | Who’s here? 
+**05 Translating Ethnographic Field Notes**
++ At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+
+06A 2D Human Pose Estimation with Tensorflow and Caffe 
++ Who’s here? 
 ![1-DsOBzKpVMUULGABMVFdVIg](https://user-images.githubusercontent.com/40745550/82762582-6febd280-9dc7-11ea-90ea-0671e1bf3744.jpeg)
 
-07 Training and Deploying a Custom Gesture Recognition Model | Whatcha up to?
+06B Feature Extraction 
++ Who's here?
 
-08 Training and Deploying a Custom Objects Classifier | Whatcha holdin?
+06C 3D Human Pose Estimation 
++ Who's here?
 
-09 Temporal Association | Who has what?
+07 Training and Deploying a Hand Motion and Object Recognition Model 
++ Whatcha up to?
 
-10 Action Analysis Based on Location | SMS Notification for Payment
+08 Training and Deploying a Custom Objects Classifier
++ Whatcha holdin?
 
-## V. EXPERIMENTS AND RESULTS
+**09 Reinforcement Learning using Human Feedback**
++ Who has what? (Temporal Association, "Building a Cart")
+
+10 Action Analysis Based on Location 
++ SMS Payment Upon Exit
+
+# V. EXPERIMENTS AND RESULTS
 + Summary Statistics
     + Accuracy 
     + Computation Speed
@@ -91,15 +109,21 @@
 + Datasets and Protocols
 + Results
 
-## DISCUSSION
-OPEN ISSUES
-+ **Show it’s possible to get interesting services without egregious and invasive privacy practices (NO FACE RECOGNITION)**
-+ Better handle the 10% of "edge cases" (unusual cases that are not common in training data)
-+ Branch object persistence models across multiple cameras
-+ Better understand the front-back orientation of human limbs due to clothing, lighting, background
-+ **Lower processing power bills and bridge the Edge-Cloud barrier!**
-+ Determine the metrics that improve downstream performance
+# DISCUSSION
 
+# APPENDIX: POLICY MEMORANDUM 
++ How will the profits that accrue from increasing automation be reinvested back into communities for collective gain? 
++ In a society that respects labor rights, each person would receive a cash payment equal to their share of the value of an automation-tax, taken on industry in pursuit of economic gain.  Fee proceeds called the “universal basic dividend” would go to all in that community, to each an equal amount.  An automation-tax on robots also provides industry with an incentive to ensure sufficient re-training, especially of low skilled workers or they bear the full brunt of the automation-tax.
++ We understand some may see the automation-tax as an innovation penalty.  Some companies may move elsewhere to avoid the tax.  Others may see the labor-intensive, redundant tasks saved by automation as a way to transform the way they do  operations, and in some ways reshape what it means to be a neighborhood market.
+
+## APPENDIX: SANDBOX
++ Show it’s possible to get interesting services without egregious and invasive privacy practices (NO FACE RECOGNITION)
++ Better handling the 10% of "edge cases" (unusual cases that are not common in training data)
++ Branching object persistence models across multiple cameras
++ Better understanding the front-back orientation of human limbs due to clothing, lighting, background
++ Lower processing power bills and bridge the Edge-Cloud barrier
++ Determine the metrics that improve downstream performance
+  
 ## BIBLIOGRAPHY
 + The Great Good Place by Roy Oldenburg (1989)
 + Writing Ethnographic Field Notes, 2nd Edition by Emerson, Fretz and Shaw (2011)
@@ -121,5 +145,3 @@ OPEN ISSUES
     archivePrefix={arXiv},
     primaryClass={stat.ML}
 }
-
-## APPENDIX
