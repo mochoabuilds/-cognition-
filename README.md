@@ -3,34 +3,39 @@
 *** ATTACHED CODE FOR PROOF-OF-CONCEPT (PEOPLE/FOOTFALL COUNTER) ***  
 
 # INTRODUCTION
-+ Through a casual reading of weekly newspapers I noticed an increasing attention placed on community. Things are moving in this direction. It has forced businesses to do things differently to better meet community needs. Many businesses are experimenting with ways to remove once manual-processes. My research tries to remove the manual-process of ringing goods up at the neighborhood market. Personally I'd love to see neighborhood market mgmt/staff free from the point-of-sale and available to:
++ Reading the news I've noticed an increasing attention placed on community. It has forced corner stores to do things differently to better meet community needs. Many corner stores are experimenting.
++ My research pulls together something like a workbench to build modern tools for corner stores. I tap into various sources of qual/quant data to offer software tools that let corner stores easily create, test and run modern tools. One such tool is removing the manual-process of ringing up goods with autonomous checkout.
++ Corner stores are an intrinsically valuable space within communities. This research focuses on giving them every edge. I want to bring them the tools and services of the world's top retailers, but also help them keep their neighborhood atmosphere and vibe. 
++ Personally I'd love to see corner store mgmt free from the POS and available to:  
     + be the public characters that “keep an eye” on the neighborhood 
     + chat with guests for no specific purpose 
     + be a “port of entry" for newcomers
-    + perform daily operations
-+ Neighborhood markets are an intrinsically valuable space within communities. This research focuses on giving them every edge. I want to bring them the tools and services of the world's top retailers, but also help them keep their neighborhood atmosphere and vibe. My goal is to make autonomous checkout feel like a natural, simple extension of the existing shopping experience. Guests will walk into a market, select items, walk out and upon exit their bill is sent to them via SMS mobile payment. It's so easy, it almost feels like stealing!
++ My goal is to make autonomous checkout feel like a natural, simple extension of the existing shopping experience. Guests will walk into a market, select items, walk out and upon exit their bill is sent to them via SMS mobile payment. It'll be so easy, it feels like stealing!
 
 # WHY THIS PROJECT?
-+ Humans learned flight when it stopped mimicking the bird and started studying lift. It was only when humans stopped seeing flight as a symbol did human intelligence flow. Meaning and knowledge don't arise from symbols, they come from directly from our visceral needs to survive. Like many, I want to build human intelligence of survival into computers. Many would call this AI.  But what we call AI is just pattern matching. Extremely clever and powerful, but nonetheless pattern matching. Until we successfully bake this visceral human intelligence into computer vision models autonomous checkout systems won't progress beyond pattern matching.
++ Humans learned flight when they stopped mimicking the bird and started studying lift. It was only when they stopped seeing flight as a symbol did human intelligence flow.  The brilliance of flight didn't come from symbols (birds), it come from directly from our visceral needs to survive (intelligence). 
++ I want to build human intelligence into computers. Many would call this AI.  But what we call AI right now is just pattern matching. Extremely clever and powerful pattern matching, but nonetheless pattern matching. Until we successfully bake human intelligence into computer vision models autonomous checkout systems won't have much needed corner store "street smarts".
 
 # TIMELINE
 + Winter 2018 — Spring 2020 
     + Conceptualizing, Literature Review & Ethnography
 + Summer 2020 
     + Proof-Of-Concept:  People/Footfall Counter 
-    + Alpha:  Tracking Gestures & Classifying Items in Neighborhood Markets
+    + Alpha:  Tracking Human Gestures & Classifying Goods in the Corner Store
 + Fall 2020
-    + Beta: Tracking Inventory Levels in Neighborhood Markets
-
+    + Beta:  "Who has what item?" - Temporal Associations in the Corner Store
+    
 # RESEARCH QUESTIONS 
-+ Teach a computer vision model to use information to further its visceral motives of survival
-+ Underpin a computer vision application with a public log of all queries run on its video stream data ("thus the watchers themselves are watched") 
++ Teach a computer vision model to use information to boost its corner store "street smarts"
++ Look for a relationship between the number of e-payments, total values, and levels of “trust” (and thus commerce) 
++ How could we underpin a computer vision application with a public log of all queries run on its video stream data ("thus the watchers themselves are watched") 
 
-# ETHNOGRAPHY
-+ What is ethnographic research? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world.  Methods include taking field notes such as: sensory impressions, personal responses, insider language, questions about behaviors, neighborhood identities, jottings, etc. I undertook approximately 10 months of ethnographic field notes in two neighborhood markets in Chicago, IL.  I then built software for translating ethnographic field notes into usable data for training computer vision models.
+# ETHNOGRAPHY ("DATA WRANGLING")
++ What is ethnographic research? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world.  Methods include taking field notes such as: sensory impressions, personal responses, insider language, questions about behaviors, neighborhood identities, jottings, etc. 
++ I undertook approximately 10 months of ethnographic field notes in two Chicago corner stores.  I then built software for translating ethnographic field notes into usable data for computer vision models to better understand store-by-store realities.  
 
 # COMPUTER VISION MODEL
-+  Through a combination of interdisciplinary methods, computer vision and off-the-shelf overhead cameras our system syncs specific points and items in a room with classifications across 400+ classes.  Feedback from humans fine-tune its "reward function" to relate directly to its visceral motives of survival.  Ideally our computer vision model system will learn to gaze at the world with some human-like intelligence when presented with new information to further its survival. It's only then, may its intelligence flow.
++  Through a combination of clever data-wrangling, computer vision hardware and off-the-shelf overhead cameras our system syncs specific locations and items in a room with classifications across 400+ classes.  Feedback from humans fine-tune the "reward function" to bake human-like corner store "street smarts" into the system. Ideally our computer vision model system will learn to gaze at the world with some human-like intelligence.
 
 # PROOF-OF-CONCEPT 
 01 Installing Required Packages and Libraries 
@@ -59,26 +64,26 @@
     + trackableobject.py
 + people_counter.py
 
-# ALPHA & BETA 
+# ALPHA and BETA 
 04 Installing Required Packages and Libraries 
 + scikit-image https://scikit-image.org/
 + scikit-learn https://scikit-learn.org/stable/index.html
 + Numpy https://numpy.org/install/
 + Keras https://keras.io/
-+ Tensorflow https://www.tensorflow.org/
++ Tensorflow https://www.tensorflow.org
 + Caffe http://caffe.berkeleyvision.org/
 
 **05 Translating Ethnographic Field Notes**
 + At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
 
-06a 2D Human Pose Estimation with Tensorflow and Caffe 
+06A 2D Human Pose Estimation with Tensorflow and Caffe 
 + Who’s here? 
 ![1-DsOBzKpVMUULGABMVFdVIg](https://user-images.githubusercontent.com/40745550/82762582-6febd280-9dc7-11ea-90ea-0671e1bf3744.jpeg)
 
-06b Feature Extraction 
+06B Feature Extraction 
 + Who's here?
 
-06c 3D Human Pose Estimation 
+06D 3D Human Pose Estimation 
 + Who's here?
 
 07 Training and Deploying a Hand Motion and Object Recognition Model 
@@ -87,11 +92,11 @@
 08 Training and Deploying a Custom Objects Classifier
 + Whatcha holding?
 
-09 Temporal Assoication 
+09 Temporal Association 
 + Who has what? (Building a Cart from Store Shelves, Tracking Inventory Levels)
 
 10 Action Analysis Based on Location 
-+ SMS mobile payment
++ Receiving bill via SMS for Mobile Payment
 
 # V. EXPERIMENTS AND RESULTS
 + Summary Statistics
@@ -107,8 +112,7 @@
 
 # APPENDIX: POLICY MEMORANDUM 
 + How will the profits that accrue from increasing automation be reinvested back into communities for collective gain? 
-+ In a society that respects labor rights, each person would receive a cash payment equal to their share of the value of an automation-tax, taken on industry in pursuit of economic gain.  Fee proceeds called the “universal basic dividend” would go to all in that community, to each an equal amount.  An automation-tax on such systems also provides industry with an incentive to ensure sufficient re-training, especially of low skilled workers or they bear the full brunt of the automation-tax.
-+ This is a policy memorandum in progress.  This means focusing a wide-angled automation-lens on regulation, rules, accounting standards, disclosure standards, stewardship codes and new intrepretations of laws must be done in partnership with market participants. 
++ A. In a society that respects labor rights, each person would receive a cash payment equal to their share of the value of an automation-tax, taken on industry in pursuit of economic gain.  Fee proceeds called the “universal basic dividend” would go to all in that community, to each an equal amount.  An automation-tax on such systems also provides industry with an incentive to ensure sufficient re-training, especially of low skilled workers or they bear the full brunt of the automation-tax. This is an idea in progress.  This means I'm still reading up on regulation, rules, accounting standards, disclosure standards, stewardship codes and new intrepretations of laws.  
 
 ## APPENDIX: SANDBOX
 + Show it’s possible to get interesting services without egregious and invasive privacy practices (NO FACE RECOGNITION)
