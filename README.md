@@ -3,41 +3,34 @@
 *** ATTACHED CODE FOR PROOF-OF-CONCEPT (PEOPLE/FOOTFALL COUNTER) ***  
 
 # INTRODUCTION
-+ Reading the news I've noticed an increasing attention placed on community. It has forced corner stores to do things differently to better meet community needs. Many corner stores are experimenting.
-+ My research pulls together something like a workbench to build modern tools for corner stores. I tap into various sources of qual/quant data to offer software tools that let corner stores easily create, test and run modern tools. One such tool is removing the manual-process of ringing up goods with autonomous checkout.
-+ Corner stores are an intrinsically valuable space within communities. This research focuses on giving them every edge. I want to bring them the tools and services of the world's top retailers, but also help them keep their neighborhood atmosphere and vibe. 
-+ Personally I'd love to see corner store mgmt free from the POS and available to:  
-    + be the public characters that “keep an eye” on the neighborhood 
-    + chat with guests for no specific purpose 
-    + be a “port of entry" for newcomers
-+ My goal is to make autonomous checkout feel like a natural, simple extension of the existing shopping experience. Guests will walk into a market, select items, walk out and upon exit their bill is sent to them via SMS mobile payment. It'll be so easy, it feels like stealing!
++ A computer can now recognize classes of things as accurately as a human can.  My hypothesis is that the decreasing costs of computer vision technology presents an opportunity to reimagine corner store operations.  Corner stores serve many roles beyond providing essential goods.  They are inherently valuable spaces within communities.  Corner stores have emerged as a comforting hyperlocal landmark amid the pandemic.  This research pull together something like a work bench to build modern tools for corner stores.  My goal is to make modern tools feel like a natural simple extension of the existing corner store experience. 
 
 # WHY THIS PROJECT?
-+ Humans learned flight when they stopped mimicking the bird and started studying lift. It was only when they stopped seeing flight as a symbol did human intelligence flow.  The brilliance of flight didn't come from symbols (birds), it come from directly from our visceral needs to survive (intelligence). 
-+ I want to build human intelligence into computers. Many would call this AI.  But what we call AI right now is just pattern matching. Extremely clever and powerful pattern matching, but nonetheless pattern matching. Until we successfully bake human intelligence into computer vision models autonomous checkout systems won't have much needed corner store "street smarts".
++ In human vision, after an image in formed in the retina it is sent to the brain’s visual cortex to process more complex features.  All this takes place in a fraction of a second.  Computer vision technology mimics the hierarchal way that human vision is wired, with some tweaks.  Many would call this AI.  But what we call AI is just pattern matching.  Extremely clever and powerful, but nonetheless pattern matching.  Until researchers bake human like survival instincts into computers they’ll won’t have “street smarts”.  
++ My research explores ways to bake “street smarts” into computer vision systems.  I believe such technology is only good if it understands the social, economic and governance complexities of human life.  This challenge is what motivates me.  
 
 # TIMELINE
 + Winter 2018 — Spring 2020 
-    + Conceptualizing, Literature Review & Ethnography
+    + Literature Review & Ethnography
 + Summer 2020 
-    + Proof-Of-Concept:  People/Footfall Counter 
-    + Alpha:  Tracking Human Gestures & Classifying Goods in the Corner Store
+    + People/Footfall Counter for Corner Stores 
 + Fall 2020
-    + Beta:  "Who has what item?" - Temporal Associations in the Corner Store
+    + Inventory Mgmt & Demand Forecasting for Corner Stores 
++ Winter 2021
+    + "Who has what item?" (Autonomous Checkout 1/2)
     
 # RESEARCH QUESTIONS 
-+ Teach a computer vision model to use information to boost its corner store "street smarts"
-+ Look for a relationship between the number of e-payments, total values, and levels of “trust” (and thus commerce) 
-+ How could we underpin a computer vision application with a public log of all queries run on its video stream data ("thus the watchers themselves are watched") 
++ Explore ways to bake “street smarts” into computer vision systems
++ How could we underpin a computer vision application with a public log of all queries run on its video stream data, "thus the watchers themselves are watched"
 
 # ETHNOGRAPHY ("DATA WRANGLING")
-+ What is ethnographic research? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world.  Methods include taking field notes such as: sensory impressions, personal responses, insider language, questions about behaviors, neighborhood identities, jottings, etc. 
-+ I undertook approximately 10 months of ethnographic field notes in two Chicago corner stores.  I then built software for translating ethnographic field notes into usable data for computer vision models to better understand store-by-store realities.  
++ What is ethnographic research? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world.  Methods include field notes such as: sensory impressions, personal responses,  questions about behaviors, neighborhood identities, jottings, etc. 
++ I undertook approximately 10 months of ethnographic field notes in two Chicago corner stores.  I then built software for translating field notes into usable data for computer vision models to better understand store-by-store complexities. 
 
 # COMPUTER VISION MODEL
-+  Through a combination of clever data-wrangling, computer vision hardware and off-the-shelf overhead cameras our system syncs specific locations and items in a room with classifications across 400+ classes.  Feedback from humans fine-tune the "reward function" to bake human-like corner store "street smarts" into the system. Ideally our computer vision model system will learn to gaze at the world with some human-like intelligence.
++  Through a combination of clever data-wrangling, computer vision hardware and off-the-shelf overhead cameras our system syncs specific locations and items in a room with classifications across 400+ parent-child groupings.  Feedback from humans fine-tune the "reward function" to bake human-like corner store "street smarts" into the system. Ideally our computer vision model system will learn to gaze at the world with some "street smarts".
 
-# PROOF-OF-CONCEPT 
+# PROOF-OF-CONCEPT
 01 Installing Required Packages and Libraries 
 + Python
 + OpenCV https://opencv.org/
@@ -64,7 +57,7 @@
     + trackableobject.py
 + people_counter.py
 
-# ALPHA and BETA 
+# FALL 2020 & WINTER 2021
 04 Installing Required Packages and Libraries 
 + scikit-image https://scikit-image.org/
 + scikit-learn https://scikit-learn.org/stable/index.html
@@ -112,7 +105,7 @@
 
 # APPENDIX: POLICY MEMORANDUM 
 + How will the profits that accrue from increasing automation be reinvested back into communities for collective gain? 
-+ A. In a society that respects labor rights, each person would receive a cash payment equal to their share of the value of an automation-tax, taken on industry in pursuit of economic gain.  Fee proceeds called the “universal basic dividend” would go to all in that community, to each an equal amount.  An automation-tax on such systems also provides industry with an incentive to ensure sufficient re-training, especially of low skilled workers or they bear the full brunt of the automation-tax. This is an idea in progress.  This means I'm still reading up on regulation, rules, accounting standards, disclosure standards, stewardship codes and new intrepretations of laws.  
++ A. In a society that respects labor rights, each person would receive a cash payment equal to their share of the value of an automation-tax, taken on industry in pursuit of economic gain.  Fee proceeds called the “universal basic dividend” would go to all in that community, dispersal tbd.  An automation-tax on such systems also provides industry with an incentive to ensure sufficient re-training, especially of low skilled workers or they bear the full brunt of the automation-tax. This is an idea in progress.  This means I'm still reading up on regulation, rules, accounting standards, disclosure standards, stewardship codes, community opinion and new intrepretations of laws.  
 
 ## APPENDIX: SANDBOX
 + Show it’s possible to get interesting services without egregious and invasive privacy practices (NO FACE RECOGNITION)
