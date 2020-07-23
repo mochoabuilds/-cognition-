@@ -3,12 +3,12 @@
 *** ATTACHED CODE FOR PROOF-OF-CONCEPT (PEOPLE/FOOTFALL COUNTER) ***  
 
 # INTRODUCTION
-+ A computer can now recognize classes of things as accurately as a human.  My hypothesis is that the decreasing costs of computer vision technology presents an opportunity to modernize corner store operations.  
-+ Corner stores serve many roles beyond providing essential goods.  They are inherently valuable spaces within communities and have emerged as a comforting hyperlocal landmark amid the pandemic.  My research pulls together something like a work bench to build modern tools for corner stores.  The focus is on making change feel like a natural extension of the existing corner store experience. 
++ Computer vision technology can now recognize classes of things as accurately as a human.  My hypothesis is that if computer vision technology continues its drop costs then it presents an opportunity to modernize corner store operations.  
++ Corner stores serve many roles beyond providing essential goods.  They are inherently valuable spaces within communities and have become a comforting hyperlocal landmark amid the pandemic.  My research pulls together something like a work bench to build modern tools for corner stores.  The focus is on making new tools feel like a natural extension of the existing corner store experience. 
 
 # WHY THIS PROJECT?
-+ In human vision, after an image in formed in the retina it is sent to the brain’s visual cortex to process more complex features. This all takes place in a fraction of a second.  Computers can mimic the hierarchal way that human vision is wired, with some tweaks.  Many would call this AI.  But what many call AI is just pattern matching.  Extremely clever and powerful stuff, but nonetheless pattern matching.  Until researchers bake human like survival instincts (aka "street smarts") into computers.
-+ My research explores ways to bake “street smarts” into a computer.  I believe such technology is only good if it understands the social, economic and privacy complexities of human life.  Helping design effective computer vision policies for our future is what motivates me.   
++ In human vision, after an image in formed in the retina it is sent to the brain’s visual cortex to process more complex features. This all takes place in a fraction of a second.  Computer vision technology can mimic the hierarchal way that human vision is wired, with some tweaks.  Many would call this AI.  But what many call AI is just pattern matching.  Extremely clever and powerful stuff, but nonetheless pattern matching.  
++ My research explores ways to bake human-like “street smarts” into a computer.  I believe such technology is only good if it understands the social, economic and privacy complexities of human life.  Helping design effective computer vision technology and its policies is what motivates me.   
 
 # TIMELINE
 + Winter 2018 — Spring 2020 
@@ -29,11 +29,10 @@
 + I undertook approximately 10 months of ethnographic field notes in two Chicago corner stores.  I then built methods for translating field notes into usable data for computer vision systems.
 
 # DEVICE 
-The device combines the functions of LIDAR and RADAR to measure the different speeds of select objects/someones hands as they move about a corner store.  This approach better avoids interference with other optical sensors, reflective objects, clothing, lighting, etc.
-
++ The device combines the functions of LIDAR and RADAR to measure the different speeds of select objects/someones hands as they move about a corner store.  This approach better avoids interference with other optical sensors, reflective objects, clothing, lighting, etc.
 
 # COMPUTER VISION MODEL
-+  Through a combination of clever data-wrangling, off-the-shelf computer vision hardware, reinforcement learning algorithms, reward functions and human feedback our system learns. The device syncs specific locations and items in a room with classifications across parent-child groupings.  Feedback from humans fine-tune the reward function to bake human-like "street smarts" into the system. Ideally our computer vision model system will learn to gaze at the world with some empathy and preserve the fabric of a corner store and its respective social norms.
++ Through a combination of clever data-wrangling, off-the-shelf computer vision hardware, reinforcement learning algorithms, reward functions and human feedback our system learns. The device syncs specific locations and items in a room with classifications across parent-child groupings.  Feedback from humans fine-tune the reward function to bake human-like "street smarts" into the system. Ideally our computer vision tools will learn to preserve the fabric of a corner store and its respective social norms.
 
 # PROOF-OF-CONCEPT
 01 Installing Required Packages and Libraries 
@@ -91,10 +90,10 @@ The device combines the functions of LIDAR and RADAR to measure the different sp
 + Whatcha holding?
 
 09 Temporal Association 
-+ Who has what? (Building a Cart from Store Shelves, Tracking Inventory Levels)
++ Who has what item?
 
 10 Action Analysis Based on Location 
-+ Receiving bill via SMS for Mobile Payment
++ Receiving bill via SMS for Mobile Payment upon exit
 
 # V. EXPERIMENTS AND RESULTS
 + Summary Statistics
