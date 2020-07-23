@@ -2,10 +2,10 @@ import yolo23.directioncounter import DirectionCounter
 import yolo23.centroid tracker import CentroidTracker
 import yolo23.trackableobject import TrackableObject
 from multiprocessing import Process
-## from 
-## from 
-## from
-## from
+from multiprocessing import Queue
+from multiprocessing import Value
+from imutils.video import VideoStream
+from imutils.video import FPS
 import argparse  
 import imutils 
 import time  
@@ -97,3 +97,44 @@ while True:
   dc = DirectionCounter(args["mode"], H, W)
 
   # begin writing video to disk, if needed
+  if args["output"] is not None and writerProcess is None:
+    # set writeVideo flag, set up frameQueue and start writerProcess
+    writeVideo = Value('i', 1)
+    frameQueue = Queue()
+    writerProcess = Process(target=write_video, args=(
+      args["output"], writeVideo, frameQueue, W, H)) 
+    writerProcess.start()   
+                
+   # preprocess frame and apply background subtraction
+   rects = []
+   
+   # convert frame to grayscale and smooth it out using gaussian
+   gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+   gray = cv2.GaussianBlur(gray, (5, 5), 0)       
+   
+   # apply background subtraction model
+   mask = mog.apply(gray)
+                
+   # erosions are applied to break apart components and reduce noise, then we find and
+   # extract contours and add the bounding boxes to rects   
+   erode = cv2.erode(mask, (7, 7), iterations=2)
+   cnts = cv2.findContours(erode.copy(), cv2.RETR_EXTERNAL,
+   cv2.CHAIN_APPROX_SIMPLE)
+   cnts = imutils.grab_contours(cnts)
+                
+   # loop over each contour
+   for c in cnts:
+   # if the contour area is less than minimum area #, then ignore object
+   if cv2.contourArea(c) < 2000:
+     continue 
+   
+   # compute bounding box coordinates of contours
+   (x, y, w, h) = cv2.boundingRect(c)
+   (startX, startY, endX, endY) = (x, y,x+w,y+h)
+
+    # add bounding box coordinates to rects list
+    rects.append((startX, startY, endX, endY)) 
+                
+    # split the screen with horizontal or vertical line    
+    if args["mode"] == "vertical":            
+       # draw a horizontal line in the center of the frame            
