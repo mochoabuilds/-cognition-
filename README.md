@@ -2,13 +2,10 @@
 
 *** ATTACHED CODE FOR PROOF-OF-CONCEPT (PEOPLE/FOOTFALL COUNTER) ***  
 
-# INTRODUCTION
-+ Computer vision technology can now recognize classes of things as accurately as a human.  My hypothesis is that if computer vision technology continues its drop costs then it presents an opportunity to modernize corner store operations.  
-+ Corner stores serve many roles beyond providing essential goods.  They are inherently valuable spaces within communities and have become a comforting hyperlocal landmark amid the pandemic.  My research pulls together something like a work bench to build modern tools for corner stores.  The focus is on making new tools feel like a natural extension of the existing corner store experience. 
+*** YOUTUBE LINK SHOWING PEOPLE/FOOTFALL COUNTER ... **
 
-# WHY THIS PROJECT?
-+ In human vision, after an image in formed in the retina it is sent to the brain’s visual cortex to process more complex features. This all takes place in a fraction of a second.  Computer vision technology can mimic the hierarchal way that human vision is wired, with some tweaks.  Many would call this AI.  But what many call AI is just pattern matching.  Extremely clever and powerful stuff, but nonetheless pattern matching.  
-+ My research explores ways to bake human-like “street smarts” into a computer.  I believe such technology is only good if it understands the social, economic and privacy complexities of human life.  Helping design effective computer vision technology and its policies is what motivates me.   
+# INTRODUCTION
++ Corner stores serve many roles beyond providing essential goods. They are inherently valuable spaces that have become a comforting landmark amid the pandemic.  My research pulls together something like a work bench to build modern tools for corner stores. The focus is on making new tools feel like a natural extension of the existing corner store experience. My research starts with ethnographic data and develops theories about ways to bake "street smarts" into computer vision systems.
 
 # TIMELINE
 + Winter 2018 — Spring 2020 
@@ -16,23 +13,23 @@
 + Summer 2020 
     + People/Footfall Counter for Corner Stores 
 + Fall 2020
-    + Inventory Mgmt for Corner Stores 
+    + Inventory Mgmt for Corner Stores (Hand Motion & Custom Objects Classifier)
 + Winter 2021
-    + "Who has what item?" (Autonomous Checkout Pt. 1)
+    + "Who has what object?" (Autonomous Checkout Pt. 1)
     
-# RESEARCH QUESTIONS 
-+ Explore ways to bake “street smarts” into computer vision systems
-+ How could we underpin a computer vision application with a public log of all queries run on its video stream data? ("thus the watchers themselves are watched")
+# RESEARCH QUESTIONS
++ How can we bake "street smarts" into computer vision systems?
++ How could we underpin a computer vision system with a public log of all queries run on its video stream data? ("thus the watchers themselves are watched")
 
-# ETHNOGRAPHY ("DATA WRANGLING")
-+ What is ethnographic research? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world.  Methods include field notes such as: sensory impressions, personal responses,  questions about behaviors, neighborhood identities, jottings, etc. 
-+ I undertook approximately 10 months of ethnographic field notes in two Chicago corner stores.  I then built methods for translating field notes into usable data for computer vision systems.
+# DATA COLLECTION
++ The data I start with to develop theory comes from ethnography.  What is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world.  Methods include field notes such as: personal responses, sensory impressions, neighborhood identities, behaviors, jottings, etc. 
++ I undertook approximately 10 months of ethnography in two Chicago corner stores.  I then built methods for translating ethnographic field notes into usable data for computer vision systems.
 
-# DEVICE 
+# DEVICE
 + The device combines the functions of LIDAR and RADAR to measure the different speeds of select objects/someones hands as they move about a corner store.  This approach better avoids interference with other optical sensors, reflective objects, clothing, lighting, etc.
 
 # COMPUTER VISION MODEL
-+ Through a combination of clever data-wrangling, off-the-shelf computer vision hardware, reinforcement learning algorithms, reward functions and human feedback our system learns. The device syncs specific locations and items in a room with classifications across parent-child groupings.  Feedback from humans fine-tune the reward function to bake human-like "street smarts" into the system. Ideally our computer vision tools will learn to preserve the fabric of a corner store and its respective social norms.
++ Through a combination of data collection, off-the-shelf computer vision hardware, reinforcement learning algorithms, reward functions and human feedback our system learns. The device syncs specific locations and items in a room with classifications across parent-child groupings.  Feedback from humans fine-tune the reward function to bake human-like "street smarts" into the system. Ideally our computer vision tools will learn to preserve the fabric of a corner store and its respective social norms.
 
 # PROOF-OF-CONCEPT
 01 Installing Required Packages and Libraries 
@@ -83,17 +80,17 @@
 06D 3D Human Pose Estimation 
 + Who's here?
 
-07 Training and Deploying a Hand Motion and Object Recognition Model 
+07 Training and Deploying a Hand Motion and Object Classifier
 + Whatcha up to?
 
 08 Training and Deploying a Custom Objects Classifier
 + Whatcha holding?
 
 09 Temporal Association 
-+ Who has what item?
++ Who has what object?
 
 10 Action Analysis Based on Location 
-+ Receiving bill via SMS for Mobile Payment upon exit
++ Guest Receiving bill via SMS for Mobile Payment Upon Store Exit
 
 # V. EXPERIMENTS AND RESULTS
 + Summary Statistics
