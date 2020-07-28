@@ -2,34 +2,36 @@
 
 *** ATTACHED CODE FOR PROOF-OF-CONCEPT (PEOPLE/FOOTFALL COUNTER) ***  
 
-*** YOUTUBE LINK SHOWING PEOPLE/FOOTFALL COUNTER ... **
+*** YOUTUBE LINK TO PEOPLE/FOOTFALL COUNTER ***
 
 # INTRODUCTION
-+ Corner stores serve many roles beyond providing essential goods. They are inherently valuable spaces that have become a comforting landmark amid the pandemic.  My research pulls together something like a work bench to build modern tools for corner stores. The focus is on making new tools feel like a natural extension of the existing corner store experience. My research starts with ethnographic data and develops theories about ways to bake "street smarts" into computer vision systems.
++ Corner stores serve many roles beyond providing essential goods. They are inherently valuable spaces amid the pandemic. Yet coronavirus has given us new ideas on how to occupy corner stores in a modern society. New ideas carry new notions of law, time and social rhythms.  It means loss as well as gain.
++ My research pulls together something like a work bench to build new tools for corner stores. The focus is on making the tools feel like a natural extension of the existing corner store experience. To do this I start with ethnographic data and develop optimization approaches that emphasize formal logic, categories and brute computational force to bake "street smarts" into computer vision applications.
+    
+# RESEARCH QUESTIONS
++ How can we bake human-like "street smarts" into computer vision applications?
++ How could we underpin a computer vision system with a public log of all queries run on its video stream data? ("thus the watchers themselves are watched")
+
+# "DATA PREP"
++ The data I start with to develop theory comes from ethnography.  What is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world.  Methods include: personal responses, sensory impressions, neighborhood identities, human behaviors, jottings, etc. 
++ I undertook approximately 10 months of ethnography in two Chicago corner stores. Next I developed a method for getting ethnographic field notes into a coherent, usable data for computer vision applications.
+
+# PRODUCT DESIGN
++ The device combines the functions of LIDAR and RADAR to measure the different speeds of items in one's hands as they move about a corner store.  This approach better avoids interference with other optical sensors, reflective objects, clothing, lighting, etc. 
++ I design this product around a "Chicago global" look inspired by music.
+
+# COMPUTER VISION 
++ Through a combination of data prep, off-the-shelf hardware, reinforcement learning algorithms, reward functions and human feedback our system learns. The device syncs specific locations and items in a room with classifiers across parent-child groupings.  Feedback from humans fine-tune the reward function to bake human-like "street smarts" into the applications. Ideally our modern tools will multiply the efficiency of the corner store while preserving the fabric of the space.
 
 # TIMELINE
 + Winter 2018 — Spring 2020 
     + Literature Review & Ethnography
 + Summer 2020 
-    + People/Footfall Counter for Corner Stores 
+    + People/Footfall Counter for Corner Stores & Product Design
 + Fall 2020
-    + Inventory Mgmt for Corner Stores (Hand Motion & Custom Objects Classifier)
+    + Inventory Mgmt for Corner Stores (Hand Motion & Item Classifier)
 + Winter 2021
     + "Who has what object?" (Autonomous Checkout Pt. 1)
-    
-# RESEARCH QUESTIONS
-+ How can we bake "street smarts" into computer vision systems?
-+ How could we underpin a computer vision system with a public log of all queries run on its video stream data? ("thus the watchers themselves are watched")
-
-# DATA COLLECTION
-+ The data I start with to develop theory comes from ethnography.  What is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world.  Methods include field notes such as: personal responses, sensory impressions, neighborhood identities, behaviors, jottings, etc. 
-+ I undertook approximately 10 months of ethnography in two Chicago corner stores.  I then built methods for translating ethnographic field notes into usable data for computer vision systems.
-
-# DEVICE
-+ The device combines the functions of LIDAR and RADAR to measure the different speeds of select objects/someones hands as they move about a corner store.  This approach better avoids interference with other optical sensors, reflective objects, clothing, lighting, etc.
-
-# COMPUTER VISION MODEL
-+ Through a combination of data collection, off-the-shelf computer vision hardware, reinforcement learning algorithms, reward functions and human feedback our system learns. The device syncs specific locations and items in a room with classifications across parent-child groupings.  Feedback from humans fine-tune the reward function to bake human-like "street smarts" into the system. Ideally our computer vision tools will learn to preserve the fabric of a corner store and its respective social norms.
 
 # PROOF-OF-CONCEPT
 01 Installing Required Packages and Libraries 
@@ -104,13 +106,11 @@
 
 # DISCUSSION
 
-# APPENDIX: POLICY MEMORANDUM 
+# POLICY MEMORANDUM 
 + How will the profits that accrue from increasing automation be reinvested back into communities for collective gain? 
-+ Working Answer1: In a society that respects labor rights, each person would receive a cash payment equal to their share of the value of an automation-tax, taken on industry in pursuit of economic gain.  Fee proceeds called the “universal basic dividend” would go to all in that community, dispersal tbd.  An automation-tax on such systems also provides industry with an incentive to ensure sufficient re-training, especially of low skilled workers or they bear the full brunt of the automation-tax. This is an idea in progress.  
-+ Working Answer2: There’s a need to create an independent accountability mechanism as we design and refine computer vision policies. It should help guests, corner store mgmt and local authority investigate complaints as well as make these public complaints available and easily searchable. We must analyze complaint cause and question methods to design effective computer vision policies.  An automation-tax would go this.  This is an idea in progress.
-+ I'm still reading up on regulation, rules, accounting standards, disclosure standards, stewardship codes, community opinion and new intrepretations of laws for both 1 & 2.  
++ Working Answer1: In a society that respects labor rights, each person would receive a cash payment equal to their share of the value of an automation-tax, taken on industry in pursuit of economic gain.  Fee proceeds called the “universal basic dividend” would go to all in that community, dispersal tbd.  An automation-tax on such systems also provides industry with an incentive to ensure sufficient re-training, especially of low skilled workers or they bear the full brunt of the automation-tax. An automation-tax could also fund an independent accountability group as we write and refine computer vision policies. It would help shoppers, corner store mgmt and local authority investigate public complaints that are available and easily searchable. We must analyze complaint cause and question methods to design effective computer vision policies.  An automation-tax would fund this.  This is an idea in progress. I'm still reading up on regulation, rules, accounting standards, disclosure standards, stewardship codes, community opinion and new interpretations of laws.
 
-## APPENDIX: SANDBOX
+## SANDBOX
 + Show it’s possible to get interesting services without egregious and invasive privacy practices (NO FACE RECOGNITION)
 + Better handling the 10% of "edge cases" (unusual cases that are not common in training data)
 + Branching object persistence models across multiple cameras
