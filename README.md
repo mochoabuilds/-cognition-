@@ -6,39 +6,38 @@
 
 # INTRODUCTION
 
-* Corner stores have many roles beyond just providing essential goods. They have become inherently valuable spaces amid the pandemic.  The corner store is a place hang out for the simple pleasure of good company and conversation.
-* However coronavirus has given us new ideas on how to occupy corner stores. These new ideas also carry new notions of law, time and social rhythms. It means loss as well as gain.
-* My research pulls together something like a work bench to preserve the fabric of the corner store and lend them modern tools.  My focus is on making the tools feel like a natural extension of the existing corner store experience.
-* With the help of many others, we combine the functions of LIDAR and thermal radar to sharpen measurement abilities at 10m and less.  We focus on measuring the different velocities of someones arms as they move about a corner store.  This approach better avoids interference with other optical sensors, reflective objects, clothing, lighting, etc.  Our thermal radar measure the speed and the the LIDAR measures the depth. Both are housed in a thoughtfully designed box.
-* One way to think about this research is as an optimization problem, in which we teach a machine to make trade-offs between many variables to arrive at a solution that minimizes as many variables as possible.   We then integrate all this computer software/data/technology for corner store to multiply its efficiency and preserve the fabric of its space.
+* Corner stores have many roles beyond just providing our essential goods. They are inherently valuable spaces.  The corner store is a place to hang out for the simple pleasure of good company and conversation.  Unfortunately, the pandemic has given new ideas on how to occupy the corner store. These new ideas carry new notions of law, time and social morms. Any change means loss as well as gain.
+* My research pulls together something like a work bench to preserve the fabric of the corner store, while also lending them modern tools.  My focus is on making any change feel like a natural extension of the existing experience.
+* With the help of many others, I research and develop software for multi-sensor data fusion and data collection for corner stores.  We focus on measuring the speed and depth of someones arms as they move about a space.  This approach better avoids interference with other optical sensors, reflective objects, clothing, lighting, etc. The sensor kit lives in a thoughtfully designed box.
+* I see the problem as an optimization/search problem. You teach a machine to make trade-offs between many variables and arrive at a solution that minimizes as many variables as possible.  I then integrate it all into a system for corner stores to multiply their efficiency as well as preserve the fabric of the space.
 
-# RESEARCH QUESTIONS
+# LEADING QUESTIONS
 
-* How could we underpin a computer vision application with a public log of all queries run on its video stream data? ("thus the watchers themselves are watched")
-* How can we teach machines to NOT use guest biometrics as a condition of accepting payment under the Song Beverley Act of 1971.
-* How will we help machines better solve computer vision problems intuitively?  
-* Better understanding how social, economic and legal systems work together to achieve research goals.
+* Could we underpin the modern tools with a public log of all queries run on its video stream data, "thus the watchers themselves are watched"
+* Can we teach machines to NOT use guest biometrics as a condition of accepting payment under the Song Beverley Act of 1971
+* Could we help machines better solve computer vision problems intuitively? 
 
-# "DATA PREPARATION”
+* Better understanding how social, economic and legal systems work together to achieve my research goals 
 
-* We integrate the technology for corner stores here.  We get rich data sets into a coherent usable format for computer vision algorithms. The data I start with to develop theory comes from ethnography. What is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world. Field notes include: personal responses, sensory impressions, neighborhood identities, human behaviors, jottings, etc.
-* I undertook approximately 10 months of ethnography in two Chicago corner stores.  I then convert field notes into a different format to make the formatting have nicer properties for the computer vision algorithms.
+# DATA COLLECTION & PREP
+
+* The start of this journey begins here. I got rich data sets into a coherent usable format for computer vision algorithms. The rich data I used to develop theory comes from ethnography. What is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world. Data includes: personal responses, sensory impressions, neighborhood identities, human behaviors, jottings, etc. I undertook approximately 10 months of ethnography in two Chicago corner stores for data collection. Next I built an autoencoder to convert ethnographic data into a different format to make the formatting have nicer properties for computer vision algorithms. 
 
 # COMPUTER VISION ALGORITHMS
 
-* Through a combination of data prep, off-the-shelf hardware, reinforcement learning algorithms, reward functions and human feedback our system learns to solve problems. The device syncs specific locations and items in a corner store with classifiers across parent-child groupings. 
-* AI is not an install-and-forget system.  It works best when humans are there to hold its hand.  Feedback from our humans fine-tunes the machine’s reward function to rely more on “tone” and physical environment to solve problems.  The machines symbolic approach emphasizes converted ethnography, hierarchal categories, brute computational force and in-person AI servicing.     
+* Through a combination of data collection and prep, off-the-shelf hardware, reinforcement learning, reward functions and human feedback our system learns to solve problems. The device syncs specific locations and items in a corner store with classifiers.
+* The system works best when humans are there to hold its hand.  Feedback from humans must fine-tune its reward function to rely more on “tone” and physical environment to solve corner store problems.  The machines symbolic approach emphasizes converted ethnography, hierarchal categories and brute computational force.
 
 # TIMELINE 
 
 * Winter 2018 — Spring 2020
     * Literature Review & Ethnography
 * Summer 2020
-    * People/Footfall Counter 
+	* People/Footfall Counter 
 * Fall 2020
-	* Inventory MGMT (Hand Motion Classifier, Item Classifier)
+	* Inventory MGMT (Hand Motion Classifier & Item Classifier)
 * Winter 2021
-	* "Who has what object?" (Autonomous Checkout Pt. 1,)
+	* "Who has what object?" (Autonomous Checkout Pt. 1)
 
 # SUMMER 2020
 
@@ -119,9 +118,8 @@ Summary Statistics
 # POLICY MEMO
 
 * How will the profits that accrue from increasing automation be reinvested back into communities for collective gain?
-* An Automation-Tax taken on industry is necessary.  An automation-tax also provides industry with an incentive to ensure sufficient re-training, especially of low skilled workers or they bear the full brunt of the automation-tax.  We anticipate opposition.  These are merely recommendations.
-* In a society that respects labor rights, each community would receive a cash payment equal to their share of the value of an automation-tax.  Fee proceeds called the “automation-dividend” would go the community for dispersal.  
-* An automation-tax could also fund an independent accountability group to help communities refine local computer vision policy. It would help communities, corner stores and local authorities investigate public complaints regarding computer vision and analyze complaints.  
+* An Automation-Tax taken on industry is necessary. We anticipate opposition. These are merely recommendations. In a society that respects labor rights, each community would receive a cash payment equal to their share of the value of an automation-tax.  Fee proceeds called the “automation-dividend” would go the community for dispersal.  
+* A tax could also fund an independent accountability group to help communities revisit their computer vision policy. It could help communities, corner stores and local authorities investigate public complaints regarding computer vision.
 * This is all an idea in progress. I'm reading up on regulation, rules, accounting standards, community opinion and new interpretations of laws.
 
 # SANDBOX
