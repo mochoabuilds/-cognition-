@@ -1,11 +1,10 @@
-#    RECIPE
+#    HIGH LEVEL 
 #
 # 1  establish bounding box coordiantes and determine centroids
 # 2  compute Euclidean distance between bounding boxes and old objects
 # 3  update coordinates of old objects
 # 4  register new objects 
 # 5  de-register old/lost objects that left the view
-
 
 from scipy.spatial import distance as dist
 from collections import OrderedDict
@@ -19,10 +18,10 @@ def __init__(self, maxDisappeared=  , maxDistance=  ):
 	# assign unique IDs to objects
 	self.nextObjectID = 0
 	
-	# dictionary - ObjectID the key and centroid the value
+	# dictionary, ObjectID the key and centroid the value
 	self.objects = OrderedDict()
 	
-	# explore number of fps ObjectID has "disappeared"
+	# explore the number of frames per second (fps) ObjectID has "disappeared"
 	self.disappeared = OrderedDict()
 	
 	# breakpoint fps for ObjectId to be marked "lost"
@@ -51,11 +50,11 @@ def update(self, rects):
 	# check if bounding box is empty
 	if len(rect) == 0:
 		
-		# if empty, loop over ObjectIDs and mark as disappeared
+		# if empty, loop over ObjectIDs and mark as "disappeared"
 		for objectID in list(self.disappeared.keys()):
 			self.disappeared[objectID] += 1
 			
-			# remove given object from tracking system if marked missing
+			# remove given object from tracking system if marked as "missing"
 			if self.disappeared[objectID] > self.maxDisappeared:
 				self.deregister(objectID)
 	
@@ -79,8 +78,8 @@ if len(self.objects) == 0:
 		self.register(inputCentroids[i])
 
 # otherwise, compute Euclidean distance between boxes and old objects with 
-# a distance map output array that indexes values with the smallest 
-# corresponding distance to the front of the list
+# distance map output array that indexes values with the smallest 
+# corresponding distance to front of the list
 else:
 	
 	# pull object IDs and related centroids
@@ -93,10 +92,10 @@ else:
 	# perform matching on rows 
 	rows = D.min(axis=1).argsort()
 	
-	# perform marching on columns
+	# perform matching on columns
 	cols = D.argmin(axis=1)[rows]
 	
-	#  set up two sets to keep track of which rows and columns looked at
+	#  set up two sets to keep track of which rows and columns previously looked at
 	used Rows = set ()
 	used Cols = set ()
 	
@@ -107,12 +106,12 @@ else:
 		if row in usedRows or col usedCols:
 			continue
 	
-	# if distance between centroids > maximum distance, do not associate centroids
+	# if distance between centroids > maximum distance, DO NOT associate centroids
 	if D[row, col] > self.maxDistance:
 		continue 
 		
-	# we are then left with the smallest Euclidean distances. we pull their object ID for 
-	# the row, set its new centroid and reset our "disappeared" counter
+	# we are then left with the smallest Euclidean distances and pull their object IDs, 
+	# set its new centroid and reset our "disappeared" counter
 	objectID = objectIDs[row]
 	self.objects[objectID] = inputCentroids[col]
 	self.disappeared[objectID] = 0
@@ -121,12 +120,12 @@ else:
 	usedRows.add(row)
 	usedCols.add(col)
 	
-	# compute row and column indexing for sets we have not yet looked at
+	# compute row and column indexing for sets we have yet to look at 
 	unusedRows = set(range(0, D.shape[0])).difference(usedRows)
 	unusedCols = set(range(0, D.shape[1])).difference(usedCols)
 	
-	# check if objects have "disappeared" or have been lost
-	# why? helpful when object centroids are greater than equal to input centroids
+	# check if objects have "disappeared" or have been "lost"
+	# why? it's helpful when object centroids are greater than equal to input centroids
 	if D.shape[0] >= D.shape[1]:
 		
 		# loop over unused row indexes
@@ -136,7 +135,7 @@ else:
 			objectID = objectIDs[row]
 			self.disappeared[objectID] += 1
 			
-			# double check to see if marking it "disappeared" was warranted 
+			# double check to see if marking it "disappeared" was the right move 
 			if self.disappeared[objectID] > self.maxDisappeared:
 				self.deregister(objectID)
 		
