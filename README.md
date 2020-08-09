@@ -7,12 +7,12 @@
 # INTRODUCTION
 
 * Neighborhood shops do more than provide us with essential goods. They're a place to you can go daily at a given time for the simple pleasure of good company and conversation. My research pulls together something like a work bench to preserve the fabric of the neighborhood shop. I'm focused on making new tools feel like a natural extension of the existing experience. 
-* With the help of many others, I design and engineer a sensing system capable of multi-sensor data fusion, summarizing, and decision making abilities. I generate training data from interdisciplinary methods to build reliable encoding/decoding streaming systems. Borrowing from sociology I convert its rich field notes and conversations with residents into a usable coherent format for the sensing system to display good judgement, especially during "edge cases".  To do this I fine-tune a machine to make trade-offs between many variables, make decisions and then explain its rationale.
+* With the help of many others, I design and engineer a sensing system capable of multi-sensor data fusion, summarizing, and decision making abilities. I generate training data from interdisciplinary methods to build a reliable autoencoder, and then I fine-tune a machine to make trade-offs between many variables and then explain its decisions.
 
 # DATA PREP: ETHNOGRAPHY, CONVERSATIONS & THE AUTOENCODER
 
 * The journey begins here. I get rich data sets into a coherent usable format for the sensing system. The rich data comes from neighborhood shop ethnography and conversations with residents. My belief is that new data helps us ask new questions, new questions develop new theories and new theories can create new sensing system tools.
-+ So what is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world. Field notes include: personal responses, sensory impressions, neighborhood identities, human behaviors, jottings, etc. I embarked on 10 months of ethnography in two Chicago neighborhood shops for data collection. Next I built a working autoencoder to convert the qualitatively rich data into a different format to make the formatting have nicer properties for sensing system algorithms.  
++ So what is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world. Field notes include: personal responses, sensory impressions, neighborhood identities, human behaviors, jottings, etc. I embarked on 10 months of ethnography in two Chicago neighborhood shops for data collection. Next I built a working autoencoder to convert the qualitatively rich data into a usable coherent format, so it has nicer properties for sensing system algorithms to learn good judgement, especially during "edge cases".  
 
 # SENSING SYSTEM ALGORITHMS
 
