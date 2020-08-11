@@ -2,21 +2,21 @@
 
 *** ATTACHED CODE FOR PROOF-OF-CONCEPT ***
 
-*** YOUTUBE LINK ***
+*** YOUTUBE DEMO ***
 
 # INTRODUCTION
 
-* Neighborhood shops do more than provide us with essential goods. They're a place to you can go daily at a given time for the simple pleasure of good company and conversation. My research pulls together something like a work bench to preserve the fabric of the neighborhood shop. I'm focused on making new tools feel like a natural extension of the existing experience. 
-* With the help of many others, I design and engineer a sensing system capable of multi-sensor data fusion, summarizing, and decision making abilities. I generate training data from interdisciplinary methods to build a reliable autoencoder, and then I fine-tune a machine to make trade-offs between many variables and then explain its decisions.
+* Neighborhood shops do more than provide us with essential goods. They're our "homes away from home" where unrelated people relate. They're the place you can go daily at a given time for the simple pleasure of good company and conversation.  However, informal public life is not totally engrained in our young American cities.  Modern tools must perserve these kinds of informal human associations as they're essential to healthy democratic cities.  My research pulls together something like a work bench to preserve the social fabric of the neighborhood shop. I'm focused on making modern tools feel like a natural extension of the existing experience. 
+* With the help of many others, I develop a sensing system capable of intergrating ethnographic field notes into more abstract and analytical efforts to address the evolving nature of human-computer interactions.  My goal is to make neighhborhood shops feel more "neutral", so staff and guests can better get to know each other, like one another and take interest in each others well-being.  
 
-# DATA PREP: ETHNOGRAPHY, CONVERSATIONS & THE AUTOENCODER
+# DATA PREP: ETHNOGRAPHY & AUTOENCODER
 
-* The journey begins here. I get rich data sets into a coherent usable format for the sensing system. The rich data comes from neighborhood shop ethnography and conversations with residents. My belief is that new data helps us ask new questions, new questions develop new theories and new theories can create new sensing system tools.
-+ So what is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world. Field notes include: personal responses, sensory impressions, neighborhood identities, human behaviors, jottings, etc. I embarked on 10 months of ethnography in two Chicago neighborhood shops for data collection. Next I built a working autoencoder to convert the qualitatively rich data into a usable coherent format, so it has nicer properties for sensing system algorithms to learn good judgement, especially during "edge cases".  
+* First, I get rich ethnographic data into a coherent usable format for the sensing system. The rich data comes from neighborhood shop ethnography. My belief is that new data helps us ask new questions, new questions develop new theories and new theories can create new sensing system tools.
++ So what is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world. Field notes include: personal responses, sensory impressions, neighborhood identities, human behaviors, jottings, etc. I embarked on 10 months of ethnography in two Chicago neighborhood shops for data collection. Next I built a working autoencoder to convert the qualitatively rich data into a usable coherent format, so it has nicer properties for sensing system algorithms to learn good judgement, especially during unusual "edge cases".  
 
 # SENSING SYSTEM ALGORITHMS
 
-* Through a combination of data prep, off-the-shelf hardware, reinforcement learning, reward functions and human feedback the sensing system learns to understand neighborhood shop "edge cases". At first, the machine will do this by syncing specific locations/items in a room with classifiers across parent-child groupings. As research progresses, and with a human to hold its hand, we will fine-tune its reward function to rely more on "tone" and the neighborhoods view during unusual "edge cases".  
+* Through a combination of data prep, off-the-shelf hardware, reinforcement learning, reward functions and human feedback I develop a sensor system to address unusual "edge cases" more effectively. I do this by digitizing the location of all items in a shop to create real-time planograms.
 * Hardware:
 * Reinforcement Learning:
 * Reward Functions:
@@ -29,19 +29,19 @@
 * Summer 2020
 	* People/Footfall Counter (Proof-of-Concept)
 * Fall 2020
-	* Inventory Mgr for Neighborhood Shops (Hand Motion & Item Classifier)
+	* Inventory Asst for Neighborhood Shops (Hand Motion & Item Classifier)
 * Winter 2021
 	* Who has what object? (Temporal Association)
 * Spring 2021
-	* "Blockchain-Based Payment Protocols for Autonomous Checkout" (Beta)
+	* Autonomous Checkout Pt. 1 
 	
 # LEADING QUESTIONS
 
-* How can we teach machines to NOT use guest biometrics as a condition of accepting payment under the Song Beverley Act of 1971?
-* How could we underpin modern tools for corner stores with a public log of all queries run on video stream data?  ("thus the watchers themselves are watched")
+* Teach machines to NOT use guest biometrics as a condition of accepting payment under the Song Beverley Act of 1971?
+* How could we underpin modern tools for neighborhood shops with a public log of all queries run on video stream data?  ("thus the watchers themselves are watched")
 * Branching object persistence models across multiple cameras
 * Better understanding the front-back orientation of human limbs due to clothing, lighting, background
-* Lowering processing power bills by bridging the Edge-Cloud barrier
+* Lowering processing power bills by bridging the edge-cloud barrier
 * Determining the metrics that improve downstream performance
 * How could I better understand how social, economic and legal systems work together to achieve my research goals? 
 		
@@ -52,7 +52,7 @@
 * OpenCV https://opencv.org/
 * dlib http://dlib.net/a
 
-02 Configuring Edge Computing Device
+02 Configuring the Edge Computing Device (Raspberry Pi)
 
 03 Footfall/People Counter (Plz see Attached Codebase)
 * Counts the # of people entering and exiting a room
@@ -78,9 +78,8 @@
 * Keras https://keras.io/
 * Tensorflow https://www.tensorflow.org
 * Caffe http://caffe.berkeleyvision.org/
-*
 
-02 Converting Field Notes for Computer Vision Algos  (Autoencoder)
+02 Ethnography & Autoencoder Setup
 
 03 2D Human Pose Estimation with Tensorflow and Caffe 
 * Who’s here? 
@@ -100,7 +99,7 @@
 08 Temporal Association
 * Who has what item?
 
-09 "Blockchain-Based Payment Protocols for Autonomous Checkout"
+09 Autonomous Checkout Pt. 1
 		
 # EXPERIMENTS AND RESULTS
 
