@@ -6,13 +6,13 @@
 
 # INTRODUCTION
 
-* Neighborhood shops do more than provide us with essential goods. They're our "homes away from home" where unrelated people relate. They're the place you can go daily at a given time for the simple pleasure of good company and conversation.  However, informal public life is not totally engrained in our young American cities.  Modern tools must perserve these kinds of informal human associations as they're essential to healthy democratic cities.  My research pulls together something like a work bench to preserve the social fabric of the neighborhood shop. I'm focused on making modern tools feel like a natural extension of the existing experience. 
-* With the help of many others, I develop a sensing system capable of intergrating ethnographic field notes into more abstract and analytical efforts to address the evolving nature of human-computer interactions.  My goal is to make neighhborhood shops feel more "neutral", so staff and guests can better get to know each other, like one another and take interest in each others well-being.  
+* Neighborhood shops do more than provide us with essential goods. They are a place you can go daily at a given time for the simple pleasure of good company and conversation. They're where unrelated people relate. However these spaces of informal public life are not totally engrained in our young midwestern cities. Neighborhood shops compete with big shopping centers pulling away customers. This research pulls together something like a work bench to preserve the social fabric of the neighborhood shop. I'm focused on making modern tools feel like a natural extension of the existing experience. 
+* With the help of many others, I develop a sensing system capable of intergrating ethnographic field notes into more abstract and analytical efforts that are a less costly way to do the same tasks. I'm currently researching, building products, understanding their benefits and devising a plan of action. 
 
-# DATA PREP: ETHNOGRAPHY & AUTOENCODER
+# DATA PREP: ETHNOGRAPHIC AUTOENCODER
 
-* First, I get rich ethnographic data into a coherent usable format for the sensing system. The rich data comes from neighborhood shop ethnography. My belief is that new data helps us ask new questions, new questions develop new theories and new theories can create new sensing system tools.
-+ So what is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world. Field notes include: personal responses, sensory impressions, neighborhood identities, human behaviors, jottings, etc. I embarked on 10 months of ethnography in two Chicago neighborhood shops for data collection. Next I built a working autoencoder to convert the qualitatively rich data into a usable coherent format, so it has nicer properties for sensing system algorithms to learn good judgement, especially during unusual "edge cases".  
+* The goal here is to get rich ethnographic data into a coherent usable format for sensing systems. The data comes from neighborhood shop ethnography. My belief is that new data helps us ask new questions, new questions develop new theories and new theories can create new tools.
++ So what is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world. Field notes include: personal responses on the unusual, sensory impressions, neighborhood identities, unusual human behaviors, jottings, etc. I embarked on 10 months of ethnography in two Chicago neighborhood shops for data. Next I built a working autoencoder to convert the qualitatively rich data into a usable coherent format, so it has nicer properties for sensing systems to learn good judgement, especially during unusual "edge cases".  
 
 # SENSING SYSTEM ALGORITHMS
 
@@ -21,6 +21,10 @@
 * Reinforcement Learning:
 * Reward Functions:
 * Fine-Tuning:
+
+# PRIVACY???
+
+* How could we underpin modern tools for neighborhood shops with a public log of all queries run on video stream data?  ("thus the watchers themselves are watched")
 
 # TIMELINE 
 
@@ -38,7 +42,6 @@
 # LEADING QUESTIONS
 
 * Teach machines to NOT use guest biometrics as a condition of accepting payment under the Song Beverley Act of 1971?
-* How could we underpin modern tools for neighborhood shops with a public log of all queries run on video stream data?  ("thus the watchers themselves are watched")
 * Branching object persistence models across multiple cameras
 * Better understanding the front-back orientation of human limbs due to clothing, lighting, background
 * Lowering processing power bills by bridging the edge-cloud barrier
