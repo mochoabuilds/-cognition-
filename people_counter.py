@@ -1,6 +1,6 @@
-import yolo23.directioncounter import DirectionCounter
-import yolo23.centroid tracker import CentroidTracker
-import yolo23.trackableobject import TrackableObject
+import cognition.directioncounter import DirectionCounter
+import cognition.centroid tracker import CentroidTracker
+import cognition.trackableobject import TrackableObject
 from multiprocessing import Process
 from multiprocessing import Queue
 from multiprocessing import Value
@@ -11,7 +11,7 @@ import imutils
 import time  
 import cv 2  
 
-# "recipe" for video writing process
+# recipe for video writing process
 def write_video(outputPath, writeVideo, frameQueue, W, H):
   
   # set up necessary data formats and video writer object
@@ -34,6 +34,7 @@ def write_video(outputPath, writeVideo, frameQueue, W, H):
   # when video is done let go of video writer object
   writer.release()
   
+  
 # argument parser that accepts four command line arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-m", "--mode", type=str, required=True,
@@ -47,6 +48,7 @@ ap.add_argument("s", "--skip-frames", type=int, default=40
   # skips frames to improve efficiency              
   help="# of skip frames between detections"
 
+                
 # if video path is empty, pull a reference from webcam
 if not args.get("input", False):
   
@@ -55,7 +57,7 @@ if not args.get("input", False):
   vs = VideoStream(usePiCamera=True).start()
   time.sleep(2.0)
                 
-# otherwise, grab a reference from video file
+# otherwise grab a reference from video file
 else:
   print("[INFO] opening video file...")
   vs = cv2.VideoCapture(args["input"])
@@ -75,14 +77,14 @@ trackableObjects = {}
 directionInfo = None
                 
 # run the foreground background subtractor, 
-# build the fps counter
+# build the frame per second (FPS) counter
 mog = cv2.bgsegm.createBackgroundSubtractorMOG()
 fps = FPS().start()
 
 # loop over frames from video steam
 while True:
                 
-  # grab frame, and index based on if webcam or video stream
+  # grab frame and index based on if webcam or video stream
   frame = vs.read()
   frame = frame[1] if args.get("input", False) else frame
 
@@ -90,13 +92,13 @@ while True:
   if args["input"] is not None and frame is None:
     break
 
-  # set the frame dimensions and run direction counter
-  # object if required
+  # set the frame dimensions and run 
+  # direction counter object if needed
   if W is None or H is None:
   (H, W) = frame.shape[:2]
   dc = DirectionCounter(args["mode"], H, W)
 
-  # begin writing video to disk, if needed
+  # begin writing video to disk if needed
   if args["output"] is not None and writerProcess is None:
     # set writeVideo flag, set up frameQueue and start writerProcess
     writeVideo = Value('i', 1)
@@ -115,8 +117,8 @@ while True:
    # apply background subtraction model
    mask = mog.apply(gray)
                 
-   # erosions are applied to break apart components and reduce noise, then we find and
-   # extract contours and add the bounding boxes to rects   
+   # erosions are applied to break apart components and reduce noise
+   # then we find and extract contours and add the bounding boxes to rects   
    erode = cv2.erode(mask, (7, 7), iterations=2)
    cnts = cv2.findContours(erode.copy(), cv2.RETR_EXTERNAL,
    cv2.CHAIN_APPROX_SIMPLE)
@@ -135,6 +137,34 @@ while True:
     # add bounding box coordinates to rects list
     rects.append((startX, startY, endX, endY)) 
                 
-    # split the screen with horizontal or vertical line    
+    # check if the people counter direction is vertical    
     if args["mode"] == "vertical":            
-       # draw a horizontal line in the center of the frame            
+       
+      # draw a horizontal line in the center of the frame 
+      # to mark whether people are moving 'up' or 'down' across 
+      # the frame once a person crosses this line
+      cv2.line(frame, (W // 2, 0), (W // 2, H), (0, 255, 255), 2)
+   
+    else: 
+      # draw a vertical line in the center of the frame 
+      # to mark whether people are moving 'left' or 'right'
+      # across the frame once a person crosses this line
+      cv2.line(frame, (W // 2, 0), (W // 2, H), (0, 255, 255), 2)
+      
+    # Counting our people! use centroid tracker to link
+    # old object (i.e. people) centroids with new object centroids
+    objects = ct.update(rects)
+                
+    # loop over tracked objects
+    for (objectID, centroid) in objects.items(): 
+    
+      # pull trackable object via object ID
+      to = trackableObjects.get(objectID, None) 
+      color = (0, 0, 255) 
+                
+      # create a new trackable object as needed
+      if to is None:
+         to = TrackableObject(objectID, centroid)
+                
+      # otherwise
+      else:
