@@ -6,31 +6,28 @@
 
 # INTRODUCTION
 
-* Neighborhood shops do more than provide us with essential goods. They are a place you can go daily for the simple pleasure of good company and conversation. They are where unrelated people relate. However, these spaces of informal public life are not totally engrained in our young midwestern cities. Neighborhood shops must compete with big shopping centers pulling away regulars. This research pulls together something like a work bench to preserve the social fabric of neighborhood shops and reinstate the kinds of human associations key to healthy neighborhoods. With the help of many others, I've been developing a sensing system that standardizes improved methods to develop our corner of the automation market.
+* Neighborhood shops do more than provide us with essential goods. They are a place you can go daily for the simple pleasure of good company and conversation. They are where unrelated people relate. However, these spaces of informal public life are not totally engrained in our young midwestern cities. Neighborhood shops compete with big shopping centers pulling away regulars. This research pulls together something like a work bench to preserve the social fabric of neighborhood shops and reinstate the kinds of human associations key to healthy neighborhoods. With the help of many others, I show how I'm developing a sensing system that standardizes improved methods for neighborhood shops. My research asks: are there less costly ways/more social ways to do the same tasks?
 
 # DATA PREP: ETHNOGRAPHIC AUTOENCODER
 
-* Neighborhood shop record systems are becoming more than mere stores of data.  My goal is to get rich ethnographic data into a coherent usable format for the sensing system. The data comes from neighborhood shop ethnography.  I believe new types of data helps us ask new questions, new questions develop new theories and new theories create new tools.
-+ So what is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world. Field notes include: personal responses, sensory impressions, neighborhood idiosyncrasies, blind spots, interviews, unstated goals, preferred work styles, etc. I embarked on 10 months of ethnography in two Chicago neighborhood shops for data collection. Next I built a working autoencoder to convert the qualitatively rich data into a usable coherent format, so it has nicer properties for the sensing system to learn good judgment.
+* Neighborhood shop record systems are becoming more than mere stores of data.  The goal is to get rich ethnographic data into a coherent usable format for the sensing system. The rich data comes from neighborhood shop ethnography.  I believe new types of data help us ask new questions, new questions develop new theories and new theories create new tools.
++ So what is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world. Field notes include: personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots, unstated goals, preferred work styles, etc. I embarked on 10 months of ethnography in two Chicago neighborhood shops for data collection. Next I built a working autoencoder to convert the qualitatively rich data into a usable coherent format, so it has nicer properties for the sensing system to learn good judgment.
 
 # HOT LINE: SENSING SYSTEM 
 
-* Through a combination of data prep, off-the-shelf hardware, cropping areas of interest, reinforcement learning, reward functions and human fine-tuning we develop flowcharts for a sensor system application. They work together to visualize which person has what item in real-time within a neighborhood shop, etc.
+* Through a combination of data prep, off-the-shelf hardware, cropping areas of interest, reinforcement learning, reward functions and human fine-tuning flowcharts are developed for a sensor system application. All these moving parts work together to visualize which person has what item in real-time. This approach creates an internal model of the neighborhood shop.
 
-# MODERN TOOLS
+# MODERN TOOLS FOR NEIGHBORHOOD SHOPS
 
-* We drew on a base of ethnography and interviews to create these modern tools. They are less costly and more efficient way to do the same old neighborhood market tasks.   
-
-Client Hardware: "Coffeepot"
-Client Software: Inventory Asst
-Guest Hardware: "Black Card"
-Guest Sofrware: "Running Tabs"
+* Client Hardware: "Coffeepot" Sensing System
+* Client Software: Inventory Asst, Purchasing Asst, Bookkeeping Asst
+* Guest Software: "Running Tabs" Smartphone Application
 
 # PRODUCT DESIGN
 
-* "COFFEEPOT" - The sensing system and processing power live in what looks like a coffeepot.  Its over-long body and low key placement of sensors was inspired by Josef Hoffman designs of 1904.
+* "COFFEEPOT" - The sensors and processing power live in what looks like a coffeepot.  Its over-long body and low key placement of sensors was inspired by Josef Hoffman designs of 1904.
 
-# PEOPLE/FOOTFALL COUNTER (PROOF-OF-CONCEPT, SUMMER 2020)
+# PEOPLE/FOOTFALL COUNTER (PROOF-OF-CONCEPT)
 
 01 Installing Required Packages and Libraries
 * Python
@@ -54,7 +51,7 @@ Guest Sofrware: "Running Tabs"
 	* trackableobject.py
 * people_counter.py (driver script)
 
-# MODERN TOOLS (FALL 2020)
+# MODERN TOOLS FOR NEIGHBORHOOD SHOPS (FALL 2020)
 
 01 Installing Required Packages and Libraries
 * scikit-image https://scikit-image.org/
@@ -105,7 +102,7 @@ Guest Sofrware: "Running Tabs"
 * Model Size
 * Protocols
 
-# RESEARCH CHALLENGES
+# DISCUSSION & CHALLENGES
 
 * How could we underpin modern tools for neighborhood shops with a public log of all queries run on video stream data?  ("thus the watchers themselves are watched")
 * Teaching machines to NOT use guest biometrics as a condition of accepting payment under the Song Beverley Act of 1971
@@ -114,13 +111,11 @@ Guest Sofrware: "Running Tabs"
 * Restructing code and making arrays more ergonomic for the sensing system
 * Determining the metrics that improve downstream performance
 * Better understanding how social, economic and legal systems work together to achieve my research goals 
-		
-# DISCUSSION
 
 # POLICY MEMO
 
 * How will the profits that accrue from increasing automation be reinvested back into communities for collective gain?
-* An automation tax taken on by industry and citizen could fund an independent accountability group to help communities revisit their computer vision policies. It could help neighborhood shops and local authorities investigate public complaints regarding computer vision/privacy. These recommendations are an idea in progress. At the moment I'm reading up on regulation, rules, accounting standards, community opinion and new interpretations of laws.
+* An automation tax taken on by industry and citizen could fund an independent accountability group to help communities revisit their sensing system/computer vision policies. It could help neighborhood shops and local authorities investigate public complaints regarding privacy. These recommendations are an idea in progress. At the moment I'm reading up on regulation, rules, accounting standards, community opinion and new interpretations of laws.
 
 # BIBLIOGRAPHY
 
