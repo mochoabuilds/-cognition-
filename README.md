@@ -1,19 +1,19 @@
 *** WORKING PAPER ***
 
-*** ATTACHED CODE FOR PROOF-OF-CONCEPT ***
+*** ATTACHED CODE FOR (PROOF-OF-CONCEPT) ***
 
 # WHAT IS IT?
 
-* My research extends the idea of what a neighborhood shop can and should be. With the help of many others, I explore: are there less costly/more social ways to do day-to-day operations in neighborhood shops?
+* This research extends the idea of what a neighborhood shop can and should be. With the help of many others, I explore whether there are less costly / more social ways to do day-to-day operations :)
 
 # WHY?
 
-* Neighborhood shops do more than provide us with essential goods. They are a place you can go daily for the simple pleasure of good company and conversation. Neighborhood shops are where unrelated people relate. However, these spaces of informal public life are not totally engrained in our yung Midwestern cities. My goal is to provide them a platform-as-a-service for enabling autonomous checkout using computer vision, overhead cameras and processing power to track and process purchases of goods.  It's a modern tool neighborhood shops didn't know they wanted, but suddenly may not be able to live without.
+* Neighborhood shops do more than provide us with essential goods. They are a place you can go daily for the simple pleasure of good company and conversation. They are where unrelated people relate. However, these spaces of informal public life are not totally engrained in our yung Midwestern cities. My goal is to provide neighborhoods shops with modern tools using computer vision, overhead cameras and brute computational force to track and process purchases of goods.  It's a tool they didn't know they wanted, but suddenly may not be able to live without.
 
-# REAL WORLD APPLICATIONS 
+# REAL WORLD APPLICATIONS! 
 
 * Shop Software: Inventory Assistant via Smartphone App
-* Shop Hardware: Sensing System Product Design 
+* Shop Hardware: Sensing System via Product Design 
 * Guest Software: Autonomous Checkout via Smartphone App
 
 # PRODUCT DESIGN
@@ -21,7 +21,7 @@
 * The sensors and processing power for the shop hardware live in what looks like a coffeepot.  Its over-long body and low key placement of sensors was inspired by Josef Hoffman designs of 1904.
 
 # DATA COLLECTION & PREP
-* My goal is to get rich ethnographic data into a coherent usable format for the sensing system. The rich data comes from neighborhood shop ethnography and 100 human action classes and 100 clips (10 seconds each) per class.  I want to show how this data set could enable new architectures to be developed that include multiple streams of information.    
+* My goal is to get rich ethnographic data into a coherent usable format for the sensing system. The rich data comes from neighborhood shop ethnography and 100 human action classes with 100 clips (10 seconds each) per class.  I want to show how this data set could enable new architectures to be developed that include multiple streams of information.    
 * STEP 1 RawData - So what is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world. Field notes include: personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots, unstated goals, preferred work styles, etc. I embarked on 10 months of ethnography in two Chicago neighborhood shops for data collection. 
 * STEP 2 TidyDataSet - I built a working auto-encoder to convert the qualitatively rich data into a usable coherent format, so it has nicer properties for the sensing system to learn good judgment.
 * STEP 3 Description - describe each variable and values in tidy data set
@@ -31,12 +31,6 @@
 
 * Through a combination of data prep, off-the-shelf hardware, cropping areas of interest, reinforcement learning, reward functions and human fine-tuning flowcharts are developed for a sensor system application. All these moving parts work together to visualize which person has what item in real-time. 
 * This section provides the technical contributions for a computer vision architecture that has the capacity to take advantage of pre-training on converted ethnographic data, and transferring this high performance action classification to learning motion features across different data sets.
-
-# ACTION CLASSIFIER ARCHITECTURE
-
-* The goal here is to build computer vision architectures and purposefully difficult data sets for training real world applications.
-* Backbone - Inception-v1 w/batch normalization
-* More to come!  
 
 # PEOPLE/FOOTFALL COUNTER (PROOF-OF-CONCEPT)
 
@@ -62,25 +56,40 @@
 	* trackableobject.py
 * people_counter.py (driver script)
 
-# REAL WORLD APPLICATIONS 
+# REAL WORLD APPLICATIONS!
 
-01 Installing Required Packages and Libraries
+* The goal here is to build challenging training data sets and computer vision architectures for real world applications.
+* More to come!
+
+01 Installing Required Packages and Libraries (Working List)
 * scikit-image https://scikit-image.org/
 * scikit-learn https://scikit-learn.org/stable/index.html
 * Numpy https://numpy.org/install/
-* Keras https://keras.io/
 * Tensorflow https://www.tensorflow.org
-* Caffe http://caffe.berkeleyvision.org/
-*
+* Qt 5.4 https://www.qt.io/qt5-4/
+* cmake https://cmake.org/
+* OpenCV http://opencv.org/downloads.html
 
-02 How the Data Set was Built
-*
+02 How the Data Set was Built?
+* Action Classes for Neighborhood Shops
+	* Body Motions
+	* Cleaning
+	* Cooking
+	* Eating & Drinking
+	* Hands
+	* Touching Persons/Animals
+	* Using Tools
+	* Being Ill/Sick/Injured
+	* Misc.
 
 02 Ethnographic Autoencoder 
-*
+* ipsum et la 
 
 03 Action Recognition 
-*
+* ipsum et la
+
+04 Implementation
+* ipsum et la
 		
 # EXPERIMENTAL EVALUATION 
 
@@ -107,14 +116,14 @@
 * The Great Good Place by Roy Oldenburg (1989)
 * Capitalism, Socialism and Democracy by Joseph A. Schumpeter (1950)
 * Writing Ethnographic Field Notes, 2nd Edition by Emerson, Fretz and Shaw (2011)
-* Deep Learning, An MIT Press Book by Ian Goodfellow and Yoshua Bengio and Aaron Courville (2016)
 
+* Deep Learning, An MIT Press Book (2016)
 * "The Kinetics Human Action Video Dataset" (2017)
 * "Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset" (2018)
-* "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift" (2015)
+* "Two-Stream Convolutional Networks for Action Recognition in Videos" (2014)
 * "Recurrent Batch Normalization" (2016)
-* "Learning Spatiotemporal Features with 3D Convolutional Networks" (2015)
-* "Spatiotemporal Residual Networks for Video Action Recognition" (2016
-* "Imagenet Large Scale Visual Recognition Challenge" (2015)
-
-* "Deep Reinforcement Learning from Human Preferences" (2017)
+* "Return of the Devil in the Details: Delving Deep into Convolutional Nets" (2014)
+* "ImageNet Classification with Deep Convolutional Neural Networks" (2012)
+* "Action Recognition by Dense Trajectories" (2011)
+* "Convolutional Two-Stream Network Fusion for Video Action Recognition" (2016)
+* "Spatiotemporal Residual Networks for Video Action Recognition" (2016)
