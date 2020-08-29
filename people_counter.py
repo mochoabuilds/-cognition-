@@ -166,5 +166,36 @@ while True:
       if to is None:
          to = TrackableObject(objectID, centroid)
                 
-      # otherwise
-      else:
+      # otherwise, trackable object used to determine direction
+      else: 
+         # find direction, update centroids lists
+         dc.find_direction(to, centroid)
+         to.centroids.append(centroid)
+                
+         # check if object counted or not
+         if not to.counted:
+            # find direction of motion of the people
+            directionInfo = dc.count_object(to, centroid)
+         
+         # otherwise, object counted and set color to green 
+         # showing it has been counted
+         else: 
+            color = (0, 255, 0)
+                
+         # store trackable object in dictionary 
+         trackableObject[objectID] = to
+                
+         # draw ID of object and centroid of object on output frame 
+         cv2.putText(frame, text, (centroid[0] - 10, centroid[1] - 10),
+            cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
+         cv2.circle(frame, (centroid[0], centroid[1]), 4, color, -1)
+         
+      # extract people counts and write/draw them
+      if directionInfo is not None:#
+        for (i, (k, v)) in enumerate(directionInfo):
+          text = "{}: {}".format(k, v)
+          cv2.putText(frame, text, (10, H - ((i * 20) + 20)),
+            cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
+       
+    # finish out loop ...
+                
