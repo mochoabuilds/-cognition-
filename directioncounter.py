@@ -7,7 +7,7 @@ class DirectionCounter:
     self.H = H
     self.W = W
      
-    # set up variables and counters for bottom-to-top & right-to-left movement
+    # set up variables and counters for bottom-to-top and right-to-left movement
     self.directionMode = directionMode
     self.totalUp = 0
     self.totalDown = 0
@@ -19,11 +19,11 @@ class DirectionCounter:
      
   def find_direction(self, to, centroid):
     
-    # check to see if tracking horizontal movement
+    # check if tracking horizontal movement
     if self.directionMode == "horizontal":
       
       # pull x-coordinate from current centroids and calculate difference 
-      # between current and the averages of all previous centroids to show direction
+      # between current and averages of all previous centroids to show direction
       # i.e. (-) for left movement & (+) for right movement
       x = [c[0] for c in to.centroids]
       delta = centroid[0] - np.mean(x)
@@ -81,7 +81,7 @@ class DirectionCounter:
     # otherwise, directional movement is vertical
     elif self.directionMode == "vertical":
         
-      # if object above the middle and moving up 
+      # if object above middle and moving up 
       # then count object as moving up
       aboveMiddle = centroid[1] < self.H // 2
       if self.direction == "up" and aboveMiddle:
