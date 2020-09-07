@@ -1,24 +1,24 @@
 *** WORKING PAPER ***
 
-*** ATTACHED CODE FOR PROOF-OF-CONCEPT (Outline the area around multiple moving humans with a rectangle) ***
+*** ATTACHED CODE FOR PROOF-OF-CONCEPT (Outline the area around multiple moving humans with a rectangle and count the number of humans inside a building at one time) ***
 
 # WHAT IS IT?
 
-* My research extends the idea of what a neighborhood shop can and should be. I do this by creating a suite of open-source tools for neighborhood shops.  With the help of other great minds, I develop application-specific models using sociological methods for the analysis of computer vision data. My goal is to show that there are less costly / more social ways to perform day-to-day operations using applications of the mathematical sciences. 
+* My research extends the idea of what a neighborhood shop can and should be.  With the help of other great minds, I develop open source tools using sociological methods to analyze computer vision data. My goal is to showcase less costly / more social ways to perform day-to-day shop operations using applications of the mathematical and social sciences. 
 
 # WHY?
 
-* Neighborhood shops do more than provide us with essential goods.  They are where unrelated people relate. They are a place you can go daily for the simple pleasure of good company and conversation.  However, these spaces of informal public life aren't totally engrained in our young Midwestern cities. I want to show how modern tools for neighborhood shops could keep them ahead of competition in a changing world.
+* Neighborhood shops do more than provide us with essential goods.  They are where unrelated people relate. They are a place you can go daily for the simple pleasure of good company and conversation.  However, these spaces of informal public life aren't totally engrained in our young Midwestern cities. I want to help neighborhood shops migrate their IT spending to the edge-cloud and stay ahead of their competition in a changing world.
 
 # HOW?
 
-* First, I gather local knowledge - the practical sort that is embedded in the heads of neighborhood staff, and translate this knowledge into high quality annotated video data sets.  Next, I use this information to train computer vision models to understand local knowledge.  Finally, I feed the models video from in-store overhead cameras to track the movement of goods in neighborhood shops and further refine the models.
-* I believe without a deeper understanding of training data, the development of better computer vision models is reduced to costly trial-and-error. Borrowing from sociological methods like ethnography may help us better understand how our training data impacts downstream classification accuracy.
+* First, I gather local knowledge - the practical sort that is embedded in the heads of neighborhood staff, and translate it into high quality annotated video data sets.  Next, I use this information to train computer vision models to understand shoppers actions.  Finally, I feed the models video from in-store overhead cameras to track the movement of goods in neighborhood shops to real world applications.
+* I believe without a deeper understanding of training data, the development of better computer vision models is reduced to costly trial-and-error. Borrowing from sociological methods like ethnography helps us better understand how our training data impacts downstream classification accuracy and build people centered applications.
  
-# REAL WORLD APPLICATIONS
+# PEOPLE CENTERED APPLICATIONS
 
 * Inventory Assistant via Smartphone App
-* Daily Service Notes (Autonomous Video Summarization) via Smartphone App
+* Service Notes (Autonomous Video Summarization) via Smartphone App
 * Autonomous Checkout via Smartphone App
  
 # PRODUCT DESIGN (PROTOTYPE)
@@ -27,9 +27,14 @@
 
 # DATA COLLECTION & PREP
 
-* My goal is to get rich neighborhood shop ethnographic data into a coherent usable format for the computer vision models. The collected ethnographic data is then split into two streams (spatial and temporal) and combined by class score fusion to generate 100 human action classes, each with 100 clips, each lasting 10 seconds per clip. I want to show how this rich data set could enable new architectures to be developed that better represent information for greater generalizability across neighborhood shops.
+* My goal is to get neighborhood shop ethnographic data into a coherent usable format for computer vision models. I want to show how this rich data set could enable new architectures to be developed that better represent information to computer vision models.
 
-* Action Classes for Neighborhood Shops (Working)
+* STEP 1 RawData - What is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world. Field notes include: personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots, unstated goals, preferred work styles, etc. I embarked on 10 months of ethnography in two Chicago neighborhood shops for data collection. 
+* STEP 2 TidyDataSet - Build a working auto-encoder to convert the qualitatively rich data into a usable coherent format so it has nicer properties for the computer vision models.
+* STEP 3 Description - Describe each variable and values in the tidy data set
+* STEP 4 ReproducibilityRecipe - Set up calculations in a way that is easy for reproducibility 
+
+* Action Classes for People Centered Applications 
 	* Answering Questions
 	* Bartending
 	* Cleaning Floor
@@ -56,18 +61,13 @@
 	* Sickness/Injury
 	* Etc.
 	
-* STEP 1 RawData - What is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world. Field notes include: personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots, unstated goals, preferred work styles, etc. I embarked on 10 months of ethnography in two Chicago neighborhood shops for data collection. 
-* STEP 2 TidyDataSet - Build a working auto-encoder to convert the qualitatively rich data into a usable coherent format so it has nicer properties for the computer vision models.
-* STEP 3 Description - Describe each variable and values in the tidy data set
-* STEP 4 ReproducibilityRecipe - Set up calculations in a way that is easy for reproducibility 
-
 # CALCULATIONS
 
-* Through a combination of data collection and prep, existing computer vision research, off-the-shelf hardware  and human fine-tuning I develop computer vision applications for neighborhood shops. This section provides the technical contributions for models that take advantage of pre-training on converted ethnographic data and transfer this high performance classification to learning action classes across different data sets (i.e. classifying actions across different neighborhood shop video streams).
+* Through a combination of data collection and prep, existing computer vision research, off-the-shelf hardware  and human fine-tuning I develop computer vision applications for neighborhood shops. This section provides the technical contributions for models that take advantage of pre-training on converted ethnographic data and transfer this understanding of action classes to learning across different data sets (i.e. different neighborhood shop video streams).
 
 # PEOPLE/FOOTFALL COUNTER (PROOF-OF-CONCEPT)
 
-* Outline the area around multiple moving humans with a rectangle
+* Outline the area around multiple moving humans with a rectangle and count the number of humans inside a building at one time.
 
 01 Installing Required Packages and Libraries
 * Python
@@ -93,7 +93,7 @@
 
 # REAL WORLD APPLICATIONS!
 
-* The goal is to develop pipeines and high quality training video data sets for computer vision applications.  This section is an extension of the proof of concept.
+* The goal is to develop deep learning pipeines and high quality training video data sets for computer vision applications.  This section is an extension of the proof of concept.
 * TLDR: Generate C/C++ code from MATLAB and deploy computer vision code to iPhone/Raspberry Pi for testing
 
 01 Installing Required Packages and Libraries 
@@ -136,8 +136,8 @@
 * "Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset" (2018)
 * "Two-Stream Convolutional Networks for Action Recognition in Videos" (2014)
 * "Convolutional Two-Stream Network Fusion for Video Action Recognition" (2016)
-* "Visualizing and Understanding Convolutional Networks" (2013)
 * "MatConvNet Convolutional Neural Networks for MATLAB" (2016)
 * "ImageNet Classification with Deep Convolutional Neural Networks" (2012)
-* Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift (2015)
 * "Spatiotemporal Residual Networks for Video Action Recognition" (2016)
+* "Learning Spatiotemporal Features with 3D Convolutional Neural Networks" (2015)
+* "Deep Reinforcement Learning from Human Preferences" (2017)
