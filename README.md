@@ -1,10 +1,10 @@
 *** WORKING PAPER ***
 
-*** ATTACHED CODE FOR PROOF-OF-CONCEPT (Outline the area around multiple moving humans with a rectangle and count the number of humans inside a building at one time) ***
+*** ATTACHED CODE FOR PROOF-OF-CONCEPT - Outline area around multiple moving people with a rectangle and count the total number of people inside a building at one time (See Appendix B) ***
 
 # WHAT IS IT?
 
-* My research extends the idea of what a neighborhood shop can and should be.  With the help of other great minds, I develop open source tools using sociological methods to analyze computer vision data. My goal is to showcase less costly / more social ways to perform day-to-day shop operations using applications of the mathematical and social sciences. 
+* My research extends the idea of what a neighborhood shop can and should be.  With the help of other great minds I develop open source tools using sociological methods to analyze computer vision data. The goal is to build networks just deep enough to boost performance while managing the cost of computational time.  My goal is to showcase my less costly / more social ways to perform day-to-day shop operations using applications of the mathematical / social sciences. 
 
 # WHY?
 
@@ -12,20 +12,19 @@
 
 # HOW?
 
-* First, I gather local knowledge - the practical sort that is embedded in the heads of neighborhood staff, and translate it into high quality annotated video data sets.  Next, I use this information to train computer vision models to understand shoppers actions.  Finally, I feed the models video from in-store overhead cameras to track the movement of goods in neighborhood shops to real world applications.
+* First, I gather local knowledge - the practical sort that is embedded in the heads of neighborhood staff, and translate it into high quality annotated video data sets for learning hand crafed features.  Next, I use these hand crafted features to train computer vision applications to understand how cues change over time to better model the temporal evolution of actions.  I do this fusing spatial cues (i.e. action classification) and temporal cues (i.e. motion flow) so that responses at the same pixel position are put into correspondence between abstract features of the two streams. The goal is to capture actions tied to a neighborhood shop object, even as they move slightly.
+
 * I believe without a deeper understanding of training data, the development of better computer vision models is reduced to costly trial-and-error. Borrowing from sociological methods like ethnography helps us better understand how our training data impacts downstream classification accuracy and build people centered applications.
  
 # PEOPLE CENTERED APPLICATIONS
 
 * Inventory Assistant via Smartphone App
-* Service Notes (Autonomous Video Summarization) via Smartphone App
+* "Service Notes" Autonomous Video Summarization via Smartphone App
 * Autonomous Checkout via Smartphone App
- 
-# PRODUCT DESIGN (PROTOTYPE)
 
-* The sensors and processing power for the computer vision hardware live in what looks like a coffeepot.  Its over-long body and low key placement of sensors was inspired by Josef Hoffman designs of 1904.
+* Generate C/C++ code from MATLAB(MatConvNet toolbox) and deploy computer vision model to iPhone/Raspberry Pi for experiments with neighborhood shop applications
 
-# DATA COLLECTION & PREP
+# DEEP DATA PREP
 
 * My goal is to get neighborhood shop ethnographic data into a coherent usable format for computer vision models. I want to show how this rich data set could enable new architectures to be developed that better represent information to computer vision models.
 
@@ -38,7 +37,7 @@
 	* Answering Questions
 	* Bartending
 	* Cleaning Floor
-	* Counting Money
+	* Register/POS
 	* Guest Drinking
 	* Guest Eating
 	* Extinguishing Fire
@@ -61,13 +60,47 @@
 	* Sickness/Injury
 	* Etc.
 	
-# CALCULATIONS
+# SPATIAL-TEMPORAL FUSION ARCHITECTURE
 
-* Through a combination of data collection and prep, existing computer vision research, off-the-shelf hardware  and human fine-tuning I develop computer vision applications for neighborhood shops. This section provides the technical contributions for models that take advantage of pre-training on converted ethnographic data and transfer this understanding of action classes to learning across different data sets (i.e. different neighborhood shop video streams).
+* Through a combination of data collection and prep, existing computer vision research, off-the-shelf hardware  and human fine-tuning I develop computer vision applications for neighborhood shops. This section provides the technical contributions for fusing (2, spatial & temporal) VGG-16 models that take advantage of pre-training on converted ethnographic data and transfer this understanding of action classes to learning across different neighborhood shop video data streams.
 
-# PEOPLE/FOOTFALL COUNTER (PROOF-OF-CONCEPT)
+# WHERE TO FUSE THE 2 NETWORKS?
 
-* Outline the area around multiple moving humans with a rectangle and count the number of humans inside a building at one time.
+# IMPLEMENTATION 
+
+# 3D CONV FUSION KERNEL
+
+* Convolutional kernel is set up via identity matricies (i.e. sum fusion).  This approach saves computational costs by using a much lower number of total parameters than other methods.  
+
+# FINETUNING
+
+* Sample batches of data at each training cycle with jitter crops, horizontal flips, etc.
+
+# TESTING
+
+# EXPERIMENTS
+
+* Mean Classification Accuracy/Layers/Parameters across:
+	* Data Set 1
+	* Data Set 2
+	* Handcrafted Data Set 
+
+# DISCUSSION & FUTURE RESEARCH
+
+* How could we empower guests to demand computer vision applications respect their privacy expectations?  Could we underpin modern tools with a public log of all queries run on video stream data?
+* Teaching machines to NOT use guest biometrics as a condition of accepting payment under the Song Beverley Act of 1971
+* Better understanding the front-back orientation of human limbs due to clothing, lighting, background, optical interference
+* Bridging the edge-cloud barrier to lower server costs as real-time computer vision applications face a strict bandwidth-accuracy trade-off
+* Restructing code and making arrays more ergonomic 
+* Determining the metrics that improve downstream performance
+* Better capturing the relationship between time and space
+* Motion stablization
+* Making up for the data set bias that leads to decreased generalization
+* Better understanding how social, economic and legal systems work together to achieve my research goals 
+
+# APPENDIX A:  PROOF-OF-CONCEPT
+
+* Outline area around multiple moving people with a rectangle and count the total number of people inside a building at one time.
 
 01 Installing Required Packages and Libraries
 * Python
@@ -91,37 +124,7 @@
 	* trackableobject.py
 * people_counter.py (driver script)
 
-# REAL WORLD APPLICATIONS!
-
-* The goal is to develop deep learning pipeines and high quality training video data sets for computer vision applications.  This section is an extension of the proof of concept.
-* TLDR: Generate C/C++ code from MATLAB and deploy computer vision code to iPhone/Raspberry Pi for testing
-
-01 Installing Required Packages and Libraries 
-
-02 Ethnographic Autoencoder 
-
-03 Action Recognition 
-
-04 Implementation
-		
-# EXPERIMENTAL TESTS
-
-* Mean Classification Accuracy across different architectures:
-
-# DISCUSSION & FUTURE RESEARCH
-
-* How could we empower guests to demand computer vision applications respect their privacy expectations?  Could we underpin modern tools with a public log of all queries run on video stream data?
-* Teaching machines to NOT use guest biometrics as a condition of accepting payment under the Song Beverley Act of 1971
-* Better understanding the front-back orientation of human limbs due to clothing, lighting, background, optical interference
-* Bridging the edge-cloud barrier to lower server costs as real-time computer vision applications face a strict bandwidth-accuracy trade-off
-* Restructing code and making arrays more ergonomic 
-* Determining the metrics that improve downstream performance
-* Better capturing the relationship between time and space
-* Motion stablization
-* Making up for the data set bias that leads to decreased generalization
-* Better understanding how social, economic and legal systems work together to achieve my research goals 
-
-# APPENDIX: POLICY MEMO
+# APPENDIX B: POLICY MEMO
 
 * How will the profits that accrue from increasing automation be reinvested back into communities for collective gain?
 
@@ -132,12 +135,11 @@
 * Writing Ethnographic Field Notes, 2nd Edition by Emerson, Fretz and Shaw (2011)
 
 * Deep Learning, An MIT Press Book (2016)
+* "Deep Reinforcement Learning from Human Preferences" (2017)
 * "The Kinetics Human Action Video Dataset" (2017)
 * "Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset" (2018)
 * "Two-Stream Convolutional Networks for Action Recognition in Videos" (2014)
 * "Convolutional Two-Stream Network Fusion for Video Action Recognition" (2016)
 * "MatConvNet Convolutional Neural Networks for MATLAB" (2016)
-* "ImageNet Classification with Deep Convolutional Neural Networks" (2012)
-* "Spatiotemporal Residual Networks for Video Action Recognition" (2016)
-* "Learning Spatiotemporal Features with 3D Convolutional Neural Networks" (2015)
-* "Deep Reinforcement Learning from Human Preferences" (2017)
+* "Towards Good Practices for Very Deep Two-Stream Convnets" (2015)
+" Action Recognition with Improved Trajectories" (2013)
