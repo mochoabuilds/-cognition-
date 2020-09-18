@@ -1,34 +1,32 @@
 *** WORKING PAPER ***
 
-*** ATTACHED CODE FOR PROOF-OF-CONCEPT >> Outline area around moving people with a rectangle and count their total number inside a building at one time (See Appendix A) ***
+*** ATTACHED CODE FOR PROOF-OF-CONCEPT >> Outline area around humans entering/exiting a building with a rectangle and update their totals accordingly (See Appendix A) ***
 
 # WHAT IS IT?
 
-* My research extends the idea of what a neighborhood shop could be.  With the help of many other great minds I build open source tools using mathematical / sociological methods to analyze computer vision data streams. The goal is to build convolutional neural networks deep enough to boost performance while managing computational costs.  My goal is to showcase less costly and more fluid ways to perform day-to-day operations using applications of the mathematical / social sciences. 
+* My research extends the idea of what a neighborhood shop could be.  With the help of many other great minds I develop open source tools using the mathematical / social sciences to analyze neighborhoods shop video streams. My goal is to build computer vision models that boost classification accuracy while managing computational costs.  The hope is to showcase less costly and more social ways to perform neighborhood shop operations using applications of the mathematical / social sciences. 
 
-# WHY THIS?
+# WHY?
 
-* Neighborhood shops do more than provide us with essential goods. They are a place you can go daily for the simple pleasure of good company and conversation. They are where unrelated people relate. However, these spaces of informal public life aren't totally engrained in our young Midwestern cities. My goal is help neighborhood shops stay ahead of their competition in a changing world.
+* Neighborhood shops do more than provide us with essential goods. They are where unrelated people relate. They are a place you can go daily for the simple pleasure of good conversation.  My goal is help neighborhood shops stay ahead of their competition in a changing world, and ensure these spaces of informal public life remain engrained in our young Midwestern cities.
 
 # HOW?
 
-* First, I gather local knowledge - the practical sort that is embedded in the heads of neighborhood staff, and translate it into high quality annotated video data sets for training computer vision models.  Next, I use these hand crafted data sets to train computer vision applications to understand how cues change over time to better model the temporal evolution of human actions/features.  I do this fusing spatial cues (i.e. action classification) and temporal cues (i.e. motion flow) so that responses at the same pixel position are put into correspondence between abstract features of the two streams. The helps the model understand human actions/features tied to a neighborhood shop object, especially as they move.
+* First, I gather local knowledge (i.e. the sort that is embedded in the heads of neighborhood staff and its customers) and use it to annotate video data sets.  Next, I use these annotated video data sets to train computer vision models to understand how cues change over time to better model the temporal evolution of human actions.  I do this fusing spatial cues (i.e. action classification) and temporal cues (i.e. motion flow) so that responses at the same pixel position are put into correspondence between abstract human actions of the two streams. This helps the model understand human actions tied to neighborhood shop objects as they are moved.
 
-* Without a deeper understanding of our data sets, the development of better computer vision models is reduced to costly trial-and-error. Borrowing from sociological methods like ethnography helps us better understand how our training data impacts downstream human action classification accuracy to build people centered applications.
- 
 # PEOPLE CENTERED APPLICATIONS
 
-* Generate C/C++ code from MATLAB(MatConvNet toolbox) & handcrafted data sets for deployment to iPhone/Raspberry Pi for experiments with people centered applications
-* Inventory Assistant via Smartphone App
-* Autonomous Checkout via Smartphone App
-* Autonomous Video Summarization ("Service Notes") via Smartphone App
+* Generate C/C++ code from MATLAB(MatConvNet) & handcrafted data sets for deployment to iPhone/Raspberry Pi for experiments. Experiments include:
+	* Inventory Assistant 
+	* Autonomous Checkout 
+	* Autonomous Video Summarization ("Service Notes") 
 
-# DEEP DATA PREP
+# METHODS
 
-* My goal is to get neighborhood shop ethnographic data into a coherent usable format for computer vision models. I want to show how this rich data set could enable new architectures to be developed that better represent information to computer vision models.
+* Bias is inevitable when training computer vision models for human action recognition. To combat this we blend qualitative and quantitative methods to better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what humans feel is important. Our reality is political, but the dominant groups claim as the norm for building computer vision models need not be the norm.  
 
 * STEP 1 RawData - What is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world. Field notes include: personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots, unstated goals, preferred work styles, etc. I embarked on 10 months of ethnography in two Chicago neighborhood shops for data collection. 
-* STEP 2 TidyDataSet - Built a working auto-encoder to convert the qualitatively rich data into a usable coherent format so it has nicer properties for the computer vision models
+* STEP 2 TidyDataSet - How do I use ethnographic data?  I built a working auto-encoder to hone months of worth of converted ethnographic data to train computer vision models.
 * STEP 3 Description - Describe each variable and values in the tidy data set
 * STEP 4 ReproducibilityRecipe - Set up calculations in a way that is easy for reproducibility 
 
@@ -61,7 +59,7 @@
 	
 # SPATIAL-TEMPORAL FUSION ARCHITECTURE
 
-* This section provides the technical contributions for fusing 2 (spatial & temporal) VGG-16 models that take advantage of pre-training on converted ethnographic data and transfer this understanding of human action / features to learning across different neighborhood shop video data streams. Through a combination of deep data prep, existing computer vision research, off-the-shelf hardware and human fine-tuning I churn this research into a product.
+* This section provides the technical contributions for fusing two models (spatial & temporal) that take advantage of pre-training on converted ethnographic data and transfer this understanding of human actions across different neighborhood shop video streams. Through a combination of mixed methods approaches, existing computer vision research, off-the-shelf hardware and human fine-tuning I create people centered applications.
 
 # WHERE TO FUSE THE 2 NETWORKS?
 
@@ -127,7 +125,6 @@
 * people_counter.py (driver script)
 
 04 Discussion
-*
 
 # APPENDIX B: POLICY MEMO
 
@@ -140,11 +137,12 @@
 * Writing Ethnographic Field Notes, 2nd Edition by Emerson, Fretz and Shaw (2011)
 
 * Deep Learning, An MIT Press Book (2016)
-* "Deep Reinforcement Learning from Human Preferences" (2017)
 * "The Kinetics Human Action Video Dataset" (2017)
-* "Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset" (2018
+* "Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset" (2018)
 * "MatConvNet Convolutional Neural Networks for MATLAB" (2016)
+* "Spatiotemporal Residual Networks for Video Action Recognition" (2016)
 * "Two-Stream Convolutional Networks for Action Recognition in Videos" (2014)
 * "Convolutional Two-Stream Network Fusion for Video Action Recognition" (2016)
-* "Spatiotemporal Residual Networks for Video Action Recognition" (2016)
+
+* "Return of the Devil in the Details: Delving Deep into Convolutional Nets" (2014)
 * "Towards Good Practices for Very Deep Two-Stream Convnets" (2015)
