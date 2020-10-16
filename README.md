@@ -4,81 +4,66 @@
 
 # WHAT IS IT?
 
-* My research extends the idea of what a neighborhood shop could be.  With the help of some great minds I develop open source tool to analyze neighborhood shop video streams and build computer vision applications that have high classification accuracy and reasonable computational costs.  My hope is to showcace more fluid ways to perform day-to-day operations using applications of the mathematical & social sciences. 
+* This research helps computer vision machines better understand the difference between 'just seeing' and actually observing.  The hope is to see what is invisible to others by better taking into account the lighting, textures and reflectivity of different objects, human actions and events in neighborhood shops.  This research extends the idea of what modern tools for neighborhood shop could be. With the help of some great minds we develop open source tools to analyze neighborhood shop video streams with high classification accuracy and reasonable computational costs. 
 
 # WHY? (SOCIAL REASONS)
 
-* Neighborhood shops do more than provide us with essential goods. They are where unrelated people relate. They are a place you can go for the simple pleasure of good conversation. However, our neighborhood shops are also transforming.  They're now living laboratories for new communal safety habits.  My goal is to use everyday theorizing to provide neighborhood shops with fluid tools for our new era.
+* Neighborhood shops do more than provide us with essential goods. They are where unrelated people relate. They are a place you can go for the simple pleasure of good conversation. The neighborhood shop represents the social infrastructure that is key to safety and prosperity in our young midwestern cities. However, our neighborhood shops are transforming.  They're now living laboratories for new communal safety habits.  Our goal is to rework the pipes channeling money and data in neighborhood shops to make them more simple and certain.
 
 # WHY? (TECH REASONS)
 
-* Computer vision methods have shown termendous promise for scene analysis when trained on large datasets.  However current datasets for neighborhood shop scene analysis are small and limited to mundane environments that don't capture the complexity of the neighborhood shop. 
+* We want to drive an industry of secure computer vision machines, and supply the industry with architectures, datasets, implementations and a mixed-methods team dedicated to the process. "Sometimes long-term simplicity is achieved only through bursts of complexity that rework current systems." 
 
 # RELATED WORKS
 
-# HOW? (TLDR)
+# HOW WE DID IT? (TLDR)
 
-* A whole new machine was created to build these neighborhood shop computer vision applications. First, I gathered local knowledge, the sort embedded in the heads of neighborhood staff and its customers, and used it to label video that is semantically similar. I then trained an autoencoder to compress these local knowledge labels into short binary codes. These labels help computer vision models learn how action cues change over time to better understand the temporal evolution of human actions in neighborhood shops scenes.
+* We used ImageNet to pretrain two streams (spatial & temporal).  We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across 22k categories. Next we gathered local knowledge, the kind embedded in the heads of neighborhood staff and its regulars, and used it to label human actions that are semantically similar. I then trained an autoencoder to compress these labels into short binary codes... 
+* To be continued
 
-# NEIGHBORHOOD SHOP APPLICATIONS
+# WHY COMPUTER VISION APPLICATION FOR NEIGHBORHOOD SHOPS?
 
-* "Sometimes long-term simplicity is achieved only through bursts of complexity that rework current systems." 
+* Shops need immediate, actionable data to improve customer experiences. We solve this problem by integrating real time data from video cameras across the shop to display the state of the shop @ any given time, and build end-to-end computer vision applications and tools that look into the future as the basis for simulations in events.
 
-	* 01_Inventory Assistant >> An interface that recognizes human actions with inventory and generates reports
-	* 02_"What You Didn't Buy" Assistant >> An interface for understanding guests' cross product interactions to better understand market segmentation and product positioning strategies
-	* 03_Autonomous Checkout >> A cashier mgmt system that recognizes human actions to build guest shopping carts in real-time; generate AR/AP, cash flow statements and general ledgers
-	
-# A. METHODS (DATA PREP)
+* Inventory Assistant >> An interface that recognizes human interactions with inventory to generate real-time reports
+* "What You Didn't Buy" Assistant >> An interface for understanding guests' cross product interactions to better understand market segmentation and product positioning strategies
+* Autonomous Shopping >> A cashier mgmt system that recognizes human actions to build guest shopping carts in real-time; generate AR/AP, cash flow statements and general ledgers.  "People don't want to make payments, they want to do what a payment facilitates."
+
+
+# COUNTERING BIAS
 
 * Bias is inevitable when training computer vision models for human action recognition. To combat this we blend qualitative and quantitative methods to better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what humans feel is important. Our reality is political, but the dominant groups claim as the norm when building computer vision applications need not be the dominant view.  Our data prep hones years worth of local knolwedge in neighborhood shops to build a computer vision machine.
 
 * STEP 1 RawData >> What is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world (i.e. local knowledge, preferences, values, beliefs). Field notes include: personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots, unstated goals, etc. 
 * STEP 2 TidyDataSet >> In-house Autonencoder that makes use of ethnographic labels to better retrieve video that is semantically similar
 * STEP 3 ReproducibilityRecipe >> Set up calculations in a way that is easy for reproducibility 
-	
-# B. ARCHITECTURE PROPOSED FOR BOTH STREAMS 
-
-* This section provides the technical contributions for fusing two convolutional nets (spatial & temporal). The spatial net detects high motion regions and captures static cues such as the shape and color of objects related to actions.  Whereas the temporal net describes what is happening in high motion regions. Next, we use a deep architecture to encode deep learned representations into the spatial net to recognize human action classes in raw unseen neighborhood shop video with high classficiation accuracy.
-
-* Challenges in human action recognition in video: low video resolution (224 x 224), learning complex motion patterns and styles, background clutter, high dimensionality of video data and small datasets for training very deep models.   
-
-
-# C: IMPLEMENTATION
-
-* The performance of the computer vision machine will depend on its implementation details: architectures, data prep, GPUs, training methods, etc.  Our architecture has different "building bloc" layers (i.e. pooling/convolutional layers) that capture patterns in video as edges, parts and objects to help the machine generalize to longer sequences than those seen during training.
-
-* What is the "secret sauce" boosting 2 stream architecture?
-* What is applied after each convolutional layer?
-* How do enable learning of spatiotemporal features at all possible scales?
-* Where to fuse 2 nets? 
-* How to fuse the 2 nets (at a conv layer) so that channel responses at the same pixel position are put into correspondence?  
 
 # PRETRAINING
 
-# TRAINING 
+* We pretrain our two streams with Inception-V3 to avoid representational bottlenecks, boost activations per tile, dimensional reduction before spreading to larger convolutions and to balance the width and depth of the network. This methods helps the computer vision machine better analyze vague hints and 'hallucinate' the finer details to detect small neighborhood shop objects.
+	
+# TWO STREAM CONFIGURATION
 
-* ReLU
-* Batch Normalization
-* Mutli-Task Learning
+* This section provides the technical contributions for fusing two streams (spatial & temporal). The spatial net detects high motion regions and captures static cues such as the shape and color of objects related to actions.  Whereas the temporal net describes what is happening in high motion regions. Next, we use a deep architecture to encode deep learned representations into the spatial net to recognize human action classes in raw unseen neighborhood shop video with high classficiation accuracy.
+* Fig 1.
 
-# TESTING
+# IMPLEMENTATION
 
-* Data Augmentation
+* The performance of the computer vision machine will depend on its implementation details: architectures, data sets, training methods, etc. 
+* Activation Functions: ReLU, Batch Normalization
+* Data Augmentation: 
+* Multi-Task Learning:
 
-# MULTI-GPU TRAINING
+# ARCHITECTURE
 
-# D: EVALUTATIONS
+* Our architecture has different "building bloc" layers (i.e. pooling/convolutional layers) that capture patterns in video as edges, parts and objects to help the machine generalize to longer sequences than those seen during training.
+* Fig 2.
 
-	# DATA SETS
-	# SPATIAL NETS
-	# TEMPORAL NETS
-	# MULTI-TASK LEARNING
-
-# EXPERIMENTS 	
+# EXPERIMENTAL EVALUATIONS	
 
 # CONCLUSIONS
 
-# FUTURE RESEARCH?
+# FUTURE RESEARCH
 
 * Teaching machines to NOT use guest biometrics as a condition of accepting payment under the Song Beverley Act of 1971
 * Better understanding the front-back orientation of human limbs due to clothing, lighting, background, optical interference
@@ -151,7 +136,7 @@
 
 # ACKNOWLEDGEMENTS
 
-* This work was supported by my immediate family, my lovely partner Kristen, my close friends and confidants and the open source community. 
+* This work was supported by my immediate family, my lovely partner K, my close friends and confidants and the open source community. 
 
 # REFERENCES
 
@@ -163,12 +148,8 @@
 * "The Kinetics Human Action Video Dataset" (2017)
 * "Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset" (2018)
 * "MatConvNet Convolutional Neural Networks for MATLAB" (2016)
-* "Spatiotemporal Residual Networks for Video Action Recognition" (2016)
 * "Two-Stream Convolutional Networks for Action Recognition in Videos" (2014)
-* "Convolutional Two-Stream Network Fusion for Video Action Recognition" (2016)
-* "Return of the Devil in the Details: Delving Deep into Convolutional Nets" (2014)
 * "Towards Good Practices for Very Deep Two-Stream Convnets" (2015)
-
 * "Action Recognition with Trajectory-Pooled Deep-Convolutional Descriptors" (2015)
 * "A Duality Based Approach for Realtime TV-L1 Optical Flow" (20__)
 * "Recurrent Batch Normalization" (2017)
