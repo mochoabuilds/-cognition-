@@ -1,67 +1,72 @@
 *** WORKING PAPER ***
 
-*** ATTACHED CODE FOR PROOF-OF-CONCEPT: Plz See Appendix A) ***
+*** ATTACHED CODE FOR PROOF-OF-CONCEPT: Appendix A ***
 
 # WHAT IS IT?
 
-* This research helps computer vision machines better understand the difference between 'just seeing' and actually observing.  The hope is to see what is invisible to others by better taking into account the lighting, textures and reflectivity of different objects, human actions and events in neighborhood shops.  This research extends the idea of what modern tools for neighborhood shop could be. With the help of some great minds we develop open source tools to analyze neighborhood shop video streams with high classification accuracy and reasonable computational costs. 
+* This research helps computer vision machines better understand the difference between 'just seeing' and actually observing.  The hope is to see what is invisible to others. This research extends the idea of what a neighborhood shop could be. With the help of some great minds we develop open source tools make shopping more simple and certain.
 
 # WHY? (SOCIAL REASONS)
 
-* Neighborhood shops do more than provide us with essential goods. They are where unrelated people relate. They are a place you can go for the simple pleasure of good conversation. The neighborhood shop represents the social infrastructure that is key to safety and prosperity in our young midwestern cities. However, our neighborhood shops are transforming.  They're now living laboratories for new communal safety habits.  Our goal is to rework the pipes channeling money and data in neighborhood shops to make them more simple and certain.
+* Neighborhood shops do more than provide us with essential goods. They are where unrelated people relate. They are a place you can go for the simple pleasure of good conversation. The neighborhood shop represents the social infrastructure that is key to safety and prosperity in our young midwestern cities. However, our neighborhood shops are transforming. They're now living laboratories for new communal safety habits.  Our goal is to make neighborhood shops nore robust and resilient, and rework the pipes channeling money and data to make them more simple and certain.
 
-# WHY? (TECH REASONS)
+# WHY? (OTHER REASONS)
 
-* We want to drive an industry of secure computer vision machines, and supply the industry with architectures, datasets, implementations and a mixed-methods team dedicated to the process. "Sometimes long-term simplicity is achieved only through bursts of complexity that rework current systems." 
+* We want to drive an industry of secure computer vision machines, and supply the industry with architectures, datasets, implementations and a mixed-methods team dedicated to the process.
 
 # RELATED WORKS
 
 # HOW WE DID IT? (TLDR)
 
-* We used ImageNet to pretrain two streams (spatial & temporal).  We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across 22k categories. Next we gathered local knowledge, the kind embedded in the heads of neighborhood staff and its regulars, and used it to label human actions that are semantically similar. I then trained an autoencoder to compress these labels into short binary codes... 
-* To be continued
+* The computer vision machine is a low light camera & Nvidia Jetson TX2 running a optical flow network, spatial network, temporal network and support vector machine (SVM) to detect human-object ineractions in neighborhood shops.
 
-# WHY COMPUTER VISION APPLICATION FOR NEIGHBORHOOD SHOPS?
+# COMPUTER VISION APPS FOR NEIGHBORHOOD SHOPS
 
-* Shops need immediate, actionable data to improve customer experiences. We solve this problem by integrating real time data from video cameras across the shop to display the state of the shop @ any given time, and build end-to-end computer vision applications and tools that look into the future as the basis for simulations in events.
+* InventoryApp >> Smartphone notifications provide immediate, actionable data on human interactions with shop inventory
+* WhatYouDidntBuyApp >> Smartphone interface detects guests' cross product interactions to better understand product positioning strategies, etc.
+* CheckoutApp >> Smartphone app keeps track of human-object interactions and builds 'running tabs' for each shopper along with an automatic payments option to make shopping more simple and certain
 
-* Inventory Assistant >> An interface that recognizes human interactions with inventory to generate real-time reports
-* "What You Didn't Buy" Assistant >> An interface for understanding guests' cross product interactions to better understand market segmentation and product positioning strategies
-* Autonomous Shopping >> A cashier mgmt system that recognizes human actions to build guest shopping carts in real-time; generate AR/AP, cash flow statements and general ledgers.  "People don't want to make payments, they want to do what a payment facilitates."
+# OVERALL ARCHITECTURE
 
+* Camera > Action Recognition Model & Flash Storage > Modem > Cloud > Smartphone Apps
 
-# COUNTERING BIAS
+# "TwO STREAM" CONFIGURATION
 
-* Bias is inevitable when training computer vision models for human action recognition. To combat this we blend qualitative and quantitative methods to better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what humans feel is important. Our reality is political, but the dominant groups claim as the norm when building computer vision applications need not be the dominant view.  Our data prep hones years worth of local knolwedge in neighborhood shops to build a computer vision machine.
-
-* STEP 1 RawData >> What is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world (i.e. local knowledge, preferences, values, beliefs). Field notes include: personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots, unstated goals, etc. 
-* STEP 2 TidyDataSet >> In-house Autonencoder that makes use of ethnographic labels to better retrieve video that is semantically similar
-* STEP 3 ReproducibilityRecipe >> Set up calculations in a way that is easy for reproducibility 
+* This section provides the technical contributions for running a spatial network, optical flow network, temporal stream and SVM to identify human-object interactions in neighborhood shops as action class probabilities. We then use a deep architecture to encode deep learned representations into the net to better recognize human-object interactions classes in raw unseen neighborhood shop video frames.
 
 # PRETRAINING
 
-* We pretrain our two streams with Inception-V3 to avoid representational bottlenecks, boost activations per tile, dimensional reduction before spreading to larger convolutions and to balance the width and depth of the network. This methods helps the computer vision machine better analyze vague hints and 'hallucinate' the finer details to detect small neighborhood shop objects.
-	
-# TWO STREAM CONFIGURATION
+* We used ImageNet to pretrain two streams (spatial & temporal). We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across 22k categories. We pretrain to avoid representational bottlenecks, boost activations per tile, make for easier dimensional reduction and better balance the width and depth of the network.
+* The performance of the computer vision machine running neighborhood shop applications will depend on its implementation details (i.e. architectures, data sets, training methods, activation functions, etc.) 
 
-* This section provides the technical contributions for fusing two streams (spatial & temporal). The spatial net detects high motion regions and captures static cues such as the shape and color of objects related to actions.  Whereas the temporal net describes what is happening in high motion regions. Next, we use a deep architecture to encode deep learned representations into the spatial net to recognize human action classes in raw unseen neighborhood shop video with high classficiation accuracy.
-* Fig 1.
+# ARCHITECTURE FOR CLASSIFICATION
 
-# IMPLEMENTATION
+* Our architecture has different "building bloc" layers (i.e. pooling/convolutional layers) that capture patterns in video as edges, parts and objects to help the machine better generalize to longer sequences than those seen during training.
 
-* The performance of the computer vision machine will depend on its implementation details: architectures, data sets, training methods, etc. 
-* Activation Functions: ReLU, Batch Normalization
-* Data Augmentation: 
-* Multi-Task Learning:
+# EXPERIMENTAL EVALUATIONS A,B,C
 
-# ARCHITECTURE
+* In this section we explore the generalizability of networks trained on different datasets.
 
-* Our architecture has different "building bloc" layers (i.e. pooling/convolutional layers) that capture patterns in video as edges, parts and objects to help the machine generalize to longer sequences than those seen during training.
-* Fig 2.
+# A: NEIGHBORHOOD SHOP DATASET
 
-# EXPERIMENTAL EVALUATIONS	
+* Bias is inevitable when training computer vision models for human-item recognition. To combat this we blend qualitative and quantitative methods to better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what humans feel is important. Our reality is political, but the dominant groups claim as the norm when building computer vision applications need not be the dominant view.  Our data prep hones years worth of local knowledge in neighborhood shops to build a low-light human-object neighborhood shop dataset, which is publically avaliable.
 
-# CONCLUSIONS
+* STEP 1 RawData - What is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world (i.e. local knowledge, preferences, values, beliefs). Ethnographic labels include the knowledge embedded in the heads of neighborhood shop staff and its regulars.  Labels include: personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots, unstated goals, etc. 
+* STEP 2 TidyDataSet - In-house autonencoder makes use of ethnographic labels that are semantically similar to label human-object interactions
+* STEP 3 ReproducibilityRecipe - Set up calculations in a way that promotes common data standards and portability across neighborhood shops for better flow of data
+
+* NeighborhoodShop Dataset
+	* 6 Actions w/ 20 Groups & 40 Clips per Group 
+	* 4800 Clips at 3-4 seconds each 
+	* 30 fps 
+	* 640 x 480
+	* Audio: YES
+
+# B: UCF-101 DATASET
+
+# C: HMDB-51 DATASET
+
+# DISCUSSION
 
 # FUTURE RESEARCH
 
@@ -71,6 +76,7 @@
 * Underpinning modern tools with a public log of all queries run on video stream data to give guests better idea about how their data is used
 * Restructing code and making arrays more ergonomic 
 * Determining the metrics that improve downstream performance
+* Shallow architecture?  Compressing networks with hashing trick?
 * Lowering the costs of switching data between neighborhood shops
 * Making up for the data set bias that leads to decreased generalization
 * Data Exchange - Letting clients/customers share and sell their data for training computer vision models
@@ -100,39 +106,10 @@
 	* directioncounter.py
 	* trackableobject.py
 * people_counter.py (driver script)
-	
-# APPENDIX B HUMAN ACTION CLASSES
 
-* Working List for Neighborhood Shop Applications 
-	* Answering Questions
-	* Bartending
-	* Cleaning Floor
-	* Cash Payments
-	* Guests Drinking
-	* Guests Eating
-	* Extinguishing Fire
-	* Garbage Collection
-	* Hugging
-	* Laughing
-	* Making Food
-	* Making Coffee Beverages
-	* Pushing Cart
-	* Shaking Hands
-	* Sign Language Interpreting
-	* Guest Smoking/Vaping
-	* Guests Browsing Goods
-	* Guests Putting Goods in Basket/Bag
-	* Sweeping Floor
-	* Stocking
-	* Mopping Floor
-	* Water Plants
-	* Petting Animals
-	* Unboxing Goods
-	* Sickness/Injury
+# APPENDIX B: POLICY MEMORANDUM
 
-# APPENDIX C: POLICY MEMORANDUM
-
-* The introduction of modern, legally enforceable computer vision privacy rights will be politically fraught.  Reform must keep up the long, hard slog of countering implicit bias, cementing privacy rights and building the infrastructure to uphold them.  I truly believe computer vision privacy rights should be for all, not just the few. Those building computer vision applications must accept greater responsiblity for its future with a collectively made set of rules with its own checks and balances.
+* The introduction of modern, legally enforceable computer vision privacy rights will be politically fraught.  Reform must keep up the long, hard slog of countering implicit bias, cementing privacy rights and building the infrastructure to uphold them.  I truly believe computer vision privacy rights should be for all, not just the few. Those building computer vision applications must accept greater responsiblity for its future. They must be part of setting the agenda, attitute, culture and laws around computer vision privacy rights.
 
 # ACKNOWLEDGEMENTS
 
@@ -143,15 +120,15 @@
 * Writing Ethnographic Field Notes, 2nd Edition by Emerson, Fretz and Shaw (2011)
 * Deep Learning, An MIT Press Book (2016)
 * The Great Good Place by Roy Oldenburg (1989)
-
-* "ImageNet Classification with Deep Convolutional Neural Networks" (20xx)
-* "The Kinetics Human Action Video Dataset" (2017)
+*
 * "Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset" (2018)
-* "MatConvNet Convolutional Neural Networks for MATLAB" (2016)
 * "Two-Stream Convolutional Networks for Action Recognition in Videos" (2014)
-* "Towards Good Practices for Very Deep Two-Stream Convnets" (2015)
-* "Action Recognition with Trajectory-Pooled Deep-Convolutional Descriptors" (2015)
-* "A Duality Based Approach for Realtime TV-L1 Optical Flow" (20__)
+* "Rethinking the Inception Architecture for Computer Vision" (2015)
+* "Going Deeper with Convolutions" (2014)
+* "Temporal Segment Networks: Towards Good Practices for Deep Action Recognition" (2016)
+*
+"Action Recognition with Improved Trajectories" (2013)
+* "A Duality Based Approach for Realtime TV-L1 Optical Flow" 
 * "Recurrent Batch Normalization" (2017)
-* "Action Recognition with Improved Trajectories" (2013)
 
+By Michael Valentino Ochoa
