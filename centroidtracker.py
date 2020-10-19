@@ -44,7 +44,7 @@ def deregister(self, objectID):
 	del self.objects[objectID]
 	del self.disappeared[ObjectId]
 
-# accept bounding box rectangles from object detector
+# establish bounding box rectangles from object detector
 def update(self, rects):
 	
 	# check if bounding box is empty
@@ -61,13 +61,13 @@ def update(self, rects):
 		# return early if no centroid or tracking info to update
 		return self.objects
 	
-	# initialize a NumPy array to store centroids for each rectangle
+	# setup a NumPy array to store centroids for each rectangle
 	inputCentroids = np.zeros((len(rects), 2), dtype="int")
 	
 # loop over bounding box rectangles 
 for (i, (startX, startY, endX, endY)) in enumerate(rects):
 	
-	# compute the centroid from bounding box coordinates and store it 
+	# compute centroid from bounding box coordinates and store it 
 	cX = int((startX + endX) / 2.0)
 	cY = int((startY + endY) / 2.0)
 	inputCentroids[i] = (cX, cY)
@@ -77,9 +77,10 @@ if len(self.objects) == 0:
 	for i in range(0, len(inputCentroids)):
 		self.register(inputCentroids[i])
 
-# otherwise, compute Euclidean distance between boxes and old objects with 
-# distance map output array that indexes values with the smallest 
-# corresponding distance to front of the list
+# otherwise,
+# compute Euclidean distance between boxes and old objects with 
+# distance map output array; index values with the smallest 
+# corresponding distance at front of the list
 else:
 	
 	# pull object IDs and related centroids
@@ -89,29 +90,29 @@ else:
 	# compute distance between object centroids and input centroids
 	D = dist.cdist(np.array(objectCentroids), inputCentroids)
 	
-	# perform matching on rows 
+		# perform matching on rows 
 	rows = D.min(axis=1).argsort()
 	
-	# perform matching on columns
+		# perform matching on columns
 	cols = D.argmin(axis=1)[rows]
 	
-	#  set up two sets to keep track of which rows and columns previously looked at
+	#  set up two sets to keep track of which rows and columns were previously looked at
 	used Rows = set ()
 	used Cols = set ()
 	
 	# loop over (row, column) index tuples to update object centroids
 	for (row, col) in zip(rows, cols):
 		
-		# ignore row or column if previously looked at
+	# ignore row or column if previously looked at
 		if row in usedRows or col usedCols:
 			continue
 	
-	# if distance between centroids > maximum distance, DO NOT associate centroids
+	# if distance between centroids > maximum distance, then DO NOT associate centroids
 	if D[row, col] > self.maxDistance:
 		continue 
 		
-	# we are then left with the smallest Euclidean distances and pull their object IDs, 
-	# set its new centroid and reset our "disappeared" counter
+	# left with smallest Euclidean distances, we then pull their object IDs, 
+	# and setup new centroid, plus reset our "disappeared" counter
 	objectID = objectIDs[row]
 	self.objects[objectID] = inputCentroids[col]
 	self.disappeared[objectID] = 0
@@ -125,7 +126,7 @@ else:
 	unusedCols = set(range(0, D.shape[1])).difference(usedCols)
 	
 	# check if objects have "disappeared" or have been "lost"
-	# why? it's helpful when object centroids are greater than equal to input centroids
+	# Why? it's helpful when object centroids are greater than equal to input centroids
 	if D.shape[0] >= D.shape[1]:
 		
 		# loop over unused row indexes
