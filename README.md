@@ -2,60 +2,60 @@
 
 *** ATTACHED CODE FOR PROOF-OF-CONCEPT: Appendix A ***
 
-## WHAT IS IT?
+## 1 INTRODUCTION
 
-* This research helps computer vision machines better understand the difference between 'just seeing' and actually observing.  The hope is to see what is invisible to others. This research extends the idea of what a neighborhood shop could be. With the help of some great minds we develop open source tools make shopping more simple and certain.
+* This research builds computer vision applications that let neighborhood shops integrate their video streams, financial records and operations into a smartphone application. Our platform extends the idea of what a neighborhood shop could be. With the help of some great minds we develop software tools that make shopping more simple and certain.
 
-## WHY? (SOCIAL REASONS)
+* Neighborhood shops do more than provide us with essential goods. They are where unrelated people relate. They are a place one can go for the simple pleasure of good conversation. The neighborhood shop represents the social infrastructure that is key to safety and prosperity in our young Midwestern cities. However, neighborhood shops are transforming. They've become living laboratories for new communal safety habits.  Our goal is to make neighborhood shops more robust and resilient, and rework the pipes channeling money and data to make them more simple and certain.
 
-* Neighborhood shops do more than provide us with essential goods. They are where unrelated people relate. They are a place you can go for the simple pleasure of good conversation. The neighborhood shop represents the social infrastructure that is key to safety and prosperity in our young midwestern cities. However, our neighborhood shops are transforming. They're now living laboratories for new communal safety habits.  Our goal is to make neighborhood shops nore robust and resilient, and rework the pipes channeling money and data to make them more simple and certain.
+* We want to drive an industry of secure computer vision applications, and supply industry with architectures, datasets, implementations, hardware and a mixed-methods team dedicated for end-to-end process.
 
-## WHY? (OTHER REASONS)
+## 1.1 COMPUTER VISION APPS 
 
-* We want to drive an industry of secure computer vision machines, and supply the industry with architectures, datasets, implementations and a mixed-methods team dedicated to the process.
+* We merge all the data silos that a neighborhood shop collects - video streams, financial records, service notes - into a single platform quickly.  Once data has been merged we present it as an elegant easy to use smartphone app.  This digital transformation could prove helpful as a neighborhood shop grows and mistakes expand exponentially.  Our computer vision apps cut down on those mistakes, save on operating costs and provide them new tools for the modern age.
 
-## RELATED WORKS
-
-## HOW WE DID IT? 
-
-* The computer vision machine is a low light camera & Nvidia Jetson TX2 running a optical flow network, spatial network, temporal network and support vector machine (SVM) to detect human-object ineractions in neighborhood shops.
-
-## COMPUTER VISION APPS 
-
-* InventoryApp >> Smartphone notifications provide immediate, actionable data on human interactions with shop inventory
+* InventoryApp >> Smartphone interface provides immediate, actionable data about human interactions with shop inventory
 * WhatYouDidntBuyApp >> Smartphone interface detects guests' cross product interactions to better understand product positioning strategies, etc.
-* CheckoutApp >> Smartphone app keeps track of human-object interactions and builds 'running tabs' for each shopper along with an automatic payments option to make shopping more simple and certain
+* CheckoutApp >> Smartphone app keeps track of human-object interactions and builds 'running tabs' for each shopper along with automatic payments option to make shopping more simple and certain.  We believe people don't want to make payments, they want to do what a payment facilitates.
 
-## OVERALL ARCHITECTURE
+## 2 RELATED WORKS
+
+## 3 CONVOLUTIONAL NETWORK FOR ACTION RECOGNITION 
+
+* In this section, we give details descriptions of our two-stream network for action recognition in video streams. Our prototype consists of a low light camera & Nvidia Jetson TX2 running an optical flow network, spatial network, temporal network and support vector machine (SVM) to detect human-object interactions in neighborhood shops.
+
+## 3.1 OVERALL ARCHITECTURE
 
 * Camera > Action Recognition Model & Flash Storage > Modem > Cloud > Smartphone Apps
 
-## "TWO STREAM" CONFIGURATION
+## 3.2 TWO STREAM NETWORK CONFIGURATION
 
 * This section provides the technical contributions for running a spatial network, optical flow network, temporal stream and SVM to identify human-object interactions in neighborhood shops as action class probabilities. We then use a deep architecture to encode deep learned representations into the net to better recognize human-object interactions classes in raw unseen neighborhood shop video frames.
 
-# PRETRAINING
+# 3.3 PRETRAINING
 
 * We used ImageNet to pretrain two streams (spatial & temporal). We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across 22k categories. We pretrain to avoid representational bottlenecks, boost activations per tile, make for easier dimensional reduction and better balance the width and depth of the network.
 
-## IMPLEMENTATION
+## 3.4 NETWORK TRAINING
 
 * The performance of the computer vision machine will depend on its implementation details (i.e. architectures, datasets, training methods, activation functions, etc.) 
 
-## ARCHITECTURE FOR CLASSIFICATION
+## 3.5 TWO STREAM ARCHITECTURE (EXPANDED)
 
-* Our architecture has different "building bloc" layers (i.e. pooling/convolutional layers) that capture patterns in video as edges, parts and objects to help the machine better generalize to longer sequences than those seen during training.
+## 4 ENSURING PRIVACY
 
-## EXPERIMENTAL EVALUATIONS A,B,C
+* Dr Ben Goldacre of Oxford and his colleagues May 2020 approach to studying the medical records of 17m people in Britain inspired our privacy practices.  Their methods perserved confidentiality while freeing high value information for analysis.  the team developed software that let them run analysis without copying or moving data out of that data center. Instead they poked data thru a secure connection, with a log of all queries run on the medical records to create an audit trail - thus the watchers themselves were being watched. This approach gave the public a better idea about how their data is used. We designed and built our computer vision applications with this approach to privacy in mind.
+
+## 5 EXPERIMENTS
 
 * In this section we explore the generalizability of networks trained on different datasets.
 
-## A: NEIGHBORHOOD SHOP DATASET
+## 5.1 NEIGHBORHOOD SHOP DATASET
 
-* Bias is inevitable when training computer vision models for human-item recognition. To combat this we blend qualitative and quantitative methods to better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what humans feel is important. Our reality is political, but the dominant groups claim as the norm when building computer vision applications need not be the dominant view.  Our data prep hones years worth of local knowledge in neighborhood shops to build a low-light human-object neighborhood shop dataset, which is publically avaliable.
+* Bias is inevitable when training computer vision models for human-item recognition. To combat this we blend qualitative and quantitative methods to better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what humans feel is important. Our reality is political, but the dominant groups claim as the norm when building computer vision applications need not be the dominant view.  Our data prep hones years worth of local knowledge in neighborhood shops to build a human-object neighborhood shop dataset, which is publicly available. Our approach takes ethnography, which many see as qualitative and analog, and turn it into something that can be digitally manipulated.
 
 * STEP 1 RawData - What is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world (i.e. local knowledge, preferences, values, beliefs). Ethnographic labels include the knowledge embedded in the heads of neighborhood shop staff and its regulars.  Labels include: personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots, unstated goals, etc. 
-* STEP 2 TidyDataSet - In-house autonencoder makes use of ethnographic labels that are semantically similar to label human-object interactions
+* STEP 2 TidyDataSet - Our in-house autonencoder makes use of ethnographic labels that are semantically similar to label human-object interactions
 * STEP 3 ReproducibilityRecipe - Set up calculations in a way that promotes common data standards and portability across neighborhood shops for better flow of data
 
 * NeighborhoodShop Dataset
@@ -65,25 +65,28 @@
 	* 640 x 480
 	* Audio: YES
 
-## B: UCF-101 DATASET
+## 5.2 UCF-101 DATASET
 
-## C: HMDB-51 DATASET
+* 13320 videos across 101 action classes
 
-## DISCUSSION
+## 5.3 HMDB-51 DATASET
 
-## FUTURE RESEARCH
+* 6766 videos across 51 action classes
 
-* Teaching machines to NOT use guest biometrics as a condition of accepting payment under the Song Beverley Act of 1971
+## 6 DISCUSSION
+
+## 7 FUTURE RESEARCH
+
+* Teaching computer vision applications to NOT use guest biometrics as a condition of accepting payment under the Song Beverley Act of 1971
 * Better understanding the front-back orientation of human limbs due to clothing, lighting, background, optical interference
 * Bridging the edge-cloud barrier to lower server costs as real-time computer vision applications face a strict bandwidth-accuracy trade-off
-* Underpinning modern tools with a public log of all queries run on video stream data to give guests better idea about how their data is used
-* Restructing code and making arrays more ergonomic 
+* Rewriting code and making arrays more ergonomic 
 * Determining the metrics that improve downstream performance
-* Shallow architecture?  Compressing networks with hashing trick?
-* Lowering the costs of switching data between neighborhood shops
+* Compressing networks with hashing trick?
+* Lowering the costs of switching data between neighborhood shops?
 * Making up for the data set bias that leads to decreased generalization
 * Data Exchange - Letting clients/customers share and sell their data for training computer vision models
-* Better understanding how social, economic and legal systems work together to achieve my research goals 
+* Better understanding how social, economic and legal systems work together to achieve research goals 
 
 ## APPENDIX A: PROOF-OF-CONCEPT
 
@@ -114,7 +117,7 @@
 
 * The introduction of modern, legally enforceable computer vision privacy rights will be politically fraught.  Reform must keep up the long, hard slog of countering implicit bias, cementing privacy rights and building the infrastructure to uphold them.  I truly believe computer vision privacy rights should be for all, not just the few. Those building computer vision applications must accept greater responsiblity for its future. They must be part of setting the agenda, attitute, culture and laws around computer vision privacy rights.
 
-## ACKNOWLEDGEMENTS
+## ACKNOWLEDGEMENT
 
 * This work was supported by my immediate family, my lovely partner K, my close friends and confidants and the open source community. 
 
@@ -129,9 +132,9 @@
 * "Rethinking the Inception Architecture for Computer Vision" (2015)
 * "Going Deeper with Convolutions" (2014)
 * "Temporal Segment Networks: Towards Good Practices for Deep Action Recognition" (2016)
+* "Deep Residual Learning for Image Recognition" (2015)
+* "Batch Normalization: Accelerating Deep Network Training by Reducing Covariate Shift" (2015)
 *
 * "Action Recognition with Improved Trajectories" (2013)
-* "A Duality Based Approach for Realtime TV-L1 Optical Flow" 
-* "Recurrent Batch Normalization" (2017)
+* "A Duality Based Approach for Realtime TV-L1 Optical Flow" (2007)
 
-## By Michael Valentino Ochoa
