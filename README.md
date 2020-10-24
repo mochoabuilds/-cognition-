@@ -21,13 +21,15 @@
 
 * In this section, we give detailed descriptions of our two-stream network for action recognition in video streams. Our prototype consists of a low light camera & Nvidia Jetson TX2 running an optical flow network, spatial network, temporal network and support vector machine (SVM) that detects human-object interactions in neighborhood shops.
 
-## 3.1 SYSTEM ARCHITECTURE
+## 3.1 SYSTEM ARCHITECTURE, ETC.
 
 Camera > Action Recognition Model & Flash Storage > Modem > Cloud > Smartphone Apps
 
+* We write pipelines for cutting edge computer vision machines  Our pipelines handle data pre-processing, model training, data-post procoessing, investigating and fixing performance bottlenecks, etc.  We run these pipes on edge devices for the sake of privacy and energy use.  More flow diagrams, documentation, testing plans/tools and ongoing support of the machine to come!
+
 ## 3.2 TWO STREAM NETWORK (CONFIGURATION)
 
-* This section provides the technical contributions for running a spatial network, optical flow network, temporal stream and SVM that identify human-object interactions in neighborhood shops as action class probabilities. We use a deep architecture to encode deep learned representations into the networks to better recognize human-object interactions in raw unseen video streams.
+* This section provides the technical contributions for running a spatial network, optical flow network, temporal stream and SVM that identify human-object interactions as action class probabilities. We use a deep architecture to encode deep learned representations into the networks to better recognize human-object interactions in raw unseen neigborhood shop video streams.
 
 ## 3.3 PRETRAINING
 
