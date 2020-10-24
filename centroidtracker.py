@@ -1,10 +1,4 @@
-#    HIGH LEVEL 
-#
-# 1  establish bounding box coordiantes and determine centroids
-# 2  compute Euclidean distance between bounding boxes and old objects
-# 3  update coordinates of old objects
-# 4  register new objects 
-# 5  de-register old/lost objects that left the view
+# tldr >> establish box coordinates around objects, compute distance between boxes, update coordinates, register new , de-register objects that left the view
 
 from scipy.spatial import distance as dist
 from collections import OrderedDict
