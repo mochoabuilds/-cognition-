@@ -4,7 +4,7 @@
 
 ## 1 INTRODUCTION
 
-* Neighborhood shops do more than provide us with essential goods. They are where unrelated people relate. They are a place one can go for the simple pleasure of good conversation. The neighborhood shop represents the social infrastructure key to safety and prosperity in our young Midwestern cities. Tho are neighborhood shops are transforming. They've become living laboratories for new communal safety habits. This research builds computer vision applications that extends the idea of what a neighborhood shop could be. With the help of some great minds we develop software tools that make shopping more simple and certain.
+* Neighborhood shops do more than provide us with essential goods. They are where unrelated people relate. They are a place one can go for the simple pleasure of good conversation. The neighborhood shop represents the social infrastructure key to safety and prosperity in our young Midwestern cities. Tho our neighborhood shops are transforming. They've become living laboratories for new communal safety habits. This research builds computer vision applications that extends the idea of what a neighborhood shop could be. With the help of some great minds we develop software tools that make shopping more simple and certain.
 
 * Our goal is drive an industry of secure computer vision machines, and supply industry with implementations, architectures, datasets, implementations, applications and a mixed-methods team dedicated to the process.
 
@@ -17,23 +17,19 @@
 
 ## 2 RELATED WORKS
 
-## 3 CONVOLUTIONAL NETWORK FOR ACTION RECOGNITION 
+## 3 HUMAN ACTION DETECTION IN VIDEO STREAMS
 
 * In this section, we give detailed descriptions of our two-stream network for action recognition in video streams. Our prototype consists of a low light camera & Nvidia Jetson TX2 running an optical flow network, spatial network, temporal network and support vector machine (SVM) that detects human-object interactions in neighborhood shops.
 
-## 3.1 OVERALL ARCHITECTURE
+## 3.1 SYSTEM ARCHITECTURE
 
-Camera >> 
->> Action Recognition Model & Flash Storage  
->> Modem 
->> Cloud 
->> Smartphone Apps
+Camera > Action Recognition Model & Flash Storage > Modem > Cloud > Smartphone Apps
 
 ## 3.2 TWO STREAM NETWORK (CONFIGURATION)
 
 * This section provides the technical contributions for running a spatial network, optical flow network, temporal stream and SVM that identify human-object interactions in neighborhood shops as action class probabilities. We use a deep architecture to encode deep learned representations into the networks to better recognize human-object interactions in raw unseen video streams.
 
-# 3.3 PRETRAINING
+## 3.3 PRETRAINING
 
 * We used ImageNet to pretrain two network streams (spatial & temporal). We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across 22k categories. We pretrain to avoid representational bottlenecks, boost activations per tile, make for easier dimensional reduction and better balance the width and depth of the network.
 
@@ -51,7 +47,7 @@ Camera >>
 
 ## 5.1 NEIGHBORHOOD SHOP DATASET
 
-* Bias is inevitable when training computer vision models for human-item recognition. To combat this we blend qualitative and quantitative methods to better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what humans feel is important. Our reality is political, but the dominant groups claim as the norm when building computer vision applications need not be the dominant view.  Our data prep hones years worth of local knowledge in neighborhood shops to build a human-object neighborhood shop dataset, which is publicly available. Our approach takes ethnography, which many see as qualitative and analog, and turn it into something that can be digitally manipulated.
+* Bias is inevitable when training computer vision models for human action detections in video streams. To combat this we apply mixed methods techniques to building datasets to better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what humans feel is important. Our reality is political, but the dominant groups claim as the norm when training computer vision applications need not be the dominant view.  Our data prep hones years worth of local knowledge in neighborhood shops to build a human-object specific neighborhood shop dataset, which is publicly available. Our approach takes ethnography, which many see as qualitative and analog, and turn it into something that trains digital machines.
 
 * STEP 1 RawData - What is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world (i.e. local knowledge, preferences, values, beliefs). Ethnographic labels include the knowledge embedded in the heads of neighborhood shop staff and its regulars.  Labels include: personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots, unstated goals, etc. 
 * STEP 2 TidyDataSet - Our in-house autonencoder makes use of ethnographic labels that are semantically similar to label human-object interactions
