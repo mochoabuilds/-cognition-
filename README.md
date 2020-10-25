@@ -17,27 +17,33 @@
 
 ## 2 RELATED WORKS
 
-## 3 HUMAN ACTION DETECTION IN VIDEO STREAMS
+* Human action-object detection has been studied by many 
+
+## 3 HUMAN-OBJECT DETECTION IN VIDEO STREAMS
 
 * In this section, we give detailed descriptions of our two-stream network for action recognition in video streams. Our prototype consists of a low light camera & Nvidia Jetson TX2 running an optical flow network, spatial network, temporal network and support vector machine (SVM) that detects human-object interactions in neighborhood shops.
 
-## 3.1 SYSTEM ARCHITECTURE, ETC.
+## 3.1 SYSTEM ARCHITECTURE
 
-Camera > Action Recognition Model & Flash Storage > Modem > Cloud > Smartphone Apps
+* Camera > Action Recognition Model & Flash Storage > Modem > Cloud > Smartphone Apps
 
-* We write pipelines for cutting edge computer vision machines  Our pipelines handle data pre-processing, model training, data-post procoessing, investigating and fixing performance bottlenecks, etc.  We run these pipes on edge devices for the sake of privacy and energy use.  More flow diagrams, documentation, testing plans/tools and ongoing support of the machine to come!
+* We write pipelines for cutting edge computer vision machines  Our pipelines handle data pre-processing, model training, data-post procoessing, investigating and fixing performance bottlenecks, etc.  We run these pipes on edge devices for the sake of privacy and energy use.  More flow diagrams, documentation, testing plans/tools to come!
 
-## 3.2 TWO STREAM NETWORK (CONFIGURATION)
+## 3.2 TWO STREAM NETWORK (WHAT & WHY)
 
-* This section provides the technical contributions for running a spatial network, optical flow network, temporal stream and SVM that identify human-object interactions as action class probabilities. We use a deep architecture to encode deep learned representations into the networks to better recognize human-object interactions in raw unseen neigborhood shop video streams.
+* This section provides the technical contributions for running a spatial network, optical flow network, temporal stream and SVM that identify human-object interactions as action class probabilities.  Our two stream convolutional network processes a video feed in real time with spatial and temporal networks that use ImageNet for pre-training and calculating optical flow to detect human-object interactions across long temporal structures.
+
+* We use a deep architecture to encode deep learned representations into the networks to better recognize human-object interactions with limited training samples in raw unseen neigborhood shop video streams.
 
 ## 3.3 PRETRAINING
 
-* We used ImageNet to pretrain two network streams (spatial & temporal). We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across 22k categories. We pretrain to avoid representational bottlenecks, boost activations per tile, make for easier dimensional reduction and better balance the width and depth of the network.
+* We used a variant of ImageNet model to pretrain network streams (spatial, temporal, optical flow). We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across 22k categories. We pretrain to avoid representational bottlenecks, boost activations per tile, make for easier dimensional reduction and better balance the width and depth of the network.
 
 ## 3.4 NETWORK TRAINING
 
-## 3.5 TWO STREAM ARCHITECTURE (CONTINUED)
+## 3.5 TWO STREAM ARCHITECTURE (HOW)
+
+## 3.6 IMPLEMENTATION
 
 ## 4 ENSURING PRIVACY
 
@@ -45,7 +51,7 @@ Camera > Action Recognition Model & Flash Storage > Modem > Cloud > Smartphone A
 
 ## 5 EXPERIMENTS
 
-* In this section we explore the generalizability of networks trained on different datasets.
+* In this section we explore the generalizability of networks trained on different datasets, etc.  Because training datasets take up many GBs in memory, a 500 GB disk is added and mounted on the virtual machine for dataset storage. The GPU chosen is a NVIDIA Tesla P100 for inferences in the cloud, and a NVIDIA Jetson TX2 for performing inferences on the edge. 
 
 ## 5.1 NEIGHBORHOOD SHOP DATASET
 
@@ -56,10 +62,9 @@ Camera > Action Recognition Model & Flash Storage > Modem > Cloud > Smartphone A
 * STEP 3 ReproducibilityRecipe - Set up calculations in a way that promotes common data standards and portability across neighborhood shops for better flow of data
 
 * NeighborhoodShop-v1 Dataset
-	* Each action, groups and clips tagged with ethnographic field notes
-	* 6 Actions with 20 Groups
+	* 6 Actions each with 20 Groups
 	* 40 Clips per Group 
-	* 4800 Clips at 3-12 seconds each
+	* 4800 Clips @ 3-12 seconds each
 	* 30 fps 
 	* 640 x 480
 	* Audio: YES
@@ -114,9 +119,9 @@ Camera > Action Recognition Model & Flash Storage > Modem > Cloud > Smartphone A
 
 ## APPENDIX B: POLICY MEMORANDUM
 
-* The introduction of modern, legally enforceable computer vision privacy rights will be politically fraught.  Reform must keep up the long, hard slog of countering implicit bias, cementing privacy rights and building the infrastructure to uphold them. Those building computer vision applications must accept greater responsiblity for its future. They must be part of setting the agenda, attitute, culture and laws around computer vision privacy rights.
+* The introduction of modern, legally enforceable computer vision privacy rights will be politically fraught.  Reform must keep up the long, hard slog of countering implicit bias, cementing privacy rights and building the infrastructure to uphold them. Those building computer vision applications must accept greater responsiblity for its future. We must be part of setting the agenda, attitute, culture and laws around computer vision privacy rights.
 
-## ACKNOWLEDGEMENT
+## ACKNOWLEDGEMENTS
 
 * This work was supported by my immediate family, my lovely partner K, my close friends and confidants and the open source community. 
 
@@ -133,7 +138,5 @@ Camera > Action Recognition Model & Flash Storage > Modem > Cloud > Smartphone A
 * "Temporal Segment Networks: Towards Good Practices for Deep Action Recognition" (2016)
 * "Deep Residual Learning for Image Recognition" (2015)
 * "Batch Normalization: Accelerating Deep Network Training by Reducing Covariate Shift" (2015)
-*
 * "Action Recognition with Improved Trajectories" (2013)
 * "A Duality Based Approach for Realtime TV-L1 Optical Flow" (2007)
-
