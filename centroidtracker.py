@@ -1,4 +1,8 @@
-# tldr >> establish box coordinates around objects, compute distance between boxes, update coordinates, register new , de-register objects that left the view
+# tldr >> establish box coordinates around objects, 
+# compute distance between boxes, 
+# update coordinates, 
+# register new objects, 
+# de-register objects that left the view
 
 from scipy.spatial import distance as dist
 from collections import OrderedDict
@@ -71,8 +75,7 @@ if len(self.objects) == 0:
 	for i in range(0, len(inputCentroids)):
 		self.register(inputCentroids[i])
 
-# otherwise,
-# compute Euclidean distance between boxes and old objects with 
+# otherwise, compute Euclidean distance between boxes and old objects with 
 # distance map output array; index values with the smallest 
 # corresponding distance at front of the list
 else:
