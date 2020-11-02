@@ -4,38 +4,33 @@
 
 ## 1 INTRODUCTION
 
-* Neighborhood shops do more than provide us with essential goods. They are where unrelated people relate. They are a place one can go for the simple pleasure of good conversation. The neighborhood shop represents the social infrastructure key to safety and prosperity in our young Midwestern cities. Tho our neighborhood shops are transforming. They've become living laboratories for new communal safety habits. This research builds computer vision applications that extends the idea of what a neighborhood shop could be. With the help of some great minds we develop software tools that make shopping more simple and certain.
-
-* Our goal is drive an industry of secure computer vision machines, and supply industry with implementations, architectures, datasets, implementations, applications and a mixed-methods team dedicated to the process.
+* Neighborhood shops do more than provide us with essential goods. They are where unrelated people relate. They are a place you go for the simple pleasure of good conversation. The neighborhood shop represents the social infrastructure key to safety and prosperity in our young Midwestern cities. However our neighborhood shops are transforming. They've become living laboratories for new communal safety habits. This research explores ways to extend the idea of what a neighborhood shop could be. With the help of some great minds we develop internal computing backbone that make shopping more simple and certain. Our goal is build secure computer vision machines, and supply industry with implementations, architectures, datasets, apps and a mixed-methods team dedicated to the process.
 
 ## 1.1 COMPUTER VISION APPS 
 
-* Our applications merge all the data silos that a neighborhood shop collects - video streams, financial records, service notes - into a single platform.  Merged data is then presented as an elegant easy to use smartphone apps.
-* InventoryApp >> Smartphone interface providing immediate actionable data about human-object interactions with shop inventory
-* WhatYouAlmostBoughtApp >> Smartphone interface detecting guests cross product interactions to better understand product positioning strategies, etc.
-* CheckoutApp >> Smartphone interface keeping track of human-object interactions to build 'running tabs' for each shopper along with automatic payments options that make shopping more simple and certain.  
+* Neighborhood shops must evolve with shoppers' changing ideas of convenience. Our apps merge all the data silos collected - video streams, financial records, service notes - into a single platform.  Merged data is then presented as elegant easy to use smartphone apps.  We envision a world in which computer vision enhances neighborhood shops because staff are given a chance to tackle new problems and grow their capabilities.
+* InventoryApp >> Provide immediate actionable data about human-object interactions with shop inventory
+* WhatYouAlmostBoughtApp >> Detect shoppers' cross product interactions to better understand product positioning strategies and recommend yet more products
+* CheckoutApp >> Keep track of human-object interactions to build 'running tabs' for each shopper along with automatic payments options that make shopping more simple and certain  
 
 ## 2 RELATED WORKS
 
 ## 3 HUMAN-OBJECT DETECTION IN VIDEO STREAMS
 
-* In this section, we give detailed descriptions of our two-stream network for action recognition in video streams. Our prototype consists of a low light camera & Nvidia Jetson TX2 running an optical flow network, spatial network, temporal network and support vector machine (SVM) that detects human-object interactions in neighborhood shops.
+* In this section, we share details of our two-stream network. Our prototype consists of a camera & Nvidia Jetson Xavier NX running an spatial network, temporal network and optical flow network that detects human-object interactions in neighborhood shops. 
 
 ## 3.1 SYSTEM ARCHITECTURE
 
+* We write pipelines for cutting edge computer vision machines  Our pipelines handle data pre-processing, model training, data-post procoessing, investigating and fixing performance bottlenecks, etc.  We run these pipes on edge devices for the sake of privacy and energy use. 
 * Camera > Action Recognition Model & Flash Storage > Modem > Cloud > Smartphone Apps
-
-* We write pipelines for cutting edge computer vision machines  Our pipelines handle data pre-processing, model training, data-post procoessing, investigating and fixing performance bottlenecks, etc.  We run these pipes on edge devices for the sake of privacy and energy use.  More flow diagrams, documentation, testing plans/tools to come!
 
 ## 3.2 TWO STREAM NETWORK (WHAT & WHY)
 
-* This section provides the technical contributions for running a spatial network, optical flow network, temporal stream and SVM that identify human-object interactions as action class probabilities.  Our two stream convolutional network processes a video feed in real time with spatial and temporal networks that use ImageNet for pre-training and calculating optical flow to detect human-object interactions across long temporal structures.
-
-* We use a deep architecture to encode deep learned representations into the networks to better recognize human-object interactions with limited training samples in raw unseen neigborhood shop video streams.
+* This section provides the technical contributions for running a spatial, temporal and optical flow network that identifies human-object interactions as action class probabilities.  Our network processes video feed in real time to detect interactions across long temporal structures. We use a deep architecture to encode deep learned representations into the network, and better recognize human-object interactions in raw unseen neigborhood shop video streams.
 
 ## 3.3 PRETRAINING
 
-* We used a variant of ImageNet model to pretrain network streams (spatial, temporal, optical flow). We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across 22k categories. We pretrain to avoid representational bottlenecks, boost activations per tile, make for easier dimensional reduction and better balance the width and depth of the network.
+* We used a variant of ImageNet model to pretrain our network streams (spatial, temporal, optical flow). We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across 22k categories. We pretrain to avoid representational bottlenecks, boost activations per tile, make for easier dimensional reduction and better balance the width and depth of the network.
 
 ## 3.4 NETWORK TRAINING
 
@@ -45,20 +40,22 @@
 
 ## 4 ENSURING PRIVACY
 
-* Dr Ben Goldacre of Oxford and his colleagues May 2020 approach to studying the medical records of 17m people in Britain inspired our privacy practices.  Their team developed software that let them run analysis without copying or moving data out of that data center. Instead they poked data thru a secure connection, with a log of all queries run on the medical records to create an audit trail. Their open source methods perserved confidentiality while freeing high value information for analysis. It also gave the public a better idea about how their data is used. We designed and built our computer vision applications with this approach to privacy in mind.
+* Dr Ben Goldacre of Oxford and his colleagues May 2020 approach to studying the medical records of 17m people in Britain inspired our privacy practices.  Their team developed software that let them run analysis without copying or moving data out of that data center. Instead they poked data thru a secure connection, with a log of all queries run on the medical records to create an audit trail. Their open source methods perserved confidentiality while freeing high value information for analysis. It also gave the public a better idea about how their data is used. 
+
+We designed and built our computer vision apps with this approach to privacy in mind.
 
 ## 5 EXPERIMENTS
 
-* In this section we explore the generalizability of networks trained on different datasets, etc.  Because training datasets take up many GBs in memory, a 500 GB disk is added and mounted on the virtual machine for dataset storage. The GPU chosen is a NVIDIA Tesla P100 for inferences in the cloud, and a NVIDIA Jetson TX2 for performing inferences on the edge. 
+* In this section we explore the generalizability of networks trained on different datasets, etc.  Because training datasets take up many GBs in memory, a 500 GB disk is added and mounted on the virtual machine for dataset storage. The GPU chosen is a NVIDIA Tesla P100 for inferences in the cloud, and a NVIDIA Jetson Xavier XN for performing inferences on the edge. 
 
-## 5.1 NEIGHBORHOOD SHOP DATASET
+# 5.1 "BEHAVIORGRAM" DATASET
 
 * Bias is inevitable when training computer vision models for human action detections in video streams. To combat this we apply ethnography to build datasets that better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what humans feel is important. Our reality is political, but the dominant groups claim as the norm when training computer vision applications need not be the dominant view.  Our data prep hones years worth of local knowledge in neighborhood shops to build a human-object neighborhood shop dataset, which is publicly available. Our approach takes ethnography, which many see as qualitative and analog, and turn it into something that trains computer vision machines. 
 
 * So what is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world (i.e. local knowledge, preferences, values, beliefs). Ethnographic labels include the knowledge embedded in the heads of neighborhood shop staff and its regulars.  Labels include: personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots and unstated goals.  Guided by ethnography, we hand label human-object interactions in a set of video streams, in order for the computer vision models to be able to learn what actions look like from a variety of different angles, biases, etc.  Once the models have digested these video streams, the algorithms are let loose on raw unseen neighborhood shope video streams.
 
-* STEP 1 DataCollection - Ethnography 
-* STEP 2 TidyDataSet - Our in-house autonencoder makes use of ethnographic labels that are semantically similar to label human-object interactions
+* STEP 1 DataCollection - Ethnographic field notes
+* STEP 2 TidyDataSet - In-house autonencoder makes use of ethnographic labels that are semantically similar to label human-object interactions in video streams
 * STEP 3 ReproducibilityRecipe - Set up calculations in a way that promotes common data standards and portability across neighborhood shops for better flow of data
 
 * NeighborhoodShop-v1 Dataset
@@ -88,7 +85,6 @@
 * Determining the metrics that improve downstream performance
 * Compressing networks with hashing trick?
 * Lowering the costs of switching data between neighborhood shops
-* Making up for the data set bias that leads to decreased generalization
 * Data Exchange? helping clients/customers share and sell their data for training computer vision models
 * Better understanding how social, economic and legal systems work together to achieve research goals 
 
@@ -138,5 +134,6 @@
 * "Temporal Segment Networks: Towards Good Practices for Deep Action Recognition" (2016)
 * "Deep Residual Learning for Image Recognition" (2015)
 * "Batch Normalization: Accelerating Deep Network Training by Reducing Covariate Shift" (2015)
+*
 * "Action Recognition with Improved Trajectories" (2013)
 * "A Duality Based Approach for Realtime TV-L1 Optical Flow" (2007)
