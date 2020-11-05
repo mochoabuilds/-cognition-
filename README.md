@@ -7,51 +7,45 @@
 * Neighborhood shops do more than provide us with essential goods. They are where unrelated people relate. They are a place you go for the simple pleasure of good conversation. The neighborhood shop represents the social infrastructure key to safety and prosperity in our young Midwestern cities. However our neighborhood shops are transforming. They've become living laboratories for new communal safety habits. This research explores ways to extend the idea of what a neighborhood shop could be. 
 * With the help of some great minds we develop computing backbones that make shopping more simple and certain. Our goal is build secure computer vision machines, and supply industry with implementations, architectures, datasets, apps and a mixed-methods team dedicated to the process.
 
-## 1.1 COMPUTER VISION APPS 
+## 1.1 REAL WORLD APPLICATIONS 
 
-* Neighborhood shops must evolve with shoppers' changing ideas of convenience. We're building real-time machines that merge all the data silos - video streams, financial records, service notes - into a single platform.  Next computer vision machines are trained on thoughfully collected video data which enables them to better handle complex neighborhood shop scenarios. 
+* Neighborhood shops must evolve with shoppers' changing ideas of convenience. We're building real-time machines that merge all data silos - video streams, financial records, service notes - into a single platform.  Next computer vision machines are trained on thoughfully collected and annotated video data which enables them to better handle complex neighborhood shop scenarios. 
 * InventoryApp >> Provide immediate actionable data about human-object interactions with shop inventory
 * WhatYouAlmostBoughtApp >> Detect shoppers' cross product interactions to better understand product positioning strategies and recommend yet more products
 * CheckoutApp >> Keep track of human-object interactions to build 'running tabs' for each shopper along with automatic payments options that make shopping more simple and certain  
 
 ## 2 RELATED WORKS
 
-## 3 HUMAN-OBJECT DETECTION IN VIDEO STREAMS
+## 3 VERY DEEP TWO-STREAM NETWORK
 
-* In this section, we share details about our two-stream network. Our computer vision machines consists of an off-the-shelf camera & Nvidia Jetson Xavier NX running an spatial network, temporal network and optical flow network to human-object interactions in neighborhood shops. 
+* In this section, we detail our two-stream network. Our computer vision machine consists of an off-the-shelf camera & Nvidia Jetson Xavier NX running a spatial network that recognizes objects, a temporal network that recognizes actions and an optical flow network that captures temporal structure (i.e. door opening vs. door closing).  We use a deep architecture to encode representations into the network to better recognize human-object interactions in raw unseen neigborhood shop video streams.
 
 ## 3.1 SYSTEM ARCHITECTURE
 
-* Our system architecture handles data pre-processing, model training, data-post procoessing, investigating and fixing performance bottlenecks, etc. 
+* Our architecture handles data pre-processing, model training, data-post procoessing, investigating and fixing performance bottlenecks, etc. 
 * Camera > Action Recognition Model & Flash Storage > Modem > Cloud > Smartphone Apps
 
-## 3.2 TWO STREAM NETWORK (WHAT & WHY)
-
-* This section provides the technical contributions for running a spatial, temporal and optical flow network to identify human-object interactions in neighborhood shops as action class probabilities.  Our two-stream network processes video feeds in real time to enable understandings across long temporal structures. 
-* We use a deep architecture to encode representations into the network to better recognize human-object interactions in raw unseen neigborhood shop video streams.
-
-## 3.3 PRETRAINING (WHAT & WHY)
+## 3.2 NETWORK PRETRAINING 
 
 * We used a variant of ImageNet model to pretrain our two-stream network (spatial, temporal, optical flow). We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across 22k categories. 
 * We pretrain to avoid representational bottlenecks, boost activations per tile, make for easier dimensional reduction and better balance the width and depth of the network.
+
+## 3.3 DATA AUGMENTATION
 
 ## 3.4 NETWORK TRAINING
 
 * We train our computer vision machines on our "Behaviorgram" dataset (see 5.1) which enables us to experiment with a diversity of research approaches, and better fine-tune our architectures to handle complex neighborhood shop scenarios.
 
-## 3.5 TWO STREAM NETWORK ARCHITECTURE
+## 3.5 NETWORK ARCHITECTURE
 
 ## 3.6 IMPLEMENTATION
 
-## 4 ENSURING PRIVACY
+## 4 EXPERIMENTS
 
-* Dr Ben Goldacre of Oxford and his colleagues May 2020 approach to studying the medical records of 17m people in Britain inspired our privacy practices.  Their team developed software that let them run analysis without copying or moving data out of that data center. Instead they poked data thru a secure connection, with a log of all queries run on the medical records to create an audit trail. Their open source methods perserved confidentiality while freeing high value information for analysis. It also gave the public a better idea about how their data is used. We designed and built our computer vision machine and its applications with this approach to privacy in mind.
+* In this section we explore the generalizability of networks trained on different datasets, etc.  
+* Because training datasets take up many GBs in memory, a 500 GB disk is added and mounted on the virtual machine for dataset storage. The GPU chosen is a NVIDIA Tesla P100 for inferences in the cloud and a NVIDIA Jetson Xavier XN for performing inferences on the edge. 
 
-## 5 EXPERIMENTS
-
-* In this section we explore the generalizability of networks trained on different datasets, etc.  Because training datasets take up many GBs in memory, a 500 GB disk is added and mounted on the virtual machine for dataset storage. The GPU chosen is a NVIDIA Tesla P100 for inferences in the cloud and a NVIDIA Jetson Xavier XN for performing inferences on the edge. 
-
-## 5.1 "BEHAVIORGRAM" DATASET
+## 4.1 "BEHAVIORGRAM" DATASET
 
 * Bias is inevitable when training computer vision models for human action detections in video streams. To combat this we apply ethnography to build datasets that better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what humans feel is important. Our reality is political, but the dominant groups claim as the norm when training computer vision applications need not be the dominant view.  Our data prep hones years worth of local knowledge in neighborhood shops to build a human-object neighborhood shop dataset, which is publicly available. Our approach takes ethnography, which many see as qualitative and analog, and turn it into something that addresses shortcomings in our datasets.  
 
@@ -69,13 +63,17 @@
 	* 640 x 480
 	* Audio: YES
 
-## 5.2 UCF-101 DATASET
+## 4.2 UCF-101 DATASET
 
 * 13320 videos across 101 action classes
 
-## 5.3 HMDB-51 DATASET
+## 4.3 HMDB-51 DATASET
 
 * 6766 videos across 51 action classes
+
+## 5 ENSURING PRIVACY
+
+* Dr Ben Goldacre of Oxford and his colleagues May 2020 approach to studying the medical records of 17m people in Britain inspired our privacy practices.  Their team developed software that let them run analysis without copying or moving data out of that data center. Instead they poked data thru a secure connection, with a log of all queries run on the medical records to create an audit trail. Their open source methods perserved confidentiality while freeing high value information for analysis. It also gave the public a better idea about how their data is used. We designed and built our computer vision machine and its applications with this approach to privacy in mind.
 
 ## 6 DISCUSSION
 
