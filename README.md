@@ -1,24 +1,27 @@
 *** WORKING PAPER ***
 
-*** ATTACHED CODE FOR PROOF-OF-CONCEPT: Appendix A ***
-
 ## 1 INTRODUCTION
 
-* Neighborhood shops do more than provide us with essential goods. They are where unrelated people relate. They are a place you go for the simple pleasure of good conversation. The neighborhood shop represents the social infrastructure key to safety and prosperity in our young Midwestern cities. However our neighborhood shops are transforming. They've become living laboratories for new communal safety habits. This research explores ways to extend the idea of what a neighborhood shop could be. 
+* Corner stores do more than provide us with essential goods. They are where unrelated people relate. They are a place you go for the simple pleasure of good conversation. The corner store represents the social infrastructure key to safety and prosperity in our young Midwestern cities. However our neighborhood shops are transforming. They've become living laboratories for new communal safety habits. This research explores ways to extend the idea of what a corner store could be. 
 * With the help of some great minds we develop computing backbones that make shopping more simple and certain. Our goal is build secure computer vision machines, and supply industry with implementations, architectures, datasets, apps and a mixed-methods team dedicated to the process.
 
-## 1.1 REAL WORLD APPLICATIONS 
+## 1.1 HOW DO WE BUILD OUR COMPUTER VISION MACHINE?
 
-* Neighborhood shops must evolve with shoppers' changing ideas of convenience. We're building real-time machines that merge all data silos - video streams, financial records, service notes - into a single platform.  Next computer vision machines are trained on thoughfully collected and annotated video data which enables them to better handle complex neighborhood shop scenarios. 
+* We build social graphs between people and goods in corner stores.  However many challenges come with this approach.  Video streams have redundant frames so processing takes time, storage is huge and they are bottlenecks during training.  So how do we model our social graphs across longer timespans accurately, efficiently and with an ability to generalize?  We use Neuro-Ethnographic Reasoning.  Our model builds its social graphs around asking descriptive ("how many? is there?"), explanatory ("what is responsible for?"), predictive ("what will happen?"), counterfacutual ("what if?") and ethnographic research questions. 
+* We believe there is still no clear front runner for computer vision architectures.  We must think differently to build the in-store social graphs of the connections between people and goods in corner stores.
+
+## 1.2 REAL WORLD APPLICATIONS 
+
+* Corner stores must evolve with shoppers' changing ideas of convenience. We're building real-time machines that merge all data silos - video streams, financial records, service notes - into a single platform.  Next our computer vision machines are trained on thoughfully collected and annotated video data which enables them to better handle complex corner stores scenarios. 
 * InventoryApp >> Provide immediate actionable data about human-object interactions with shop inventory
 * WhatYouAlmostBoughtApp >> Detect shoppers' cross product interactions to better understand product positioning strategies and recommend yet more products
-* CheckoutApp >> Keep track of human-object interactions to build 'running tabs' for each shopper along with automatic payments options that make shopping more simple and certain  
+* AutonomousCheckoutApp >> Keep track of human-object interactions to build 'running tabs' for each shopper along with automatic payments options that make shopping more simple and certain  
 
 ## 2 RELATED WORKS
 
-## 3 VERY DEEP TWO-STREAM NETWORK
+## 3 VERY DEEP MULTI-STREAM NETWORK
 
-* In this section, we detail our two-stream network. Our computer vision machine consists of an off-the-shelf camera & Nvidia Jetson Xavier NX running a spatial network that recognizes objects, a temporal network that recognizes actions and an optical flow network that captures temporal structure (i.e. door opening vs. door closing).  We use a deep architecture to encode representations into the network to better recognize human-object interactions in raw unseen neigborhood shop video streams.
+* Our computer vision machine consists of an off-the-shelf camera & Nvidia Jetson Xavier NX running a spatial network that recognizes objects, a temporal network that recognizes actions and an optical flow network that captures temporal structure (i.e. door opening vs. door closing).  We use a deep architecture to encode representations into the network to better recognize human-object interactions in raw unseen corner store video streams.
 
 ## 3.1 SYSTEM ARCHITECTURE
 
@@ -27,14 +30,14 @@
 
 ## 3.2 NETWORK PRETRAINING 
 
-* We used a variant of ImageNet model to pretrain our two-stream network (spatial, temporal, optical flow). We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across 22k categories. 
+* We use a variant of ImageNet model to pretrain our two-stream network (spatial, temporal, optical flow). We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across 22k categories. 
 * We pretrain to avoid representational bottlenecks, boost activations per tile, make for easier dimensional reduction and better balance the width and depth of the network.
 
 ## 3.3 DATA AUGMENTATION
 
 ## 3.4 NETWORK TRAINING
 
-* We train our computer vision machines on our "Behaviorgram" dataset (see 5.1) which enables us to experiment with a diversity of research approaches, and better fine-tune our architectures to handle complex neighborhood shop scenarios.
+* We train our computer vision machines on our "Behaviorgram" dataset (see 5.1) which enables us to experiment with a diversity of research approaches, and better fine-tune our architectures to handle complex corner store scenarios.
 
 ## 3.5 NETWORK ARCHITECTURE
 
@@ -47,16 +50,16 @@
 
 ## 4.1 "BEHAVIORGRAM" DATASET
 
-* Bias is inevitable when training computer vision models for human action detections in video streams. To combat this we apply ethnography to build datasets that better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what humans feel is important. Our reality is political, but the dominant groups claim as the norm when training computer vision applications need not be the dominant view.  Our data prep hones years worth of local knowledge in neighborhood shops to build a human-object neighborhood shop dataset, which is publicly available. Our approach takes ethnography, which many see as qualitative and analog, and turn it into something that addresses shortcomings in our datasets.  
+* Bias is inevitable when training computer vision models for human action detections in video streams. To combat this we apply ethnography to build datasets that better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what humans feel is important. Our reality is political, but the dominant groups claim as the norm when training computer vision applications need not be the dominant view.  Our data prep hones years worth of local knowledge in neighborhood shops to build a human-object social graph of the corner, which is publicly available. Our approach asks descriptive ("how many? is there?"), explanatory ("what is responsible for?"), predictive ("what will happen?"), counterfacutual ("what if?") and ethnographic research questions. This approach takes qualitative and analog methods, and turns it into something that addresses shortcomings in ourtraining datasets.  
 
-* So what is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world (i.e. local knowledge, preferences, values, beliefs). Ethnographic labels include the knowledge embedded in the heads of neighborhood shop staff and its regulars.  Labels include: personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots and unstated goals.  Guided by ethnography, we hand label human-object interactions in a set of video streams, in order for the computer vision models to be able to learn what actions look like from a variety of different angles, biases, etc.  Once the models have digested these video streams, the algorithms are let loose on raw unseen neighborhood shope video streams.
+* So what is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world (i.e. local knowledge, preferences, values, beliefs). Ethnographic labels include the knowledge embedded in the heads of neighborhood shop staff and its regulars.  Labels include: personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots and unstated goals.  Guided by ethnography, we hand label human-object interactions in a set of video streams, in order for the computer vision models to be able to learn what actions look like from a variety of different angles, biases, etc.  Once the models have digested these video streams, the algorithms are let loose on raw unseen corner store video streams.
 
 * STEP 1 DataCollection - Ethnographic field notes
 * STEP 2 TidyDataSet - In-house autonencoder makes use of ethnographic labels that are semantically similar to label human-object interactions in video streams
 * STEP 3 ReproducibilityRecipe - Set up calculations in a way that promotes common data standards and portability across neighborhood shops for better flow of data
 
 * Behaviorgram-v1 Dataset
-	* 6 Actions each with 20 Groups
+	* 6 Actions each, across 20 Groups
 	* 40 Clips per Group 
 	* 4800 Clips @ 3-12 seconds each
 	* 30 fps 
@@ -77,7 +80,7 @@
 
 ## 6 DISCUSSION
 
-## 7 FUTURE RESEARCH
+## 7 SANDBOX
 
 * Teaching computer vision applications to NOT use guest biometrics as a condition of accepting payment under the Song Beverley Act of 1971
 * Better understanding the front-back orientation of human limbs due to clothing, lighting, background, optical interference
@@ -85,36 +88,11 @@
 * Rewriting code and making arrays more ergonomic 
 * Determining the metrics that improve downstream performance
 * Compressing networks with hashing trick?
-* Lowering the costs of switching data between neighborhood shops
+* Lowering the costs of switching data between corner stores
 * Data Exchange? helping clients/customers share and sell their data for training computer vision models
 * Better understanding how social, economic and legal systems work together to achieve research goals 
 
-## APPENDIX A: PROOF-OF-CONCEPT
-
-* Outline area around humans entering/exiting a building with a rectangle and update total number inside building accordingly.
-
-01 Installing Required Packages and Libraries
-* Python
-* OpenCV https://opencv.org/
-* dlib http://dlib.net/a
-
-02 Configuring the Edge Computing Device (Raspberry Pi)
-
-03 Footfall/People Counter (See Attached Code)
-* Videos/
-    * .avi
-    * .mp4
-    * .mp4
-* Output/
-	* .avi
-* cognition (module)
-	* init__.py
-	* centroidtracker.py
-	* directioncounter.py
-	* trackableobject.py
-* people_counter.py (driver script)
-
-## APPENDIX B: POLICY MEMORANDUM
+## APPENDIX A: POLICY MEMORANDUM
 
 * The introduction of modern, legally enforceable computer vision privacy rights will be politically fraught.  Reform must keep up the long, hard slog of countering implicit bias, cementing privacy rights and building the infrastructure to uphold them. Those building computer vision applications must accept greater responsiblity for its future. We must be part of setting the agenda, attitute, culture and laws around computer vision privacy rights.
 
@@ -135,6 +113,9 @@
 * "Temporal Segment Networks: Towards Good Practices for Deep Action Recognition" (2016)
 * "Deep Residual Learning for Image Recognition" (2015)
 * "Batch Normalization: Accelerating Deep Network Training by Reducing Covariate Shift" (2015)
-*
-* "Action Recognition with Improved Trajectories" (2013)
-* "A Duality Based Approach for Realtime TV-L1 Optical Flow" (2007)
+* "Recurrent Batch Normalization" (2017)
+* "FlowNet 2.0: Evolution of Optical Flow Estimation with Deep Networks" (2016)
+* 
+* "CLEVRER: Collision Events for Video Representation and Reasoning" (2020)
+* "Mimetics: Towards Understanding Human Actions Out of Context" (2020)
+* "Deep Temporal Linear Encoding Networks" (2016)
