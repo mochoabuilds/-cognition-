@@ -8,11 +8,11 @@
 ## 1.1 HOW DO WE BUILD COMPUTER VISION MACHINES?
 
 * We do this by building social graphs of the connections between people and goods (i.e. human-object interactions) in corner stores.  Tho many challenges come with this approach.  Corner stores' raw video streams have redundant frames so processing takes time, storage is huge and they are often bottlenecks during training.  So how do we model social graphs across longer video stream timespans accurately, efficiently and with an ability to generalize?  We use Neuro-Ethnographic Reasoning.  Our model builds its social graphs around asking descriptive ("how many? is there?"), explanatory ("what is responsible for?"), predictive ("what will happen?"), counterfacutual ("what if?") and ethnographic research questions. 
-* There is still no clear front runner for computer vision machine architectures.  We must think differently when building the in-store social graphs of the connections between people and goods in corner stores.
+* There is still no clear front runner for computer vision machine architectures. Classficiation errors reflect a general weakness of quantitative modeling: overestimation.  Our ultimate goal is to create Neuro-Ethnographic social graphs - in which data from off-the-shelf cameras are collected, thoughtfully processed and fed into corner store applications in real-time.
 
-## 1.2 REAL WORLD APPLICATIONS 
+## 1.2 CORNER STORE APPLICATIONS 
 
-* Corner stores must evolve with shoppers' changing ideas of convenience. Our real-time computer vision machines merge all data silos - video streams, financial records, service notes - into a single platform.  Next our machines are trained on thoughfully collected and annotated data that enables them to better handle complex corner stores scenarios. Working alongside flesh-and-blood workers our machines free humans up to perform other tasks.
+* Corner stores must evolve with shoppers' changing ideas of convenience. Our real-time computer vision machines merge all data silos - video streams, financial records, service notes - into a single platform.  Next machines are trained on thoughfully collected data that enables them to better handle complex corner stores scenarios. Working alongside flesh-and-blood workers the machines allow for more autonomy and creativity.
 * WhatYouAlmostBoughtApp >> Detect shoppers' cross product interactions to better understand product positioning strategies and recommend yet more products
 * AutonomousCheckoutApp >> Keep track of human-object interactions to build 'running tabs' for each shopper along with automatic payments options   
 
@@ -20,11 +20,11 @@
 
 ## 3 VERY DEEP MULTI-STREAM NETWORK
 
-* Our computer vision machine consists of an off-the-shelf camera & Nvidia Jetson Xavier NX running a spatial network that recognizes objects, a temporal network that recognizes actions and an optical flow network that captures temporal structure (i.e. goods being put in a shopping bag vs. removed from shopping bag).  We use a deep architecture to encode representations into the network to better recognize human-object interactions in raw unseen corner store video streams.
+* Our computer vision machine consists of an off-the-shelf camera & Nvidia Jetson Xavier NX running a spatial network that recognizes objects, a temporal network that recognizes actions and an optical flow network that captures temporal structure (i.e. objects put in a shopping bag vs. objects removed from shopping bag).  We use a deep architecture to encode representations into the mult-stream network to better recognize human-object interactions in raw unseen corner store video streams.
 
 ## 3.1 SYSTEM ARCHITECTURE
 
-* Our architecture handles data pre-processing, model training, data-post procoessing, investigating and fixing performance bottlenecks, etc. 
+* Our architecture handles data pre-processing, model training, data-post procoessing, investigating and fixing performance bottlenecks, etc. We rely on NVIDIA's Jetpack SDK for libraries, APIs, debugging kits and optimization.
 
 ## 3.2 NETWORK PRETRAINING 
 
