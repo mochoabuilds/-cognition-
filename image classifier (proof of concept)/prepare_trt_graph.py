@@ -1,4 +1,4 @@
-# import packages to define Tensorflow graphs, assist 
+# import packages that define Tensorflow graphs, assist 
 # in defining graphs, loading models and optimizing framework
 from tensorflow.graph_util import convert_variables_to_constants
 from tensorflow.graph_util import remove_training_nodes
@@ -8,7 +8,7 @@ import tensorflow as tf
 import argparse
 import os
 
-# freezeGraph - accept Keras model and output frozen tf graph
+# freezeGraph: accepts Keras model and outputs frozen tf graph
 # as a prereq to create trt graph
 def freezeGraph(graph, session, outputNames):
 	# start with graph's default context
@@ -21,6 +21,7 @@ def freezeGraph(graph, session, outputNames):
 		# return frozen graph
 		return 
 
+	
 # command line arguments 
 ap = argparse.ArgumentParser()
 ap.add_argument("-w", "--weights", required=True,
@@ -29,8 +30,9 @@ ap.add_argument("-t", "--trt-graph", required=True,
 	help ="path to the TRT graph file")
 args = vars(ap.parse_args())
 
-# generate trt graph, fix learning rate, load model 
-# and extract underlying tf session
+
+# generate trt graph, fix learning rate, load model,
+# extract underlying tf session
 tf.keras.backend.set_learning_phase(0)
 model = load_model(args["weights"]) 
 session = tf.keras.backend.get_session()
@@ -38,12 +40,12 @@ session = tf.keras.backend.get_session()
 # gather output names from model for layer associations
 outputNames = [t.op.name for t in model.ouputs]
 
-# start Keras to frozen tf graph conversion process
+# start Keras-to-frozen-tf-graph conversion process
 print("[INFO] freezing network...")
 frozenGraph = freezeGraph(session.graph, session, outputNames)
 
 # create trt graph from frozen tf graph using NVIDIA's trt framework
-5 print("[INFO] creating TRT graph...")
+print("[INFO] creating TRT graph...")
 	trtGraph = trt.create_inference_graph(
 	input_graph_def=frozenGraph,
 	outputs=outputNames,
