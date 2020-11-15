@@ -1,5 +1,7 @@
 *** WORKING PAPER ***
 
+*** Attached Code: Proof of Concept, Image Classifier ***
+
 ## 1 INTRODUCTION
 
 * Corner stores do more than provide us with essential goods. They are where unrelated people relate. They are a place you go for the simple pleasure of good conversation. The corner store represents the social infrastructure key to safety and prosperity in our young Midwestern cities. Tho our corner stores are transforming. They've become living laboratories for new communal safety habits. 
