@@ -1,11 +1,11 @@
 *** WORKING PAPER ***
 
-*** Attached Code: Proof of Concept, Image Classifier ***
+*** ATTACHED CODE >> Proof of Concept, Image Classifier ***
 
 ## 1 INTRODUCTION
 
-* Corner stores do more than provide us with essential goods. They are where unrelated people relate. They are a place you go for the simple pleasure of good conversation. The corner store represents the social infrastructure key to safety and prosperity in our young Midwestern cities. Tho our corner stores are transforming. They've become living laboratories for new communal safety habits. 
-* This research explores ways to extend the idea of what a corner store could be. With the help of many other great minds we develop computing backbones that make corner stores more simple and certain. Our goal is to build secure computer vision machines, and supply industry with implementations, architectures, data sets, applications and mixed-methods teams dedicated to the process.
+* Corner stores do more than provide us with essential goods. They are where unrelated people relate. They are a place you go for the simple pleasure of good conversation. The corner store represents the social infrastructure key to safety and prosperity in our young Midwestern cities. Tho our corner stores are amidst a once-in-a-generation shift, as technology becomes more baked into everyday life. 
+* This research explores ways to extend the idea of what a corner store could be. With the help of many other great minds we develop, deploy and manage computer vision applications that make corner stores more simple and certain. Our goal is to build secure handheld computer vision machines, and supply more industries with implementations, architectures, data sets and mixed-methods teams dedicated to the entire process.
 
 ## 1.1 HOW DO WE BUILD COMPUTER VISION MACHINES?
 
@@ -14,29 +14,32 @@
 
 ## 1.2 CORNER STORE APPLICATIONS 
 
-* Corner stores must evolve with shoppers' changing ideas of convenience. Our real-time computer vision machines merge all data silos - video streams, financial records, service notes - into a single platform.  Next machines are trained on thoughfully collected data that enables them to better handle complex corner stores scenarios. Working alongside flesh-and-blood workers the machines allow for more autonomy and creativity.
-* WhatYouAlmostBoughtApp >> Detect shoppers' cross product interactions to better understand product positioning strategies and recommend yet more products
-* AutonomousCheckoutApp >> Keep track of human-object interactions to build 'running tabs' for each shopper along with automatic payments options   
+* Corner stores must evolve with shoppers' changing ideas of convenience. Our real-time computer vision machines merge all data silos - video streams, financial records, service notes - into a single platform.  Next machines are trained on thoughfully collected data that enables them to better handle complex corner stores scenarios. Working alongside flesh-and-blood workers the machines allow humans to move beyond their exisiting roles, positions and expectations to a more vibrant dynamic. 
+	* WhatYouAlmostBoughtApp >> Detect shoppers' cross product interactions to better understand product positioning strategies and recommend yet more products
+	* AutonomousCheckoutApp >> Keep track of human-object interactions to build 'running tabs' for each shopper along with automatic payments options   
 
 ## 2 RELATED WORKS
 
 ## 3 VERY DEEP MULTI-STREAM NETWORK
 
-* Our computer vision machine consists of an off-the-shelf camera & Nvidia Jetson Xavier NX running a spatial network that recognizes objects, a temporal network that recognizes actions and an optical flow network that captures temporal structure (i.e. objects put in a shopping bag vs. objects removed from shopping bag).  We use a deep architecture to encode representations into the mult-stream network to better recognize human-object interactions in raw unseen corner store video streams.
+* Our computer vision machine consists of an off-the-shelf camera & Nvidia Jetson Xavier NX running a:
+	* spatial network that recognizes objects
+	* a temporal network that recognizes actions 
+	* an optical flow network that captures temporal structure (i.e. objects put in a shopping bag vs. objects removed from shopping bag).  
 
 ## 3.1 SYSTEM ARCHITECTURE
 
-* Our architecture handles data pre-processing, model training, data-post procoessing, investigating and fixing performance bottlenecks, etc. We rely on NVIDIA's Jetpack SDK for libraries, APIs, debugging kits and optimization.
+* Our architecture handles data pre-processing, model training, data-post procoessing, investigating and fixing performance bottlenecks, etc. We rely on NVIDIA's Jetpack SDK for libraries, APIs, debugging kits and optimization.  We create a deep architecture to encode representations into the very deep multi-stream network to better recognize human-object interactions in raw unseen corner store video streams.
 
 ## 3.2 NETWORK PRETRAINING 
 
-* We use a variant of ImageNet model to pretrain our multi-stream network (spatial, temporal, optical flow). We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across 22k categories. We pretrain to avoid representational bottlenecks, boost activations per tile, make for easier dimensional reduction and better balance the width and depth of the network.
+* We use a variant of ImageNet model to pretrain our multi-stream network (i.e. spatial, temporal, optical flow). We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across 22k categories. Pretraining allows us to avoid representational bottlenecks, boost activations per tile, make for easier dimensional reduction and better balance the width and depth of the network.
 
 ## 3.3 DATA AUGMENTATION
 
 ## 3.4 NETWORK TRAINING
 
-* We train our computer vision machines on our "Behaviorgram" dataset (see 5.1) which enables us to experiment with a diversity of research approaches, and better fine-tune our architectures to handle complex corner store scenarios.
+* We train our computer vision machines on our "Behaviorgram" dataset (see 5.1) which enables us to experiment with a diversity of research approaches, and fine-tune our architectures to navigate uncertainity better, faster and with less computational energy.
 
 ## 3.5 NETWORK ARCHITECTURE
 
@@ -44,7 +47,7 @@
 
 ## 4 EXPERIMENTS
 
-* In this section we explore the generalizability of networks trained on different datasets, etc.  
+* In this section we explore the generalizability of networks trained on three different datasets.
 * Because training datasets take up many GBs in memory, a 500 GB disk is added and mounted on the virtual machine for dataset storage. The GPU chosen is a NVIDIA Tesla P100 for inferences in the cloud and a NVIDIA Jetson Xavier XN for performing inferences on the edge. 
 
 ## 4.1 "BEHAVIORGRAM" DATASET
@@ -57,7 +60,7 @@
 * STEP 2 TidyDataSet - In-house autonencoder makes use of collected data that are semantically similar to label human-object interactions in video streams
 * STEP 3 ReproducibilityRecipe - Set up calculations in a way that promotes common data standards and portability across corner stores for better flow of data
 
-* Behaviorgram-v1 Dataset
+* "Behaviorgram-v1" Dataset
 	* 6 Actions each, across 20 Groups
 	* 40 Clips per Group 
 	* 4800 Clips @ 3-12 seconds each
