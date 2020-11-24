@@ -50,3 +50,46 @@ outputTensor = tfSess.graph.get_tensor_by_name(outputTensorName)
 # load input image, perform data prep for inference
 image = cv2.imread(args["image"])
 output = image.copy()
+
+# swap the color channels for OpenCV ordering, and resize image for 
+# MobileNet V2 classification CNN expectations
+image = cv2.cvtColor(image, cv2.COLOR.BGR2RGB)
+image = cv2.resize(image, (224, 224))
+
+# add batch dimension to image for easier prediction/pre-processing 
+image = np.expand_dims(image, axis=0)
+image = preprocess_input(image)
+
+# run the Jetson! pass image through TensorFlow session to gather predictions
+start = time.time()
+predictions = tfSess.run(outputTensor,
+	feed_dict={inputTensorName: image})
+end = time.time()
+print("[INFO] classification took {:.4f} seconds...".format(
+	end - start))
+
+# loop over top-5 predictions
+topPredictions = decode_predictions(predictions, top=5)
+
+# loop over results
+for (i, prediction) in enumerate(topPredictions[0]):
+	# check if this top result, if so draw label on image
+	if i == 0:
+		# format image and draw prediction on output image
+		label = prediction[1].upper()
+ 		text = "Label: {}, {:.2f}%".format(label,
+			prediction[2] * 100)
+		cv2.putText(output, text, (10, 30),
+			cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
+		
+	# display classification result on terminal
+	print("{}. {}: {:.2f}%".format(i + 1, prediction[1].upper(),
+		prediction[2] * 100))
+		
+# show output image
+cv2.imshow("Output", output)
+cv2.waitKey(0)
+
+		   
+		   
+		   
