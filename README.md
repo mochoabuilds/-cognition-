@@ -1,11 +1,11 @@
 *** WORKING PAPER ***
 
-*** ATTACHED CODE >> Proof of Concept, Image Classifier ***
+*** ATTACHED CODE >> Proof of Concept - Image Classifier ***
 
 ## 1 INTRODUCTION
 
-* Corner stores do more than provide us with essential goods. They are where unrelated people relate. They are a place you go for the simple pleasure of good conversation. The corner store represents the social infrastructure key to safety and prosperity in our young Midwestern cities. Tho our corner stores are amidst a once-in-a-generation shift, as technology becomes more baked into everyday life. 
-* This research explores ways to extend the idea of what a corner store could be. With the help of many other great minds we develop, deploy and manage computer vision applications that make corner stores more simple and certain. Our goal is to build secure handheld computer vision machines, and supply more industries with implementations, architectures, data sets and mixed-methods teams dedicated to the entire process.
+* Corner stores do more than provide us with essential goods. They are where unrelated people relate. They are a place you go for the simple pleasure of good conversation. The corner store represents the social infrastructure key to safety and prosperity in young Midwestern cities. Tho corner stores are in the throes of a once-in-a-generation shift, as technology becomes more baked into everyday life. 
+* With the help of many other great minds we develop, deploy and manage computer vision applications that make corner stores more simple and certain. Our goal is to build secure computer vision machines, and supply more industries with implementations, architectures and mixed-methods teams dedicated to the entire process.
 
 ## 1.1 HOW DO WE BUILD COMPUTER VISION MACHINES?
 
@@ -14,7 +14,7 @@
 
 ## 1.2 CORNER STORE APPLICATIONS 
 
-* Corner stores must evolve with shoppers' changing ideas of convenience. Our real-time computer vision machines merge all data silos - video streams, financial records, service notes - into a single platform.  Next machines are trained on thoughfully collected data that enables them to better handle complex corner stores scenarios. Working alongside flesh-and-blood workers the machines allow humans to move beyond their exisiting roles, positions and expectations to a more vibrant dynamic. 
+* Corner stores must evolve with shoppers' changing ideas of convenience. Our real-time computer vision machines merge all data silos - video streams, financial records, service notes - into a single platform.  Next machines are trained on thoughfully collected data that enables them to better handle complex corner stores scenarios. Working alongside flesh-and-blood workers the machines allow humans to move beyond existing roles, positions and expectations to a more vibrant dynamic. 
 	* WhatYouAlmostBoughtApp >> Detect shoppers' cross product interactions to better understand product positioning strategies and recommend yet more products
 	* AutonomousCheckoutApp >> Keep track of human-object interactions to build 'running tabs' for each shopper along with automatic payments options   
 
@@ -25,7 +25,7 @@
 * Our computer vision machine consists of an off-the-shelf camera & Nvidia Jetson Xavier NX running a:
 	* spatial network that recognizes objects
 	* a temporal network that recognizes actions 
-	* an optical flow network that captures temporal structure (i.e. objects put in a shopping bag vs. objects removed from shopping bag).  
+	* an optical flow network that captures temporal structure (i.e. objects put in a bag vs. objects removed from a bag).  
 
 ## 3.1 SYSTEM ARCHITECTURE
 
@@ -37,30 +37,23 @@
 
 ## 3.3 DATA AUGMENTATION
 
-## 3.4 NETWORK TRAINING
+## 3.4A NETWORK TRAINING
 
-* We train our computer vision machines on our "Behaviorgram" dataset (see 5.1) which enables us to experiment with a diversity of research approaches, and fine-tune our architectures to navigate uncertainity better, faster and with less computational energy.
+* We train our computer vision machines on our "Corner Store Social Graph-v1" dataset which enables us to experiment with a diversity of research approaches, and fine-tune our architectures to navigate uncertainity better, faster and with less computational energy.
 
-## 3.5 NETWORK ARCHITECTURE
+# 3.4B CORNER STORE SOCIAL GRAPH DATASET
 
-## 3.6 IMPLEMENTATION
+* Bias is inevitable when training computer vision models for human action-object detections in video streams. To combat this we apply ethnographic methods to build datasets that better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what humans feel is important. Our reality is political, but the dominant groups claim as the norm when training computer vision machines need not be. If computer vision engineers are as commited to diversity and inclusion as they say there are, then they would make different choices.  That's why we are so loud about talking about combatting dataset bias that we see consistently and trying to call for some real change.
 
-## 4 EXPERIMENTS
+* What is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world (i.e. local knowledge, preferences, values, beliefs). Ethnographic labels include the knowledge embedded in the heads of corner store staff and its regulars.  Labels include: personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots and unstated goals.  Guided by ethnography, we hand label human-object interactions in a set of video streams, in order for the computer vision models to be able to learn what actions look like from a variety of different angles, biases, etc.  Once the models have digested these video streams, the algorithms are let loose on raw unseen corner store video streams.
 
-* In this section we explore the generalizability of networks trained on three different datasets.
-* Because training datasets take up many GBs in memory, a 500 GB disk is added and mounted on the virtual machine for dataset storage. The GPU chosen is a NVIDIA Tesla P100 for inferences in the cloud and a NVIDIA Jetson Xavier XN for performing inferences on the edge. 
-
-## 4.1 "BEHAVIORGRAM" DATASET
-
-* Bias is inevitable when training computer vision models for human action detections in video streams. To combat this we apply ethnography to build datasets that better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what humans feel is important. Our reality is political, but the dominant groups claim as the norm when training computer vision machines need not be the dominant view.  Our data prep hones years worth of local corner store knowledge to build a human-object interaction social graphs, which are publicly available. Our approach asks descriptive ("how many? is there?"), explanatory ("what is responsible for?"), predictive ("what will happen?"), counterfacutual ("what if?") and ethnographic research questions. This approach takes qualitative and analog methods, and turns it into something that addresses shortcomings in ourtraining datasets.  
-
-* So what is ethnography? It's a sociological method of firsthand participant observation in once unfamiliar social circles to pull a sense of what's relevant in that world (i.e. local knowledge, preferences, values, beliefs). Ethnographic labels include the knowledge embedded in the heads of corner store staff and its regulars.  Labels include: personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots and unstated goals.  Guided by ethnography, we hand label human-object interactions in a set of video streams, in order for the computer vision models to be able to learn what actions look like from a variety of different angles, biases, etc.  Once the models have digested these video streams, the algorithms are let loose on raw unseen corner store video streams.
+* Our dataset hones years worth of local corner store ethnography to build human action-object interaction social graphs, which are publicly available. Our approach asks descriptive ("how many? is there?"), explanatory ("what is responsible for?"), predictive ("what will happen?"), counterfacutual ("what if?") and ethnographic research questions. This approach takes qualitative and analog methods, and turns it into something that addresses societal shortcomings in computer vision training datasets.  
 
 * STEP 1 DataCollection - Descriptive, Explanatory, Predictive, Counterfactual and Ethnographic field notes
 * STEP 2 TidyDataSet - In-house autonencoder makes use of collected data that are semantically similar to label human-object interactions in video streams
 * STEP 3 ReproducibilityRecipe - Set up calculations in a way that promotes common data standards and portability across corner stores for better flow of data
 
-* "Behaviorgram-v1" Dataset
+* "Corner Store Social Graph-v1" Dataset
 	* 6 Actions each, across 20 Groups
 	* 40 Clips per Group 
 	* 4800 Clips @ 3-12 seconds each
@@ -68,11 +61,19 @@
 	* 640 x 480
 	* Audio: YES
 
-## 4.2 UCF-101 DATASET
+## 3.5 NETWORK ARCHITECTURE
+
+## 3.6 IMPLEMENTATION
+
+## 4 EXPERIMENTS
+
+* In this section we explore the generalizability of networks on two different datasets.
+
+## 4.1 UCF-101 DATASET
 
 * 13320 videos across 101 action classes
 
-## 4.3 HMDB-51 DATASET
+## 4.2 HMDB-51 DATASET
 
 * 6766 videos across 51 action classes
 
@@ -115,8 +116,6 @@
 * "Deep Residual Learning for Image Recognition" (2015)
 * "Batch Normalization: Accelerating Deep Network Training by Reducing Covariate Shift" (2015)
 * "Recurrent Batch Normalization" (2017)
-* "FlowNet 2.0: Evolution of Optical Flow Estimation with Deep Networks" (2016)
-* 
-* "CLEVRER: Collision Events for Video Representation and Reasoning" (2020)
+* "FlowNet 2.0: Evolution of Optical Flow Estimation with Deep Networks" (2016)* 
 * "Mimetics: Towards Understanding Human Actions Out of Context" (2020)
-* "Deep Temporal Linear Encoding Networks" (2016)
+
