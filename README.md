@@ -1,26 +1,31 @@
 *** WORKING PAPER ***
 
-*** ATTACHED CODE >> Proof of Concept - Image Classifier ***
+*** ATTACHED CODE >> Proof of Concept - Packaged Good Image Classifier ***
 
 ## 1 INTRODUCTION
 
-* Corner stores do more than provide us with essential goods. They are where unrelated people relate. They are a place you go for the simple pleasure of good conversation. The corner store represents the social infrastructure key to safety and prosperity in young Midwestern cities. Tho corner stores are in the throes of a once-in-a-generation shift, as technology becomes more baked into everyday life. 
-* With the help of many other great minds we develop, deploy and manage computer vision applications that make corner stores more simple and certain. Our goal is to build secure computer vision machines, and supply more industries with implementations, architectures and mixed-methods teams dedicated to the entire process.
+* Corner stores do more than provide us with essential goods. They are where unrelated people relate. They're a place you go for the simple pleasure of good conversation. The corner store is part of the social infrastructure key to safety and prosperity in young Midwestern cities. Tho they are in the throes of a once-in-a-generation moment, as mobile/cloud technology becomes more baked into everyday life. To help corner stores, with the help of many other great minds we develop, deploy and manage computer vision apps that make stores more simple and certain. 
 
-## 1.1 HOW DO WE BUILD COMPUTER VISION MACHINES?
+## 1.1 HOW DO WE DO THIS?
 
-* We do this by building social graphs of the connections between people and goods (i.e. human-object interactions) in corner stores.  Tho many challenges come with this approach.  Corner stores' raw video streams have redundant frames so processing takes time, storage is huge and they are often bottlenecks during training.  So how do we model social graphs across longer video stream timespans accurately, efficiently and with an ability to generalize?  We use Neuro-Ethnographic Reasoning.  Our model builds its social graphs around asking descriptive ("how many? is there?"), explanatory ("what is responsible for?"), predictive ("what will happen?"), counterfacutual ("what if?") and ethnographic research questions. 
-* There is still no clear front runner for computer vision machine architectures. Classficiation errors reflect a general weakness of quantitative modeling: overestimation.  Our ultimate goal is to create Neuro-Ethnographic social graphs - in which data from off-the-shelf cameras are collected, thoughtfully processed and fed into corner store applications in real-time.
+* We believe there is still no clear front runner in computer vision architectures. Classficiation errors reflect a general weakness of quantitative modeling: overestimation. To counter this we build social graphs of the connections between people and goods (i.e. human-object interactions) in corner stores.  Our methods better balances out overestimation by building its social graphs around asking...
+	* descriptive questions ("how many? is there?")
+	* explanatory questions ("what is responsible for?")
+	* predictive questions ("what will happen?")
+	* counterfacutual questions ("what if?") 
+* ...to overcome the general weakness of overestimation in quantitiative modeling.
+ 
 
 ## 1.2 CORNER STORE APPLICATIONS 
 
-* Corner stores must evolve with shoppers' changing ideas of convenience. Our real-time computer vision machines merge all data silos - video streams, financial records, service notes - into a single platform.  Next machines are trained on thoughfully collected data that enables them to better handle complex corner stores scenarios. Working alongside flesh-and-blood workers the machines allow humans to move beyond existing roles, positions and expectations to a more vibrant dynamic. 
-	* WhatYouAlmostBoughtApp >> Detect shoppers' cross product interactions to better understand product positioning strategies and recommend yet more products
-	* AutonomousCheckoutApp >> Keep track of human-object interactions to build 'running tabs' for each shopper along with automatic payments options   
+* Corner stores must evolve with shoppers' changing ideas of convenience. Our real-time computer vision application merges all data silos - video streams, financial records, service notes - into a single platform.  Next machines are trained on the "Corner Store Social Graph" datasets that enables machines to better understand complex corner stores scenarios. Working alongside workers the machines applications help humans move beyond existing roles, positions and expectations into a more dynamic one. 
+	* PERLIMIARY APPLICATIONS:
+	* WhatYouAlmostBoughtApp >> Detect shoppers' cross product interactions to better understand product positioning strategies and recommend products
+	* AutonomousCheckoutApp >> Keep track of human-object interactions to build 'running tabs' for each shopper along with automatic payment options   
 
 ## 2 RELATED WORKS
 
-## 3 VERY DEEP MULTI-STREAM NETWORK
+## 3 SYSTEM
 
 * Our computer vision machine consists of an off-the-shelf camera & Nvidia Jetson Xavier NX running a:
 	* spatial network that recognizes objects
@@ -29,17 +34,18 @@
 
 ## 3.1 SYSTEM ARCHITECTURE
 
-* Our architecture handles data pre-processing, model training, data-post procoessing, investigating and fixing performance bottlenecks, etc. We rely on NVIDIA's Jetpack SDK for libraries, APIs, debugging kits and optimization.  We create a deep architecture to encode representations into the very deep multi-stream network to better recognize human-object interactions in raw unseen corner store video streams.
+* We rely on NVIDIA's Jetpack SDK for libraries, APIs, debugging kits and optimization.  
+* More to come!
 
 ## 3.2 NETWORK PRETRAINING 
 
-* We use a variant of ImageNet model to pretrain our multi-stream network (i.e. spatial, temporal, optical flow). We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across 22k categories. Pretraining allows us to avoid representational bottlenecks, boost activations per tile, make for easier dimensional reduction and better balance the width and depth of the network.
+* We use a variant of ImageNet model to pretrain our multi-stream network (i.e. spatial, temporal, optical flow). We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across 22k categories. Pretraining allows us to avoid representational bottlenecks, boost our activations per tile, make for easier dimensional reduction and better balance the width and depth of the network.
 
 ## 3.3 DATA AUGMENTATION
 
 ## 3.4A NETWORK TRAINING
 
-* We train our computer vision machines on our "Corner Store Social Graph-v1" dataset which enables us to experiment with a diversity of research approaches, and fine-tune our architectures to navigate uncertainity better, faster and with less computational energy.
+* We train our computer vision machines on our "Corner Store Social Graph" dataset which enables us to experiment with a diversity of research approaches, and fine-tune our architectures to navigate uncertainity better, faster and with less computational energy.
 
 # 3.4B CORNER STORE SOCIAL GRAPH DATASET
 
@@ -114,8 +120,9 @@
 * "Going Deeper with Convolutions" (2014)
 * "Temporal Segment Networks: Towards Good Practices for Deep Action Recognition" (2016)
 * "Deep Residual Learning for Image Recognition" (2015)
-* "Batch Normalization: Accelerating Deep Network Training by Reducing Covariate Shift" (2015)
-* "Recurrent Batch Normalization" (2017)
-* "FlowNet 2.0: Evolution of Optical Flow Estimation with Deep Networks" (2016)* 
+* "FlowNet 2.0: Evolution of Optical Flow Estimation with Deep Networks" (2016)
+* 
 * "Mimetics: Towards Understanding Human Actions Out of Context" (2020)
+* "Recurrent Batch Normalization" (2017)
+* "Batch Normalization: Accelerating Deep Network Training by Reducing Covariate Shift" (2015)
 
