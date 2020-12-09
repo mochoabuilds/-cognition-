@@ -12,19 +12,17 @@
 	
 ## 1.2 WHY FOCUS ON CORNER STORES? 
 
-* To win in the corner store market today, things should have a role towards advancing the group. We mesaure this on an objective basis with field observation guided by Q/A listed below. We believe corner store applications must reflect the sensitive interpretation of what the corner store community feels is important. Our approach blends rich qualitiative data and AI models to test our theory of how the corner store could win. that revolves around de-basing the dominant group's claims as the norms for life when building computer vision models.
+* To win in the corner store market today, things should have a role towards advancing the group. We mesaure this goal on an objective basis Q/A listed below. We believe corner store applications must reflect the sensitive interpretation of what the corner store community feels is important. Our approach blends rich qualitiative data and AI models to test our theory of how a corner store could their market.
 
-* Field Observation Q/A used to encode/decode the world:
+* Q/A used to measure goal & encode/decode the world:
 	* "how many?" "is there?"  (descriptive questions)
 	* "what is responsible for...?" (explanatory questions)
 	* "what will happen?" (predictive questions)
 	* "what if?" (counterfactual questions)
-	* "members meaning" (rich qualitative questions)
-	*  temperature, sound levels, smells (sensory impressions)
+	* "members meaning" (rich qualitative questions, ethnography)
+	*  temperature, sounds, smells (sensory impressions)
 	
 * Data is collected on a store-by-store basis and used to build a Corner-Store-Social-Graph 
-
-*
  	
 ## 1.3 CORNER STORE APPLICATIONS 
 
