@@ -4,17 +4,17 @@
 
 ## 1 INTRODUCTION
 
-* Corner stores do more than just provide us with essential goods. They're where unrelated people relate. They're somewhere you can go for the simple pleasure of good conversation. Its social infrastructure is key to safety and prosperity in our Midwestern cities. Tho corner stores are in a once-in-a-generation shift as cloud/mobile technology becomes more baked into everyday life. To help out, our research deploys computer vision technology to make corner stores more simple and certain. We master the art of building software corner stores love - and use our portfolio of applications to run it the edge-cloud.
+* Corner stores do more than just provide us with essential goods. They're where unrelated people relate. They're somewhere you can go for the simple pleasure of some good conversation. Its social infrastructure is key to safety and prosperity in ouryoung Midwestern cities. Tho our corner stores are in a once-in-a-generation shift as cloud/mobile technology becomes more baked into everyday life. To help the corner store, our research deploys AI technology to make corner stores more simple and certain. In time we'll master the art of building software corner stores love - and use our portfolio of applications to run it on the edge-cloud.
 
 ## 1.1 HOW WE DO THIS?
 
-* To transform the corner store, not just its IT, you must invest both in people and technology. A culture of test-driven development, human-centered design and edge-cloud native operations must be the norm. Products must also be highly automated and easy to use. Our technologies must spark major improvements in how corner stores run their business. A partnership with our research group means being led through the next stage of their corner store. We help corner store run computer vision application where they want and scale them across targets. Our approach takes mature open-source software and embeds it into applictions you can trust.
+* To transform the corner store, not just its IT, you must invest both in people and technology. A culture of test-driven development, human-centered design and edge-cloud native operations is our norm. Our products must be highly automated and easy to use. They must spark major improvements in how corner stores run their business. 
+* We believe a partnership with our research group means being led through to the next stage of the corner store. We want to help corner stores run AI application that make service more simple and certain, and scale them across target. Our approach takes mature open-source software and embeds it into applictions you can trust.
 	
 ## 1.2 WHY FOCUS ON CORNER STORES? 
 
-* To win in the corner store market today, things should have a role towards advancing the group. We mesaure this goal on an objective basis Q/A listed below. We believe corner store applications must reflect the sensitive interpretation of what the corner store community feels is important. Our approach blends rich qualitiative data and AI models to test our theory of how a corner store could their market.
-
-* Q/A used to measure goal & encode/decode the world:
+* To win in the corner store market today, things should have a role towards advancing the group. We mesaure this on an objective basis with the Q/A listed below. We believe tech applications must reflect the sensitive interpretation of what the corner store community feels is important. Our approach blends rich qualitiative data and AI models to test our theory that things should have a role towards advancing the group to win in the corner store market today.
+* the Q/A fed into our in-house autoencoder
 	* "how many?" "is there?"  (descriptive questions)
 	* "what is responsible for...?" (explanatory questions)
 	* "what will happen?" (predictive questions)
@@ -22,13 +22,14 @@
 	* "members meaning" (rich qualitative questions, ethnography)
 	*  temperature, sounds, smells (sensory impressions)
 	
-* Data is collected on a store-by-store basis and used to build a Corner-Store-Social-Graph 
+* Data is collected on a store-by-store basis.  Guided by our mixed-method approach, we hand label (encode) human-object interactions invideo streams, in order for the computer vision models to be able to learn what actions look like (decode) from a variety of different biases, angles, etc. to build the "Corner-Store-Social-Graph".
  	
 ## 1.3 CORNER STORE APPLICATIONS 
 
-* Corner stores must evolve with shoppers' changing ideas of convenience. Our applications merges all data silos -- video streams, financial records, service notes -- into a single platform.  
+* Corner stores must evolve with shoppers' changing ideas of convenience. Our applications merges all data silos -- video streams, financial records, service notes -- into a single product that is highly automated and easy-to-use.  
 	* WhatYouAlmostBoughtApp >> Detect shoppers' cross product interactions to better understand product positioning strategies 
-	* AutonomousCheckoutApp >> Build 'running tabs' for people as they shop along with ez payment option  
+	* AutonomousCheckoutApp  
+	* Data Exchange >> shoppers share and sell their data for training computer vision models
 
 ## 2 RELATED WORKS
 
@@ -36,7 +37,7 @@
 
 * We have tried dozens of different ways to construct a computer vision system before designing one from scratch that is both functional and manufacturable.  
 
-## 3.1 THE SYSTEM 
+## 3.1 SYSTEM 
 
 * Our systems consists of a Nvidia Jetson Xavier NX and Raspberry Pi Camera V2 or Logitech c270 Webcam running NVIDIA's JetPack SDK for libraries, APIs, debugging and optimization.
 
@@ -46,16 +47,17 @@
 
 ## 3.3 FUSION ARCHITECTURE
 
-## 3.4 NETWORK TRAINING WITH CORNER-STORE-SOCIAL-GRAPH
+## 3.4 CORNER-STORE-SOCIAL-GRAPH TRAINING
 
-* We train our computer vision machines on our "Corner Store Social Graph" which enables us to experiment with a diverse research approaches and fine-tune our architectures to navigate uncertainity better, faster and with less computational energy.
+* We train our computer vision machines on the "Corner Store Social Graph" which better enables us to experiment and fine-tune our architectures to navigate uncertainity faster and with less computational power.
 
-* Bias is inevitable when training computer vision models for human action-object detections in video streams. To combat this we apply our rich field research towards building datasets that better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what adults feel is important. Our reality is political, but the dominant groups claim as the norm when training computer vision machines need not be. Our rich field research includes the knowledge embedded in the heads of corner store staff and its regulars.  Data includes: personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots and unstated goals.  
-* Guided by our mixed-method approach, we hand label (encode) human-object interactions in a set of video streams, in order for the computer vision models to be able to learn what actions look like (decode) from a variety of different biases, angles, etc.  Once the models have digested these video streams, the algorithms are let loose on corner store video streams for classification accuracy experiments.
+* Bias is inevitable when training computer vision models for human action-object detections in video streams. To combat this we apply our rich Q/A towards building datasets that better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what adults feel is important. Our reality is political, but the dominant groups claim as the norm when training computer vision machines need not be. Our field research is made up of the knowledge embedded in the heads of corner store staff and its regulars. 
+* Guided by our mixed-method approach, we hand label (encode) human-object interactions in a set of video streams, in order for the computer vision models to be able to learn what actions look like (decode) from a variety of different biases, angles, etc. Hand labeled data includes: thematic coding of personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots and unstated goals, Q/A, etc. 
+* Once the models have digested these video streams, the algorithms are let loose on corner store video streams for various classification accuracy/generalizability experiments. 
 
-* STEP 1 DataCollection - Video Streams & Field Notes
-* STEP 2 TidyDataSet - In-house hand-labeling/autonencoder makes use of collected data that are semantically similar to label human-object interactions in video streams
-* STEP 3 ReproducibilityRecipe - Set up calculations in a way that promotes common data standards and portability across corner stores for better flow of data
+* STEP 1 >> DataCollection - Video Streams & Hand Labeling 
+* STEP 2 >> TidyDataSet - In-house hand-labeling/autonencoder makes use of collected data that are semantically similar to label human-object interactions in video streams
+* STEP 3 >> ReproducibilityRecipe - Set up classification calculations in a way that promotes common data standards and portability across multiple corner stores for better flow of data
 
 * "Corner Store Social Graph" (v1)
 	* 160 actions
@@ -71,7 +73,7 @@
 
 ## 4 EXPERIMENTS
 
-* In this section we explore the generalizability of networks on different benchmark datasets.
+* In this section we explore the generalizability of networks on different benchmark data sets.
 
 ## 4.1 UCF-101 DATASET
 
@@ -80,8 +82,6 @@
 ## 4.2 HMDB-51 DATASET
 
 * 6766 videos across 51 action classes
-
-# 4.3 CORNER-STORE-SOCIAL-GRAPH DATASET
 
 ## 5 ENSURING DATA PRIVACY
 
@@ -97,7 +97,6 @@
 * Rewriting code and making arrays more ergonomic
 * Determining the metrics that improve downstream performance
 * Lowering the costs of switching data across different corner stores
-* Data Exchange? helping clients/customers share and sell their data for training computer vision models
 * Better understanding how social, economic and legal systems work together to achieve research goals 
 
 ## APPENDIX A: POLICY MEMORANDUM
