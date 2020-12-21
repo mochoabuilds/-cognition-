@@ -4,38 +4,30 @@
 
 ## 1 INTRODUCTION
 
-* Corner stores do more than just provide us with essential goods. They're where unrelated people relate. They're somewhere you can go for the simple pleasure of some good conversation. Its social infrastructure is key to safety and prosperity in ouryoung Midwestern cities. Tho our corner stores are in a once-in-a-generation shift as cloud/mobile technology becomes more baked into everyday life. To help the corner store, our research deploys AI technology to make corner stores more simple and certain. In time we'll master the art of building software corner stores love - and use our portfolio of applications to run it on the edge-cloud.
+* Corner stores - part pantry, part place to hug the block. Their prescence can't be underestimated.  Hyperlocal by nature, corner stores are inherently loyal to its neighborhood inhabitants. Some locals have been known to benefit from understandings that let them grab essential on credit. There may be chaos outside, but the corner store brings a calming stability in these times. They're also where unrelated people relate. Its socio-economic infrastructure is key to safety and prosperity in our young Midwestern cities. 
+* Tho corner stores are in a once-in-a-generation shift as cloud/mobile services becomes more baked into everyday life. To help them, our research deploys AI technology to spark major improvements in how corner stores run their business.
+
 
 ## 1.1 HOW WE DO THIS?
 
-* To transform the corner store, not just its IT, you must invest both in people and technology. A culture of test-driven development, human-centered design and edge-cloud native operations is our norm. Our products must be highly automated and easy to use. They must spark major improvements in how corner stores run their business. 
-* We believe a partnership with our research group means being led through to the next stage of the corner store. We want to help corner stores run AI application that make service more simple and certain, and scale them across target. Our approach takes mature open-source software and embeds it into applictions you can trust.
+* To transform the corner store, not just its IT department, our approach takes mature open-source software and embeds it into applications everyone can trust. Our mixed methods approach blends rich qualitative data from humans with AI models to create a portfolio of services that are highly automated and easy-to-use. A culture of test-driven development, human-centered design and edge-cloud operations drive our methods. We strive to help corner stores run applications that make services more simple, certain and scalable.  
+* To address our biggest challenges, the impracticality of approaching every problem with brute computing power.  It soon became clear that the move is to look for shortcuts.  Rather than having our AI models see corner store scenarios as step by step thinking, models see scenarios with their own "intuition" learned from many translated examples of rules of thumb humans also use, but struggle to articulate. To be honest, we understand AI is a box of many different tools, and this is not our original system, but this new approach gives us more room to grow and boost the software's accuracy further.
+
 	
 ## 1.2 WHY FOCUS ON CORNER STORES? 
 
-* To win in the corner store market today, things should have a role towards advancing the group. We mesaure this on an objective basis with the Q/A listed below. We believe tech applications must reflect the sensitive interpretation of what the corner store community feels is important. Our approach blends rich qualitiative data and AI models to test our theory that things should have a role towards advancing the group to win in the corner store market today.
-* the Q/A fed into our in-house autoencoder
-	* "how many?" "is there?"  (descriptive questions)
-	* "what is responsible for...?" (explanatory questions)
-	* "what will happen?" (predictive questions)
-	* "what if?" (counterfactual questions)
-	* "members meaning" (rich qualitative questions, ethnography)
-	*  temperature, sounds, smells (sensory impressions)
-	
-* Data is collected on a store-by-store basis.  Guided by our mixed-method approach, we hand label (encode) human-object interactions invideo streams, in order for the computer vision models to be able to learn what actions look like (decode) from a variety of different biases, angles, etc. to build the "Corner-Store-Social-Graph".
- 	
-## 1.3 CORNER STORE APPLICATIONS 
+* To win in the corner store market today, you gotta build loyal regulars.  Its hyperlocal nature means word of a new, simplier and easier corner store experience will go around quickly.  Our technology means spaces become more than just a store, they become extensions of the home for shoppers. This feeling can't be underestimated.
 
-* Corner stores must evolve with shoppers' changing ideas of convenience. Our applications merges all data silos -- video streams, financial records, service notes -- into a single product that is highly automated and easy-to-use.  
-	* WhatYouAlmostBoughtApp >> Detect shoppers' cross product interactions to better understand product positioning strategies 
-	* AutonomousCheckoutApp  
+* Right now we are trying to extend software-as-a-service -- by accessing AI programs remotely rather than installing on them office computers -- particularly for corner store applications that are highly automated, easy-to-use and readily avaliable.
+	* Autonomous Checkout App >> Match the technological and operational plumbing of this service to its new reality
+	* WhatYouAlmostBought App >> Detect shoppers' cross product interactions to better understand product positioning strategies 
 	* Data Exchange >> shoppers share and sell their data for training computer vision models
 
 ## 2 RELATED WORKS
 
 ## 3 RESEARCH GOAL
 
-* We have tried dozens of different ways to construct a computer vision system before designing one from scratch that is both functional and manufacturable.  
+* We have tried dozens of different ways to construct a AI/computer vision system before designing this one from scratch.  It is both functional and manufacturable.  
 
 ## 3.1 SYSTEM 
 
@@ -49,11 +41,11 @@
 
 ## 3.4 CORNER-STORE-SOCIAL-GRAPH TRAINING
 
-* We train our computer vision machines on the "Corner Store Social Graph" which better enables us to experiment and fine-tune our architectures to navigate uncertainity faster and with less computational power.
+* We train our AI/computer vision models on the "Corner Store Social Graph" to experiment and fine-tune our architectures to operate with higher accuracy and less computational power.
 
-* Bias is inevitable when training computer vision models for human action-object detections in video streams. To combat this we apply our rich Q/A towards building datasets that better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what adults feel is important. Our reality is political, but the dominant groups claim as the norm when training computer vision machines need not be. Our field research is made up of the knowledge embedded in the heads of corner store staff and its regulars. 
-* Guided by our mixed-method approach, we hand label (encode) human-object interactions in a set of video streams, in order for the computer vision models to be able to learn what actions look like (decode) from a variety of different biases, angles, etc. Hand labeled data includes: thematic coding of personal interviews, sensory impressions, neighborhood idiosyncrasies, blind spots and unstated goals, Q/A, etc. 
-* Once the models have digested these video streams, the algorithms are let loose on corner store video streams for various classification accuracy/generalizability experiments. 
+* Bias is inevitable when training computer vision models for human action-object detections in video streams. To combat this we apply our rich Q/A towards building datasets that better debase the dominant groups claim as the norm.  This helps our computer vision models better "see" the sensitive interpretations of what adults feel is important. Our reality is political, but the dominant groups claim as the norm when training computer vision machines need not be. Our field research is made up of the rules of thumb embedded in the heads of corner store staff and its regulars.
+* Guided by our mixed-method approach, we hand label (encode) human-object interactions in a set of video streams, in order for the computer vision models to be able to see scenarios with their own "intuition". We then use those translated rules of thumb to make decisions (decode) from a variety of different biases, angles, etc. 
+* Once the models have digested these video streams, the classifications algorithms are let loose on corner store video streams for various accuracy/generalizability experiments. 
 
 * STEP 1 >> DataCollection - Video Streams & Hand Labeling 
 * STEP 2 >> TidyDataSet - In-house hand-labeling/autonencoder makes use of collected data that are semantically similar to label human-object interactions in video streams
@@ -67,13 +59,15 @@
 	* 640 x 480
 	* Audio: YES
 
-## 3.5 NETWORK ARCHITECTURE
+## 3.5 SYSTEM ARCHITECTURE
 
-## 3.6 IMPLEMENTATION
+## 3.6 NETWORK ARCHITECTURE
+
+## 3.7 IMPLEMENTATION
 
 ## 4 EXPERIMENTS
 
-* In this section we explore the generalizability of networks on different benchmark data sets.
+* In this section we explore the accuracy/generalizability of AI models on different benchmark data sets.
 
 ## 4.1 UCF-101 DATASET
 
@@ -105,7 +99,7 @@
 
 ## ACKNOWLEDGEMENTS
 
-* This work was supported by my immediate family, my lovely partner K, my close friends and confidants and the open source community. 
+* This work was supported by my lovely partner K, my immediate family, my close friends and confidants and the open source community. 
 
 ## REFERENCES
 
