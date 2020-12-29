@@ -4,47 +4,47 @@
 
 ## 1 SUMMARY
 
-* The shift to mobile payments requires a service that makes checkout more simple and certain. Our research deploys AI technology to spark major improvements in how corner stores/small grocers run their businesses.  We enable them to conduct autonomous checkout for goods via SMS.  By taking the idea of waiting in line out of the equation we make checkout more simple and certain. The shift to mobile payments, plus our magic will create a network effect among partnering stores, making our service the preferred way to pay in person.
+* Society's shift to mobile payments requires a service that makes checkout more simple and certain. Our prototypes enables corner stores/small grocers to conduct autonomous checkout for goods via SMS, with loyal regulars. This applied AI technology will spark a major improvement in how corner stores/small grocers run their business.  Our prototypes take the idea of waiting in line entirely out of the equation.  Society's shift to mobile payments, plus our code/magic will create a network effect among partnering corner stores, making our service the simpliest and most certain way to pay in person. 
 
 ## 1.1 INTRODUCTION
 
-* Corner stores - part pantry, part place to hug the block. To be honest, their prescence can't be underestimated.  Hyperlocal by nature, corner stores are inherently loyal to its surrounding population. Many have been known to benefit from understandings that let them grab goods on credit. We believe this socio-economic infrastructure is key to safety and prosperity in Midwestern cities. 
+* Corner stores - 1 part pantry, 1 part place to hug the block. Their prescence can't be underestimated.  Hyperlocal by nature, corner stores are inherently loyal to its surrounding folk. Many have been known to benefit from handshake understandings that let them grab goods on credit. This socio-economic infrastructure can't be underestimated, it's key to safety and prosperity in our young Midwestern cities. 
 
 ## 1.2 WHY FOCUS ON CORNER STORES? 
 
-* To win in the corner store market today, you gotta build loyal regulars.  Its hyperlocal nature means word of a better experience will go around quickly.
+* To win in the corner store market today, you gotta build loyal regulars.  Its hyperlocal nature means word of a better automated experience will go around quickly.
 
-* Our service accesses AI programs remotely rather than installing them on actual computers -- so applications are highly automated, easy-to-use and readily avaliable. 
-	* Autonomous Checkout App >> Watch shoppers browse shelves, keep a running tab of items taken from shelves and charge shoppers upon exit
-	* WhatYouAlmostBought App >> Detect shoppers' cross product interactions to better understand product positioning strategies 
-	* Data Exchange >> Shoppers share and sell their data for training computer vision models
+* What unique about our service is that it accesses AI programs remotely rather than installing them on actual computers - so applications are highly automated, readily avaliable and easy-to-use.  Sample apps include: 
+	* Autonomous Checkout App >> Watch shoppers browse shelves, keep a running tab of items taken from shelves and prompt shoppers with SMS payment option upon exit
+	* What You "AlmostBought" App >> Detect shoppers' cross product interactions to better understand product positioning strategies 
+	* Data Exchange >> Shoppers share and sell their data for training AI models
 
 ## 1.3 HOW WE DO IT?
 
-* To transform the corner store, not just its IT department, our approach takes mature open-source software and embeds it in services everyone can trust. A culture of test-driven development, human-centered design and edge-cloud operations drive our theory and methods. Our mixed methods approach blends rich ethnographic data from humans with powerful AI models to create a portfolio of services that are highly automated and easy-to-use. We strive to help stores run applications that make services more simple and certain.
+* A culture of test-driven development, human-centered design and edge-cloud operations drive our theory and methods. Our mixed methods approach blends rich ethnographic data from humans with powerful AI models to create a portfolio of services that are highly automated and easy-to-use. To transform the corner store, and not just its IT department, our approach takes mature open-source software and embeds it in services everyone can trust. Our long term goal is to help corner stores/small grocers run AI applications that make checkout more simple and certain.
 	
 ## 2 RELATED WORKS
 
 ## 3 THEORY + METHODS
 
-* To address our biggest challenge - the impracticality of approaching every AI problem with brute computing power - we looked for shortcuts. Rather than having our AI models see corner store scenarios as step by step thinking, models see these scenarios with their own "intuition" learned from many translated rules of thumb that humans also use, but struggle to articulate. 
-* AI is a box of many different tools, and this is not our original system, but our approach gives us more room to grow and boost the technology's accuracy further. We have tried dozens of different ways to construct a AI/computer vision system before designing this one from scratch.  It is both functional and manufacturable.  
+* To address our biggest challenge - the impracticality of approaching every AI problem with brute computing power - we looked for shortcuts. Rather than having AI models see corner store scenarios via step by step thinking, our AI models see these scenarios with their own "intuition" learned from many many translated rules of thumb that humans also lean on, but struggle to articulate. We translated them with an in-house autoencoder to make more functional and understandable for our models.
+* This is not our original system, but our current approach gives us more room to grow and boost the technology's accuracy further. We have tried dozens of different ways to construct a AI/computer vision system before designing this one from scratch.  
 
 ## 3.1 SYSTEM OVERVIEW
 
-* Our system consists of an off-the-shelf camera and Jetson Xavier NX embedded computing board running our magic/code/data via NVIDIA's JetPack SDK for libraries, APIs, debugging and optimization.
+* Our system consists of an off-the-shelf camera and Jetson Xavier NX embedded computing board that runs our code/magic using NVIDIA's JetPack SDK for libraries, APIs, debugging and optimization.
 
 ## 3.2 UPLOADING/PRETRAINING NETWORK
 
-* We use an offshoot of ImageNet model to pretrain our multi-stream network. We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across 22k categories. Pretraining allows us to avoid representational bottlenecks, boost our activations per tile and better balance the width and depth of the network.
+* We use an offshoot of ImageNet model to pretrain our multi-stream network. We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across ~22k categories. Pretraining allows us to avoid representational bottlenecks, boost our activations per tile and helps us better balance the width and depth of the network.
 
 ## 3.3 COLLECTING TRAINING DATA ("ETHNOGRAPHIC AUTOENCODER")
 
-* Bias is inevitable when training computer vision models for human action-object detections in video streams. To combat this we build datasets that better debase the dominant groups claim as the norm. Our reality is political, but the dominant groups claim as the norm when training computer vision machines need not be. This helps our AI models better "see" the sensitive interpretations of what humans feel is important. Our "ethographic autoencoder" translates human rules of thumb from staff and loyal regulars into a lanugage machines use to "see" corner stores with their own hyperlocal "intuition". 
+* Bias is inevitable when training computer vision models for human Action-Object detections in video streams. To mitigae this we build our dataset for each respective corner store/small grocer to better debase the dominant groups claim as the norm. Our reality is political, but the dominant groups claim as the norm when training AI models need not be. We believe this approach helps models better "see" the sensitive interpretations of what humans feel is important.  An in-house "ethographic autoencoder" translates ethnographic field notes & human rules of thumb from staff and loyal regulars of each space into a lanugage AI models can use to "see" corner stores with their own hyperlocal "intuition".  This "intuition" will prove helpful in edge cases.
 
 * STEP 1 >> DataCollection - Video Streams & Hand Labeling 
-* STEP 2 >> TidyDataSet - In-house hand-labeling/autonencoder makes use of collected data that are semantically similar to label human-object interactions in video streams
-* STEP 3 >> ReproducibilityRecipe - Set up classification calculations in a way that promotes common data standards and portability across multiple corner stores for better flow of data
+* STEP 2 >> TidyDataSet - In-house "ethnographic autonencoder" makes use of collected field data that are semantically similar to more robustly label human-object interactions in video streams
+* STEP 3 >> ReproducibilityRecipe - Set up classification calculations in a way that promotes common data standards and portability across multiple corner stores for better flow of shopper data
 
 ## 3.4 ADDING NETWORK LAYERS
 
