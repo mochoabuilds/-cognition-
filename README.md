@@ -4,7 +4,7 @@
 
 ## 1 SUMMARY
 
-* Advances in machine learning have given corner stores a far shinier array of tools.  Along other great minds, we test whether an algorithm could enable corner stores to conduct autonomous checkout with loyal regulars. Our technology will spark a major improvement in how corner stores run their business.  We take the idea of waiting in line entirely out of the equation and make corner store checkout more simple, certain and hospitable.
+* Advances in machine learning have given corner stores a far shinier array of tools.  Along with other great minds, we test whether algorithms could enable corner stores to conduct autonomous checkout with loyal regulars. We believe our technology will spark major improvements in how corner stores run their business.  We take the idea of waiting in line entirely out of the equation and make corner store checkout more simple, certain and hospitable.
 
 ## 1.1 INTRODUCTION
 
