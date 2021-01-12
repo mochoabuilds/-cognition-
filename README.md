@@ -4,19 +4,17 @@
 
 ## 1 SUMMARY
 
-* Advances in machine learning have given neighborhood corner stores far shinier toolkit.  My test is whether algorithms could enable corner stores to conduct autonomous checkout. I believe this technology could spark major improvements in how corner stores run their business.  We take the idea of waiting in line entirely out of the equation and checkout more simple, certain and hospitable.
-* What's more, the introduction of modern, legally enforceable computer vision privacy rights will be politically fraught.  Reform must keep up the long, hard slog of countering implicit bias, cementing privacy rights and building the infrastructure to uphold them. Those building machine learning applications must accept greater responsiblity for its future. We must be part of setting the agenda, attitute, culture and laws around computer vision privacy rights. I consider this daily in developing this autonomous checkout application.
+* Advances in machine learning have given neighborhood corner stores far shinier toolkits.  The test is whether algorithms could enable corner stores to conduct autonomous checkout. I believe this shift could spark major improvements in how corner stores run their business.  My goal is take the idea of waiting in line entirely out of the equation and make checkout more simple, certain and hospitable.
 
 ## 1.1 INTRODUCTION
 
-* Corner stores -- part pantry, part place to hug the block. Their prescence can't be underestimated.  Hyperlocal by nature, corner stores are inherently loyal to their surrounding community. Many people been known to benefit from handshake deals that let them grab goods on credit. This socio-economic infrastructure can't be underestimated, it's key to safety and prosperity in our young Midwestern cities. 
-* What's more, 
+* Hyperlocal by nature, corner stores are inherently loyal to their surrounding community. Many have been known to benefit from handshake deals that let them grab goods on credit. This socio-economic infrastructure can't be underestimated. Corner stores are part pantry, part place to hug the block. They are key to safety and prosperity, in our historically speaking, young midwestern cities.  Corner stores prescence can't be underestimated.  
 
 ## 1.2 WHY FOCUS ON CORNER STORES? 
 
-* To win in the corner store market today, you gotta have loyal regulars.  Our technology focuses on making checkout more simple, certain and hospitable.
+* To win in the neighborhood corner store market today, you gotta have loyal regulars.  Our technology focuses on making their checkout more simple, certain and hospitable.
 
-* What unique about our technology is that it accesses machine learning programs both remotely/locally rather than installing them on big old actual computers, instead it's done on hand sized edge computing devices - so applications are highly automated, readily avaliable and easy-to-use.  Apps include: 
+* What unique about our technology is that it accesses machine learning programs both remotely/locally rather than installing them on big old actual computers, instead it's done on hand sized edge computing devices with its own camera - so applications are highly automated, readily avaliable and easy-to-use.  Apps include: 
 	* Autonomous Checkout >> System watches guests browse shelves, keeps a running tab of items taken from shelves and prompts guests with SMS payment upon exit
 	* What You "AlmostBought" App >> Detect guests cross product interactions to better understand product positioning strategies 
 	* Data Exchange >> Guests share and sell their data for training machine learning models
