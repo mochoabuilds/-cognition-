@@ -1,5 +1,6 @@
-# import packages that define Tensorflow graphs, assist 
-# in defining graphs, loading models and optimizing framework
+# import packages that: 
+# define Tensorflow graphs, assist in defining the graphs, 
+# help load models and optimize framework
 from tensorflow.graph_util import convert_variables_to_constants
 from tensorflow.graph_util import remove_training_nodes
 from tensorflow.keras.models import load_model
@@ -8,12 +9,13 @@ import tensorflow as tf
 import argparse
 import os
 
-# freezeGraph: accepts Keras model and outputs frozen tf graph
-# as a prereq to create trt graph
+# freezeGraph: 
+# accepts Keras model and outputs frozen tf graph
+# as a prereq to create NVIDA's trt graph framework
 def freezeGraph(graph, session, outputNames):
 	# start with graph's default context
 	with graph.as_default():
-		# remove training nodes from graph, convert graph vars to contstants
+		# remove training nodes from graph, convert graph variables to contstants
 		graphDefInf = remove_training_nodes(graph.as_graph_def())
 		graphDefFrozen = convert_variables_to_constants(session, 
 			graphDefInf, outputNames)
@@ -22,7 +24,7 @@ def freezeGraph(graph, session, outputNames):
 		return 
 
 	
-# command line arguments 
+# command line arguments:
 ap = argparse.ArgumentParser()
 ap.add_argument("-w", "--weights", required=True,
 	help="path to the pretrained MobileNet V2 weights")
@@ -31,6 +33,7 @@ ap.add_argument("-t", "--trt-graph", required=True,
 args = vars(ap.parse_args())
 
 
+# backend prep:
 # generate trt graph, fix learning rate, load model,
 # extract underlying tf session
 tf.keras.backend.set_learning_phase(0)
@@ -44,7 +47,7 @@ outputNames = [t.op.name for t in model.ouputs]
 print("[INFO] freezing network...")
 frozenGraph = freezeGraph(session.graph, session, outputNames)
 
-# create trt graph from frozen tf graph using NVIDIA's trt framework
+# create trt graph from frozen tf graph using NVIDIA's framework
 print("[INFO] creating TRT graph...")
 	trtGraph = trt.create_inference_graph(
 	input_graph_def=frozenGraph,
