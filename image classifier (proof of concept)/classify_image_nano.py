@@ -27,9 +27,10 @@ ap.add_argument("-i", "--image", required=True,
 	help="path to our input image")
 args = vars(ap.parse_args())
 
+# input/output prep:
 # load our model, set names of input and ouput tensors to
 # tell network which operation to refer to when fed image,
-# and what to output when network done with inference
+# and what to output when network is done with inference
 inputTensorName = "input_1:0"
 outputTensorName = "Logits/Softmax:0"
 
@@ -37,6 +38,7 @@ outputTensorName = "Logits/Softmax:0"
 print("[INFO] loading TRT graph...")
 trtGraph = loadTRTGraph(args["trt_graph"])
 
+# deep prep for TensorFlow session:
 # setup config, enable GPU, create tf session, import trt graph into session
 print("[INFO] initializing TensorFlow session...")
 tfConfig = tf.ConfigProto()
@@ -51,6 +53,7 @@ outputTensor = tfSess.graph.get_tensor_by_name(outputTensorName)
 image = cv2.imread(args["image"])
 output = image.copy()
 
+# image prep:
 # swap the color channels for OpenCV ordering, and resize image for 
 # MobileNet V2 classification CNN expectations
 image = cv2.cvtColor(image, cv2.COLOR.BGR2RGB)
@@ -60,7 +63,7 @@ image = cv2.resize(image, (224, 224))
 image = np.expand_dims(image, axis=0)
 image = preprocess_input(image)
 
-# run the Jetson! pass image through TensorFlow session to gather predictions
+# RUN THE JETSON :) pass image through TensorFlow session to gather predictions
 start = time.time()
 predictions = tfSess.run(outputTensor,
 	feed_dict={inputTensorName: image})
@@ -86,7 +89,7 @@ for (i, prediction) in enumerate(topPredictions[0]):
 	print("{}. {}: {:.2f}%".format(i + 1, prediction[1].upper(),
 		prediction[2] * 100))
 		
-# show output image
+# show output image :)
 cv2.imshow("Output", output)
 cv2.waitKey(0)
 
