@@ -34,11 +34,12 @@
 
 * Our system consists of an off-the-shelf camera and Jetson Xavier NX embedded computing board that runs our code using NVIDIA's JetPack SDK for libraries, APIs, debugging and optimization.
 
-## 3.2 UPLOADING/PRETRAINING NETWORK
+
+## 3.2 DOWNLOADING OPEN SOURCE MODELS
 
 * We use an offshoot of ImageNet model to pretrain our multi-stream network. We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across thousands of  categories. Pretraining allows us to avoid representational bottlenecks, boost our activations per tile and helps us better balance the width and depth of the network.
 
-## 3.3 COLLECTING TRAINING DATA 
+## 3.3 LABELING TRAINING DATASETS
 
 * Bias is inevitable when training machine learning models for human action-object detections in video streams. To counter this bias we build datasets for each respective corner store to better debase the dominant groups claim as the norm. Our reality is political, but the dominant groups claim as the norm when training AI applications need not be. We believe this approach helps the models better "see" the sensitive interpretations of what humans feel is important.  
 * Our in-house "ethographic autoencoder" translates human rules of thumb from staff and loyal regulars into a lanugage AI models can use to "see" corner stores with their own hyperlocal "intuition".  This "intuition" will prove immensely helpful in future edge cases.
@@ -47,15 +48,19 @@
 * STEP 2 >> TidyDataSet - In-house "ethnographic autonencoder" notices human-action interactions that are semantically similar to hand labeled human rules of thumb from previous video streams
 * STEP 3 >> ReproducibilityRecipe - Set up classification calculations in a way that promotes common data standards and portability across multiple corner stores for better flow of this store-by-store "intuiton" across neighborhoods
 
-## 3.4 ADDING NETWORK LAYERS
+## 3.4 CONFIGURE PLATFORMS/FILES
 
-## 3.5 TRAINING THE MODEL
+* VIDEO --> Capture --> Decode --> Image Processing --> 
+* Stream Mgmt --> Detection --> 
+* Tracking --> On Screen Display --> OUTPUT 
 
-## 3.6 TESTING THE MODEL
+## 3.5 CUSTOMIZING MODEL
 
-## 4 EXPERIMENTS
+## 3.6 ON-SITE TESTING
 
-* In this section we explore the accuracy/generalizability of machine learning models on different benchmark data sets.
+## 4 EXPERIMENTAL DATA
+
+* In this section we explore the accuracy/generalizability of models on different benchmark data sets.
 
 ## 4.1 UCF-101 DATASET
 
@@ -67,7 +72,11 @@
 
 ## 5 DISCUSSION
 
-## 6 SANDBOX
+## APPENDIX: BI-DIRECTIONAL COMMUNICATIONS, ETC.
+
+* In this section we describe how we send and recieve event triggered messages between cloud and device, request system logs and conduct model updates.
+
+## SANDBOX
 
 * Teaching computer vision applications to NOT use guest biometrics as a condition of accepting payment under the Song Beverley Act of 1971
 * Better understanding the front-back orientation of human limbs due to clothing, lighting, background, optical interference
