@@ -1,6 +1,6 @@
 *** WORKING PAPER ***
 
-*** ATTACHED CODE:  Packaged Goods Classifier - Proof of Concept ***
+*** ATTACHED:  Packaged Goods Classifier (Proof of Concept) ***
 
 ## 1 SUMMARY
 
@@ -8,13 +8,14 @@
 
 ## 1.1 INTRODUCTION
 
-* Hyperlocal by nature, corner stores are inherently loyal to their surrounding community. Many have been known to benefit from handshake deals that let neighbors grab goods on credit. This socio-economic infrastructure can't be underestimated. Our corner stores are part pantry, part place to hug the block. They are key to safety and prosperity in your young midwestern cities.  Corner stores prescence can't be underestimated.  
+* Hyperlocal by nature, corner stores are inherently loyal to their surrounding community. Many have been known to benefit from handshake deals that let neighbors grab goods on credit. This socio-economic infrastructure can't be underestimated. Our corner stores are part pantry, part place to hug the block. They are key to safety and prosperity in your young midwestern cities.  The prescence of corner stores can't be underestimated.  
 
 * To transform the corner store toolkit, and not just its IT department, we take mature open-source software and embed it in services everyone can trust. A culture of human-centered design, test-driven development and edge-cloud operations drive our highly automated and easy-to-use applications.
 
 ## 1.2 WHY FOCUS ON CORNER STORES? 
 
-* To win in the neighborhood corner store today, you gotta have loyal regulars.  Our technology focuses on making their checkout more simple, certain and hospitable.  My goal is take the idea of waiting in line entirely out of the equation... Walk in > tap a tile with your phone > shop > walk out
+* To win in the neighborhood corner store today, you gotta have loyal regulars.  Our technology focuses on making their checkout more simple, certain and hospitable.  My goal is take the idea of waiting in line entirely out of the equation. 
+* Walk in > Tap a tile > Shop > Walk out
 
 * What unique about our technology is that it accesses machine learning programs both remotely and locally rather than installing them on big old actual computers.  Instead it's done on hand sized computing devices with their own camera - so applications are highly automated, readily avaliable and easy-to-use.  Apps include: 
 	* Autonomous Checkout >> System watches guests browse shelves, keeps a running tab of items taken from shelves and prompts guests with SMS payment upon exit
@@ -35,11 +36,11 @@
 * Our system consists of an off-the-shelf camera and Jetson Xavier NX embedded computing board that runs our code using NVIDIA's JetPack SDK for libraries, APIs, debugging and optimization.
 
 
-## 3.2 DOWNLOADING OPEN SOURCE MODELS
+## 3.2 DOWNLOAD OPEN SOURCE MODELS
 
 * We use an offshoot of ImageNet model to pretrain our multi-stream network. We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across thousands of  categories. Pretraining allows us to avoid representational bottlenecks, boost our activations per tile and helps us better balance the width and depth of the network.
 
-## 3.3 LABELING TRAINING DATASETS
+## 3.3 LABEL TRAINING DATASETS
 
 * Bias is inevitable when training machine learning models for human action-object detections in video streams. To counter this bias we build datasets for each respective corner store to better debase the dominant groups claim as the norm. Our reality is political, but the dominant groups claim as the norm when training AI applications need not be. We believe this approach helps the models better "see" the sensitive interpretations of what humans feel is important.  
 * Our in-house "ethographic autoencoder" translates human rules of thumb from staff and loyal regulars into a lanugage AI models can use to "see" corner stores with their own hyperlocal "intuition".  This "intuition" will prove immensely helpful in future edge cases.
