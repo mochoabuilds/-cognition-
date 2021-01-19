@@ -4,27 +4,27 @@
 
 ## 1 SUMMARY
 
-* Advances in machine learning have given neighborhood corner stores far shinier toolkits.  This shift could spark major improvements in how corner stores run their business in the neighborhoods.  
+* Advances in machine learning have given neighborhood corner stores far shinier toolkits.  This shift could spark major improvements in how corner stores run their business. This research functions as a mediator for the emerging urban experience. The tools we build reflect what we value.  We strive to construct a reality that empowers the corner store and advances its surrounding community.
 
 ## 1.1 INTRODUCTION
 
 * Hyperlocal by nature, corner stores are inherently loyal to their surrounding community. Many have been known to benefit from handshake deals that let neighbors grab goods on credit. This socio-economic infrastructure can't be underestimated. Our corner stores are part pantry, part place to hug the block. They are key to safety and prosperity in your young midwestern cities.  The prescence of corner stores can't be underestimated.  
 
-* To transform the corner store toolkit, and not just its IT department, we take mature open-source software and embed it in services everyone can trust. A culture of human-centered design, test-driven development and edge-cloud operations drive our highly automated and easy-to-use applications.
+* To transform the corner store toolkit, and not just its IT department, we take mature open-source software and embed it in services everyone can trust. Our system assembles all the knowledge scattered throughout the corner store and translates it in ways that the system gets.
 
 ## 1.2 WHY FOCUS ON CORNER STORES? 
 
-* To win in the neighborhood corner store today, you gotta have loyal regulars.  Our technology focuses on making their checkout more simple, certain and hospitable.  My goal is take the idea of waiting in line entirely out of the equation. 
+* Much of the corner store experience relies on the checkout experience.  We offer corner stores an intelligent AI edge solution for a simplier, clearer and more hospitable checkout experience.  Off-the-shelf cameras, embedded computing boards and AI models better understand guest behaviors and preferences, and the computing board optimized using NVIDIA's metropolis framework performs real-time computations of AI algorithms on the edge.  This system tests and measures the success of corner stores layouts/etc and extends these valuable insights to corner stores around the Midwest. 
 * Walk in > Tap a tile > Shop > Walk out
 
-* What unique about our technology is that it accesses machine learning programs both remotely and locally rather than installing them on big old actual computers.  Instead it's done on hand sized computing devices with their own camera - so applications are highly automated, readily avaliable and easy-to-use.  Apps include: 
+* What unique about our technology is that it accesses machine learning programs both remotely and locally rather than installing them on big old actual computers.  Instead it's done on hand sized computing devices with their own camera - so applications are highly automated, readily avaliable and easy-to-use.  
 	* Autonomous Checkout >> System watches guests browse shelves, keeps a running tab of items taken from shelves and prompts guests with SMS payment upon exit
 	* What You "AlmostBought" App >> Detect guests cross product interactions to better understand product positioning strategies 
 	* Data Exchange >> Guests share and sell their data for training machine learning models
 
 ## 1.3 HOW WILL WE DO IT?
 
-* To address our biggest challenge, the impracticality of approaching every machine learning problem with brute computing power, we looked for shortcuts. Rather than having software/edge devices see corner store scenarios thru step by step thinking, our tech sees scenarios with its own "intuition".  It learns that from translated rules of thumb that humans also lean on, but struggle to articulate. Our in-house autoencoder does the translating of these rules of thumb to make real world scenarios more understandable for our applications.  This is not our original system, but our current approach gives us more room to grow and boost our tech's accuracy further. We have tried dozens of different ways to construct an autonomous checkout system before designing this one from scratch.  
+* To address our biggest challenge, the impracticality of approaching every machine learning problem with brute computing power, we looked for shortcuts. Rather than having software/edge devices see corner store scenarios thru step by step thinking, our tech sees scenarios with its own "intuition".  It learns that from translated rules of thumb that humans also lean on, but struggle to articulate. Our in-house autoencoder does the translating of these rules of thumb to make real world scenarios more understandable for our applications.  This is not our original system, but our current approach gives us more room to grow and boost our technology's accuracy and understanding of how guests could shop and leave happier. We have tried dozens of different ways to construct an autonomous checkout system before designing this one from scratch.  
 	
 ## 2 RELATED WORKS
 
