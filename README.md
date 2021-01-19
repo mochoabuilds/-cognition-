@@ -4,7 +4,7 @@
 
 ## 1 SUMMARY
 
-* Advances in machine learning have given neighborhood corner stores far shinier toolkits.  This shift could spark major improvements in how corner stores run their business. This research functions as a mediator for the emerging urban experience. The tools we build reflect what we value.  We strive to construct a reality that empowers the corner store and advances its surrounding community.
+* Advances in machine learning have given neighborhood corner stores far shinier toolkits.  This shift could spark major improvements in how corner stores run their business. This research functions as a mediator for the emerging urban experience. The tools we build reflect what we value.  Our goal is to construct a reality that empowers the corner store and advances its surrounding community.
 
 ## 1.1 INTRODUCTION
 
@@ -14,7 +14,7 @@
 
 ## 1.2 WHY FOCUS ON CORNER STORES? 
 
-* Much of the corner store experience relies on the checkout experience.  We offer corner stores an intelligent AI edge solution for a simplier, clearer and more hospitable checkout experience.  Off-the-shelf cameras, embedded computing boards and AI models better understand guest behaviors and preferences, and the computing board optimized using NVIDIA's metropolis framework performs real-time computations of AI algorithms on the edge.  This system tests and measures the success of corner stores layouts/etc and extends these valuable insights to corner stores around the Midwest. 
+* Guests don't want to make payments, they want to do what a payment facilitates. Loyal regulars want the option to grab goods on credit without having to wait in line.  We offer these regulars an intelligent AI edge solution for a simplier, clearer and more hospitable autonomous checkout experience.  Off-the-shelf cameras, embedded computing boards and AI models better understand guest behaviors and preferences, and the computing board optimized using NVIDIA's metropolis framework performs real-time computations of AI algorithms on the edge.  This system tests and measures the success of corner stores layouts/etc and extends these valuable insights to corner stores around the Midwest. 
 * Walk in > Tap a tile > Shop > Walk out
 
 * What unique about our technology is that it accesses machine learning programs both remotely and locally rather than installing them on big old actual computers.  Instead it's done on hand sized computing devices with their own camera - so applications are highly automated, readily avaliable and easy-to-use.  
@@ -36,7 +36,7 @@
 * Our system consists of an off-the-shelf camera and Jetson Xavier NX embedded computing board that runs our code using NVIDIA's JetPack SDK for libraries, APIs, debugging and optimization.
 
 
-## 3.2 DOWNLOAD OPEN SOURCE MODELS
+## 3.2 DOWNLOAD OPEN SOURCE MODELS (PRETRAINING)
 
 * We use an offshoot of ImageNet model to pretrain our multi-stream network. We are immensely grateful for ImageNet and the human labor it took to sort, label and prep the millions of images across thousands of  categories. Pretraining allows us to avoid representational bottlenecks, boost our activations per tile and helps us better balance the width and depth of the network.
 
@@ -55,11 +55,11 @@
 * Stream Mgmt --> Detection --> 
 * Tracking --> On Screen Display --> OUTPUT 
 
-## 3.5 CUSTOMIZING MODEL
+## 3.5 CUSTOMIZE IMPLEMENTATIONS
 
-## 3.6 ON-SITE TESTING
+## 3.6 MODEL ARCHITECTURE 
 
-## 4 EXPERIMENTAL DATA
+## 4 EXPERIMENTAL EVALUATION 
 
 * In this section we explore the accuracy/generalizability of models on different benchmark data sets.
 
