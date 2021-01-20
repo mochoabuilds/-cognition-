@@ -1,23 +1,22 @@
-*** WORKING PAPER ***
+*** "Machine with a Memory: An Actionable Credit System for Cashierless Checkout"
 
-*** ATTACHED:  Packaged Goods Classifier (Proof of Concept) ***
+*** Attached Code:  Packaged Goods Classifier (Proof of Concept) 
 
-## 1 SUMMARY
+## 1 HELLO WORLD
 
-* Advances in machine learning have given neighborhood corner stores far shinier toolkits.  This shift could spark major improvements in how corner stores run their business. This research functions as a mediator for the emerging urban experience. The tools we build reflect what we value.  Our goal is to construct a reality that empowers the corner store and advances its surrounding community.
+* Advances in machine learning have given neighborhood corner stores far shinier toolkits.  This shift could spark major improvements in how corner stores run their business. This research functions as a mediator for our emerging urban experience. I believe the tools we build reflect what we value.  My goal is to construct a reality that empowers the corner store while also advancing the neighboring community.
 
-## 1.1 INTRODUCTION
+* Hyperlocal by nature, corner stores are inherently loyal to their surrounding community. Many souls been known to benefit from handshake deals that let neighbors grab goods on credit. This socio-economic infrastructure can't be underestimated. Corner stores are part pantry, part place to hug the block. They are key to safety and prosperity in your young midwestern cities.  Their prescence can't be underestimated.  
 
-* Hyperlocal by nature, corner stores are inherently loyal to their surrounding community. Many have been known to benefit from handshake deals that let neighbors grab goods on credit. This socio-economic infrastructure can't be underestimated. Our corner stores are part pantry, part place to hug the block. They are key to safety and prosperity in your young midwestern cities.  The prescence of corner stores can't be underestimated.  
+## 1.2 WHY CORNER STORES?
 
-* To transform the corner store toolkit, and not just its IT department, we take mature open-source software and embed it in services everyone can trust. Our system assembles all the knowledge scattered throughout the corner store and translates it in ways that the system gets.
+* To transform the corner store toolkit, and not just its IT department, we take mature open-source software and embed it in services everyone can trust. Our system assembles all the knowledge scattered throughout the corner store and translates it in ways that the system can use to create tools.
 
-## 1.2 WHY FOCUS ON CORNER STORES? 
+* I've observed during my travels that regulars don't want to make payments, they want to do what a payment facilitates.  Some loyal regulars may want the option to grab goods on credit without having to wait in line.  We offer these people an intelligent AI edge solution for a simplier, clearer and more hospitable checkout experience.  We make the corner store suddenly feel like ones pantry.
 
-* Guests don't want to make payments, they want to do what a payment facilitates. Loyal regulars want the option to grab goods on credit without having to wait in line.  We offer these regulars an intelligent AI edge solution for a simplier, clearer and more hospitable autonomous checkout experience.  Off-the-shelf cameras, embedded computing boards and AI models better understand guest behaviors and preferences, and the computing board optimized using NVIDIA's metropolis framework performs real-time computations of AI algorithms on the edge.  This system tests and measures the success of corner stores layouts/etc and extends these valuable insights to corner stores around the Midwest. 
 * Walk in > Tap a tile > Shop > Walk out
 
-* What unique about our technology is that it accesses machine learning programs both remotely and locally rather than installing them on big old actual computers.  Instead it's done on hand sized computing devices with their own camera - so applications are highly automated, readily avaliable and easy-to-use.  
+* What unique about our approach is that it accesses AI programs both remotely and locally rather than installing them on big old actual computers.  Instead computations are done on hand sized computing devices equipped with their own cameras - so applications are highly automated, readily avaliable and easy-to-use.  Early apps include: 
 	* Autonomous Checkout >> System watches guests browse shelves, keeps a running tab of items taken from shelves and prompts guests with SMS payment upon exit
 	* What You "AlmostBought" App >> Detect guests cross product interactions to better understand product positioning strategies 
 	* Data Exchange >> Guests share and sell their data for training machine learning models
@@ -33,8 +32,7 @@
 
 ## 3.1 SYSTEM OVERVIEW
 
-* Our system consists of an off-the-shelf camera and Jetson Xavier NX embedded computing board that runs our code using NVIDIA's JetPack SDK for libraries, APIs, debugging and optimization.
-
+* Our system consists of an off-the-shelf camera and Jetson Xavier NX embedded computing board that runs our code using NVIDIA's JetPack SDK for libraries, APIs, debugging and optimization. The goal is to create a 'digital twin' of a corner store that integrates real-time data from off-the-shelf cameras to display the state of the shop at any given time, and extend that understanding towards autonomous checkout.  Using off-the-shelf cameras, embedded computing boards and AI models our system better understands guest behaviors and preferences at any given time. The computing board is optimized using NVIDIA's Metropolis framework to performs real-time computations of AI algorithms on the edge.  This system tests and measures the success of autonomous checkout accuracy rates and extends these valuable insights to corner stores across the system.
 
 ## 3.2 DOWNLOAD OPEN SOURCE MODELS (PRETRAINING)
 
@@ -43,21 +41,22 @@
 ## 3.3 LABEL TRAINING DATASETS
 
 * Bias is inevitable when training machine learning models for human action-object detections in video streams. To counter this bias we build datasets for each respective corner store to better debase the dominant groups claim as the norm. Our reality is political, but the dominant groups claim as the norm when training AI applications need not be. We believe this approach helps the models better "see" the sensitive interpretations of what humans feel is important.  
-* Our in-house "ethographic autoencoder" translates human rules of thumb from staff and loyal regulars into a lanugage AI models can use to "see" corner stores with their own hyperlocal "intuition".  This "intuition" will prove immensely helpful in future edge cases.
+* Our IN-HOUSE AUTOENCODER compresses human rules of thumb/labels/vectors from staff and loyal regulars into short binary codes that AI models use to "see" corner stores with their own hyperlocal "intuition".  This "intuition" helps AI models generalize to longer sequences than those seen during training.  It also helps us combine several store datasets to learn neighborhood level human-object representations, and easily add rich training data on the fly.
+
 
 * STEP 1 >> DataCollection - Hand labeling of human rules of thumb into video streams
-* STEP 2 >> TidyDataSet - In-house "ethnographic autonencoder" notices human-action interactions that are semantically similar to hand labeled human rules of thumb from previous video streams
-* STEP 3 >> ReproducibilityRecipe - Set up classification calculations in a way that promotes common data standards and portability across multiple corner stores for better flow of this store-by-store "intuiton" across neighborhoods
+* STEP 2 >> TidyDataSet - In-house "ethnographic autonencoder" notices human-object interactions that are semantically similar to hand labeled human rules of thumb from previous video streams
+* STEP 3 >> ReproducibilityRecipe - Set up classification calculations in a way that promotes common data standards and portability to decrease overfitting models.
+
+* Our IN HOUSE LABELED DATASET currently consists of 100 human action classes with 100 clips per class each lasting 10 seconds.
 
 ## 3.4 CONFIGURE PLATFORMS/FILES
 
-* VIDEO --> Capture --> Decode --> Image Processing --> 
-* Stream Mgmt --> Detection --> 
-* Tracking --> On Screen Display --> OUTPUT 
-
-## 3.5 CUSTOMIZE IMPLEMENTATIONS
+## 3.5 CUSTOM INTEGRATIONS 
 
 ## 3.6 MODEL ARCHITECTURE 
+
+* Baed on the human visual cortex, our model contains two pathways the ventral (shape and color of objects) and the dorsal (caused by motion of objects).  This approach helps us better represent motion using the optical flow displacement field.  A two stream approach also helps the model better understand how repetitive actions such as "sweeping" require an understanding of different spatiotemporal cues at different scales, a tricky work of human fine-tuning.
 
 ## 4 EXPERIMENTAL EVALUATION 
 
@@ -73,9 +72,9 @@
 
 ## 5 DISCUSSION
 
-## APPENDIX: BI-DIRECTIONAL COMMUNICATIONS, ETC.
+## APPENDIX: BI-DIRECTIONAL COMMUNICATIONS
 
-* In this section we describe how we send and recieve event triggered messages between cloud and device, request system logs and conduct model updates.
+* In this section we describe how we send and recieve event triggered messages between cloud and device / request system logs / conduct model updates.
 
 ## SANDBOX
 
