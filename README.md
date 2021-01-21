@@ -1,29 +1,33 @@
-*** "Machine with a Memory: An Actionable Credit System for Cashierless Checkout"
+*** "An Actionable Credit System for Cashierless Checkout"
 
 *** Attached Code:  Packaged Goods Classifier (Proof of Concept) 
 
-## 1 HELLO WORLD
+## 1 CIRCUMSTANCES OF CONCEPTION
 
-* Advances in machine learning have given neighborhood corner stores far shinier toolkits.  This shift could spark major improvements in how corner stores run their business. This research functions as a mediator for our emerging urban experience. I believe the tools we build reflect what we value.  My goal is to construct a reality that empowers the corner store while also advancing the neighboring community.
+* During Spring 2020, when visiting my neighborhood corner store in Chicago my plan was to scoop some essentials.  Waiting in a line that snaked up and down the aisles I maintained my physical distance on account of COVID-19 restrictions.  Yet the line stretched too far and  new shopper entered, so I was left momentairly stuck between some loud talkers not wearing masks.  After a few anxious minutes I exited, immediately thinking there must be a better way for regular customers to do checkout at the corner store. 
 
-* Hyperlocal by nature, corner stores are inherently loyal to their surrounding community. Many souls been known to benefit from handshake deals that let neighbors grab goods on credit. This socio-economic infrastructure can't be underestimated. Corner stores are part pantry, part place to hug the block. They are key to safety and prosperity in your young midwestern cities.  Their prescence can't be underestimated.  
+## 1 INTRODUCTION
 
-## 1.2 WHY CORNER STORES?
+* Advances in machine learning have given corner stores far shinier toolkits.  Tools have gotten smaller, parallelised and now run along with smartphones, progress has become very fast. As computer vision improves, this could spark major improvements in how corner stores run their business.  This research function as a mediator for the emerging corner store checkout experience. 
 
-* To transform the corner store toolkit, and not just its IT department, we take mature open-source software and embed it in services everyone can trust. Our system assembles all the knowledge scattered throughout the corner store and translates it in ways that the system can use to create tools.
+## 1.2  PURPOSE / PROBLEM SOLVED
 
-* I've observed during my travels that regulars don't want to make payments, they want to do what a payment facilitates.  Some loyal regulars may want the option to grab goods on credit without having to wait in line.  We offer these people an intelligent AI edge solution for a simplier, clearer and more hospitable checkout experience.  We make the corner store suddenly feel like ones pantry.
+* Hyperlocal by nature, corner stores are inherently loyal to their surrounding neighborhood. Many souls been known to benefit from handshake deals that let them grab goods on credit. This socio-economic infrastructure can't be underestimated. Their prescence can't be underestimated.  
+
+* To transform the corner store toolkit, and not just its IT department, we take mature open-source software and embed it in services everyone can trust. Our system assembles all the knowledge scattered throughout the corner store and translates it in ways that the system can use to create new tools.
+
+* Our tools revolve around the idea that: people don't want to make payments, they want to do what a payment facilitates.  Some regulars want the option to grab goods on credit and simply skip the line entirely.  They want their corner store to be part pantry / part place to say hello.  Such spaces are key to safety and prosperity in your young midwestern cities.   We offer these regulars an intelligent AI solution that makes for a simplier, clearer and more hospitable checkout experience.
 
 * Walk in > Tap a tile > Shop > Walk out
 
-* What unique about our approach is that it accesses AI programs both remotely and locally rather than installing them on big old actual computers.  Instead computations are done on hand sized computing devices equipped with their own cameras - so applications are highly automated, readily avaliable and easy-to-use.  Early apps include: 
+* What unique about our approach is that it accesses AI programs both remotely and locally rather than installing them on big old actual computers.  Instead computations are done on hand sized computing devices equipped with their own cameras - tools/apps are highly automated, readily avaliable and easy-to-use.  Prototypes include:
 	* Autonomous Checkout >> System watches guests browse shelves, keeps a running tab of items taken from shelves and prompts guests with SMS payment upon exit
 	* What You "AlmostBought" App >> Detect guests cross product interactions to better understand product positioning strategies 
 	* Data Exchange >> Guests share and sell their data for training machine learning models
 
 ## 1.3 HOW WILL WE DO IT?
 
-* To address our biggest challenge, the impracticality of approaching every machine learning problem with brute computing power, we looked for shortcuts. Rather than having software/edge devices see corner store scenarios thru step by step thinking, our tech sees scenarios with its own "intuition".  It learns that from translated rules of thumb that humans also lean on, but struggle to articulate. Our in-house autoencoder does the translating of these rules of thumb to make real world scenarios more understandable for our applications.  This is not our original system, but our current approach gives us more room to grow and boost our technology's accuracy and understanding of how guests could shop and leave happier. We have tried dozens of different ways to construct an autonomous checkout system before designing this one from scratch.  
+* To address our biggest challenge, the impracticality of approaching every machine learning problem with brute computing power, we looked for shortcuts. Rather than having our computer vision system see corner store scenarios thru step by step thinking, ours sees scenarios with its own "intuition".  It learns that from translated rules of thumb about how people shop and leave happy that humans also lean on, but struggle to articulate. Our in-house autoencoder does the translating of these ethnographic field data on how hopstiable shopping experience happens with a human, and translating that into rules of thumb that make real world scenarios more understandable to our tools/apps.  This is not our original system, but our current approach gives us more room to grow and boost our technology's accuracy. We have tried dozens of different ways to construct an autonomous checkout system before designing this one from scratch.  
 	
 ## 2 RELATED WORKS
 
@@ -40,7 +44,8 @@
 
 ## 3.3 LABEL TRAINING DATASETS
 
-* Bias is inevitable when training machine learning models for human action-object detections in video streams. To counter this bias we build datasets for each respective corner store to better debase the dominant groups claim as the norm. Our reality is political, but the dominant groups claim as the norm when training AI applications need not be. We believe this approach helps the models better "see" the sensitive interpretations of what humans feel is important.  
+* Bias is inevitable when training machine learning models for human action-object detections in video streams. To counter  corner stores are the center of our analysis, to better debase the dominant groups claim as the norm for theories about how guests shop / leavier happier. Our reality is political, but the Ai developer perspective as the norm when training AI applications need not be. We believe this approach helps the models better "see" the sensitive interpretations of what humans feel is important.  
+
 * Our IN-HOUSE AUTOENCODER compresses human rules of thumb/labels/vectors from staff and loyal regulars into short binary codes that AI models use to "see" corner stores with their own hyperlocal "intuition".  This "intuition" helps AI models generalize to longer sequences than those seen during training.  It also helps us combine several store datasets to learn neighborhood level human-object representations, and easily add rich training data on the fly.
 
 
@@ -105,6 +110,5 @@
 * "Deep Residual Learning for Image Recognition" (2015)
 * "FlowNet 2.0: Evolution of Optical Flow Estimation with Deep Networks" (2016)
 * "A Large Dataset to Train Convolutional Networks for Disparity, Optical Flow and Scene Flow Estimation" (2016)
-*
 
 
