@@ -4,15 +4,15 @@
 
 ## 1 CIRCUMSTANCES OF CONCEPTION
 
-* During Spring 2020, I visited my neighborhood corner store in Chicago.  My plan was to scoop some essentials.  Soon enough I found myself in a line that snaked up and down the aisles, with me maintaining physical distance on account of COVID-19 restrictions.  But the line continued to grow.  New shoppers entered the store and I was now in a standing among many unmasked people, gifting and gabbing.  Aerosols were plentiful.  After a few anxious minutes I left, immediately thinking there must be a better, clearer and more hospitable way for customers (especially regulars) to do checkout.  
+* During Spring 2020, I visited my neighborhood corner store in Chicago.  My plan was to scoop some essentials.  Soon I found myself in a line that snaked up and down the aisles as I maintained physical distance on account of COVID-19 restrictions.  Yet the line continued to grow and I was now in a standing among many unmasked people, as they gifted and gabbed.  Aerosols were plentiful.  After a few anxious minutes I left, immediately thinking there must be a better, clearer and more hospitable way for customers (especially regulars) to do checkout.  
 
 ## 1.1 MARKET CONTEXT
 
-* Advances in machine learning have given corner stores far shinier toolkits.  Tools have gotten smaller, parallelised and now run along with smartphones, progress has become very fast. As AI domain knowledge roots itself, it could spark major improvements in how corner stores run their business.  This research function as a mediator for emerging tools related to simplier, clearer and more hospitable corner store checkout. 
+* Advances in machine learning have given corner stores far shinier toolkits.  Tools have gotten smaller, parallelised and now run along with smartphones, progress has become very fast. As AI domain knowledge roots itself, it could spark major improvements in how corner stores run their business.  This research functions as a mediator for emerging tools that make corner store checkout simplier, clearer and more hospitable. Perhaps 
 
 ## 1.2 PURPOSE / PROBLEM SOLVED
 
-* Hyperlocal by nature, corner stores are inherently loyal to their surrounding neighborhood. Many souls been known to benefit from handshake deals that let them grab goods on credit. This socio-economic infrastructure can't be underestimated. A good corner store's prescence can't be underestimated.  To transform the corner store toolkit, and not just its IT department, we take mature open-source software and embed it in services everyone can trust. Our system assembles all the knowledge scattered throughout the corner store and translates it in ways that the system / humans can use to create new inherently helpful tools.
+* Hyperlocal by nature, corner stores are inherently loyal to their surrounding neighborhood. Many souls been known to benefit from handshake deals that let them grab goods on credit. This socio-economic infrastructure can't be underestimated. A good corner store's prescence can't be underestimated.  To transform the corner store toolkit, and not just its IT department, we take mature open-source software and embed it in services everyone can trust. Our system assembles all the knowledge scattered throughout the corner store and translates it into tools that corner stores might not otherwise realized were possible.
 
 ## Our tools revolve around the idea that: people don't want to make payments, they want to do what a payment facilitates. 
 
@@ -20,7 +20,7 @@
 
 ## Walk in > Tap a tile > Shop > Walk out 
 
-* What's unique about our approach is that it accesses AI programs both remotely and locally rather than installing them on big old actual computers.  Our end-to-end method adopts a sparse temporal sampling strategy, which "enables efficient learning using the entire video without the limitation of sequence length" (TSNs, 2016). Instead the computation @ inference time is done on hand sized computing devices equipped with their own cameras -- tools/apps are highly automated, readily avaliable and easy-to-use/modify.  Prototypes include:
+* What's unique about our approach is that it accesses AI programs both remotely and locally. This more decentralized approach reduces the amount of data transmitted and thus the amount avaliable to intercept or jam.  Rather than installing algorithms on big old actual computers, computation @ inference time is done on hand sized computing devices equipped with their own cameras.  Tools/apps are highly automated, readily avaliable and easy-to-use/modify.  Prototypes include:
 	* Autonomous Checkout >> System watches guests browse shelves, keeps a running tab of items taken from shelves and prompts guests with SMS 'actionable credit' upon exit
 	* What You "AlmostBought" App >> Detect guests cross product interactions to better understand product positioning strategies 
 	* Data Exchange >> Guests share and sell their data for training AI models
@@ -96,7 +96,10 @@
 
 ## 5 DISCUSSION
 
-## APPENDIX: "CORNER STORE v-1" DATASET PARENT-CHILD GROUPINGS
+## APPENDIX: "CORNER STORE v-1" DATASET ~ 100 ACTION CLASSES
+
+* In no particular order: "Running" "Throwing" "Eating X" "Drinking X" "Dancing" "Attacking" "Touching X" "Crawling" "Sweeping Floor" "Checking X" "Reogranizing X" "Carrying Child" "Other Payment" "Leaving Store" "Entering Store" "Following Down" "Garbage Collection" "Hugging" "Bending Down for X" "Mapping" "Opening X" "Picking X From Shelf Z" "Playing Catch" "Pumping Fist" "Pushing Cart" "Pushing Stroller" "Dancing" "Shaking Hands" "Sign Language Interpreting" "Slapping Person" "Big Sneeze" "Sword Fighting" "Tasting X" "Tickling" "Unboxing" "Applauding" "Clapping" "Mopping Floor" "Cleaning Windows" "Petting Dog" "Punching Person" "Pushing Wheelchair" "Roller Skating" "Washing Hands" 
+
 
 ## ACKNOWLEDGEMENTS
 
